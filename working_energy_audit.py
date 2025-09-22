@@ -99,6 +99,15 @@ class WorkingEnergyAudit:
         scrollbar = ttk.Scrollbar(tab, orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas)
         
+        # Legénda farieb na vrchu
+        legend_frame = tk.Frame(scrollable_frame, bg='#f8f9fa', relief=tk.RIDGE, bd=1)
+        legend_frame.pack(fill=tk.X, padx=20, pady=5)
+        
+        tk.Label(legend_frame, text="ℹ️ LEGENDÁ POLÍ:", font=('Arial', 10, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10, pady=5)
+        tk.Label(legend_frame, text="🔴 POVINNÉ", fg='red', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🟠 DÔLEŽITÉ", fg='orange', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🔵 VOLITELNÉ", fg='blue', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        
         scrollable_frame.bind("<Configure>", 
                              lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
@@ -110,52 +119,53 @@ class WorkingEnergyAudit:
         id_frame.pack(fill=tk.X, padx=20, pady=10)
         
         # Riad 1
-        tk.Label(id_frame, text="Názov budovy *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.building_name = tk.Entry(id_frame, width=30, font=('Arial', 9))
+        tk.Label(id_frame, text="Názov budovy *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.building_name = tk.Entry(id_frame, width=30, font=('Arial', 9), bg='#ffe6e6')
         self.building_name.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(id_frame, text="Účel budovy *:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        tk.Label(id_frame, text="Účel budovy *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
         self.building_purpose = ttk.Combobox(id_frame, width=25, values=[
             "Rodinný dom", "Bytový dom", "Administratívna budova", "Škola", "Nemocnica",
             "Hotel", "Obchodné centrum", "Reštaurácia", "Priemyselná budova", "Sklad", "Ostatné"
         ])
+        self.building_purpose.configure(style='Required.TCombobox')
         self.building_purpose.grid(row=0, column=3, padx=5, pady=3)
         self.building_purpose.bind('<<ComboboxSelected>>', self.on_building_purpose_changed)
         
         # Riad 2  
-        tk.Label(id_frame, text="Adresa *:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
-        self.address = tk.Entry(id_frame, width=30, font=('Arial', 9))
+        tk.Label(id_frame, text="Adresa *:", fg='red', font=('Arial', 9, 'bold')).grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.address = tk.Entry(id_frame, width=30, font=('Arial', 9), bg='#ffe6e6')
         self.address.grid(row=1, column=1, padx=5, pady=3)
         
-        tk.Label(id_frame, text="PSČ a obec:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
-        self.postal_city = tk.Entry(id_frame, width=25, font=('Arial', 9))
+        tk.Label(id_frame, text="PSČ a obec:", fg='blue').grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.postal_city = tk.Entry(id_frame, width=25, font=('Arial', 9), bg='#e6f2ff')
         self.postal_city.grid(row=1, column=3, padx=5, pady=3)
         
         # Riad 3
-        tk.Label(id_frame, text="Katastrálne územie:").grid(row=2, column=0, sticky=tk.W, padx=5, pady=3)
-        self.cadastral = tk.Entry(id_frame, width=30, font=('Arial', 9))
+        tk.Label(id_frame, text="Katastrálne územie:", fg='blue').grid(row=2, column=0, sticky=tk.W, padx=5, pady=3)
+        self.cadastral = tk.Entry(id_frame, width=30, font=('Arial', 9), bg='#e6f2ff')
         self.cadastral.grid(row=2, column=1, padx=5, pady=3)
         
-        tk.Label(id_frame, text="Súpisné/orientačné číslo:").grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
-        self.house_number = tk.Entry(id_frame, width=25, font=('Arial', 9))
+        tk.Label(id_frame, text="Súpisné/orientačné číslo:", fg='blue').grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
+        self.house_number = tk.Entry(id_frame, width=25, font=('Arial', 9), bg='#e6f2ff')
         self.house_number.grid(row=2, column=3, padx=5, pady=3)
         
         # Riad 4
-        tk.Label(id_frame, text="Vlastník budovy *:").grid(row=3, column=0, sticky=tk.W, padx=5, pady=3)
-        self.owner = tk.Entry(id_frame, width=30, font=('Arial', 9))
+        tk.Label(id_frame, text="Vlastník budovy *:", fg='red', font=('Arial', 9, 'bold')).grid(row=3, column=0, sticky=tk.W, padx=5, pady=3)
+        self.owner = tk.Entry(id_frame, width=30, font=('Arial', 9), bg='#ffe6e6')
         self.owner.grid(row=3, column=1, padx=5, pady=3)
         
-        tk.Label(id_frame, text="IČO vlastníka:").grid(row=3, column=2, sticky=tk.W, padx=5, pady=3)
-        self.owner_ico = tk.Entry(id_frame, width=25, font=('Arial', 9))
+        tk.Label(id_frame, text="IČO vlastníka:", fg='blue').grid(row=3, column=2, sticky=tk.W, padx=5, pady=3)
+        self.owner_ico = tk.Entry(id_frame, width=25, font=('Arial', 9), bg='#e6f2ff')
         self.owner_ico.grid(row=3, column=3, padx=5, pady=3)
         
         # Riad 5
-        tk.Label(id_frame, text="Kontaktná osoba *:").grid(row=4, column=0, sticky=tk.W, padx=5, pady=3)
-        self.contact_person = tk.Entry(id_frame, width=30, font=('Arial', 9))
+        tk.Label(id_frame, text="Kontaktná osoba *:", fg='red', font=('Arial', 9, 'bold')).grid(row=4, column=0, sticky=tk.W, padx=5, pady=3)
+        self.contact_person = tk.Entry(id_frame, width=30, font=('Arial', 9), bg='#ffe6e6')
         self.contact_person.grid(row=4, column=1, padx=5, pady=3)
         
-        tk.Label(id_frame, text="Telefón/Email:").grid(row=4, column=2, sticky=tk.W, padx=5, pady=3)
-        self.contact_details = tk.Entry(id_frame, width=25, font=('Arial', 9))
+        tk.Label(id_frame, text="Telefón/Email:", fg='orange').grid(row=4, column=2, sticky=tk.W, padx=5, pady=3)
+        self.contact_details = tk.Entry(id_frame, width=25, font=('Arial', 9), bg='#fff2e6')
         self.contact_details.grid(row=4, column=3, padx=5, pady=3)
         
         # TECHNICKÉ CHARAKTERISTIKY PODĽA NORMY
@@ -164,58 +174,58 @@ class WorkingEnergyAudit:
         tech_frame.pack(fill=tk.X, padx=20, pady=10)
         
         # Riad 1 - Základné rozmery
-        tk.Label(tech_frame, text="Rok výstavby *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.construction_year = tk.Entry(tech_frame, width=15)
+        tk.Label(tech_frame, text="Rok výstavby *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.construction_year = tk.Entry(tech_frame, width=15, bg='#ffe6e6')
         self.construction_year.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Rok poslednej rekonštrukcie:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.renovation_year = tk.Entry(tech_frame, width=15)
+        tk.Label(tech_frame, text="Rok poslednej rekonštrukcie:", fg='orange').grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.renovation_year = tk.Entry(tech_frame, width=15, bg='#fff2e6')
         self.renovation_year.grid(row=0, column=3, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Energetická trieda (aktuálna):").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        tk.Label(tech_frame, text="Energetická trieda (aktuálna):", fg='blue').grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
         self.current_energy_class = ttk.Combobox(tech_frame, width=12, values=["A", "B", "C", "D", "E", "F", "G", "Neznáma"])
         self.current_energy_class.grid(row=0, column=5, padx=5, pady=3)
         
         # Riad 2 - Plochy a objemy
-        tk.Label(tech_frame, text="Podlahová plocha (vykurovaná) [m²] *:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
-        self.floor_area = tk.Entry(tech_frame, width=15)
+        tk.Label(tech_frame, text="Podlahová plocha (vykurovaná) [m²] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.floor_area = tk.Entry(tech_frame, width=15, bg='#ffe6e6')
         self.floor_area.grid(row=1, column=1, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Podlahová plocha (celková) [m²]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
-        self.total_floor_area = tk.Entry(tech_frame, width=15)
+        tk.Label(tech_frame, text="Podlahová plocha (celková) [m²]:", fg='blue').grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.total_floor_area = tk.Entry(tech_frame, width=15, bg='#e6f2ff')
         self.total_floor_area.grid(row=1, column=3, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Obostavaný priestor [m³] *:").grid(row=1, column=4, sticky=tk.W, padx=5, pady=3)
-        self.volume = tk.Entry(tech_frame, width=12)
+        tk.Label(tech_frame, text="Obostavaný priestor [m³] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=1, column=4, sticky=tk.W, padx=5, pady=3)
+        self.volume = tk.Entry(tech_frame, width=12, bg='#ffe6e6')
         self.volume.grid(row=1, column=5, padx=5, pady=3)
         
         # Riad 3 - Geometria
-        tk.Label(tech_frame, text="Počet nadzemných podlaží *:").grid(row=2, column=0, sticky=tk.W, padx=5, pady=3)
-        self.floors_above = tk.Entry(tech_frame, width=15)
+        tk.Label(tech_frame, text="Počet nadzemných podlaží *:", fg='red', font=('Arial', 9, 'bold')).grid(row=2, column=0, sticky=tk.W, padx=5, pady=3)
+        self.floors_above = tk.Entry(tech_frame, width=15, bg='#ffe6e6')
         self.floors_above.grid(row=2, column=1, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Počet podzemných podlaží:").grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
-        self.floors_below = tk.Entry(tech_frame, width=15)
+        tk.Label(tech_frame, text="Počet podzemných podlaží:", fg='blue').grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
+        self.floors_below = tk.Entry(tech_frame, width=15, bg='#e6f2ff')
         self.floors_below.grid(row=2, column=3, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Svetlá výška [m]:").grid(row=2, column=4, sticky=tk.W, padx=5, pady=3)
-        self.ceiling_height = tk.Entry(tech_frame, width=12)
+        tk.Label(tech_frame, text="Svetlá výška [m]:", fg='blue').grid(row=2, column=4, sticky=tk.W, padx=5, pady=3)
+        self.ceiling_height = tk.Entry(tech_frame, width=12, bg='#e6f2ff')
         self.ceiling_height.grid(row=2, column=5, padx=5, pady=3)
         
         # Riad 4 - Konštrukčný systém
-        tk.Label(tech_frame, text="Konštrukčný systém *:").grid(row=3, column=0, sticky=tk.W, padx=5, pady=3)
+        tk.Label(tech_frame, text="Konštrukčný systém:", fg='orange').grid(row=3, column=0, sticky=tk.W, padx=5, pady=3)
         self.construction_system = ttk.Combobox(tech_frame, width=13, values=[
             "Murovaný", "Montovaný betón", "Skelet ŽB", "Oceľový skelet", "Drevostavba", "Zmiešaný", "Ostatné"
         ])
         self.construction_system.grid(row=3, column=1, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Typ založenia:").grid(row=3, column=2, sticky=tk.W, padx=5, pady=3)
+        tk.Label(tech_frame, text="Typ založenia:", fg='blue').grid(row=3, column=2, sticky=tk.W, padx=5, pady=3)
         self.foundation_type = ttk.Combobox(tech_frame, width=13, values=[
             "Základové pásy", "Základová doska", "Pilóty", "Suterén", "Ostatné"
         ])
         self.foundation_type.grid(row=3, column=3, padx=5, pady=3)
         
-        tk.Label(tech_frame, text="Orientácia hlavnej fasády:").grid(row=3, column=4, sticky=tk.W, padx=5, pady=3)
+        tk.Label(tech_frame, text="Orientácia hlavnej fasády:", fg='blue').grid(row=3, column=4, sticky=tk.W, padx=5, pady=3)
         self.orientation = ttk.Combobox(tech_frame, width=10, values=["S", "SV", "V", "JV", "J", "JZ", "Z", "SZ"])
         self.orientation.grid(row=3, column=5, padx=5, pady=3)
         
@@ -225,18 +235,18 @@ class WorkingEnergyAudit:
         climate_frame.pack(fill=tk.X, padx=20, pady=10)
         
         # Riad 1
-        tk.Label(climate_frame, text="Klimatická oblasť:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        tk.Label(climate_frame, text="Klimatická oblasť:", fg='blue').grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
         self.climate_zone = ttk.Combobox(climate_frame, width=20, values=[
             "Teplá (do 500 m n.m.)", "Mierna (500-800 m n.m.)", "Chladná (nad 800 m n.m.)"
         ])
         self.climate_zone.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(climate_frame, text="Nadmorská výška [m]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.altitude = tk.Entry(climate_frame, width=15)
+        tk.Label(climate_frame, text="Nadmorská výška [m]:", fg='blue').grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.altitude = tk.Entry(climate_frame, width=15, bg='#e6f2ff')
         self.altitude.grid(row=0, column=3, padx=5, pady=3)
         
-        # Riad 2 - Automatické nastavenie podľa mest
-        tk.Label(climate_frame, text="Lokalita (automatické HDD):").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        # Riad 2 - Automatické nastavenie podľa miest
+        tk.Label(climate_frame, text="Lokalita (automatické HDD):", fg='orange', font=('Arial', 9, 'bold')).grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
         self.city_location = ttk.Combobox(climate_frame, width=18, values=[
             "Bratislava (2800)", "Košice (3200)", "Prešov (3400)", "Banská Bystrica (3600)",
             "Trnava (2850)", "Žilina (3300)", "Nitra (2900)", "Trenčín (3000)",
@@ -247,17 +257,17 @@ class WorkingEnergyAudit:
         self.city_location.grid(row=1, column=1, padx=5, pady=3)
         self.city_location.bind('<<ComboboxSelected>>', self.on_city_changed)
         
-        tk.Label(climate_frame, text="HDD (stupeň.dni) [K.deň/rok]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
-        self.hdd = tk.Entry(climate_frame, width=15)
+        tk.Label(climate_frame, text="HDD (stupeň.dni) [K.deň/rok]:", fg='orange', font=('Arial', 9, 'bold')).grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.hdd = tk.Entry(climate_frame, width=15, bg='#fff2e6')
         self.hdd.grid(row=1, column=3, padx=5, pady=3)
         
         # Riad 3
-        tk.Label(climate_frame, text="Prevažujúci smer vetra:").grid(row=2, column=0, sticky=tk.W, padx=5, pady=3)
+        tk.Label(climate_frame, text="Prevažujúci smer vetra:", fg='blue').grid(row=2, column=0, sticky=tk.W, padx=5, pady=3)
         self.wind_direction = ttk.Combobox(climate_frame, width=20, values=["S", "SV", "V", "JV", "J", "JZ", "Z", "SZ", "Premenlivý"])
         self.wind_direction.grid(row=2, column=1, padx=5, pady=3)
         
-        tk.Label(climate_frame, text="Tienenie budovy:").grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
-        self.shading = ttk.Combobox(climate_frame, width=13, values=["Žiadne", "Čiastočné", "Značné", "Úplné"])
+        tk.Label(climate_frame, text="Tienenie budovy:", fg='blue').grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
+        self.shading = ttk.Combobox(climate_frame, width=13, values=["Ziadne", "Čiastocne", "Znacne", "Úplné"])
         self.shading.grid(row=2, column=3, padx=5, pady=3)
         
         canvas.pack(side="left", fill="both", expand=True)
@@ -432,15 +442,15 @@ class WorkingEnergyAudit:
         walls_frame.pack(fill=tk.X, padx=20, pady=10)
         
         # Riad 1
-        tk.Label(walls_frame, text="Celková plocha stien [m²] *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.wall_area = tk.Entry(walls_frame, width=15)
+        tk.Label(walls_frame, text="Celková plocha stìen [m²] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.wall_area = tk.Entry(walls_frame, width=15, bg='#ffe6e6')
         self.wall_area.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(walls_frame, text="U-hodnota stien [W/m²K] *:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.wall_u = tk.Entry(walls_frame, width=15)
+        tk.Label(walls_frame, text="U-hodnota stìen [W/m²K] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.wall_u = tk.Entry(walls_frame, width=15, bg='#ffe6e6')
         self.wall_u.grid(row=0, column=3, padx=5, pady=3)
         
-        tk.Label(walls_frame, text="Typ konštrukcie stien:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        tk.Label(walls_frame, text="Typ konštrukcie stìen:", fg='blue').grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
         self.wall_construction = ttk.Combobox(walls_frame, width=18, values=[
             "Jednoplashá murovaná", "Dvojplashá murovaná", "Sendvičová", "Montovaná betónová", 
             "Drevenká", "Železobetová", "Lastrock", "Ytong", "Keramická"
@@ -448,18 +458,18 @@ class WorkingEnergyAudit:
         self.wall_construction.grid(row=0, column=5, padx=5, pady=3)
         
         # Riad 2
-        tk.Label(walls_frame, text="Typ tepelnej izolácie *:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        tk.Label(walls_frame, text="Typ tepelnej izolácie:", fg='orange').grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
         self.wall_insulation = ttk.Combobox(walls_frame, width=13, values=[
             "Bez izolácie", "ETICS (kontaktný)", "Vnútorná", "Dutinová", "Fasadistic", 
-            "Kombinácia", "Inhérent (izol. betony)"
+            "Kombinácia", "Inhérent (izol. betóny)"
         ])
         self.wall_insulation.grid(row=1, column=1, padx=5, pady=3)
         
-        tk.Label(walls_frame, text="Hrúbka izolácie [mm]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
-        self.wall_insulation_thickness = tk.Entry(walls_frame, width=15)
+        tk.Label(walls_frame, text="Hrúbka izolácie [mm]:", fg='blue').grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.wall_insulation_thickness = tk.Entry(walls_frame, width=15, bg='#e6f2ff')
         self.wall_insulation_thickness.grid(row=1, column=3, padx=5, pady=3)
         
-        tk.Label(walls_frame, text="Typ izolačného materiálu:").grid(row=1, column=4, sticky=tk.W, padx=5, pady=3)
+        tk.Label(walls_frame, text="Typ izolačného materiálu:", fg='blue').grid(row=1, column=4, sticky=tk.W, padx=5, pady=3)
         self.wall_insulation_material = ttk.Combobox(walls_frame, width=16, values=[
             "EPS (polystyén)", "XPS (extrud. polystyén)", "Mineralná vlna", "PUR/PIR pena", 
             "Féniová pena", "Konopa", "Drťvé vlákno", "Celulóza", "Perlite", "Vakuúmové"
@@ -487,12 +497,12 @@ class WorkingEnergyAudit:
         windows_frame.pack(fill=tk.X, padx=20, pady=10)
         
         # Riad 1 - Okná
-        tk.Label(windows_frame, text="Plocha okien celkom [m²] *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.window_area = tk.Entry(windows_frame, width=13)
+        tk.Label(windows_frame, text="Plocha okien celkom [m²] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.window_area = tk.Entry(windows_frame, width=13, bg='#ffe6e6')
         self.window_area.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(windows_frame, text="U-hodnota okien [W/m²K] *:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.window_u = tk.Entry(windows_frame, width=15)
+        tk.Label(windows_frame, text="U-hodnota okien [W/m²K] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.window_u = tk.Entry(windows_frame, width=15, bg='#ffe6e6')
         self.window_u.grid(row=0, column=3, padx=5, pady=3)
         
         tk.Label(windows_frame, text="g-hodnota (solares g) [-]:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
@@ -539,12 +549,12 @@ class WorkingEnergyAudit:
         roof_frame.pack(fill=tk.X, padx=20, pady=10)
         
         # Riad 1
-        tk.Label(roof_frame, text="Plocha strechy [m²] *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.roof_area = tk.Entry(roof_frame, width=15)
+        tk.Label(roof_frame, text="Plocha strechy [m²] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.roof_area = tk.Entry(roof_frame, width=15, bg='#ffe6e6')
         self.roof_area.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(roof_frame, text="U-hodnota strechy [W/m²K] *:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.roof_u = tk.Entry(roof_frame, width=15)
+        tk.Label(roof_frame, text="U-hodnota strechy [W/m²K] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.roof_u = tk.Entry(roof_frame, width=15, bg='#ffe6e6')
         self.roof_u.grid(row=0, column=3, padx=5, pady=3)
         
         tk.Label(roof_frame, text="Typ strechy:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
@@ -591,12 +601,12 @@ class WorkingEnergyAudit:
         floor_frame.pack(fill=tk.X, padx=20, pady=10)
         
         # Riad 1
-        tk.Label(floor_frame, text="Plocha podlahy [m²] *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.floor_area_envelope = tk.Entry(floor_frame, width=15)
+        tk.Label(floor_frame, text="Plocha podlahy [m²] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.floor_area_envelope = tk.Entry(floor_frame, width=15, bg='#ffe6e6')
         self.floor_area_envelope.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(floor_frame, text="U-hodnota podlahy [W/m²K] *:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.floor_u = tk.Entry(floor_frame, width=15)
+        tk.Label(floor_frame, text="U-hodnota podlahy [W/m²K] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.floor_u = tk.Entry(floor_frame, width=15, bg='#ffe6e6')
         self.floor_u.grid(row=0, column=3, padx=5, pady=3)
         
         tk.Label(floor_frame, text="Typ kontaktu so zemou:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
@@ -644,7 +654,7 @@ class WorkingEnergyAudit:
                                      font=('Arial', 11, 'bold'))
         heating_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(heating_frame, text="Typ vykurovania *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        tk.Label(heating_frame, text="Typ vykurovania *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
         self.heating_type = ttk.Combobox(heating_frame, width=28, values=[
             "Plynový kotol kondenzačný", "Plynový kotol klasický", "Elektrický kotol",
             "Tepelné čerpadlo vzduch-voda", "Tepelné čerpadlo zem-voda", "Tepelné čerpadlo voda-voda",
@@ -657,8 +667,8 @@ class WorkingEnergyAudit:
         self.heating_power = tk.Entry(heating_frame, width=12)
         self.heating_power.grid(row=0, column=3, padx=5, pady=3)
         
-        tk.Label(heating_frame, text="Sezónna účinnosť ηs [%] *:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
-        self.heating_efficiency = tk.Entry(heating_frame, width=12)
+        tk.Label(heating_frame, text="Sezónna účinnosť ηs [%] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.heating_efficiency = tk.Entry(heating_frame, width=12, bg='#ffe6e6')
         self.heating_efficiency.grid(row=1, column=1, padx=5, pady=3)
         
         tk.Label(heating_frame, text="Výstupná teplota vykurovania [°C]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
@@ -669,7 +679,7 @@ class WorkingEnergyAudit:
         self.heating_year = tk.Entry(heating_frame, width=12)
         self.heating_year.grid(row=2, column=1, padx=5, pady=3)
         
-        tk.Label(heating_frame, text="Palivo *:").grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
+        tk.Label(heating_frame, text="Palivo *:", fg='red', font=('Arial', 9, 'bold')).grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
         self.fuel_type = ttk.Combobox(heating_frame, width=18, values=[
             "Zemný plyn", "Elektrina", "Pelety", "Drevo", "LPG"
         ])
@@ -739,15 +749,15 @@ class WorkingEnergyAudit:
                                    font=('Arial', 11, 'bold'))
         light_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(light_frame, text="Typ svietidiel:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        tk.Label(light_frame, text="Typ svietidiel:", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
         self.lighting_type = ttk.Combobox(light_frame, width=18, values=[
             "LED", "Fluorescenčné (T5/T8)", "Halogénové", "Výbojkové", "Klasické žiarovky"
         ])
         self.lighting_type.grid(row=0, column=1, padx=5, pady=3)
         self.lighting_type.bind('<<ComboboxSelected>>', self.on_lighting_type_changed)
         
-        tk.Label(light_frame, text="Inštalovaný výkon [W]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.lighting_power = tk.Entry(light_frame, width=12)
+        tk.Label(light_frame, text="Inštalovaný výkon [W]:", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.lighting_power = tk.Entry(light_frame, width=12, bg='#fff2e6')
         self.lighting_power.grid(row=0, column=3, padx=5, pady=3)
         
         tk.Label(light_frame, text="Riadenie osvetlenia:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
@@ -817,20 +827,20 @@ class WorkingEnergyAudit:
                                        font=('Arial', 11, 'bold'))
         occupancy_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(occupancy_frame, text="Počet užívateľov (osoby):").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.occupants = tk.Entry(occupancy_frame, width=12)
+        tk.Label(occupancy_frame, text="Počet užívateľov (osoby):", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.occupants = tk.Entry(occupancy_frame, width=12, bg='#fff2e6')
         self.occupants.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(occupancy_frame, text="Hodiny/deň:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.operating_hours = tk.Entry(occupancy_frame, width=12)
+        tk.Label(occupancy_frame, text="Hodiny/deň:", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.operating_hours = tk.Entry(occupancy_frame, width=12, bg='#fff2e6')
         self.operating_hours.grid(row=0, column=3, padx=5, pady=3)
         
         tk.Label(occupancy_frame, text="Dni/rok:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
         self.operating_days = tk.Entry(occupancy_frame, width=12)
         self.operating_days.grid(row=0, column=5, padx=5, pady=3)
         
-        tk.Label(occupancy_frame, text="Nastavená teplota zima [°C]:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
-        self.winter_temp = tk.Entry(occupancy_frame, width=12)
+        tk.Label(occupancy_frame, text="Nastavená teplota zima [°C]:", fg='orange', font=('Arial', 9, 'bold')).grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.winter_temp = tk.Entry(occupancy_frame, width=12, bg='#fff2e6')
         self.winter_temp.grid(row=1, column=1, padx=5, pady=3)
         
         tk.Label(occupancy_frame, text="Nastavená teplota leto [°C]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
@@ -842,12 +852,12 @@ class WorkingEnergyAudit:
                                          font=('Arial', 11, 'bold'))
         consumption_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(consumption_frame, text="Ročná spotreba plynu [m³]:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.gas_consumption = tk.Entry(consumption_frame, width=12)
+        tk.Label(consumption_frame, text="Ročná spotreba plynu [m³]:", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.gas_consumption = tk.Entry(consumption_frame, width=12, bg='#fff2e6')
         self.gas_consumption.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(consumption_frame, text="Ročná spotreba elektriny [kWh]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.electricity_consumption = tk.Entry(consumption_frame, width=12)
+        tk.Label(consumption_frame, text="Ročná spotreba elektriny [kWh]:", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.electricity_consumption = tk.Entry(consumption_frame, width=12, bg='#fff2e6')
         self.electricity_consumption.grid(row=0, column=3, padx=5, pady=3)
         
         tk.Label(consumption_frame, text="Cena plynu [€/m³]:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
@@ -1190,6 +1200,7 @@ Audit sa vykonáva podľa noriem:
         basic = self.audit_data['basic_info']
         results = self.results
         
+        # Základné povinné údaje
         output = f"""
 {'='*80}
 📊 ENERGETICKÝ AUDIT - VÝSLEDKY
@@ -1199,7 +1210,44 @@ Audit sa vykonáva podľa noriem:
 📍 Adresa: {basic['address']}
 📐 Podlahová plocha: {basic['floor_area']:.0f} m²
 📅 Rok výstavby: {basic['construction_year']}
-🏗️ Typ budovy: {basic['building_type']}
+🏗️ Účel budovy: {basic['building_purpose']}"""
+        
+
+        # Voliteľné identifikačné údaje
+        optional_id = {
+            "Vlastník": (basic.get('owner'), ""),
+            "Kontaktná osoba": (basic.get('contact_person'), ""),
+            "PSČ a obec": (basic.get('postal_city'), ""),
+            "Telefón/Email": (basic.get('contact_details'), ""),
+            "IČO": (basic.get('owner_ico'), ""),
+            "Katastrálne územie": (basic.get('cadastral'), ""),
+            "Súpisné/orientačné číslo": (basic.get('house_number'), "")
+        }
+        output += self.format_section_if_has_data("IDENTIFIKÁCIA OBJEKTU", optional_id)
+        
+        # Voliteľné technické údaje
+        optional_tech = {
+            "Rok rekonštrukcie": (basic.get('renovation_year'), ""),
+            "Aktuálna energetická trieda": (basic.get('current_energy_class'), ""),
+            "Celková podlahová plocha": (basic.get('total_floor_area'), " m²"),
+            "Počet podzemných podlaží": (basic.get('floors_below'), ""),
+            "Svetlá výška": (basic.get('ceiling_height'), " m"),
+            "Konštrukčný systém": (basic.get('construction_system'), ""),
+            "Typ založenia": (basic.get('foundation_type'), ""),
+            "Orientácia fasády": (basic.get('orientation'), "")
+        }
+        output += self.format_section_if_has_data("TECHNICKÉ CHARAKTERISTIKY", optional_tech)
+        
+        # Voliteľné klimatické údaje
+        optional_climate = {
+            "Klimatická oblasť": (basic.get('climate_zone'), ""),
+            "Nadmorská výška": (basic.get('altitude'), " m n.m."),
+            "Prevažujúci smer vetra": (basic.get('wind_direction'), ""),
+            "Tienenie budovy": (basic.get('shading'), "")
+        }
+        output += self.format_section_if_has_data("KLIMATICKÉ ÚDAJE", optional_climate)
+        
+        output += f"""
 
 {'='*80}
 🔥 TEPELNÉ STRATY OBÁLKY BUDOVY
@@ -1331,6 +1379,22 @@ G: > 250 kWh/m²rok   (Mimoriadne neúsporná)
         tk.Button(calc_window, text="❌ Zavrieť", command=calc_window.destroy,
                  bg='#e74c3c', fg='white', font=('Arial', 12, 'bold')).pack(pady=10)
                  
+    def format_optional_field(self, label, value, unit=""):
+        """Formátuje voliteľné pole len ak je vyplnené"""
+        if value and str(value).strip() not in ["", "0", "0.0", "Neznáma"]:
+            return f"\n• {label}: {value}{unit}"
+        return ""
+    
+    def format_section_if_has_data(self, title, fields_dict):
+        """Formátuje sekciu len ak obsahuje dané"""
+        section_content = ""
+        for label, (value, unit) in fields_dict.items():
+            section_content += self.format_optional_field(label, value, unit)
+        
+        if section_content:
+            return f"\n\n=== {title} ===" + section_content
+        return ""
+    
     def generate_calculation_details(self):
         """Generovanie detailných výpočtov"""
         if not self.results:
