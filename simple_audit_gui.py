@@ -166,6 +166,10 @@ class SimpleEnergyAuditGUI:
                  command=self.generate_certificate, bg='#9b59b6', fg='white',
                  font=('Arial', 10, 'bold'), width=12, height=2).pack(side=tk.LEFT, padx=5)
         
+        tk.Button(buttons_frame, text="🧮 POZRIEŤ VÝPOČET",
+                 command=self.show_calculation_details, bg='#f39c12', fg='white',
+                 font=('Arial', 10, 'bold'), width=15, height=2).pack(side=tk.LEFT, padx=5)
+        
         tk.Button(buttons_frame, text="❌ UKONČIŤ",
                  command=self.root.quit, bg='#e74c3c', fg='white',
                  font=('Arial', 10, 'bold'), width=12, height=2).pack(side=tk.RIGHT, padx=20)
@@ -368,6 +372,255 @@ Platnosť do: {datetime.now().replace(year=datetime.now().year + 10).strftime('%
 """
         
         messagebox.showinfo("Certifikát", certificate_info)
+        
+    def show_calculation_details(self):
+        """Zobrazenie detailných výpočtov s vzorcami"""
+        if not self.audit_data or not self.results:
+            messagebox.showwarning("Upozornenie", "Najprv vykonajte audit pre zobrazenie výpočtov.")
+            return
+        
+        # Vytvorenie nového okna pre výpočty
+        calc_window = tk.Toplevel(self.root)
+        calc_window.title("🧮 DETAILNÉ VÝPOČTY - ENERGETICKÝ AUDIT")
+        calc_window.geometry("900x700")
+        calc_window.configure(bg='white')
+        
+        # Header
+        header = tk.Frame(calc_window, bg='#34495e', height=50)
+        header.pack(fill=tk.X)
+        header.pack_propagate(False)
+        
+        tk.Label(header, text="🧮 KROK-ZA-KROKOM VÝPOČTY", 
+                font=('Arial', 14, 'bold'), fg='white', bg='#34495e').pack(pady=10)
+        
+        # Scrollable text area
+        text_frame = tk.Frame(calc_window)
+        text_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
+        
+        calc_text = scrolledtext.ScrolledText(text_frame, font=('Consolas', 10), 
+                                              bg='#f8f9fa', wrap=tk.WORD)
+        calc_text.pack(fill=tk.BOTH, expand=True)
+        
+        # Generovanie detailných výpočtov
+        calculation_details = self.generate_calculation_details()
+        calc_text.insert(tk.END, calculation_details)
+        calc_text.config(state=tk.DISABLED)
+        
+        # Tlačidlo na zatvorenie
+        tk.Button(calc_window, text="❌ Zavrieť", command=calc_window.destroy,
+                 bg='#e74c3c', fg='white', font=('Arial', 12, 'bold')).pack(pady=10)
+                 
+    def generate_calculation_details(self):
+        """Generovanie detailného opisu výpočtov s vzorcami"""
+        building = self.audit_data['building']
+        envelope = self.audit_data['envelope']
+        systems = self.audit_data['systems']
+        results = self.results
+        
+        # Výpočet hodnôt krok za krokom
+        wall_losses = envelope['wall_area'] * envelope['wall_u']
+        window_losses = envelope['window_area'] * envelope['window_u']
+        total_losses = wall_losses + window_losses
+        
+        hdd = 2800  # Bratislava
+        heating_need = total_losses * hdd * 24 / 1000
+        heating_energy = heating_need / systems['heating_efficiency']
+        electricity = building['floor_area'] * 15
+        total_energy = heating_energy + electricity
+        
+        primary_energy = heating_energy * 1.1 + electricity * 3.0
+        specific_primary = primary_energy / building['floor_area']
+        
+        co2_emissions = heating_energy * 0.202 + electricity * 0.486
+        specific_co2 = co2_emissions / building['floor_area']
+        
+        details = f"""
+{'='*80}
+🧮 DETAILNÉ VÝPOČTY ENERGETICKÉHO AUDITU
+{'='*80}
+
+📊 VSTUPNÉ ÚDAJE:
+{'─'*40}
+🏢 Budova: {building['name']}
+📐 Podlahová plocha (Af): {building['floor_area']:.1f} m²
+📅 Rok výstavby: {building['construction_year']}
+🧱 Plocha stien (Aw): {envelope['wall_area']:.1f} m²
+🧱 U-hodnota stien (Uw): {envelope['wall_u']:.3f} W/m²K
+🪟 Plocha okien (Aok): {envelope['window_area']:.1f} m²
+🪟 U-hodnota okien (Uok): {envelope['window_u']:.3f} W/m²K
+⚙️  Typ vykurovania: {systems['heating_type']}
+⚙️  Účinnosť vykurovania (ηh): {systems['heating_efficiency']*100:.1f}%
+
+{'='*80}
+📈 KROK 1: VÝPOČET TEPELNÝCH STRÁT
+{'='*80}
+
+📐 VZOREC: Tepelné straty = Súčet (Plocha × U-hodnota)
+
+🧱 Tepelné straty stenami:
+   Qw = Aw × Uw
+   Qw = {envelope['wall_area']:.1f} m² × {envelope['wall_u']:.3f} W/m²K
+   Qw = {wall_losses:.2f} W/K
+
+🪟 Tepelné straty oknami:
+   Qok = Aok × Uok
+   Qok = {envelope['window_area']:.1f} m² × {envelope['window_u']:.3f} W/m²K
+   Qok = {window_losses:.2f} W/K
+
+📊 CELKOVÉ TEPELNÉ STRATY:
+   Qtotal = Qw + Qok
+   Qtotal = {wall_losses:.2f} + {window_losses:.2f}
+   Qtotal = {total_losses:.2f} W/K
+
+{'='*80}
+📈 KROK 2: POTREBA TEPLA NA VYKUROVANIE
+{'='*80}
+
+📐 VZOREC: Qh = Qtotal × HDD × 24 / 1000
+   kde: HDD = Heating Degree Days (stupňové dni vykurovania)
+
+🌡️  Heating Degree Days (Bratislava): {hdd} K·deň/rok
+
+🔥 Potreba tepla na vykurovanie:
+   Qh = {total_losses:.2f} W/K × {hdd} K·deň/rok × 24 h/deň ÷ 1000
+   Qh = {heating_need:.0f} kWh/rok
+
+{'='*80}
+📈 KROK 3: SPOTREBA ENERGIE NA VYKUROVANIE
+{'='*80}
+
+📐 VZOREC: Eh = Qh / ηh
+   kde: ηh = účinnosť vykurovacieho systému
+
+⚙️  Spotreba energie na vykurovanie:
+   Eh = {heating_need:.0f} kWh/rok ÷ {systems['heating_efficiency']:.2f}
+   Eh = {heating_energy:.0f} kWh/rok
+
+{'='*80}
+📈 KROK 4: SPOTREBA ELEKTRICKEJ ENERGIE
+{'='*80}
+
+📐 VZOREC: Eel = Af × 15 kWh/m²rok (štandardná hodnota)
+
+💡 Spotreba elektrickej energie:
+   Eel = {building['floor_area']:.1f} m² × 15 kWh/m²rok
+   Eel = {electricity:.0f} kWh/rok
+
+{'='*80}
+📈 KROK 5: CELKOVÁ SPOTREBA ENERGIE
+{'='*80}
+
+📐 VZOREC: Etotal = Eh + Eel
+
+⚡ Celková spotreba energie:
+   Etotal = {heating_energy:.0f} + {electricity:.0f}
+   Etotal = {total_energy:.0f} kWh/rok
+
+{'='*80}
+📈 KROK 6: PRIMÁRNA ENERGIA
+{'='*80}
+
+📐 VZOREC: Ep = Eh × fp,h + Eel × fp,el
+   kde: fp,h = faktor primárnej energie pre vykurovanie
+        fp,el = faktor primárnej energie pre elektrinu
+
+🔢 Faktory primárnej energie:
+   - Vykurovanie (plyn): fp,h = 1.1
+   - Elektrina: fp,el = 3.0
+
+🎯 Primárna energia:
+   Ep = {heating_energy:.0f} × 1.1 + {electricity:.0f} × 3.0
+   Ep = {heating_energy * 1.1:.0f} + {electricity * 3.0:.0f}
+   Ep = {primary_energy:.0f} kWh/rok
+
+📊 Špecifická primárna energia:
+   ep = Ep / Af
+   ep = {primary_energy:.0f} kWh/rok ÷ {building['floor_area']:.1f} m²
+   ep = {specific_primary:.1f} kWh/m²rok
+
+{'='*80}
+📈 KROK 7: ENERGETICKÁ TRIEDA
+{'='*80}
+
+📐 KLASIFIKÁCIA PODĽA STN EN 16247:
+   A: ≤ 50 kWh/m²rok    (Veľmi úsporná)
+   B: ≤ 75 kWh/m²rok    (Úsporná)
+   C: ≤ 110 kWh/m²rok   (Vyhovujúca)
+   D: ≤ 150 kWh/m²rok   (Nevyhovujúca)
+   E: ≤ 200 kWh/m²rok   (Neúsporná)
+   F: ≤ 250 kWh/m²rok   (Veľmi neúsporná)
+   G: > 250 kWh/m²rok   (Mimoriadne neúsporná)
+
+🏅 HODNOTENIE:
+   Špecifická primárna energia: {specific_primary:.1f} kWh/m²rok
+   Energetická trieda: {results['energy_class']}
+
+{'='*80}
+📈 KROK 8: CO2 EMISIE
+{'='*80}
+
+📐 VZOREC: CO2 = Eh × fCO2,h + Eel × fCO2,el
+   kde: fCO2,h = emisný faktor pre vykurovanie
+        fCO2,el = emisný faktor pre elektrinu
+
+🌍 Emisné faktory:
+   - Vykurovanie (plyn): fCO2,h = 0.202 kg CO2/kWh
+   - Elektrina: fCO2,el = 0.486 kg CO2/kWh
+
+🌱 CO2 emisie:
+   CO2 = {heating_energy:.0f} × 0.202 + {electricity:.0f} × 0.486
+   CO2 = {heating_energy * 0.202:.0f} + {electricity * 0.486:.0f}
+   CO2 = {co2_emissions:.0f} kg CO2/rok
+
+📊 Špecifické CO2 emisie:
+   co2 = CO2 / Af
+   co2 = {co2_emissions:.0f} kg CO2/rok ÷ {building['floor_area']:.1f} m²
+   co2 = {specific_co2:.1f} kg CO2/m²rok
+
+{'='*80}
+📋 SÚHRN VÝSLEDKOV
+{'='*80}
+
+🏢 BUDOVA: {building['name']}
+📐 Podlahová plocha: {building['floor_area']:.0f} m²
+
+⚡ ENERGETICKÁ BILANCIA:
+├─ Potreba tepla: {heating_need:.0f} kWh/rok
+├─ Spotreba na vykurovanie: {heating_energy:.0f} kWh/rok
+├─ Spotreba elektrickej energie: {electricity:.0f} kWh/rok
+└─ CELKOVÁ SPOTREBA: {total_energy:.0f} kWh/rok
+
+🎯 ENERGETICKÉ HODNOTENIE:
+├─ Primárna energia: {primary_energy:.0f} kWh/rok
+├─ Špecifická primárna energia: {specific_primary:.1f} kWh/m²rok
+├─ Energetická trieda: {results['energy_class']}
+└─ Tepelné straty: {total_losses:.2f} W/K
+
+🌍 ENVIRONMENTÁLNY DOPAD:
+├─ CO2 emisie: {co2_emissions:.0f} kg CO2/rok
+└─ Špecifické CO2 emisie: {specific_co2:.1f} kg CO2/m²rok
+
+{'='*80}
+📚 POUŽITÉ NORMY A ŠTANDARDY:
+{'='*80}
+
+• STN EN 16247-1: Energetické audity - Časť 1: Všeobecné požiadavky
+• STN EN ISO 13790: Energetická náročnosť budov
+• Vyhláška MH SR č. 364/2012 Z. z. o energetickej náročnosti budov
+• STN 73 0540: Tepelná ochrana budov
+
+📖 POZNÁMKY:
+• HDD hodnota 2800 K·deň/rok je typická pre Bratislavu
+• Faktory primárnej energie sú v súlade s platnou legislatívou SR
+• Emisné faktory zodpovedajú aktuálnym hodnotám pre SR
+• Štandardná spotreba elektrickej energie 15 kWh/m²rok pre obytné budovy
+
+{'='*80}
+Koniec detailného výpočtu - {datetime.now().strftime('%d.%m.%Y %H:%M')}
+{'='*80}
+"""
+        
+        return details
 
 def main():
     """Spustenie aplikácie"""
