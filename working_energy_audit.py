@@ -85,6 +85,7 @@ class WorkingEnergyAudit:
         self.create_basic_info_tab()
         self.create_envelope_tab()
         self.create_heating_tab()
+        self.create_dhw_tab()  # Nový samostatný tab pre TUV
         self.create_electrical_tab()
         self.create_usage_tab()
         self.create_results_tab()
@@ -398,27 +399,74 @@ class WorkingEnergyAudit:
             pass
     
     def on_dhw_type_changed(self, event=None):
-        """Auto-doplnenie parametrov teplej vody"""
+        """Auto-doplnenie parametrov teplej užitkovej vody"""
         dhw_type = self.dhw_type.get()
         defaults = {
-            "Elektrický bojler": {'efficiency': '85', 'circulation': 'Časová'},
-            "Plynový bojler": {'efficiency': '78', 'circulation': 'Bez cirkulácie'},
-            "Kombinovaný kotol": {'efficiency': '85', 'circulation': 'Termostatická'},
-            "Solárne kolektory": {'efficiency': '60', 'circulation': 'Termostatická'},
-            "Tepelné čerpadlo": {'efficiency': '250', 'circulation': 'Termostatická'}
+            "Elektrický bojler": {
+                'efficiency': '85', 'circulation': 'Časová', 'storage_temp': '60', 
+                'power': '2.5', 'volume_per_person': 80
+            },
+            "Plynový bojler": {
+                'efficiency': '78', 'circulation': 'Bez cirkulácie', 'storage_temp': '60', 
+                'power': '24', 'volume_per_person': 50
+            },
+            "Kombinovaný kotol": {
+                'efficiency': '85', 'circulation': 'Termostatická', 'storage_temp': '60', 
+                'power': '0', 'volume_per_person': 60
+            },
+            "Solárne kolektory": {
+                'efficiency': '60', 'circulation': 'Termostatická', 'storage_temp': '45', 
+                'power': '0', 'volume_per_person': 100
+            },
+            "Tepelné čerpadlo TUV": {
+                'efficiency': '250', 'circulation': 'Termostatická', 'storage_temp': '55', 
+                'power': '2', 'volume_per_person': 80
+            },
+            "Príprava v kotle": {
+                'efficiency': '80', 'circulation': 'Neprerushovaná', 'storage_temp': '60', 
+                'power': '0', 'volume_per_person': 40
+            },
+            "Prípravník": {
+                'efficiency': '75', 'circulation': 'Termostatická', 'storage_temp': '60', 
+                'power': '0', 'volume_per_person': 60
+            }
         }
+        
         if dhw_type in defaults:
             values = defaults[dhw_type]
+            
+            # Základné parametre
             self.dhw_efficiency.delete(0, tk.END)
             self.dhw_efficiency.insert(0, values['efficiency'])
             self.dhw_circulation.set(values['circulation'])
             
-            # Odhad objemu zásobníka podľa počtu osôb
+            # Teplota a výkon
+            if hasattr(self, 'dhw_storage_temp'):
+                self.dhw_storage_temp.delete(0, tk.END)
+                self.dhw_storage_temp.insert(0, values['storage_temp'])
+            
+            if hasattr(self, 'dhw_power') and values['power'] != '0':
+                self.dhw_power.delete(0, tk.END)
+                self.dhw_power.insert(0, values['power'])
+            
+            # Odhad objemu zásobníka a spotreby
             try:
-                occupants = int(self.occupants.get() if hasattr(self, 'occupants') and self.occupants.get() else '4')
-                estimated_volume = occupants * 50  # 50l na osobu
+                # Získať počet osôb
+                occupants = 4  # default
+                if hasattr(self, 'occupants') and self.occupants.get():
+                    occupants = int(self.occupants.get())
+                
+                # Objem zásobníka
+                estimated_volume = occupants * values['volume_per_person']
                 self.dhw_volume.delete(0, tk.END)
                 self.dhw_volume.insert(0, str(estimated_volume))
+                
+                # Denká spotreba
+                if hasattr(self, 'dhw_daily_consumption'):
+                    daily_consumption = occupants * 50  # 50l/osobu/deň
+                    self.dhw_daily_consumption.delete(0, tk.END)
+                    self.dhw_daily_consumption.insert(0, str(daily_consumption))
+                    
             except ValueError:
                 pass
             
@@ -435,6 +483,15 @@ class WorkingEnergyAudit:
                              lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
+        
+        # Legénda farieb
+        legend_frame = tk.Frame(scrollable_frame, bg='#f8f9fa', relief=tk.RIDGE, bd=1)
+        legend_frame.pack(fill=tk.X, padx=20, pady=5)
+        
+        tk.Label(legend_frame, text="ℹ️ LEGENDÁ POLÍ:", font=('Arial', 10, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10, pady=5)
+        tk.Label(legend_frame, text="🔴 POVINNÉ", fg='red', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🟠 DÔLEŽITÉ", fg='orange', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🔵 VOLITELNÉ", fg='blue', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
         
         # VONKAJŠIE STENY (STN EN 16247-1 bod 6.2.3)
         walls_frame = tk.LabelFrame(scrollable_frame, text="🧱 Vonkajšie steny (STN EN 16247-1 bod 6.2.3)", 
@@ -649,6 +706,15 @@ class WorkingEnergyAudit:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
         
+        # Legénda farieb
+        legend_frame = tk.Frame(scrollable_frame, bg='#f8f9fa', relief=tk.RIDGE, bd=1)
+        legend_frame.pack(fill=tk.X, padx=20, pady=5)
+        
+        tk.Label(legend_frame, text="ℹ️ LEGENDÁ POLÍ:", font=('Arial', 10, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10, pady=5)
+        tk.Label(legend_frame, text="🔴 POVINNÉ", fg='red', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🟠 DÔLEŽITÉ", fg='orange', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🔵 VOLITELNÉ", fg='blue', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        
         # ZDROJ TEPLA A VÝROBA
         heating_frame = tk.LabelFrame(scrollable_frame, text="🔥 Zdroj tepla a výroba (STN EN 16247-1 bod 6.2.7)", 
                                      font=('Arial', 11, 'bold'))
@@ -730,8 +796,128 @@ class WorkingEnergyAudit:
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
         
+    def create_dhw_tab(self):
+        """Tab 4: Teplá užitková voda podľa STN EN 16247-1 bod 6.2.9"""
+        tab = ttk.Frame(self.notebook)
+        self.notebook.add(tab, text="🚿 TUV")
+        
+        canvas = tk.Canvas(tab)
+        scrollbar = ttk.Scrollbar(tab, orient="vertical", command=canvas.yview)
+        scrollable_frame = tk.Frame(canvas)
+        
+        scrollable_frame.bind("<Configure>", 
+                             lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+        
+        # Legénda farieb
+        legend_frame = tk.Frame(scrollable_frame, bg='#f8f9fa', relief=tk.RIDGE, bd=1)
+        legend_frame.pack(fill=tk.X, padx=20, pady=5)
+        
+        tk.Label(legend_frame, text="ℹ️ LEGENDÁ POLÍ:", font=('Arial', 10, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10, pady=5)
+        tk.Label(legend_frame, text="🔴 POVINNÉ", fg='red', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🟠 DÔLEŽITÉ", fg='orange', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🔵 VOLITELNÉ", fg='blue', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        
+        # SYSTÉM PRÍPRAVY TUV
+        dhw_system_frame = tk.LabelFrame(scrollable_frame, text="🚿 Systém prípravy teplej užitkovej vody (STN EN 16247-1 bod 6.2.9)", 
+                                        font=('Arial', 11, 'bold'))
+        dhw_system_frame.pack(fill=tk.X, padx=20, pady=10)
+        
+        # Riad 1 - Základné parametre
+        tk.Label(dhw_system_frame, text="Typ ohrevu TUV *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.dhw_type = ttk.Combobox(dhw_system_frame, width=22, values=[
+            "Elektrický bojler", "Plynový bojler", "Kombinovaný kotol", 
+            "Solárne kolektory", "Tepelné čerpadlo TUV", "Príprava v kotle", "Prípravník"
+        ])
+        self.dhw_type.grid(row=0, column=1, padx=5, pady=3)
+        self.dhw_type.bind('<<ComboboxSelected>>', self.on_dhw_type_changed)
+        
+        tk.Label(dhw_system_frame, text="Objem zásobníka [l] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.dhw_volume = tk.Entry(dhw_system_frame, width=12, bg='#ffe6e6')
+        self.dhw_volume.grid(row=0, column=3, padx=5, pady=3)
+        
+        tk.Label(dhw_system_frame, text="Výkon ohrevu [kW]:", fg='orange').grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        self.dhw_power = tk.Entry(dhw_system_frame, width=12, bg='#fff2e6')
+        self.dhw_power.grid(row=0, column=5, padx=5, pady=3)
+        
+        # Riad 2 - Účinnosť a energia
+        tk.Label(dhw_system_frame, text="Účinnosť ohrevu ηTUV [%] *:", fg='red', font=('Arial', 9, 'bold')).grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.dhw_efficiency = tk.Entry(dhw_system_frame, width=12, bg='#ffe6e6')
+        self.dhw_efficiency.grid(row=1, column=1, padx=5, pady=3)
+        
+        tk.Label(dhw_system_frame, text="Teplota úkladania [°C]:", fg='orange').grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.dhw_storage_temp = tk.Entry(dhw_system_frame, width=12, bg='#fff2e6')
+        self.dhw_storage_temp.grid(row=1, column=3, padx=5, pady=3)
+        
+        tk.Label(dhw_system_frame, text="Rok inštalácie:", fg='blue').grid(row=1, column=4, sticky=tk.W, padx=5, pady=3)
+        self.dhw_installation_year = tk.Entry(dhw_system_frame, width=12, bg='#e6f2ff')
+        self.dhw_installation_year.grid(row=1, column=5, padx=5, pady=3)
+        
+        # DISTRIBÚCIA A CIRKULÁCIA
+        distribution_frame = tk.LabelFrame(scrollable_frame, text="🔄 Distribúcia a cirkulácia TUV", 
+                                          font=('Arial', 11, 'bold'))
+        distribution_frame.pack(fill=tk.X, padx=20, pady=10)
+        
+        tk.Label(distribution_frame, text="Typ cirkulácie:", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.dhw_circulation = ttk.Combobox(distribution_frame, width=18, values=[
+            "Bez cirkulácie", "Neprerushovaná", "Časová", "Termostatická", "So čerpadlom na požiadanie"
+        ])
+        self.dhw_circulation.grid(row=0, column=1, padx=5, pady=3)
+        
+        tk.Label(distribution_frame, text="Dĺžka rozvodov [m]:", fg='blue').grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.dhw_pipe_length = tk.Entry(distribution_frame, width=12, bg='#e6f2ff')
+        self.dhw_pipe_length.grid(row=0, column=3, padx=5, pady=3)
+        
+        tk.Label(distribution_frame, text="Izolácia rozvodov:", fg='blue').grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        self.dhw_pipe_insulation = ttk.Combobox(distribution_frame, width=15, values=[
+            "Bez izolácie", "Tenká izolácia", "Štandardná izolácia", "Hrúba izolácia"
+        ])
+        self.dhw_pipe_insulation.grid(row=0, column=5, padx=5, pady=3)
+        
+        # SPOTREBA A POŽIADAVKY
+        consumption_frame = tk.LabelFrame(scrollable_frame, text="📊 Spotreba a požiadavky na TUV", 
+                                         font=('Arial', 11, 'bold'))
+        consumption_frame.pack(fill=tk.X, padx=20, pady=10)
+        
+        tk.Label(consumption_frame, text="Denká spotreba TUV [l/deň]:", fg='orange', font=('Arial', 9, 'bold')).grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.dhw_daily_consumption = tk.Entry(consumption_frame, width=12, bg='#fff2e6')
+        self.dhw_daily_consumption.grid(row=0, column=1, padx=5, pady=3)
+        
+        tk.Label(consumption_frame, text="Počet odverných miest:", fg='blue').grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.dhw_tap_points = tk.Entry(consumption_frame, width=12, bg='#e6f2ff')
+        self.dhw_tap_points.grid(row=0, column=3, padx=5, pady=3)
+        
+        tk.Label(consumption_frame, text="Teplota dodávky [°C]:", fg='blue').grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        self.dhw_supply_temp = tk.Entry(consumption_frame, width=12, bg='#e6f2ff')
+        self.dhw_supply_temp.grid(row=0, column=5, padx=5, pady=3)
+        
+        # OBNOVITELNÉ ZDROJE ENERGIE
+        renewable_frame = tk.LabelFrame(scrollable_frame, text="☀️ Obnovitelné zdroje energie pre TUV", 
+                                       font=('Arial', 11, 'bold'))
+        renewable_frame.pack(fill=tk.X, padx=20, pady=10)
+        
+        tk.Label(renewable_frame, text="Solárne kolektory:", fg='blue').grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.solar_collectors = ttk.Combobox(renewable_frame, width=18, values=[
+            "Bez solárnych kolektorov", "Plochodeskové", "Vakúúmiové", "Koncentračné"
+        ])
+        self.solar_collectors.grid(row=0, column=1, padx=5, pady=3)
+        
+        tk.Label(renewable_frame, text="Plocha kolektorov [m²]:", fg='blue').grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.solar_area = tk.Entry(renewable_frame, width=12, bg='#e6f2ff')
+        self.solar_area.grid(row=0, column=3, padx=5, pady=3)
+        
+        tk.Label(renewable_frame, text="Orientácia kolektorov:", fg='blue').grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        self.solar_orientation = ttk.Combobox(renewable_frame, width=15, values=[
+            "Juh", "Juhovychod", "Juhozapad", "Vychod", "Zapad", "Iná"
+        ])
+        self.solar_orientation.grid(row=0, column=5, padx=5, pady=3)
+        
+        canvas.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+        
     def create_electrical_tab(self):
-        """Tab 4: Elektrina, osvetlenie a TUV podľa STN EN 16247-1"""
+        """Tab 5: Elektrina a osvetlenie podľa STN EN 16247-1"""
         tab = ttk.Frame(self.notebook)
         self.notebook.add(tab, text="💡 Elektrina")
         
@@ -743,6 +929,15 @@ class WorkingEnergyAudit:
                              lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
+        
+        # Legénda farieb
+        legend_frame = tk.Frame(scrollable_frame, bg='#f8f9fa', relief=tk.RIDGE, bd=1)
+        legend_frame.pack(fill=tk.X, padx=20, pady=5)
+        
+        tk.Label(legend_frame, text="ℹ️ LEGENDÁ POLÍ:", font=('Arial', 10, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10, pady=5)
+        tk.Label(legend_frame, text="🔴 POVINNÉ", fg='red', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🟠 DÔLEŽITÉ", fg='orange', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🔵 VOLITELNÉ", fg='blue', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
         
         # OSVETLENIE
         light_frame = tk.LabelFrame(scrollable_frame, text="💡 Osvetlenie (STN EN 16247-1 bod 6.2.8)", 
@@ -771,39 +966,18 @@ class WorkingEnergyAudit:
                                      font=('Arial', 11, 'bold'))
         devices_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(devices_frame, text="IT zariadenia [W]:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.it_power = tk.Entry(devices_frame, width=12)
+        tk.Label(devices_frame, text="IT zariadenia [W]:", fg='blue').grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.it_power = tk.Entry(devices_frame, width=12, bg='#e6f2ff')
         self.it_power.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(devices_frame, text="Ostatné spotrebiče [W]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.appliances_power = tk.Entry(devices_frame, width=12)
+        tk.Label(devices_frame, text="Ostatné spotrebiče [W]:", fg='blue').grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.appliances_power = tk.Entry(devices_frame, width=12, bg='#e6f2ff')
         self.appliances_power.grid(row=0, column=3, padx=5, pady=3)
         
-        # TEPLÁ VODA (TUV)
-        dhw_frame = tk.LabelFrame(scrollable_frame, text="🚿 Ohrev teplej vody (STN EN 16247-1 bod 6.2.9)", 
-                                 font=('Arial', 11, 'bold'))
-        dhw_frame.pack(fill=tk.X, padx=20, pady=10)
+        tk.Label(devices_frame, text="Chladenie/klimatizácia [W]:", fg='blue').grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        self.cooling_power = tk.Entry(devices_frame, width=12, bg='#e6f2ff')
+        self.cooling_power.grid(row=0, column=5, padx=5, pady=3)
         
-        tk.Label(dhw_frame, text="Typ ohrevu TUV:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
-        self.dhw_type = ttk.Combobox(dhw_frame, width=22, values=[
-            "Elektrický bojler", "Plynový bojler", "Kombinovaný kotol", "Solárne kolektory", "Tepelné čerpadlo"
-        ])
-        self.dhw_type.grid(row=0, column=1, padx=5, pady=3)
-        self.dhw_type.bind('<<ComboboxSelected>>', self.on_dhw_type_changed)
-        
-        tk.Label(dhw_frame, text="Objem zásobníka [l]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
-        self.dhw_volume = tk.Entry(dhw_frame, width=12)
-        self.dhw_volume.grid(row=0, column=3, padx=5, pady=3)
-        
-        tk.Label(dhw_frame, text="Účinnosť ohrevu ηTUV [%]:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
-        self.dhw_efficiency = tk.Entry(dhw_frame, width=12)
-        self.dhw_efficiency.grid(row=1, column=1, padx=5, pady=3)
-        
-        tk.Label(dhw_frame, text="Cirkulácia TUV:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
-        self.dhw_circulation = ttk.Combobox(dhw_frame, width=18, values=[
-            "Bez cirkulácie", "Neprerušovaná", "Časová", "Termostatická"
-        ])
-        self.dhw_circulation.grid(row=1, column=3, padx=5, pady=3)
         
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
@@ -821,6 +995,15 @@ class WorkingEnergyAudit:
                              lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
+        
+        # Legénda farieb
+        legend_frame = tk.Frame(scrollable_frame, bg='#f8f9fa', relief=tk.RIDGE, bd=1)
+        legend_frame.pack(fill=tk.X, padx=20, pady=5)
+        
+        tk.Label(legend_frame, text="ℹ️ LEGENDÁ POLÍ:", font=('Arial', 10, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10, pady=5)
+        tk.Label(legend_frame, text="🔴 POVINNÉ", fg='red', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🟠 DÔLEŽITÉ", fg='orange', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
+        tk.Label(legend_frame, text="🔵 VOLITELNÉ", fg='blue', font=('Arial', 9, 'bold'), bg='#f8f9fa').pack(side=tk.LEFT, padx=10)
         
         # OBSADENOSŤ A PREVÁDZKA
         occupancy_frame = tk.LabelFrame(scrollable_frame, text="👥 Obsadenosť a prevádzka (STN EN 16247-1 bod 6.2.10)", 
@@ -1036,8 +1219,21 @@ Audit sa vykonáva podľa noriem:
                     'lighting_power': float(self.lighting_power.get() or 500) if self.lighting_power.get() else 500,
                     'it_power': float(self.it_power.get() or 200) if self.it_power.get() else 200,
                     'appliances_power': float(self.appliances_power.get() or 300) if self.appliances_power.get() else 300,
-                    'dhw_type': self.dhw_type.get() or "Elektrický bojler",
-                    'dhw_volume': float(self.dhw_volume.get() or 200) if self.dhw_volume.get() else 200
+                    'cooling_power': float(self.cooling_power.get() or 0) if hasattr(self, 'cooling_power') and self.cooling_power.get() else 0
+                },
+                'dhw': {
+                    'type': self.dhw_type.get() or "Elektrický bojler",
+                    'volume': float(self.dhw_volume.get() or 200),
+                    'efficiency': float(self.dhw_efficiency.get() or 85) / 100 if self.dhw_efficiency.get() else 0.85,
+                    'power': float(self.dhw_power.get() or 0) if hasattr(self, 'dhw_power') and self.dhw_power.get() else 0,
+                    'storage_temp': float(self.dhw_storage_temp.get() or 60) if hasattr(self, 'dhw_storage_temp') and self.dhw_storage_temp.get() else 60,
+                    'circulation': self.dhw_circulation.get() or "Bez cirkulácie",
+                    'daily_consumption': float(self.dhw_daily_consumption.get() or 0) if hasattr(self, 'dhw_daily_consumption') and self.dhw_daily_consumption.get() else 0,
+                    'installation_year': int(self.dhw_installation_year.get() or 2010) if hasattr(self, 'dhw_installation_year') and self.dhw_installation_year.get() else None,
+                    'pipe_length': float(self.dhw_pipe_length.get() or 0) if hasattr(self, 'dhw_pipe_length') and self.dhw_pipe_length.get() else 0,
+                    'pipe_insulation': self.dhw_pipe_insulation.get() if hasattr(self, 'dhw_pipe_insulation') else "Bez izolácie",
+                    'solar_collectors': self.solar_collectors.get() if hasattr(self, 'solar_collectors') else "Bez solárnych kolektorov",
+                    'solar_area': float(self.solar_area.get() or 0) if hasattr(self, 'solar_area') and self.solar_area.get() else 0
                 },
                 'usage': {
                     'occupants': int(self.occupants.get() or 4),
@@ -1079,6 +1275,7 @@ Audit sa vykonáva podľa noriem:
             heating = self.audit_data['heating']
             usage = self.audit_data['usage']
             electrical = self.audit_data['electrical']
+            dhw = self.audit_data['dhw']
             
             # Progres 40% - Tepelné straty
             self.progress['value'] = 40
@@ -1109,11 +1306,18 @@ Audit sa vykonáva podľa noriem:
             lighting_energy = (electrical['lighting_power'] * usage['operating_hours'] * 
                              usage['operating_days']) / 1000
             
-            appliances_energy = ((electrical['it_power'] + electrical['appliances_power']) * 
+            appliances_energy = ((electrical['it_power'] + electrical['appliances_power'] + electrical['cooling_power']) * 
                                usage['operating_hours'] * usage['operating_days']) / 1000
             
-            # Teplá voda (40l/osoba/deň)
-            dhw_energy = usage['occupants'] * 40 * 365 * 1.163 / 1000  # kWh/rok
+            # Teplá užitková voda - detailný výpočet
+            if dhw['daily_consumption'] > 0:
+                daily_dhw = dhw['daily_consumption']  # l/deň
+            else:
+                daily_dhw = usage['occupants'] * 50  # odhad 50l/osobu/deň
+            
+            # Energia na ohrev TUV
+            dhw_energy_need = daily_dhw * 365 * 1.163 * (dhw['storage_temp'] - 10) / 1000  # kWh/rok (z 10°C na storage_temp)
+            dhw_energy = dhw_energy_need / dhw['efficiency']  # reálna spotreba s účinnosťou
             
             total_electricity = lighting_energy + appliances_energy + dhw_energy
             
@@ -1181,7 +1385,7 @@ Audit sa vykonáva podľa noriem:
             self.display_results()
             
             # Prepnutie na tab výsledkov
-            self.notebook.select(5)  # Index tabu výsledkov
+            self.notebook.select(6)  # Index tabu výsledkov (teô 6 kvôli novému TUV tabu)
             
             self.status_label.config(text="Audit dokončený úspešne!")
             messagebox.showinfo("Úspech", "✅ Energetický audit dokončený úspešne!")
