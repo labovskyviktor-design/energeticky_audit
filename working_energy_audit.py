@@ -120,6 +120,7 @@ class WorkingEnergyAudit:
             "Hotel", "Obchodné centrum", "Reštaurácia", "Priemyselná budova", "Sklad", "Ostatné"
         ])
         self.building_purpose.grid(row=0, column=3, padx=5, pady=3)
+        self.building_purpose.bind('<<ComboboxSelected>>', self.on_building_purpose_changed)
         
         # Riad 2  
         tk.Label(id_frame, text="Adresa *:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
@@ -277,7 +278,7 @@ class WorkingEnergyAudit:
             "Poprad (3800)": "3800",
             "Komárno (2700)": "2700",
             "Nové Zámky (2750)": "2750",
-            "Piettåny (2950)": "2950",
+            "Pietťany (2950)": "2950",
             "Ružomberok (3500)": "3500",
             "Zvolen (3450)": "3450",
             "Levoča (3550)": "3550"
@@ -287,6 +288,129 @@ class WorkingEnergyAudit:
         if selected_city in city_hdd_mapping:
             self.hdd.delete(0, tk.END)
             self.hdd.insert(0, city_hdd_mapping[selected_city])
+    
+    def on_building_purpose_changed(self, event=None):
+        """Auto-doplnenie po výbere účelu budovy"""
+        purpose = self.building_purpose.get()
+        defaults = {
+            "Rodinný dom": {'occupants': '4', 'hours': '12', 'days': '365', 'winter_temp': '21'},
+            "Bytový dom": {'occupants': '20', 'hours': '16', 'days': '365', 'winter_temp': '21'},
+            "Škola": {'occupants': '300', 'hours': '8', 'days': '185', 'winter_temp': '20'},
+            "Administratívna budova": {'occupants': '50', 'hours': '10', 'days': '250', 'winter_temp': '22'},
+            "Hotel": {'occupants': '40', 'hours': '24', 'days': '365', 'winter_temp': '22'},
+            "Obchodné centrum": {'occupants': '200', 'hours': '12', 'days': '365', 'winter_temp': '18'},
+            "Reštaurácia": {'occupants': '30', 'hours': '12', 'days': '300', 'winter_temp': '20'}
+        }
+        if purpose in defaults:
+            values = defaults[purpose]
+            # Auto-fill len ak polia už existujú (taby sú vytvárané postupne)
+            if hasattr(self, 'occupants') and hasattr(self.occupants, 'delete'): 
+                self.occupants.delete(0, tk.END)
+                self.occupants.insert(0, values['occupants'])
+            if hasattr(self, 'operating_hours') and hasattr(self.operating_hours, 'delete'):
+                self.operating_hours.delete(0, tk.END)
+                self.operating_hours.insert(0, values['hours'])
+            if hasattr(self, 'operating_days') and hasattr(self.operating_days, 'delete'):
+                self.operating_days.delete(0, tk.END)
+                self.operating_days.insert(0, values['days'])
+            if hasattr(self, 'winter_temp') and hasattr(self.winter_temp, 'delete'):
+                self.winter_temp.delete(0, tk.END)
+                self.winter_temp.insert(0, values['winter_temp'])
+    
+    def on_heating_type_changed(self, event=None):
+        """Auto-doplnenie po výbere typu vykurovania"""
+        heating_type = self.heating_type.get()
+        defaults = {
+            "Plynový kotol kondenzačný": {'efficiency': '92', 'fuel': 'Zemný plyn', 'supply_temp': '55', 'fp_heating': '1.1', 'fco2_heating': '0.202'},
+            "Plynový kotol klasický": {'efficiency': '85', 'fuel': 'Zemný plyn', 'supply_temp': '70', 'fp_heating': '1.1', 'fco2_heating': '0.202'},
+            "Elektrický kotol": {'efficiency': '95', 'fuel': 'Elektrina', 'supply_temp': '60', 'fp_heating': '2.5', 'fco2_heating': '0.296'},
+            "Tepelné čerpadlo vzduch-voda": {'efficiency': '330', 'fuel': 'Elektrina', 'supply_temp': '35', 'fp_heating': '2.5', 'fco2_heating': '0.089'},
+            "Tepelné čerpadlo zem-voda": {'efficiency': '400', 'fuel': 'Elektrina', 'supply_temp': '35', 'fp_heating': '2.5', 'fco2_heating': '0.074'},
+            "Tepelné čerpadlo voda-voda": {'efficiency': '450', 'fuel': 'Elektrina', 'supply_temp': '35', 'fp_heating': '2.5', 'fco2_heating': '0.066'},
+            "Biomasa (pelety)": {'efficiency': '88', 'fuel': 'Pelety', 'supply_temp': '65', 'fp_heating': '1.2', 'fco2_heating': '0.025'},
+            "Biomasa (drevo)": {'efficiency': '75', 'fuel': 'Drevo', 'supply_temp': '70', 'fp_heating': '1.1', 'fco2_heating': '0.022'}
+        }
+        if heating_type in defaults:
+            values = defaults[heating_type]
+            self.heating_efficiency.delete(0, tk.END)
+            self.heating_efficiency.insert(0, values['efficiency'])
+            self.fuel_type.set(values['fuel'])
+            self.supply_temp.delete(0, tk.END)
+            self.supply_temp.insert(0, values['supply_temp'])
+            self.fp_heating.delete(0, tk.END)
+            self.fp_heating.insert(0, values['fp_heating'])
+            self.fco2_heating.delete(0, tk.END)
+            self.fco2_heating.insert(0, values['fco2_heating'])
+    
+    def on_fuel_changed(self, event=None):
+        """Auto-doplnenie emisných faktorov pre palivo"""
+        fuel = self.fuel_type.get()
+        factors = {
+            "Zemný plyn": {'fp': '1.1', 'fco2': '0.202'},
+            "Elektrina": {'fp': '2.5', 'fco2': '0.296'},
+            "Pelety": {'fp': '1.2', 'fco2': '0.025'},
+            "Drevo": {'fp': '1.1', 'fco2': '0.022'},
+            "LPG": {'fp': '1.3', 'fco2': '0.235'}
+        }
+        if fuel in factors:
+            values = factors[fuel]
+            # Nastaviť len ak nie je elektrické kúrenie (pre el. kurenie sa faktory nastavia zo samotného kúrenia)
+            heating_type = self.heating_type.get()
+            if "Elektrický" not in heating_type and "Tepelné čerpadlo" not in heating_type:
+                self.fp_heating.delete(0, tk.END)
+                self.fp_heating.insert(0, values['fp'])
+                self.fco2_heating.delete(0, tk.END)
+                self.fco2_heating.insert(0, values['fco2'])
+        # Nastaviť aj základné faktory pre elektrinu
+        self.fp_electricity.delete(0, tk.END)
+        self.fp_electricity.insert(0, '2.5')
+        self.fco2_electricity.delete(0, tk.END)
+        self.fco2_electricity.insert(0, '0.296')
+    
+    def on_lighting_type_changed(self, event=None):
+        """Auto-doplnenie vlastností osvetlenia"""
+        lighting_type = self.lighting_type.get()
+        # Môžeme nastaviť odhadovaný výkon na základe typu a plochy
+        try:
+            floor_area = float(self.floor_area.get() or 0)
+            power_per_m2 = {
+                "LED": 8,
+                "Fluorescenčné (T5/T8)": 12,
+                "Halogénové": 15,
+                "Výbojkové": 18,
+                "Klasické žiarovky": 25
+            }
+            if lighting_type in power_per_m2 and floor_area > 0:
+                estimated_power = floor_area * power_per_m2[lighting_type]
+                self.lighting_power.delete(0, tk.END)
+                self.lighting_power.insert(0, str(int(estimated_power)))
+        except ValueError:
+            pass
+    
+    def on_dhw_type_changed(self, event=None):
+        """Auto-doplnenie parametrov teplej vody"""
+        dhw_type = self.dhw_type.get()
+        defaults = {
+            "Elektrický bojler": {'efficiency': '85', 'circulation': 'Časová'},
+            "Plynový bojler": {'efficiency': '78', 'circulation': 'Bez cirkulácie'},
+            "Kombinovaný kotol": {'efficiency': '85', 'circulation': 'Termostatická'},
+            "Solárne kolektory": {'efficiency': '60', 'circulation': 'Termostatická'},
+            "Tepelné čerpadlo": {'efficiency': '250', 'circulation': 'Termostatická'}
+        }
+        if dhw_type in defaults:
+            values = defaults[dhw_type]
+            self.dhw_efficiency.delete(0, tk.END)
+            self.dhw_efficiency.insert(0, values['efficiency'])
+            self.dhw_circulation.set(values['circulation'])
+            
+            # Odhad objemu zásobníka podľa počtu osôb
+            try:
+                occupants = int(self.occupants.get() if hasattr(self, 'occupants') and self.occupants.get() else '4')
+                estimated_volume = occupants * 50  # 50l na osobu
+                self.dhw_volume.delete(0, tk.END)
+                self.dhw_volume.insert(0, str(estimated_volume))
+            except ValueError:
+                pass
             
     def create_envelope_tab(self):
         """Tab 2: Obálka budovy podľa STN EN 16247-1"""
@@ -502,7 +626,7 @@ class WorkingEnergyAudit:
         scrollbar.pack(side="right", fill="y")
         
     def create_heating_tab(self):
-        """Tab 3: Vykurovanie"""
+        """Tab 3: Vykurovanie podľa STN EN 16247-1"""
         tab = ttk.Frame(self.notebook)
         self.notebook.add(tab, text="🔥 Vykurovanie")
         
@@ -515,58 +639,89 @@ class WorkingEnergyAudit:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
         
-        # VYKUROVACÍ SYSTÉM
-        heating_frame = tk.LabelFrame(scrollable_frame, text="🔥 Vykurovací systém", 
-                                     font=('Arial', 12, 'bold'))
+        # ZDROJ TEPLA A VÝROBA
+        heating_frame = tk.LabelFrame(scrollable_frame, text="🔥 Zdroj tepla a výroba (STN EN 16247-1 bod 6.2.7)", 
+                                     font=('Arial', 11, 'bold'))
         heating_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(heating_frame, text="Typ vykurovania *:").grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-        self.heating_type = ttk.Combobox(heating_frame, width=30, values=[
+        tk.Label(heating_frame, text="Typ vykurovania *:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.heating_type = ttk.Combobox(heating_frame, width=28, values=[
             "Plynový kotol kondenzačný", "Plynový kotol klasický", "Elektrický kotol",
-            "Tepelné čerpadlo", "Biomasa", "Kombinovaný systém"
+            "Tepelné čerpadlo vzduch-voda", "Tepelné čerpadlo zem-voda", "Tepelné čerpadlo voda-voda",
+            "Biomasa (pelety)", "Biomasa (drevo)", "Kombinovaný systém"
         ])
-        self.heating_type.grid(row=0, column=1, columnspan=2, padx=10, pady=5)
+        self.heating_type.grid(row=0, column=1, padx=5, pady=3)
+        self.heating_type.bind('<<ComboboxSelected>>', self.on_heating_type_changed)
         
-        tk.Label(heating_frame, text="Výkon zdroja [kW]:").grid(row=1, column=0, sticky=tk.W, padx=10, pady=5)
-        self.heating_power = tk.Entry(heating_frame, width=20)
-        self.heating_power.grid(row=1, column=1, padx=10, pady=5, sticky=tk.W)
+        tk.Label(heating_frame, text="Menovitý výkon [kW]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.heating_power = tk.Entry(heating_frame, width=12)
+        self.heating_power.grid(row=0, column=3, padx=5, pady=3)
         
-        tk.Label(heating_frame, text="Účinnosť [%] *:").grid(row=1, column=2, sticky=tk.W, padx=10, pady=5)
-        self.heating_efficiency = tk.Entry(heating_frame, width=20)
-        self.heating_efficiency.grid(row=1, column=3, padx=10, pady=5, sticky=tk.W)
+        tk.Label(heating_frame, text="Sezónna účinnosť ηs [%] *:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.heating_efficiency = tk.Entry(heating_frame, width=12)
+        self.heating_efficiency.grid(row=1, column=1, padx=5, pady=3)
         
-        tk.Label(heating_frame, text="Rok inštalácie:").grid(row=2, column=0, sticky=tk.W, padx=10, pady=5)
-        self.heating_year = tk.Entry(heating_frame, width=20)
-        self.heating_year.grid(row=2, column=1, padx=10, pady=5, sticky=tk.W)
+        tk.Label(heating_frame, text="Výstupná teplota vykurovania [°C]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.supply_temp = tk.Entry(heating_frame, width=12)
+        self.supply_temp.grid(row=1, column=3, padx=5, pady=3)
         
-        tk.Label(heating_frame, text="Typ paliva:").grid(row=2, column=2, sticky=tk.W, padx=10, pady=5)
+        tk.Label(heating_frame, text="Rok inštalácie:").grid(row=2, column=0, sticky=tk.W, padx=5, pady=3)
+        self.heating_year = tk.Entry(heating_frame, width=12)
+        self.heating_year.grid(row=2, column=1, padx=5, pady=3)
+        
+        tk.Label(heating_frame, text="Palivo *:").grid(row=2, column=2, sticky=tk.W, padx=5, pady=3)
         self.fuel_type = ttk.Combobox(heating_frame, width=18, values=[
             "Zemný plyn", "Elektrina", "Pelety", "Drevo", "LPG"
         ])
-        self.fuel_type.grid(row=2, column=3, padx=10, pady=5)
+        self.fuel_type.grid(row=2, column=3, padx=5, pady=3)
+        self.fuel_type.bind('<<ComboboxSelected>>', self.on_fuel_changed)
         
-        # DISTRIBÚCIA
-        dist_frame = tk.LabelFrame(scrollable_frame, text="🌡️ Distribúcia tepla", 
-                                  font=('Arial', 12, 'bold'))
+        # EMISNÉ A PRIMÁRNE FAKTORY
+        factors_frame = tk.LabelFrame(scrollable_frame, text="🌍 Faktory primárnej energie a emisie (referenčné)", font=('Arial', 11, 'bold'))
+        factors_frame.pack(fill=tk.X, padx=20, pady=10)
+        
+        tk.Label(factors_frame, text="fp (vykurovanie):").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.fp_heating = tk.Entry(factors_frame, width=10)
+        self.fp_heating.grid(row=0, column=1, padx=5, pady=3)
+        
+        tk.Label(factors_frame, text="fp (elektrina):").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.fp_electricity = tk.Entry(factors_frame, width=10)
+        self.fp_electricity.grid(row=0, column=3, padx=5, pady=3)
+        
+        tk.Label(factors_frame, text="fCO2 (vykurovanie) [kg/kWh]:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.fco2_heating = tk.Entry(factors_frame, width=10)
+        self.fco2_heating.grid(row=1, column=1, padx=5, pady=3)
+        
+        tk.Label(factors_frame, text="fCO2 (elektrina) [kg/kWh]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.fco2_electricity = tk.Entry(factors_frame, width=10)
+        self.fco2_electricity.grid(row=1, column=3, padx=5, pady=3)
+        
+        # DISTRIBÚCIA A REGULÁCIA
+        dist_frame = tk.LabelFrame(scrollable_frame, text="🌡️ Distribúcia tepla a regulácia", 
+                                  font=('Arial', 11, 'bold'))
         dist_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(dist_frame, text="Typ distribúcie:").grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-        self.distribution_type = ttk.Combobox(dist_frame, width=25, values=[
-            "Radiátory", "Podlahové kúrenie", "Konvektory", "Teplovzdušné"
+        tk.Label(dist_frame, text="Typ distribúcie:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.distribution_type = ttk.Combobox(dist_frame, width=20, values=[
+            "Radiátory (vyššoteplotné)", "Podlahové kúrenie (nízkoteplotné)", "Konvektory", "Teplovzdušné"
         ])
-        self.distribution_type.grid(row=0, column=1, padx=10, pady=5)
+        self.distribution_type.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(dist_frame, text="Regulácia:").grid(row=0, column=2, sticky=tk.W, padx=10, pady=5)
+        tk.Label(dist_frame, text="Izolácia rozvodov [%]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.pipe_insulation = tk.Entry(dist_frame, width=10)
+        self.pipe_insulation.grid(row=0, column=3, padx=5, pady=3)
+        
+        tk.Label(dist_frame, text="Regulácia:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
         self.heating_control = ttk.Combobox(dist_frame, width=20, values=[
-            "Bez regulácie", "Termostatické hlavice", "Ekvitermická", "Inteligentný systém"
+            "Bez regulácie", "Termostatické hlavice", "Ekvitermická", "Zónová regulácia", "Inteligentný systém"
         ])
-        self.heating_control.grid(row=0, column=3, padx=10, pady=5)
+        self.heating_control.grid(row=0, column=5, padx=5, pady=3)
         
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
         
     def create_electrical_tab(self):
-        """Tab 4: Elektrina a osvetlenie"""
+        """Tab 4: Elektrina, osvetlenie a TUV podľa STN EN 16247-1"""
         tab = ttk.Frame(self.notebook)
         self.notebook.add(tab, text="💡 Elektrina")
         
@@ -580,53 +735,71 @@ class WorkingEnergyAudit:
         canvas.configure(yscrollcommand=scrollbar.set)
         
         # OSVETLENIE
-        light_frame = tk.LabelFrame(scrollable_frame, text="💡 Osvetlenie", 
-                                   font=('Arial', 12, 'bold'))
+        light_frame = tk.LabelFrame(scrollable_frame, text="💡 Osvetlenie (STN EN 16247-1 bod 6.2.8)", 
+                                   font=('Arial', 11, 'bold'))
         light_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(light_frame, text="Typ svietidiel:").grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-        self.lighting_type = ttk.Combobox(light_frame, width=20, values=[
-            "LED", "Úsporné žiarovky", "Halogénové", "Klasické žiarovky"
+        tk.Label(light_frame, text="Typ svietidiel:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.lighting_type = ttk.Combobox(light_frame, width=18, values=[
+            "LED", "Fluorescenčné (T5/T8)", "Halogénové", "Výbojkové", "Klasické žiarovky"
         ])
-        self.lighting_type.grid(row=0, column=1, padx=10, pady=5)
+        self.lighting_type.grid(row=0, column=1, padx=5, pady=3)
+        self.lighting_type.bind('<<ComboboxSelected>>', self.on_lighting_type_changed)
         
-        tk.Label(light_frame, text="Celkový výkon [W]:").grid(row=0, column=2, sticky=tk.W, padx=10, pady=5)
-        self.lighting_power = tk.Entry(light_frame, width=20)
-        self.lighting_power.grid(row=0, column=3, padx=10, pady=5)
+        tk.Label(light_frame, text="Inštalovaný výkon [W]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.lighting_power = tk.Entry(light_frame, width=12)
+        self.lighting_power.grid(row=0, column=3, padx=5, pady=3)
         
-        # ZARIADENIA
+        tk.Label(light_frame, text="Riadenie osvetlenia:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        self.lighting_control = ttk.Combobox(light_frame, width=18, values=[
+            "Manuálne", "Časové spínače", "Senzory pohybu", "Denné svetlo", "Inteligentný systém"
+        ])
+        self.lighting_control.grid(row=0, column=5, padx=5, pady=3)
+        
+        # ELEKTRICKÉ ZARIADENIA
         devices_frame = tk.LabelFrame(scrollable_frame, text="⚡ Elektrické zariadenia", 
-                                     font=('Arial', 12, 'bold'))
+                                     font=('Arial', 11, 'bold'))
         devices_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(devices_frame, text="IT zariadenia [W]:").grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-        self.it_power = tk.Entry(devices_frame, width=20)
-        self.it_power.grid(row=0, column=1, padx=10, pady=5)
+        tk.Label(devices_frame, text="IT zariadenia [W]:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.it_power = tk.Entry(devices_frame, width=12)
+        self.it_power.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(devices_frame, text="Domáce spotrebiče [W]:").grid(row=0, column=2, sticky=tk.W, padx=10, pady=5)
-        self.appliances_power = tk.Entry(devices_frame, width=20)
-        self.appliances_power.grid(row=0, column=3, padx=10, pady=5)
+        tk.Label(devices_frame, text="Ostatné spotrebiče [W]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.appliances_power = tk.Entry(devices_frame, width=12)
+        self.appliances_power.grid(row=0, column=3, padx=5, pady=3)
         
-        # TEPLÁ VODA
-        dhw_frame = tk.LabelFrame(scrollable_frame, text="🚿 Ohrev teplej vody", 
-                                 font=('Arial', 12, 'bold'))
+        # TEPLÁ VODA (TUV)
+        dhw_frame = tk.LabelFrame(scrollable_frame, text="🚿 Ohrev teplej vody (STN EN 16247-1 bod 6.2.9)", 
+                                 font=('Arial', 11, 'bold'))
         dhw_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(dhw_frame, text="Typ ohrevu:").grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-        self.dhw_type = ttk.Combobox(dhw_frame, width=25, values=[
-            "Elektrický bojler", "Plynový bojler", "Kombinovaný kotol", "Solárne kolektory"
+        tk.Label(dhw_frame, text="Typ ohrevu TUV:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.dhw_type = ttk.Combobox(dhw_frame, width=22, values=[
+            "Elektrický bojler", "Plynový bojler", "Kombinovaný kotol", "Solárne kolektory", "Tepelné čerpadlo"
         ])
-        self.dhw_type.grid(row=0, column=1, padx=10, pady=5)
+        self.dhw_type.grid(row=0, column=1, padx=5, pady=3)
+        self.dhw_type.bind('<<ComboboxSelected>>', self.on_dhw_type_changed)
         
-        tk.Label(dhw_frame, text="Objem zásobníka [l]:").grid(row=0, column=2, sticky=tk.W, padx=10, pady=5)
-        self.dhw_volume = tk.Entry(dhw_frame, width=20)
-        self.dhw_volume.grid(row=0, column=3, padx=10, pady=5)
+        tk.Label(dhw_frame, text="Objem zásobníka [l]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.dhw_volume = tk.Entry(dhw_frame, width=12)
+        self.dhw_volume.grid(row=0, column=3, padx=5, pady=3)
+        
+        tk.Label(dhw_frame, text="Účinnosť ohrevu ηTUV [%]:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.dhw_efficiency = tk.Entry(dhw_frame, width=12)
+        self.dhw_efficiency.grid(row=1, column=1, padx=5, pady=3)
+        
+        tk.Label(dhw_frame, text="Cirkulácia TUV:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.dhw_circulation = ttk.Combobox(dhw_frame, width=18, values=[
+            "Bez cirkulácie", "Neprerušovaná", "Časová", "Termostatická"
+        ])
+        self.dhw_circulation.grid(row=1, column=3, padx=5, pady=3)
         
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
         
     def create_usage_tab(self):
-        """Tab 5: Užívanie budovy"""
+        """Tab 5: Užívanie budovy a prevádzka podľa STN EN 16247-1"""
         tab = ttk.Frame(self.notebook)
         self.notebook.add(tab, text="👥 Užívanie")
         
@@ -639,47 +812,51 @@ class WorkingEnergyAudit:
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
         
-        # OBSADENOSŤ
-        occupancy_frame = tk.LabelFrame(scrollable_frame, text="👥 Obsadenosť a prevádzka", 
-                                       font=('Arial', 12, 'bold'))
+        # OBSADENOSŤ A PREVÁDZKA
+        occupancy_frame = tk.LabelFrame(scrollable_frame, text="👥 Obsadenosť a prevádzka (STN EN 16247-1 bod 6.2.10)", 
+                                       font=('Arial', 11, 'bold'))
         occupancy_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(occupancy_frame, text="Počet obyvateľov/užívateľov:").grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-        self.occupants = tk.Entry(occupancy_frame, width=20)
-        self.occupants.grid(row=0, column=1, padx=10, pady=5)
+        tk.Label(occupancy_frame, text="Počet užívateľov (osoby):").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.occupants = tk.Entry(occupancy_frame, width=12)
+        self.occupants.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(occupancy_frame, text="Prevádzkové hodiny/deň:").grid(row=0, column=2, sticky=tk.W, padx=10, pady=5)
-        self.operating_hours = tk.Entry(occupancy_frame, width=20)
-        self.operating_hours.grid(row=0, column=3, padx=10, pady=5)
+        tk.Label(occupancy_frame, text="Hodiny/deň:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.operating_hours = tk.Entry(occupancy_frame, width=12)
+        self.operating_hours.grid(row=0, column=3, padx=5, pady=3)
         
-        tk.Label(occupancy_frame, text="Prevádzkové dni/rok:").grid(row=1, column=0, sticky=tk.W, padx=10, pady=5)
-        self.operating_days = tk.Entry(occupancy_frame, width=20)
-        self.operating_days.grid(row=1, column=1, padx=10, pady=5)
+        tk.Label(occupancy_frame, text="Dni/rok:").grid(row=0, column=4, sticky=tk.W, padx=5, pady=3)
+        self.operating_days = tk.Entry(occupancy_frame, width=12)
+        self.operating_days.grid(row=0, column=5, padx=5, pady=3)
         
-        tk.Label(occupancy_frame, text="Teplota v zime [°C]:").grid(row=1, column=2, sticky=tk.W, padx=10, pady=5)
-        self.winter_temp = tk.Entry(occupancy_frame, width=20)
-        self.winter_temp.grid(row=1, column=3, padx=10, pady=5)
+        tk.Label(occupancy_frame, text="Nastavená teplota zima [°C]:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.winter_temp = tk.Entry(occupancy_frame, width=12)
+        self.winter_temp.grid(row=1, column=1, padx=5, pady=3)
         
-        # AKTUÁLNA SPOTREBA
-        consumption_frame = tk.LabelFrame(scrollable_frame, text="📊 Aktuálna ročná spotreba", 
-                                         font=('Arial', 12, 'bold'))
+        tk.Label(occupancy_frame, text="Nastavená teplota leto [°C]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.summer_temp = tk.Entry(occupancy_frame, width=12)
+        self.summer_temp.grid(row=1, column=3, padx=5, pady=3)
+        
+        # AKTUÁLNA SPOTREBA A TARIFY
+        consumption_frame = tk.LabelFrame(scrollable_frame, text="📊 Energetická bilancia (meraná) a ceny", 
+                                         font=('Arial', 11, 'bold'))
         consumption_frame.pack(fill=tk.X, padx=20, pady=10)
         
-        tk.Label(consumption_frame, text="Spotreba plynu [m³/rok]:").grid(row=0, column=0, sticky=tk.W, padx=10, pady=5)
-        self.gas_consumption = tk.Entry(consumption_frame, width=20)
-        self.gas_consumption.grid(row=0, column=1, padx=10, pady=5)
+        tk.Label(consumption_frame, text="Ročná spotreba plynu [m³]:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=3)
+        self.gas_consumption = tk.Entry(consumption_frame, width=12)
+        self.gas_consumption.grid(row=0, column=1, padx=5, pady=3)
         
-        tk.Label(consumption_frame, text="Spotreba elektriny [kWh/rok]:").grid(row=0, column=2, sticky=tk.W, padx=10, pady=5)
-        self.electricity_consumption = tk.Entry(consumption_frame, width=20)
-        self.electricity_consumption.grid(row=0, column=3, padx=10, pady=5)
+        tk.Label(consumption_frame, text="Ročná spotreba elektriny [kWh]:").grid(row=0, column=2, sticky=tk.W, padx=5, pady=3)
+        self.electricity_consumption = tk.Entry(consumption_frame, width=12)
+        self.electricity_consumption.grid(row=0, column=3, padx=5, pady=3)
         
-        tk.Label(consumption_frame, text="Cena plynu [€/m³]:").grid(row=1, column=0, sticky=tk.W, padx=10, pady=5)
-        self.gas_price = tk.Entry(consumption_frame, width=20)
-        self.gas_price.grid(row=1, column=1, padx=10, pady=5)
+        tk.Label(consumption_frame, text="Cena plynu [€/m³]:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=3)
+        self.gas_price = tk.Entry(consumption_frame, width=12)
+        self.gas_price.grid(row=1, column=1, padx=5, pady=3)
         
-        tk.Label(consumption_frame, text="Cena elektriny [€/kWh]:").grid(row=1, column=2, sticky=tk.W, padx=10, pady=5)
-        self.electricity_price = tk.Entry(consumption_frame, width=20)
-        self.electricity_price.grid(row=1, column=3, padx=10, pady=5)
+        tk.Label(consumption_frame, text="Cena elektriny [€/kWh]:").grid(row=1, column=2, sticky=tk.W, padx=5, pady=3)
+        self.electricity_price = tk.Entry(consumption_frame, width=12)
+        self.electricity_price.grid(row=1, column=3, padx=5, pady=3)
         
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
@@ -857,6 +1034,7 @@ Audit sa vykonáva podľa noriem:
                     'operating_hours': float(self.operating_hours.get() or 12),
                     'operating_days': int(self.operating_days.get() or 250),
                     'winter_temp': float(self.winter_temp.get() or 21),
+                    'summer_temp': float(self.summer_temp.get() or 24) if hasattr(self, 'summer_temp') and self.summer_temp.get() else 24,
                     'gas_consumption': float(self.gas_consumption.get() or 0) if self.gas_consumption.get() else 0,
                     'electricity_consumption': float(self.electricity_consumption.get() or 0) if self.electricity_consumption.get() else 0,
                     'gas_price': float(self.gas_price.get() or 0.8) if self.gas_price.get() else 0.8,
