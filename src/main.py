@@ -9,9 +9,23 @@ from tkinter import ttk, messagebox
 import sys
 import os
 from pathlib import Path
+import logging
 
 # Pridanie src adresára do Python cesty
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+# Import modulov aplikácie
+try:
+    from .database import get_db_manager
+    from .audit_forms import AuditFormDialog, AuditListFrame, show_audit_form
+    from .energy_calculations import get_energy_calculator
+    from .certificate_generator import get_certificate_generator
+except ImportError:
+    # Fallback pre spustenie bez relative importov
+    from database import get_db_manager
+    from audit_forms import AuditFormDialog, AuditListFrame, show_audit_form
+    from energy_calculations import get_energy_calculator
+    from certificate_generator import get_certificate_generator
 
 class EnergyAuditApp:
     """Hlavná trieda aplikácie pre energetický audit"""
@@ -21,6 +35,14 @@ class EnergyAuditApp:
         self.root.title("Energy Audit - Energetický Audit Budov")
         self.root.geometry("1200x800")
         self.root.minsize(800, 600)
+        
+        # Inicializácia databázy a kalkulatora
+        self.db_manager = get_db_manager()
+        self.energy_calculator = get_energy_calculator()
+        self.certificate_generator = get_certificate_generator()
+        
+        # Aktuálny audit
+        self.current_audit_id = None
         
         # Nastavenie štýlu
         self.setup_styles()
@@ -95,48 +117,148 @@ class EnergyAuditApp:
         self.notebook = ttk.Notebook(work_area)
         self.notebook.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
-        # Uvítací tab
-        welcome_frame = ttk.Frame(self.notebook, padding="20")
-        self.notebook.add(welcome_frame, text="Úvod")
+        # Tab so zoznamom auditov
+        audit_list_frame = ttk.Frame(self.notebook, padding="5")
+        self.notebook.add(audit_list_frame, text="Zoznam auditov")
         
-        welcome_label = ttk.Label(welcome_frame, 
-                                text="Vitajte v aplikácii Energy Audit\n\n"
-                                     "Táto aplikácia vám pomôže:\n"
-                                     "• Vykonať energetický audit budovy\n"
-                                     "• Vygenerovať certifikát energetickej efektívnosti\n"
-                                     "• Spravovať databázu auditov\n\n"
-                                     "Pre začatie vyberte 'Nový Audit' z menu alebo použite tlačidlo v ľavom paneli.",
-                                font=('Arial', 12))
-        welcome_label.pack(expand=True)
+        # Vytvorenie zoznamu auditov
+        self.audit_list = AuditListFrame(audit_list_frame, on_audit_select=self.open_audit_details)
+        self.audit_list.pack(fill=tk.BOTH, expand=True)
         
     # Metódy pre menu akcie
     def new_audit(self):
         """Vytvorenie nového auditu"""
-        messagebox.showinfo("Nový Audit", "Funkcia 'Nový Audit' bude implementovaná.")
+        try:
+            result = show_audit_form(self.root, on_save_callback=self.on_audit_saved)
+        except Exception as e:
+            messagebox.showerror("Chyba", f"Nepodarilo sa otvoriť formulár auditu: {str(e)}")
         
     def open_audit(self):
         """Otvorenie existujúceho auditu"""
-        messagebox.showinfo("Otvoriť Audit", "Funkcia 'Otvoriť Audit' bude implementovaná.")
+        # Refresh audit list to show any changes
+        if hasattr(self, 'audit_list'):
+            self.audit_list.refresh_list()
+        messagebox.showinfo("Info", "Pre otvorenie auditu dvojkliknite na audit v zozname")
         
     def save_audit(self):
         """Uloženie aktuálneho auditu"""
-        messagebox.showinfo("Uložiť Audit", "Funkcia 'Uložiť Audit' bude implementovaná.")
+        if self.current_audit_id:
+            messagebox.showinfo("Info", f"Audit s ID {self.current_audit_id} je automaticky uložený")
+        else:
+            messagebox.showinfo("Info", "Žadny audit nie je aktuálne otvorený")
         
     def energy_calculator(self):
         """Spustenie kalkulačky energií"""
-        messagebox.showinfo("Kalkulačka", "Funkcia 'Kalkulačka energií' bude implementovaná.")
+        if not self.current_audit_id:
+            messagebox.showwarning("Upozornenie", "Najprv vyberte alebo vytvorte audit")
+            return
+        
+        try:
+            # Načítanie údajov auditu
+            audit_data = self.db_manager.get_audit(self.current_audit_id)
+            if not audit_data:
+                messagebox.showerror("Chyba", "Nepodarilo sa načítať audit")
+                return
+            
+            # Prvý prepáračný výpočet
+            building_data = {
+                'heated_area': audit_data.get('heated_area', 100),
+                'building_type': audit_data.get('building_type', 'Rodinný dom'),
+                'structures': [
+                    {'name': 'Obvodová stena', 'structure_type': 'wall', 'area': 100, 'u_value': 1.0, 'thermal_bridges': 0},
+                    {'name': 'Strecha', 'structure_type': 'roof', 'area': audit_data.get('heated_area', 100), 'u_value': 0.8, 'thermal_bridges': 0},
+                    {'name': 'Podlaha', 'structure_type': 'floor', 'area': audit_data.get('heated_area', 100), 'u_value': 0.8, 'thermal_bridges': 0},
+                    {'name': 'Okná', 'structure_type': 'window', 'area': 20, 'u_value': 1.5, 'thermal_bridges': 0}
+                ],
+                'heating_system': {'system_type': 'Plynový kotol', 'fuel_type': 'Zemný plyn', 'efficiency': 85.0}
+            }
+            
+            results = self.energy_calculator.complete_building_assessment(building_data)
+            
+            # Zobrazenie výsledkov
+            summary = results['summary']
+            classification = results['energy_classification']
+            
+            result_text = (
+                f"Výsledky energetického výpočtu:\n\n"
+                f"Energetická trieda: {classification['energy_class']}\n"
+                f"Popis: {classification['class_description']}\n\n"
+                f"Špecifická potreba tepla na vykurovanie: {summary['specific_heating_demand']:.1f} kWh/m²rok\n"
+                f"Špecifická potreba tepla na teplú vodu: {summary['specific_hot_water_demand']:.1f} kWh/m²rok\n"
+                f"Špecifická spotreba primárnej energie: {summary['specific_primary_energy']:.1f} kWh/m²rok\n"
+                f"Špecifické emisie CO₂: {summary['specific_co2_emissions']:.1f} kg/m²rok"
+            )
+            
+            messagebox.showinfo("Výsledky výpočtu", result_text)
+            
+        except Exception as e:
+            messagebox.showerror("Chyba", f"Chyba pri výpočte: {str(e)}")
         
     def certificate_generator(self):
         """Spustenie generátora certifikátu"""
-        messagebox.showinfo("Certifikát", "Funkcia 'Generátor certifikátu' bude implementovaná.")
+        if not self.current_audit_id:
+            messagebox.showwarning("Upozornenie", "Najprv vyberte alebo vytvorte audit")
+            return
+        
+        try:
+            # Generovanie certifikátu
+            certificate_path = self.certificate_generator.generate_certificate(self.current_audit_id)
+            
+            if certificate_path:
+                result = messagebox.askyesno(
+                    "Úspech", 
+                    f"Certifikát bol úspešne vygenerovaný:\n{certificate_path}\n\nChcete otvoriť adresár s certifikátom?"
+                )
+                
+                if result:
+                    # Otvorenie adresára s certifikátom
+                    import subprocess
+                    subprocess.run(["explorer", str(certificate_path.parent)], check=False)
+            else:
+                messagebox.showerror("Chyba", "Nepodarilo sa vygenerovať certifikát")
+                
+        except Exception as e:
+            messagebox.showerror("Chyba", f"Chyba pri generovaní certifikátu: {str(e)}")
         
     def about(self):
         """Zobrazenie informácií o aplikácii"""
-        messagebox.showinfo("O aplikácii", 
-                          "Energy Audit Desktop Application\n"
-                          "Verzia 1.0.0\n\n"
-                          "Aplikácia na vykonávanie energetického auditu\n"
-                          "a certifikáciu budov.")
+        db_info = self.db_manager.get_database_info()
+        info_text = (
+            "Energy Audit Desktop Application\n"
+            "Verzia 1.0.0\n\n"
+            "Aplikácia na vykonávanie energetického auditu\n"
+            "a certifikáciu budov.\n\n"
+            f"Databáza: {db_info['audit_count']} auditov\n"
+            f"Veľkosť DB: {db_info['database_size_mb']} MB"
+        )
+        messagebox.showinfo("O aplikácii", info_text)
+    
+    def on_audit_saved(self, result):
+        """Callback po uložení auditu"""
+        if hasattr(self, 'audit_list'):
+            self.audit_list.refresh_list()
+        
+        if result and result.get('action') == 'created':
+            self.current_audit_id = result.get('id')
+    
+    def open_audit_details(self, audit_id):
+        """Otvorenie detailov auditu"""
+        self.current_audit_id = audit_id
+        
+        # Načítanie údajov auditu
+        audit_data = self.db_manager.get_audit(audit_id)
+        if audit_data:
+            # Zobrazenie informácií o audite
+            info_text = (
+                f"Audit: {audit_data.get('audit_name', 'Bez názvu')}\n"
+                f"Budova: {audit_data.get('building_name', 'Bez názvu')}\n"
+                f"Typ: {audit_data.get('building_type', 'Neuvedený')}\n"
+                f"Plocha: {audit_data.get('total_area', 0)} m²\n"
+                f"Stav: {audit_data.get('status', 'draft')}"
+            )
+            messagebox.showinfo("Detail auditu", info_text)
+        else:
+            messagebox.showerror("Chyba", "Nepodarilo sa načítať audit")
 
 def main():
     """Hlavná funkcia aplikácie"""
