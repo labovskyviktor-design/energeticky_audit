@@ -1,0 +1,99 @@
+{
+  "audit_info": {
+    "title": "ENERGETICKÝ AUDIT BUDOVY",
+    "subtitle": "Energetické hodnotenie budovy dom",
+    "date": "2025-09-22 21:42",
+    "auditor": "Ing. Energetický Audítor",
+    "standard": "STN EN 16247-1, STN EN ISO 52016"
+  },
+  "building_info": {
+    "name": "dom",
+    "address": "dom",
+    "type": "Bytový dom",
+    "floor_area": 120.0,
+    "heated_area": 115.0,
+    "volume": 350.0,
+    "height": 8.5,
+    "floors": 2,
+    "construction_year": 2000
+  },
+  "results": {
+    "envelope_analysis": {
+      "total_heat_loss_coefficient": 75.0,
+      "details": [
+        {
+          "name": "Obvodová stena",
+          "area": 200.0,
+          "u_value": 0.25,
+          "heat_loss": 50.0
+        },
+        {
+          "name": "Strecha",
+          "area": 40.0,
+          "u_value": 0.2,
+          "heat_loss": 8.0
+        },
+        {
+          "name": "Podlaha",
+          "area": 20.0,
+          "u_value": 0.3,
+          "heat_loss": 6.0
+        },
+        {
+          "name": "Okná",
+          "area": 10.0,
+          "u_value": 1.1,
+          "heat_loss": 11.0
+        }
+      ]
+    },
+    "heating_analysis": {
+      "transmission_losses": 5040.0,
+      "ventilation_losses": 3998.400000000001,
+      "total_losses": 9038.400000000001,
+      "solar_gains": 1500.0,
+      "internal_gains": 153.3,
+      "net_heating_need": 7385.100000000001,
+      "specific_heating_need": 64.21826086956523
+    },
+    "energy_consumption": {
+      "heating_energy": 8205.666666666668,
+      "dhw_energy": 36.5,
+      "electricity": 1800.0,
+      "total_energy": 10042.166666666668,
+      "specific_total": 87.32318840579711
+    },
+    "primary_energy": {
+      "heating": 9026.233333333335,
+      "dhw": 109.5,
+      "electricity": 5400.0,
+      "total": 14535.733333333335,
+      "specific": 126.3976811594203
+    },
+    "energy_class": {
+      "class": "D",
+      "specific_primary_energy": 126.3976811594203
+    },
+    "co2_emissions": {
+      "heating": 1657.5446666666671,
+      "dhw": 17.739,
+      "electricity": 874.8,
+      "total": 2550.0836666666673,
+      "specific": 22.17464057971015
+    }
+  },
+  "recommendations": [
+    {
+      "category": "Vetranie",
+      "title": "Inštalácia rekuperačnej jednotky",
+      "description": "Rekuperácia tepla z odvádzaného vzduchu môže priniesť významné úspory.",
+      "priority": "Stredná",
+      "estimated_savings": "10-15%"
+    }
+  ],
+  "certification": {
+    "energy_class": "D",
+    "specific_primary_energy": "126.4 kWh/m²rok",
+    "co2_emissions": "22.2 kg CO2/m²rok"
+  }
+}

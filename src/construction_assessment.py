@@ -400,7 +400,7 @@ class ConstructionAssessor:
             u_value_rating=u_value_rating,
             insulation_adequacy=insulation_adequacy,
             thermal_bridge_assessment=thermal_bridge_assessment,
-            condensation_risk="Vyžaduje analýzu",  # Bude implementované neskôr
+            condensation_risk=self._assess_condensation_risk(construction),
             recommendations=recommendations
         )
     
@@ -509,7 +509,183 @@ class ConstructionAssessor:
         # Predpokladáme EPS izoláciu s λ = 0.040 W/mK
         additional_thickness = additional_resistance * 0.040
         
-        return max(0, additional_thickness)
+        return additional_thickness
+    
+    def _assess_condensation_risk(self, construction: Construction) -> str:
+        """
+        Hodnotenie rizika kondenzácie pomocou Glaserovej metódy
+        
+        Args:
+            construction: Stavebná konštrukcia
+            
+        Returns:
+            Hodnotenie rizika kondenzácie
+        """
+        try:
+            # Základné klimatické parametre pre Slovensko
+            exterior_temp = -12.0  # °C (exteriérová teplota)
+            interior_temp = 20.0   # °C (interiérová teplota)
+            exterior_rh = 85.0     # % (vonkajšia relatívna vlhkosť)
+            interior_rh = 50.0     # % (vnútorná relatívna vlhkosť)
+            
+            # Výpočet teplôt v jednotlivých vrstvách
+            layer_temperatures = self._calculate_layer_temperatures(
+                construction, exterior_temp, interior_temp
+            )
+            
+            # Výpočet parciálnych tlakov vodnej pary
+            vapor_pressures = self._calculate_vapor_pressures(
+                construction, exterior_rh, interior_rh, layer_temperatures
+            )
+            
+            # Hodnotenie kondenzácie
+            condensation_layers = []
+            
+            for i, (temp, vapor_pressure) in enumerate(zip(layer_temperatures, vapor_pressures)):
+                # Výpočet saturačného tlaku pri danej teplote
+                saturation_pressure = self._calculate_saturation_pressure(temp)
+                
+                # Kontrola kondenzácie
+                if vapor_pressure > saturation_pressure:
+                    condensation_layers.append(i)
+            
+            # Výsledné hodnotenie
+            if not condensation_layers:
+                return "Bez rizika kondenzácie"
+            elif len(condensation_layers) == 1 and condensation_layers[0] == 0:
+                return "Povrchová kondenzácia - kontrolovať tepelné mostíky"
+            elif any(i > 0 and i < len(construction.layers)-1 for i in condensation_layers):
+                return "Kritické riziko - kondenzácia vo vnútri konštrukcie"
+            else:
+                return "Mierneho riziko kondenzácie"
+                
+        except Exception as e:
+            return f"Chyba pri výpočte kondenzácie: {str(e)}"
+    
+    def _calculate_layer_temperatures(self, construction: Construction, 
+                                    t_ext: float, t_int: float) -> List[float]:
+        """
+        Výpočet teplôt v jednotlivých vrstvách konštrukcie
+        
+        Args:
+            construction: Stavebná konštrukcia
+            t_ext: Vonkajšia teplota [°C]
+            t_int: Vnútorná teplota [°C]
+            
+        Returns:
+            Zoznam teplôt v jednotlivých vrstvách
+        """
+        temperatures = [t_ext]  # Začíname vonkajšou teplotou
+        
+        # Tepelné odpory jednotlivých vrstiev
+        layer_resistances = []
+        for layer in construction.layers:
+            if layer.thickness > 0:
+                resistance = layer.thickness / layer.thermal_conductivity
+                layer_resistances.append(resistance)
+            else:
+                layer_resistances.append(0.001)  # Minimálny odpor
+        
+        total_resistance = sum(layer_resistances)
+        if total_resistance == 0:
+            return [t_int] * len(construction.layers)
+        
+        # Výpočet teploty na konci každej vrstvy
+        cumulative_resistance = 0
+        temp_diff = t_int - t_ext
+        
+        for resistance in layer_resistances:
+            cumulative_resistance += resistance
+            temp = t_ext + (cumulative_resistance / total_resistance) * temp_diff
+            temperatures.append(temp)
+        
+        return temperatures[1:]  # Vrátime teploty bez počiatočnej vonkajšej
+    
+    def _calculate_vapor_pressures(self, construction: Construction, 
+                                 rh_ext: float, rh_int: float, 
+                                 temperatures: List[float]) -> List[float]:
+        """
+        Výpočet parciálnych tlakov vodnej pary
+        
+        Args:
+            construction: Stavebná konštrukcia
+            rh_ext: Vonkajšia relatívna vlhkosť [%]
+            rh_int: Vnútorná relatívna vlhkosť [%]
+            temperatures: Teploty v jednotlivých vrstvách [°C]
+            
+        Returns:
+            Zoznam parciálnych tlakov vodnej pary [Pa]
+        """
+        # Výpočet difúznych odporov
+        vapor_resistances = []
+        for layer in construction.layers:
+            # Predpokladáme difúzny odpor μ = 50 pre bežné materiály
+            mu = getattr(layer, 'vapor_diffusion_resistance', 50)
+            if layer.thickness > 0:
+                vapor_resistance = mu * layer.thickness
+                vapor_resistances.append(vapor_resistance)
+            else:
+                vapor_resistances.append(1)  # Minimálny odpor
+        
+        total_vapor_resistance = sum(vapor_resistances)
+        if total_vapor_resistance == 0:
+            return [self._rh_to_vapor_pressure(rh_int, temperatures[-1])] * len(temperatures)
+        
+        # Parciálne tlaky na začiatku a konci
+        p_ext = self._rh_to_vapor_pressure(rh_ext, temperatures[0])
+        p_int = self._rh_to_vapor_pressure(rh_int, temperatures[-1])
+        
+        vapor_pressures = [p_ext]
+        cumulative_resistance = 0
+        pressure_diff = p_int - p_ext
+        
+        for resistance in vapor_resistances[:-1]:
+            cumulative_resistance += resistance
+            pressure = p_ext + (cumulative_resistance / total_vapor_resistance) * pressure_diff
+            vapor_pressures.append(pressure)
+        
+        return vapor_pressures
+    
+    def _calculate_saturation_pressure(self, temperature: float) -> float:
+        """
+        Výpočet nasýteného tlaku vodnej pary pri danej teplote
+        
+        Args:
+            temperature: Teplota [°C]
+            
+        Returns:
+            Nasýtený tlak vodnej pary [Pa]
+        """
+        import math
+        
+        # Magnus-Tetensova formula
+        if temperature >= 0:
+            # Pre vodu
+            a = 17.27
+            b = 237.7
+        else:
+            # Pre ľad
+            a = 21.875
+            b = 265.5
+        
+        exponent = (a * temperature) / (b + temperature)
+        saturation_pressure = 610.78 * math.exp(exponent)
+        
+        return saturation_pressure
+    
+    def _rh_to_vapor_pressure(self, relative_humidity: float, temperature: float) -> float:
+        """
+        Konverzia relatívnej vlhkosti na parciálny tlak vodnej pary
+        
+        Args:
+            relative_humidity: Relatívna vlhkosť [%]
+            temperature: Teplota [°C]
+            
+        Returns:
+            Parciálny tlak vodnej pary [Pa]
+        """
+        saturation_pressure = self._calculate_saturation_pressure(temperature)
+        return (relative_humidity / 100.0) * saturation_pressure
     
     def compare_constructions(self, constructions: List[Construction], 
                             standard: str = 'wall_new_2012') -> Dict[str, Any]:

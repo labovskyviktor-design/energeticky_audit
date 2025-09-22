@@ -1,0 +1,603 @@
+{
+  "audit_metadata": {
+    "audit_id": "EA-2024-COMPREHENSIVE-001",
+    "auditor": "AuditorQualification(name='Ing. Energetický Audítor', education_level='Vysokoškolské vzdelanie - energetika', experience_years=5, certification_number='EA-2024-001', certification_body='Slovenská komora energetických audítorov', specialized_areas=['Budovy', 'Priemysel'], continuous_education_hours=40)",
+    "audit_date": "2025-09-22 21:34:25.776050",
+    "audit_scope": {
+      "scope_type": "comprehensive",
+      "boundaries": "whole_building",
+      "focus_areas": [
+        "energy_efficiency",
+        "thermal_comfort",
+        "indoor_air_quality",
+        "sustainability"
+      ],
+      "audit_objectives": [
+        "Identifikácia úsporných opatrení",
+        "Hodnotenie tepelno-technických vlastností",
+        "Analýza prevádzkovej efektívnosti",
+        "Návrh renovačných opatrení"
+      ]
+    },
+    "data_collection_methods": [],
+    "limitations": [],
+    "assumptions": []
+  },
+  "general_info": {
+    "building_name": "Kancelárska budova Green Office",
+    "building_address": "Námestie Slobody 12, 811 06 Bratislava, Slovensko",
+    "building_type": "Administratívna budova",
+    "total_floor_area": 4500.0,
+    "heated_floor_area": 4200.0,
+    "conditioned_volume": 14700.0,
+    "building_height": 21.0,
+    "number_of_floors": 6,
+    "construction_year": 1998,
+    "major_renovations": [
+      {
+        "year": 2010,
+        "scope": "Výmena okien",
+        "description": "Inštalácia trojskiel s nízkoemisnými nátermi",
+        "cost": 180000
+      },
+      {
+        "year": 2018,
+        "scope": "Modernizácia vykurovacieho systému",
+        "description": "Inštalácia kondenzačného plynového kotla",
+        "cost": 85000
+      }
+    ],
+    "occupancy_profile": {
+      "max_occupants": 280,
+      "typical_occupants": 230,
+      "occupancy_schedule": "weekdays 7:00-19:00",
+      "seasonal_variation": 0.85
+    },
+    "operating_schedule": {
+      "weekdays": "6:30-20:00",
+      "saturdays": "8:00-14:00",
+      "sundays": "closed",
+      "holidays": "closed"
+    },
+    "typical_occupancy": 0,
+    "climate_zone": "Dfb",
+    "heating_degree_days": null,
+    "cooling_degree_days": null,
+    "building_permits": [],
+    "energy_label": null,
+    "data_sources": [],
+    "data_quality": "measured"
+  },
+  "building_envelope": {
+    "total_envelope_area": 5850.0,
+    "window_to_wall_ratio": 0.32,
+    "thermal_bridge_coefficient": 0.05,
+    "walls": [
+      {
+        "name": "Obvodové steny - sever",
+        "area": 980.0,
+        "u_value": 0.35,
+        "construction_type": "wall",
+        "data_quality": "calculated",
+        "material_layers": [
+          {
+            "material": "Omietka vnútorná",
+            "thickness": 0.015,
+            "lambda": 0.8
+          },
+          {
+            "material": "Porotherm 30",
+            "thickness": 0.3,
+            "lambda": 0.18
+          },
+          {
+            "material": "Polystyrén EPS",
+            "thickness": 0.12,
+            "lambda": 0.04
+          },
+          {
+            "material": "Omietka vonkajšia",
+            "thickness": 0.02,
+            "lambda": 0.8
+          }
+        ],
+        "construction_year": 1998,
+        "condition_rating": "good"
+      },
+      {
+        "name": "Obvodové steny - juh",
+        "area": 1020.0,
+        "u_value": 0.28,
+        "construction_type": "wall",
+        "data_quality": "calculated",
+        "construction_year": 2010,
+        "condition_rating": "excellent"
+      }
+    ],
+    "roof": [
+      {
+        "name": "Plochá strecha",
+        "area": 750.0,
+        "u_value": 0.22,
+        "construction_type": "roof",
+        "data_quality": "estimated",
+        "material_layers": [
+          {
+            "material": "Hydroizolácia",
+            "thickness": 0.008
+          },
+          {
+            "material": "Minerálna vlna",
+            "thickness": 0.2,
+            "lambda": 0.04
+          },
+          {
+            "material": "Parozábrana",
+            "thickness": 0.002
+          },
+          {
+            "material": "ŽB doska",
+            "thickness": 0.2,
+            "lambda": 1.6
+          }
+        ],
+        "construction_year": 1998,
+        "condition_rating": "fair"
+      }
+    ],
+    "floors": [
+      {
+        "name": "Podlaha nad suterénom",
+        "area": 750.0,
+        "u_value": 0.31,
+        "construction_type": "floor",
+        "data_quality": "estimated",
+        "construction_year": 1998,
+        "condition_rating": "good"
+      }
+    ],
+    "windows": [
+      {
+        "name": "Okná - trojsklo",
+        "area": 950.0,
+        "u_value": 1.1,
+        "construction_type": "window",
+        "data_quality": "estimated",
+        "construction_year": 2010,
+        "condition_rating": "excellent"
+      }
+    ],
+    "doors": [],
+    "airtightness_n50": 2.8,
+    "airtightness_q50": 1.9,
+    "blower_door_test_date": "2023-11-15",
+    "thermal_bridges": [],
+    "data_quality": "estimated",
+    "validation_status": "valid"
+  },
+  "technical_systems": [
+    {
+      "system_id": "HEAT-001",
+      "system_name": "Plynový kondenzačný kotol",
+      "system_category": "heating",
+      "system_type": "Gas condensing boiler",
+      "nominal_capacity": 320.0,
+      "actual_capacity": null,
+      "efficiency_nominal": 98.5,
+      "efficiency_actual": null,
+      "energy_input": [],
+      "energy_output": [],
+      "annual_consumption": {
+        "natural_gas": 85000
+      },
+      "load_profile": [],
+      "manufacturer": null,
+      "model": null,
+      "installation_year": 2018,
+      "design_life": null,
+      "operating_hours_annual": 2100,
+      "capacity_factor": null,
+      "maintenance_schedule": {},
+      "maintenance_history": [
+        {
+          "date": "2024-09-15",
+          "type": "annual_service",
+          "findings": "Všetky komponenty v poriadku",
+          "cost": 450
+        }
+      ],
+      "control_system": {
+        "type": "weather_compensated",
+        "automation_level": "automatic",
+        "sensors": [
+          "outdoor_temp",
+          "indoor_temp",
+          "flow_temp"
+        ]
+      },
+      "automation_level": "manual",
+      "setpoints": {},
+      "operational_status": "operational",
+      "condition_assessment": {},
+      "identified_issues": [],
+      "measurement_points": [],
+      "monitoring_data": [],
+      "data_quality": "measured",
+      "data_sources": []
+    },
+    {
+      "system_id": "VENT-001",
+      "system_name": "Vzduchotechnická jednotka s rekuperáciou",
+      "system_category": "ventilation",
+      "system_type": "AHU with heat recovery",
+      "nominal_capacity": 12000,
+      "actual_capacity": null,
+      "efficiency_nominal": 82.0,
+      "efficiency_actual": null,
+      "energy_input": [],
+      "energy_output": [],
+      "annual_consumption": {
+        "electricity": 18500
+      },
+      "load_profile": [],
+      "manufacturer": null,
+      "model": null,
+      "installation_year": 2015,
+      "design_life": null,
+      "operating_hours_annual": 3500,
+      "capacity_factor": null,
+      "maintenance_schedule": {},
+      "maintenance_history": [],
+      "control_system": {
+        "type": "demand_controlled",
+        "automation_level": "smart",
+        "sensors": [
+          "co2",
+          "humidity",
+          "occupancy"
+        ]
+      },
+      "automation_level": "manual",
+      "setpoints": {},
+      "operational_status": "operational",
+      "condition_assessment": {},
+      "identified_issues": [],
+      "measurement_points": [],
+      "monitoring_data": [],
+      "data_quality": "estimated",
+      "data_sources": []
+    },
+    {
+      "system_id": "LIGHT-001",
+      "system_name": "LED osvetľovací systém",
+      "system_category": "lighting",
+      "system_type": "LED with daylight control",
+      "nominal_capacity": null,
+      "actual_capacity": null,
+      "efficiency_nominal": null,
+      "efficiency_actual": null,
+      "energy_input": [],
+      "energy_output": [],
+      "annual_consumption": {
+        "electricity": 28000
+      },
+      "load_profile": [],
+      "manufacturer": null,
+      "model": null,
+      "installation_year": 2020,
+      "design_life": null,
+      "operating_hours_annual": null,
+      "capacity_factor": null,
+      "maintenance_schedule": {},
+      "maintenance_history": [],
+      "control_system": {
+        "type": "daylight_dimming",
+        "automation_level": "smart",
+        "sensors": [
+          "daylight",
+          "occupancy",
+          "motion"
+        ]
+      },
+      "automation_level": "manual",
+      "setpoints": {},
+      "operational_status": "operational",
+      "condition_assessment": {},
+      "identified_issues": [],
+      "measurement_points": [],
+      "monitoring_data": [],
+      "data_quality": "assumed",
+      "data_sources": []
+    },
+    {
+      "system_id": "DHW-001",
+      "system_name": "Ohrev teplej vody",
+      "system_category": "dhw",
+      "system_type": "Gas water heater",
+      "nominal_capacity": 45.0,
+      "actual_capacity": null,
+      "efficiency_nominal": 89.0,
+      "efficiency_actual": null,
+      "energy_input": [],
+      "energy_output": [],
+      "annual_consumption": {
+        "natural_gas": 15000
+      },
+      "load_profile": [],
+      "manufacturer": null,
+      "model": null,
+      "installation_year": null,
+      "design_life": null,
+      "operating_hours_annual": null,
+      "capacity_factor": null,
+      "maintenance_schedule": {},
+      "maintenance_history": [],
+      "control_system": null,
+      "automation_level": "manual",
+      "setpoints": {},
+      "operational_status": "operational",
+      "condition_assessment": {},
+      "identified_issues": [],
+      "measurement_points": [],
+      "monitoring_data": [],
+      "data_quality": "estimated",
+      "data_sources": []
+    }
+  ],
+  "energy_consumption": [
+    {
+      "energy_carrier": "electricity",
+      "annual_consumption": 185000.0,
+      "annual_cost": 25900.0,
+      "unit_price": 0.14,
+      "measurement_method": "continuous",
+      "hourly_profile": null,
+      "daily_profile": [
+        3.2,
+        2.8,
+        2.5,
+        2.3,
+        2.8,
+        4.5,
+        7.8,
+        9.2,
+        11.5,
+        12.8,
+        13.2,
+        13.5,
+        12.9,
+        13.1,
+        12.7,
+        12.3,
+        11.8,
+        10.9,
+        9.2,
+        7.5,
+        6.1,
+        5.2,
+        4.3,
+        3.8
+      ],
+      "weekly_profile": null,
+      "monthly_profile": [
+        16200,
+        15100,
+        14800,
+        13900,
+        12500,
+        13200,
+        14100,
+        13800,
+        14600,
+        15900,
+        17800,
+        19200
+      ],
+      "seasonal_variation": {
+        "spring": 0.92,
+        "summer": 0.85,
+        "autumn": 0.98,
+        "winter": 1.15
+      },
+      "peak_demand": 45.8,
+      "peak_demand_time": null,
+      "load_factor": 0.52,
+      "utility_bills": [
+        {
+          "period": "2024-01",
+          "consumption": 16200,
+          "cost": 2268,
+          "peak_demand": 42.1
+        },
+        {
+          "period": "2024-02",
+          "consumption": 15100,
+          "cost": 2114,
+          "peak_demand": 39.8
+        }
+      ],
+      "meter_readings": [],
+      "sub_metering": {},
+      "weather_corrected": false,
+      "occupancy_corrected": false,
+      "degree_days_correlation": null,
+      "measurement_uncertainty": 2.5,
+      "data_quality": "measured",
+      "validation_status": "valid"
+    },
+    {
+      "energy_carrier": "natural_gas",
+      "annual_consumption": 100000.0,
+      "annual_cost": 6500.0,
+      "unit_price": 0.065,
+      "measurement_method": "monthly_readings",
+      "hourly_profile": null,
+      "daily_profile": null,
+      "weekly_profile": null,
+      "monthly_profile": [
+        12500,
+        11200,
+        9800,
+        7400,
+        4200,
+        2800,
+        2200,
+        2100,
+        3500,
+        6800,
+        9200,
+        11800
+      ],
+      "seasonal_variation": {
+        "heating_season": 1.45,
+        "non_heating_season": 0.25
+      },
+      "peak_demand": null,
+      "peak_demand_time": null,
+      "load_factor": null,
+      "utility_bills": [],
+      "meter_readings": [],
+      "sub_metering": {},
+      "weather_corrected": false,
+      "occupancy_corrected": false,
+      "degree_days_correlation": null,
+      "measurement_uncertainty": 5.0,
+      "data_quality": "estimated",
+      "validation_status": "valid"
+    }
+  ],
+  "diagnostic_findings": [
+    {
+      "finding_id": "THERMO-001",
+      "diagnostic_method": "thermography",
+      "location": "Obvodová stena - severozápadný roh",
+      "severity": "medium",
+      "description": "Tepelný mostík pri napojení steny na strop",
+      "category": "thermal",
+      "measurement_date": "2024-01-20T10:30:00",
+      "inspector": "Ing. Peter Nový",
+      "measured_values": {
+        "surface_temperature": 14.2,
+        "delta_temperature": 3.8
+      },
+      "reference_values": {
+        "acceptable_delta": 2.0
+      },
+      "deviation": null,
+      "photographic_evidence": [],
+      "energy_impact": 2400,
+      "cost_impact": 180,
+      "comfort_impact": null,
+      "structural_impact": null,
+      "recommended_actions": [
+        "Dodatočná izolácia tepelného mostíka",
+        "Aplikácia vnútornej izolácie v problémovej oblasti"
+      ],
+      "urgency_level": "medium",
+      "estimated_cost_to_fix": null
+    },
+    {
+      "finding_id": "AIR-001",
+      "diagnostic_method": "blower_door",
+      "location": "Celá budova",
+      "severity": "low",
+      "description": "Vzduchotesnosť v rámci normy, ale s možnosťou zlepšenia",
+      "category": "airtightness",
+      "measurement_date": "2023-11-15T09:00:00",
+      "inspector": "Ing. Mária Krásna",
+      "measured_values": {
+        "n50": 2.8,
+        "q50": 1.9
+      },
+      "reference_values": {
+        "target_n50": 2.0,
+        "excellent_n50": 1.5
+      },
+      "deviation": null,
+      "photographic_evidence": [],
+      "energy_impact": 3200,
+      "cost_impact": 250,
+      "comfort_impact": null,
+      "structural_impact": null,
+      "recommended_actions": [
+        "Dotesnenie okien a dverí",
+        "Kontrola a oprava netesností v rozvodoch"
+      ],
+      "urgency_level": "low",
+      "estimated_cost_to_fix": null
+    },
+    {
+      "finding_id": "HVAC-001",
+      "diagnostic_method": "performance_test",
+      "location": "Strojovňa vykurovania",
+      "severity": "low",
+      "description": "Kotol pracuje s dobrou účinnosťou, mierne zníženie oproti nominálu",
+      "category": "technical",
+      "measurement_date": "2024-02-10T14:00:00",
+      "inspector": "Ing. Tomáš Technický",
+      "measured_values": {
+        "efficiency_measured": 94.2,
+        "emissions_nox": 42
+      },
+      "reference_values": {
+        "efficiency_nominal": 98.5,
+        "emissions_limit": 60
+      },
+      "deviation": null,
+      "photographic_evidence": [],
+      "energy_impact": 1800,
+      "cost_impact": 140,
+      "comfort_impact": null,
+      "structural_impact": null,
+      "recommended_actions": [
+        "Čistenie a optimalizácia nastavení horáka",
+        "Kontrola výmenníka tepla"
+      ],
+      "urgency_level": "low",
+      "estimated_cost_to_fix": null
+    }
+  ],
+  "export_timestamp": "2025-09-22T21:34:25.780054",
+  "data_quality_summary": {
+    "overall_assessment": {
+      "overall_score": 73.5,
+      "quality_level": "calculated",
+      "component_scores": {
+        "general": 100,
+        "envelope": 60,
+        "systems": 65.0,
+        "consumption": 80.0
+      }
+    },
+    "completeness_analysis": {
+      "overall_completeness": 82.5,
+      "component_completeness": {
+        "general_info": 90,
+        "building_envelope": 75,
+        "technical_systems": 80,
+        "energy_consumption": 85
+      },
+      "missing_critical_data": []
+    },
+    "accuracy_assessment": {
+      "measurement_accuracy": "high",
+      "calculation_accuracy": "medium",
+      "estimation_reliability": "medium",
+      "validation_passed": 85
+    },
+    "reliability_scores": {
+      "data_sources": 0.8,
+      "measurement_methods": 0.9,
+      "expert_assessments": 0.7,
+      "documentation_quality": 0.8
+    },
+    "improvement_recommendations": [],
+    "validation_summary": {
+      "total_validations": 10,
+      "passed": 8,
+      "warnings": 2,
+      "errors": 0,
+      "success_rate": 80.0
+    }
+  }
+}

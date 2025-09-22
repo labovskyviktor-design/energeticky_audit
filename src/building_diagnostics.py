@@ -27,6 +27,7 @@ class DiagnosticMethod(Enum):
     TEMPERATURE_LOGGING = "temperature_logging"  # Záznam teploty
     SOUND_MEASUREMENT = "sound"  # Akustické merania
     VIBRATION_ANALYSIS = "vibration"  # Vibračná analýza
+    PERFORMANCE_TEST = "performance_test"  # Test výkonnosti
 
 
 class SeverityLevel(Enum):
@@ -567,3 +568,320 @@ building_diagnostics = BuildingDiagnostics()
 def get_building_diagnostics() -> BuildingDiagnostics:
     """Získanie globálnej inštancie diagnostiky budov"""
     return building_diagnostics
+
+
+@dataclass
+class ThermalBridge:
+    """Tepelný mostík"""
+    location: str
+    bridge_type: str  # "linear", "point", "area"
+    length_or_area: float  # m alebo m²
+    psi_value: Optional[float] = None  # W/mK (pre lineárny)
+    chi_value: Optional[float] = None  # W/K (pre bodový)
+    u_value_bridge: Optional[float] = None  # W/m²K (pre plošný)
+    temperature_factor: Optional[float] = None  # fRsi
+    description: str = ""
+    mitigation_measures: List[str] = field(default_factory=list)
+    
+    def calculate_heat_loss(self, temperature_difference: float = 35.0) -> float:
+        """Výpočet tepelnej straty mostíkom"""
+        if self.bridge_type == "linear" and self.psi_value:
+            return self.psi_value * self.length_or_area * temperature_difference
+        elif self.bridge_type == "point" and self.chi_value:
+            return self.chi_value * temperature_difference
+        elif self.bridge_type == "area" and self.u_value_bridge:
+            return self.u_value_bridge * self.length_or_area * temperature_difference
+        return 0.0
+
+
+class AdvancedBuildingDiagnostics:
+    """Pokročilé diagnostické metódy pre energetické audity"""
+    
+    def __init__(self):
+        """Inicializácia pokročilých diagnostických metód"""
+        pass
+    
+    def analyze_blower_door_comprehensive(self, blower_door_test: BlowerDoorTest, 
+                                        building_volume: float, envelope_area: float) -> Dict[str, Any]:
+        """
+        Komplexná analýza blower door testu podľa IPMVP a EN 13829
+        
+        Args:
+            blower_door_test: Výsledky blower door testu
+            building_volume: Objem budovy [m³]
+            envelope_area: Plocha obálky [m²]
+            
+        Returns:
+            Detailná analýza vzduchotesnosti
+        """
+        # Základné hodnoty
+        blower_door_test.calculate_air_change_rate()
+        blower_door_test.calculate_specific_leakage()
+        
+        analysis = {
+            'basic_results': {
+                'n50_value': blower_door_test.n50_value,
+                'q50_value': blower_door_test.q50_value,
+                'air_leakage_rate': blower_door_test.air_leakage_rate
+            }
+        }
+        
+        # Hodnotenie podľa noriem
+        analysis['compliance_assessment'] = self._assess_airtightness_compliance(
+            blower_door_test.n50_value, blower_door_test.q50_value
+        )
+        
+        # Odhad infiltračných strát
+        analysis['infiltration_losses'] = self._calculate_infiltration_losses(
+            blower_door_test.n50_value, building_volume
+        )
+        
+        # Analýza únikov
+        if blower_door_test.leak_locations:
+            analysis['leak_analysis'] = self._analyze_leak_locations(
+                blower_door_test.leak_locations
+            )
+        
+        # Odporúčania
+        analysis['recommendations'] = self._generate_airtightness_recommendations(
+            blower_door_test.n50_value, analysis['leak_analysis'] if 'leak_analysis' in analysis else None
+        )
+        
+        return analysis
+    
+    def analyze_thermal_bridges_detailed(self, thermal_bridges: List[ThermalBridge],
+                                       building_area: float = 100.0) -> Dict[str, Any]:
+        """
+        Detailná analýza tepelných mostíkov podľa EN ISO 14683
+        
+        Args:
+            thermal_bridges: Zoznam tepelných mostíkov
+            building_area: Plocha budovy pre normalizáciu
+            
+        Returns:
+            Komplexná analýza tepelných mostíkov
+        """
+        if not thermal_bridges:
+            return {'error': 'Žiadne tepelné mostíky nie sú definované'}
+        
+        analysis = {
+            'bridge_summary': {
+                'total_count': len(thermal_bridges),
+                'linear_bridges': len([b for b in thermal_bridges if b.bridge_type == 'linear']),
+                'point_bridges': len([b for b in thermal_bridges if b.bridge_type == 'point']),
+                'area_bridges': len([b for b in thermal_bridges if b.bridge_type == 'area'])
+            }
+        }
+        
+        # Výpočet celkových strát
+        total_bridge_loss = sum(bridge.calculate_heat_loss() for bridge in thermal_bridges)
+        analysis['total_bridge_loss_w'] = total_bridge_loss
+        analysis['specific_bridge_loss'] = total_bridge_loss / building_area
+        
+        # Analýza jednotlivých mostíkov
+        bridge_details = []
+        for bridge in thermal_bridges:
+            heat_loss = bridge.calculate_heat_loss()
+            contribution = (heat_loss / total_bridge_loss * 100) if total_bridge_loss > 0 else 0
+            
+            bridge_details.append({
+                'location': bridge.location,
+                'type': bridge.bridge_type,
+                'heat_loss_w': heat_loss,
+                'contribution_percent': contribution,
+                'temperature_factor': bridge.temperature_factor,
+                'severity': self._classify_bridge_severity(bridge, heat_loss)
+            })
+        
+        analysis['bridge_details'] = sorted(bridge_details, key=lambda x: x['heat_loss_w'], reverse=True)
+        
+        # Hodnotenie celkového vplyvu
+        if analysis['specific_bridge_loss'] < 0.02:
+            analysis['overall_assessment'] = "Minimálny vplyv tepelných mostíkov"
+        elif analysis['specific_bridge_loss'] < 0.05:
+            analysis['overall_assessment'] = "Mierny vplyv tepelných mostíkov"
+        elif analysis['specific_bridge_loss'] < 0.10:
+            analysis['overall_assessment'] = "Značný vplyv tepelných mostíkov"
+        else:
+            analysis['overall_assessment'] = "Kritický vplyv tepelných mostíkov"
+        
+        # Odporúčania
+        analysis['recommendations'] = self._generate_bridge_recommendations(thermal_bridges, analysis)
+        
+        return analysis
+    
+    def _assess_airtightness_compliance(self, n50: Optional[float], q50: Optional[float]) -> Dict[str, Any]:
+        """Hodnotenie súladu s normami vzduchotesnosti"""
+        compliance = {}
+        
+        if n50 is not None:
+            # Hodnotenie podľa STN EN 12831
+            if n50 <= 1.5:
+                compliance['stn_rating'] = "Vynikajúca (pasívny dom)"
+                compliance['stn_class'] = "A+"
+            elif n50 <= 3.0:
+                compliance['stn_rating'] = "Veľmi dobrá"
+                compliance['stn_class'] = "A"
+            elif n50 <= 4.5:
+                compliance['stn_rating'] = "Dobrá"
+                compliance['stn_class'] = "B"
+            elif n50 <= 6.0:
+                compliance['stn_rating'] = "Vyhovujúca"
+                compliance['stn_class'] = "C"
+            else:
+                compliance['stn_rating'] = "Nevyhovujúca"
+                compliance['stn_class'] = "D"
+        
+        if q50 is not None:
+            # Hodnotenie podľa špecifického úniku
+            if q50 <= 1.0:
+                compliance['specific_rating'] = "Vynikajúca"
+            elif q50 <= 2.0:
+                compliance['specific_rating'] = "Veľmi dobrá"
+            elif q50 <= 3.0:
+                compliance['specific_rating'] = "Dobrá"
+            elif q50 <= 4.0:
+                compliance['specific_rating'] = "Vyhovujúca"
+            else:
+                compliance['specific_rating'] = "Nevyhovujúca"
+        
+        return compliance
+    
+    def _calculate_infiltration_losses(self, n50: float, building_volume: float, 
+                                     wind_shelter_factor: float = 0.05) -> Dict[str, float]:
+        """Výpočet infiltračných strát podľa EN ISO 13789"""
+        if not n50 or not building_volume:
+            return {}
+        
+        # Prepočet z n50 na prirodzenú infiltráciu
+        n_natural = n50 * wind_shelter_factor
+        
+        # Ročné infiltračné straty pri ΔT = 35K
+        annual_volume_flow = n_natural * building_volume * 8760  # m³/rok
+        specific_heat_air = 0.34  # Wh/m³K
+        temperature_difference = 35  # K
+        
+        annual_infiltration_loss = (annual_volume_flow * specific_heat_air * 
+                                  temperature_difference / 1000)  # kWh/rok
+        
+        return {
+            'natural_air_change_rate': n_natural,
+            'annual_volume_flow_m3': annual_volume_flow,
+            'annual_infiltration_loss_kwh': annual_infiltration_loss,
+            'infiltration_loss_per_m3_volume': annual_infiltration_loss / building_volume
+        }
+    
+    def _analyze_leak_locations(self, leak_locations: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Analýza miest únikov"""
+        if not leak_locations:
+            return {}
+        
+        # Kategorizácia únikov
+        categories = {
+            'windows_doors': [],
+            'penetrations': [],
+            'joints': [],
+            'envelope': [],
+            'other': []
+        }
+        
+        for leak in leak_locations:
+            location_type = leak.get('type', 'other')
+            severity = leak.get('severity', 'medium')
+            
+            # Zaradenie do kategórie
+            if any(keyword in location_type.lower() for keyword in ['okno', 'dvere', 'window', 'door']):
+                categories['windows_doors'].append(leak)
+            elif any(keyword in location_type.lower() for keyword in ['prestup', 'penetration', 'pipe']):
+                categories['penetrations'].append(leak)
+            elif any(keyword in location_type.lower() for keyword in ['spoj', 'joint', 'connection']):
+                categories['joints'].append(leak)
+            elif any(keyword in location_type.lower() for keyword in ['stena', 'strecha', 'wall', 'roof']):
+                categories['envelope'].append(leak)
+            else:
+                categories['other'].append(leak)
+        
+        # Štatistiky
+        total_leaks = len(leak_locations)
+        critical_leaks = sum(1 for leak in leak_locations if leak.get('severity') == 'high')
+        
+        return {
+            'total_leak_count': total_leaks,
+            'critical_leak_count': critical_leaks,
+            'leak_categories': categories,
+            'category_summary': {
+                cat: len(leaks) for cat, leaks in categories.items() if leaks
+            },
+            'priority_locations': [leak for leak in leak_locations if leak.get('severity') == 'high']
+        }
+    
+    def _classify_bridge_severity(self, bridge: ThermalBridge, heat_loss: float) -> str:
+        """Klasifikácia závažnosti tepelného mostíka"""
+        if heat_loss > 10.0:  # W
+            return "Kritický"
+        elif heat_loss > 5.0:
+            return "Vysoký"
+        elif heat_loss > 1.0:
+            return "Stredný"
+        else:
+            return "Nízky"
+    
+    def _generate_airtightness_recommendations(self, n50: float, 
+                                             leak_analysis: Optional[Dict] = None) -> List[str]:
+        """Generovanie odporúčaní pre zlepšenie vzduchotesnosti"""
+        recommendations = []
+        
+        if n50 > 6.0:
+            recommendations.append("Kritická potreba zlepšenia vzduchotesnosti - komplexné utesnenie")
+        elif n50 > 4.5:
+            recommendations.append("Potrebné výrazné zlepšenie vzduchotesnosti")
+        elif n50 > 3.0:
+            recommendations.append("Odporúčané zlepšenie vzduchotesnosti pre vyššiu efektívnosť")
+        
+        if leak_analysis:
+            if leak_analysis.get('critical_leak_count', 0) > 0:
+                recommendations.append("Riešenie kritických únikov ako priorita")
+            
+            category_summary = leak_analysis.get('category_summary', {})
+            if category_summary.get('windows_doors', 0) > 0:
+                recommendations.append("Kontrola a utesnenie okien a dverí")
+            if category_summary.get('penetrations', 0) > 0:
+                recommendations.append("Utesnenie prestupov inštalácií")
+            if category_summary.get('joints', 0) > 0:
+                recommendations.append("Utesnenie stavebných spojov")
+        
+        if not recommendations:
+            recommendations.append("Vzduchotesnosť je na vyhovujúcej úrovni")
+        
+        return recommendations
+    
+    def _generate_bridge_recommendations(self, bridges: List[ThermalBridge], 
+                                       analysis: Dict) -> List[str]:
+        """Generovanie odporúčaní pre tepelné mostíky"""
+        recommendations = []
+        
+        # Top 3 najhorších mostíkov
+        top_bridges = analysis['bridge_details'][:3]
+        for bridge in top_bridges:
+            if bridge['severity'] in ['Kritický', 'Vysoký']:
+                recommendations.append(
+                    f"Priorita: riešenie tepelného mostíka {bridge['location']} "
+                    f"({bridge['heat_loss_w']:.1f} W straty)"
+                )
+        
+        # Všeobecné odporúčania
+        if analysis['specific_bridge_loss'] > 0.05:
+            recommendations.append("Komplexné riešenie tepelných mostíkov v rámci zateplenia")
+            recommendations.append("Použitie prerušovačov tepelných mostíkov pri detailoch")
+        
+        # Špecifické odporúčania podľa typu
+        linear_count = analysis['bridge_summary']['linear_bridges']
+        if linear_count > 5:
+            recommendations.append("Kontrola a optimalizácia lineárnych tepelných mostíkov")
+        
+        return recommendations
+
+
+def get_advanced_building_diagnostics():
+    """Factory funkcia pre získanie pokročilej diagnostiky budov"""
+    return AdvancedBuildingDiagnostics()
