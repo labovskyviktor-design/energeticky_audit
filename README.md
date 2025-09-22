@@ -1,142 +1,106 @@
-# 🏠 Energetická Audítorská Aplikácia
+# 🏢 Professional Energy Audit System v2.0
 
-Komplexná desktopová aplikácia pre energetické audity budov implementovaná v Pythone s GUI rozhraním.
+**Profesionálny systém pre energetické audity budov podľa slovenských noriem**
 
-## 📋 Prehľad
+## 📋 Popis
 
-Táto aplikácia poskytuje kompletný ekosystém nástrojov pre energetické hodnotenie budov od základných výpočtov až po pokročilé analýzy a detailné reporty s investičnými odporúčaniami.
+Komplexná aplikácia pre vykonávanie energetických auditov budov v súlade s:
+- **STN EN 16247-1** (Energetické audity - Všeobecné požiadavky)
+- **STN EN ISO 13790** (Energetická náročnosť budov)
+- **STN 73 0540-2 Z2/2019** (Tepelná ochrana budov)
+- **Vyhláška MH SR č. 364/2012 Z. z.** o energetickej náročnosti budov
 
-## ✨ Kľúčové funkcionality
 
-### 🏗️ Základné moduly
-- **GUI formuláre** - Používateľsky prívetivé rozhranie pre zadávanie údajov
-- **Databáza** - SQLite databáza pre ukladanie auditov a výsledkov
-- **Energetické výpočty** - Komplexné výpočty podľa STN noriem
-- **Generátor certifikátov** - Automatické vytváranie energetických certifikátov
+## ✨ Hlavné funkcie
 
-### 🔬 Pokročilé analýzy
-- **Tepelno-technické výpočty** - Detailná analýza tepelných strát a mostíkov
-- **Diagnostika budov** - Termovízia, blower door testy, monitorovanie
-- **Posudzovania konštrukcií** - Hodnotenie stavebných konštrukcií a materiálov
-- **Pokročilé reporty** - Komplexné správy s grafmi a odporúčaniami
+### 🔍 Kompletný energetický audit
+- **Detailný popis budovy** - identifikácia, typológia, funkcie
+- **Obálka budovy** - steny, okná, strecha, podlaha s tepelno-technickým posúdením
+- **Vykurovací systém** - zdroje tepla, distribúcia, regulácia
+- **Teplá úžitková voda (TUV)** - samostatný tab s kompletným systémom
+- **Elektrické systémy** - osvetlenie a elektrické zariadenia
+- **Užívanie budovy** - prevádzkové parametre
 
-## 📊 Podporované štandardy
+### 🧮 Pokročilé výpočty
+- **Mesačná energetická bilancia** podľa STN EN ISO 13790
+- **Solárne a vnútorné tepelné zisky** s koeficientom využiteľnosti
+- **Transmisné straty** včítane tepelných mostov
+- **Ventilačné straty** s n50 testnosťou budovy
+- **Primárna energia** podľa aktuálnych konverzných faktorov SR
+- **CO2 emisie** podľa emisných faktorov SEPS/SHMU 2024
 
-- **STN 73 0540-2:2012** - Tepelná ochrana budov
-- **Pasívny dom** - Štandard nízkoenergetických budov  
-- **nZEB** - Takmer nulovej potreby energie
-- **Energetická klasifikácia** - Triedy A1 až G
+### 📊 Výstupy a hodnotenie
+- **Energetické triedy A0-G** podľa vyhlášky 364/2012
+- **Detailné výpočty** krok za krokom
+- **Súhrnné tabuľky** nepriehľadných a priehľadných konštrukcií
+- **Odporúčania na zlepšenie** energetickej účinnosti
+- **Energetické certifikáty** na export
+- **Projekty** uloženie/načítanie vo formáte JSON
 
-## 🧮 Výpočtové funkcie
-
-- Tepelné straty cez konštrukcie
-- Tepelné mostíky a ich vplyv
-- Potreba tepla na vykurovanie a ohrev TÚV
-- Primárna energia a CO₂ emisie
-- Sezónne energetické bilancie
-- Kondenzácia a letná stabilita
-
-## 📈 Analytické nástroje
-
-- **Benchmark analýzy** - Porovnanie s typickými hodnotami
-- **Finančné analýzy** - NPV, IRR, doba návratnosti
-- **Priority matrix** - Optimalizácia investičných rozhodnutí
-- **Environmentálny dopad** - Výpočet CO₂ úspor
-- **Compliance check** - Kontrola súladu s normami
 
 ## 🛠️ Technické špecifikácie
 
-### Požiadavky
-- Python 3.8+
-- tkinter (GUI)
-- sqlite3 (databáza)
-- reportlab (PDF generovanie)
-- Ďalšie závislosti v `requirements.txt`
+### Požiadavky na systém
+- **Python 3.8+**
+- **Tkinter** (GUI framework)
+- **Operačný systém:** Windows, macOS, Linux
 
-### Štruktúra projektu
-
-```
-energy-audit-app/
-├── src/                          # Zdrojové súbory
-│   ├── main.py                   # Hlavná aplikácia
-│   ├── config.py                 # Konfigurácia
-│   ├── database.py               # Databázové operácie
-│   ├── energy_calculations.py    # Energetické výpočty
-│   ├── thermal_analysis.py       # Tepelno-technické analýzy
-│   ├── building_diagnostics.py   # Diagnostické nástroje
-│   ├── construction_assessment.py # Posudzovania konštrukcií
-│   ├── advanced_reports.py       # Pokročilé reporty
-│   ├── audit_forms.py            # GUI formuláre
-│   └── certificate_generator.py  # Generátor certifikátov
-├── tests/                        # Testy
-├── docs/                         # Dokumentácia
-├── scripts/                      # Pomocné skripty a PDF materiály
-└── data/                         # Údajové súbory
-```
-
-## 🚀 Inštalácia a spustenie
-
+### Inštalácia a spustenie
 ```bash
-# Klonovanie repository
-git clone https://github.com/labovskyviktor-design/energeticky_audit.git
-cd energeticky_audit
-
-# Inštalácia závislostí
-pip install -r requirements.txt
-
-# Spustenie aplikácie
-python src/main.py
+# Spustenie hlavnej aplikácie
+python working_energy_audit.py
 ```
 
-## 📝 Použitie
+### Štruktúra súborov
+- `working_energy_audit.py` - **Hlavná aplikácia** (odporúčané)
+- `energy_audit_gui.py` - Pôvodná verzia
+- `simple_audit_gui.py` - Zjednodušená verzia
+- `comprehensive_audit_gui.py` - Rozšírená verzia
 
-1. **Vytvorenie auditu** - Zadanie základných údajov o budove
-2. **Analýza konštrukcií** - Definovanie stavebných konštrukcií
-3. **Energetické výpočty** - Automatické výpočty potrieb energie
-4. **Diagnostika** - Vykonanie meraní a testov
-5. **Generovanie reportov** - Vytvorenie komplexných správ
-6. **Export certifikátov** - PDF certifikáty a dokumentácia
+## 📈 Validované výpočty
 
-## 🧪 Testovanie
+### Klimatické údaje SR
+- **Bratislava:** HDD 2800 K·deň/rok
+- **Košice:** HDD 3100 K·deň/rok  
+- **Poprad:** HDD 3200 K·deň/rok
 
-```bash
-# Spustenie všetkých testov
-python run_tests.py
+### Konverzné faktory (2024)
+- **Zemný plyn:** 1.1
+- **Elektrina:** 2.5
+- **Celenné vykurovanie:** 1.0
+- **Tepelné čerpadlo:** 2.5
 
-# Jednotlivé testy modulov
-python -m pytest tests/
-```
+### CO2 emisné faktory (2024)
+- **Elektrina SR:** 0.218 kg CO2/kWh
+- **Zemný plyn:** 0.202 kg CO2/kWh
+- **Biomasa:** 0.039 kg CO2/kWh
 
-## 📚 Dokumentácia
+## 🎯 Cieľové skupiny
 
-Podrobná dokumentácia je dostupná v priečinku `docs/` vrátane:
-- Technickej dokumentácie modulov
-- Užívateľskej príručky
-- Príkladov použitia
-- Referenčných materiálov (PDF)
+- **Energetickí audítori** - certifikovaní odborníci
+- **Projektanti** - návrh energeticky efektívnych budov
+- **Správcovia nehnuteľností** - optimalizácia energetických nákladov
+- **Developeri** - hodnotenie energetickej náročnosti projektov
 
-## 🤝 Prispievanie
+## 📞 Kontakt a podpora
 
-1. Vytvorte fork repository
-2. Vytvorte feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commitnite zmeny (`git commit -m 'Add some AmazingFeature'`)
-4. Push do branch (`git push origin feature/AmazingFeature`)
-5. Otvorte Pull Request
+**Aplikácia je určená výlučne pre profesionálne použitie.**
 
-## 📄 Licencia
-
-Tento projekt je licencovaný pod MIT licenciou - pozrite súbor `LICENSE` pre detaily.
-
-## 👥 Autori
-
-- **Viktor Labovský** - *Inicálna práca* - [labovskyviktor-design](https://github.com/labovskyviktor-design)
-
-## 🙏 Poďakovanie
-
-- STN normy pre energetické hodnotenie budov
-- Python komunita za výborné nástroje
-- Všetkým prispievateľom a testerom
+Pre získanie prístupu alebo technickú podporu kontaktujte vlastníka.
 
 ---
 
-**⚡ Energetická efektívnosť začína správnym meraním a analýzou!**
+## 📄 Licencia
+
+**Copyright © 2024 - Všetky práva vyhradené**
+
+Táto aplikácia je vlastníctvom jej autora. Akékoľvek použitie, kopírovanie, modifikácia alebo distribúcia je **prísne zakázaná** bez písomného súhlasu vlastníka.
+
+### ⚠️ Dôležité upozornenie:
+- Neautorizované použitie je **trestným činom**
+- Všetky výpočty a metodiky jsou chránené autorskými právami
+- Pre komerčné použitie je potrebná licenčná zmluva
+
+---
+
+*Posledná aktualizácia: 22. september 2024*

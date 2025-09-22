@@ -1,21 +1,51 @@
-MIT License
+Copyright © 2024 - Všetky práva vyhradené
 
-Copyright (c) 2025 Viktor Labovský
+VLASTNÍCKA LICENCIA - PROFESSIONAL ENERGY AUDIT SYSTEM
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Vlastník: [Váš názov/meno]
+Dátum: 22. september 2024
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. VLASTNÍCTVO
+   Táto aplikácia "Professional Energy Audit System v2.0" a všetky súvisiace súbory,
+   zdrojový kód, dokumentácia, algoritmy a metodiky sú výlučným vlastníctvom autora.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. OBMEDZENIA POUŽITIA
+   Bez písomného súhlasu vlastníka je PRÍSNE ZAKÁZANÉ:
+   - Kopírovanie aplikácie alebo jej častí
+   - Modifikácia zdrojového kódu
+   - Distribúcia v akejkoľvek forme
+   - Komerčné využitie
+   - Reverse engineering
+   - Dekompilácia alebo analýza kódu
+   - Vytváranie odvodených diel
+
+3. POVOLENÉ POUŽITIE
+   Aplikácia môže byť používaná výlučne:
+   - S výslovným písomným povolením vlastníka
+   - V súlade s licenčnou zmluvou
+   - Pre účely definované vlastníkom
+
+4. OCHRANA DUŠEVNÉHO VLASTNÍCTVA
+   - Všetky výpočtové algoritmy sú chránené autorským právom
+   - Metodiky a postupy sú proprietárne
+   - GUI dizájn a používateľské rozhranie je chránené
+   - Databáza faktorov a noriem je duševným vlastníkom
+
+5. PRÁVNE DÔSLEDKY
+   Porušenie tejto licencie predstavuje:
+   - Porušenie autorských práv
+   - Trestný čin podľa platnej legislatívy
+   - Dôvod pre občianskoprávnu zodpovednosť
+   - Nárok na náhradu škody
+
+6. ZÁRUKA A ZODPOVEDNOSŤ
+   - Aplikácia je poskytovaná "tak ako je"
+   - Vlastník nezodpovedá za škody vzniknuté používaním
+   - Všetky riziká nesie používateľ
+
+7. KONTAKT
+   Pre získanie licencie alebo povolení kontaktujte vlastníka.
+
+UPOZORNENIE: Toto je proprietárny softvér. Neautorizované použitie je trestným činom!
+
+Všetky práva vyhradené © 2024
