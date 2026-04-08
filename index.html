@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energetický Audit — Výpočtový nástroj</title>
+    <meta name="description" content="Softvér na energetický audit a certifikáciu budov podľa slovenských technických noriem (STN).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     VIEW: DASHBOARD
+════════════════════════════════════════════════════════════ -->
+<div id="view-dashboard">
+
+    <!-- Top bar -->
+    <div class="dash-topbar">
+        <div class="dash-topbar-inner">
+            <div class="dash-logo">
+                <span class="dash-logo-icon">⚡</span>
+                <div>
+                    <div class="dash-logo-text">Energetický Audit</div>
+                    <div class="dash-logo-sub">Výpočtový nástroj — STN 73 0540-2/Z1</div>
+                </div>
+            </div>
+            <button class="btn-primary" id="btn-new-project" onclick="showNewProject()">
+                + Nový projekt
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="dash-hero">
+        <div>
+            <h1>Moje projekty</h1>
+            <p>Vyberte existujúci projekt alebo vytvorte nový energetický audit.</p>
+        </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="dash-search-bar">
+        <div class="dash-search-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="dash-search" placeholder="Hľadať projekt..." autocomplete="off">
+        </div>
+        <span class="dash-count" id="dash-projects-count"></span>
+    </div>
+
+    <!-- Projects grid -->
+    <div class="dash-content">
+        <div class="projects-grid" id="projects-grid"></div>
+    </div>
+
+</div><!-- /view-dashboard -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     VIEW: NEW PROJECT FORM
+════════════════════════════════════════════════════════════ -->
+<div id="view-new-project" style="display:none">
+
+    <!-- Top bar -->
+    <div class="dash-topbar">
+        <div class="dash-topbar-inner">
+            <div class="dash-logo">
+                <span class="dash-logo-icon">⚡</span>
+                <div>
+                    <div class="dash-logo-text">Energetický Audit</div>
+                    <div class="dash-logo-sub">Výpočtový nástroj — STN 73 0540-2/Z1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="new-project-screen">
+        <button class="back-btn" onclick="goToDashboard()">← Späť na projekty</button>
+        <h2>Nový projekt</h2>
+        <p class="subtitle-text">Vyplňte základné informácie o projekte. Môžete ich kedykoľvek upraviť.</p>
+
+        <form id="new-project-form">
+            <div class="new-project-card">
+
+                <!-- Identifikácia projektu -->
+                <p class="form-section-title">📋 Identifikácia projektu</p>
+                <div class="form-grid">
+                    <div class="field field-wide">
+                        <label for="np-name">Názov projektu *</label>
+                        <input type="text" id="np-name" name="np-name"
+                               placeholder="napr. Bytový dom Bratislava P1.14" required>
+                    </div>
+                    <div class="field field-wide">
+                        <label for="np-address">Adresa / lokalita</label>
+                        <input type="text" id="np-address" name="np-address"
+                               placeholder="napr. Ul. Mieru 14, 811 01 Bratislava">
+                    </div>
+                </div>
+
+                <!-- Budova -->
+                <p class="form-section-title" style="margin-top:1.5rem;">🏢 Popis budovy</p>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="np-type">Typ budovy</label>
+                        <select id="np-type" name="np-type">
+                            <option value="Bytový dom" selected>Bytový dom</option>
+                            <option value="Rodinný dom">Rodinný dom</option>
+                            <option value="Administratíva">Administratívna budova</option>
+                            <option value="Škola">Škola / Vzdelávanie</option>
+                            <option value="Nemocnica">Nemocnica / Zdravotníctvo</option>
+                            <option value="Priemysel">Priemyselná budova</option>
+                            <option value="Iné">Iné</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="np-year">Rok výstavby</label>
+                        <input type="number" id="np-year" name="np-year"
+                               placeholder="napr. 1985" min="1800" max="2030" step="1">
+                    </div>
+                    <div class="field">
+                        <label for="np-floors">Počet nadzemných podlaží</label>
+                        <input type="number" id="np-floors" name="np-floors"
+                               placeholder="napr. 8" min="1" max="100" step="1">
+                    </div>
+                </div>
+
+                <!-- Auditor -->
+                <p class="form-section-title" style="margin-top:1.5rem;">👤 Zodpovedný auditor</p>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="np-auditor">Meno auditora</label>
+                        <input type="text" id="np-auditor" name="np-auditor"
+                               placeholder="napr. Ing. Ján Novák">
+                    </div>
+                    <div class="field">
+                        <label for="np-number">Číslo oprávnenia</label>
+                        <input type="text" id="np-number" name="np-number"
+                               placeholder="napr. EA-2024-0123">
+                    </div>
+                </div>
+
+            </div><!-- /new-project-card -->
+
+            <div class="new-project-actions">
+                <button type="button" class="btn-secondary" onclick="goToDashboard()">Zrušiť</button>
+                <button type="submit" class="btn-primary">Pokračovať na audit ➔</button>
+            </div>
+        </form>
+    </div>
+
+</div><!-- /view-new-project -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     VIEW: AUDIT TOOL
+════════════════════════════════════════════════════════════ -->
+<div id="view-audit" style="display:none">
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>Energetický Audit</h1>
+            </div>
+            <div id="audit-project-strip"></div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav class="wizard-steps">
+                <button class="step-btn active" onclick="switchTab('ch1', this)">
+                    <span class="step-num">1</span>
+                    <span class="step-title">Posúdenie konštrukcií</span>
+                </button>
+                <button class="step-btn" onclick="switchTab('ch2', this)">
+                    <span class="step-num">2</span>
+                    <span class="step-title">Potreba tepla</span>
+                </button>
+                <button class="step-btn" onclick="switchTab('ch3', this)">
+                    <span class="step-num">3</span>
+                    <span class="step-title">Vykurovacia sústava</span>
+                </button>
+                <button class="step-btn" onclick="switchTab('ch4', this)">
+                    <span class="step-num">4</span>
+                    <span class="step-title">Príprava teplej vody</span>
+                </button>
+                <button class="step-btn" onclick="switchTab('ch6', this)">
+                    <span class="step-num">5</span>
+                    <span class="step-title">Návrh opatrení</span>
+                </button>
+                <button class="step-btn" onclick="switchTab('ch8', this)">
+                    <span class="step-num">6</span>
+                    <span class="step-title">Ekonomika a Návratnosť</span>
+                </button>
+                <button class="step-btn" onclick="switchTab('ch9', this)">
+                    <span class="step-num">7</span>
+                    <span class="step-title">Energetický certifikát</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer" style="flex-direction:column; align-items:flex-start; gap:0.5rem;">
+                <div style="display:flex; justify-content:space-between; width:100%;">
+                    <label for="expert-toggle" class="expert-label">Expert Mode</label>
+                    <label class="switch">
+                        <input type="checkbox" id="expert-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div style="display:flex; justify-content:space-between; width:100%;">
+                    <label for="dark-toggle" class="expert-label">🌙 Tmavý režim</label>
+                    <label class="switch">
+                        <input type="checkbox" id="dark-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="step-container">
+                <!-- ============================================================ -->
+                <!-- CHAPTER 1: Thermal Assessment -->
+                <!-- ============================================================ -->
+                <section id="tab-ch1" class="tab-content active">
+                    <div class="ch1-layout-wrapper" style="display:flex; gap:1.5rem; align-items:flex-start; flex-wrap:wrap;">
+                        <!-- Hlavný stĺpec -->
+                        <div class="ch1-main-col" style="flex: 1 1 500px; min-width: 0;">
+                            <!-- 1. Calculation from layers -->
+                    <div class="card">
+                        <h2>1. Výpočet U z vrstiev konštrukcie</h2>
+                        <p class="card-desc">R&nbsp;= &Sigma;(d/&lambda;), U&nbsp;= 1/(Rsi&nbsp;+&nbsp;R&nbsp;+&nbsp;Rse) — vzorce STN EN ISO 6946</p>
+
+                        <div class="form-section">
+                            <!-- Toolbar -->
+                            <div class="layers-toolbar">
+                                <h3>Skladba konštrukcie <span style="font-weight:400;color:var(--text-muted);font-size:0.8rem;">(od interiéru k exteréru)</span></h3>
+                                <div class="layers-toolbar-actions">
+                                    <div class="preset-dropdown-wrap">
+                                        <button type="button" class="btn-secondary btn-preset-toggle" id="btn-preset-toggle" onclick="togglePresetDropdown()">
+                                            📄 Preset konštrukcie &nbsp;<span class="caret">▾</span>
+                                        </button>
+                                        <div class="preset-dropdown" id="preset-dropdown">
+                                            <p class="preset-dropdown-title">Vyberte typ konštrukcie</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="layers-table" id="layers-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:36px"></th>
+                                            <th>Materál / Názov vrstvy</th>
+                                            <th width="90">d [m]</th>
+                                            <th width="90">&lambda; [W/mK]</th>
+                                            <th width="85">&rho; [kg/m³]</th>
+                                            <th width="80">c [J/kgK]</th>
+                                            <th width="65">&mu; [-]</th>
+                                            <th width="36"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="layers-tbody">
+                                        <tr>
+                                            <td><button type="button" class="btn-pick-mat" onclick="openMaterialPicker(this.closest('tr'))" title="Vybrať materiálu z knižnice">🧱</button></td>
+                                            <td><input type="text" placeholder="Názov vrstvy" value="Silikátová omietka"></td>
+                                            <td><input type="number" value="0.002" step="0.001" class="layer-d" placeholder="d"></td>
+                                            <td><input type="number" value="0.80" step="0.001" class="layer-l"></td>
+                                            <td><input type="number" value="1700" class="layer-rho"></td>
+                                            <td><input type="number" value="1000" class="layer-c"></td>
+                                            <td><input type="number" value="45" class="layer-mu"></td>
+                                            <td><button type="button" class="btn-icon" onclick="removeLayerRow(this)" title="Odstrániť">✕</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" id="ch1-add-layer" class="btn-secondary" style="margin-top:0.5rem;" onclick="addLayerRow()">+ Pridať vrstvu</button>
+
+                            <div class="form-grid" style="margin-top: 1.5rem;">
+                                <div class="field">
+                                    <label for="ch1-name">Názov konštrukcie</label>
+                                    <input type="text" id="ch1-name" value="Obvodová stena">
+                                </div>
+                                <div class="field">
+                                    <label for="ch1-type">Typ konštrukcie</label>
+                                    <select id="ch1-type">
+                                        <optgroup label="Opláštenie budovy">
+                                            <option value="wall" selected>Vonkajšia stena a šikmá strecha nad obyt. priestorom so sklonom >45°</option>
+                                            <option value="roof">Plochá a šikmá strecha ≤45°</option>
+                                            <option value="ceiling_ext">Strop nad vonkajším prostredím</option>
+                                            <option value="ceiling">Strop pod nevykurovaným priestorom</option>
+                                        </optgroup>
+                                        <optgroup label="Steny s vodorovným tepelným tokom">
+                                            <option value="int_hor_10">Medzi vnút. priestorom s rozdielom teplôt do 10 K (vodorovne)</option>
+                                            <option value="int_hor_15">Medzi vnút. priestorom s rozdielom teplôt do 15 K (vodorovne)</option>
+                                            <option value="int_hor_20">Medzi vnút. priestorom s rozdielom teplôt do 20 K (vodorovne)</option>
+                                            <option value="int_hor_25">Medzi vnút. priestorom s rozdielom teplôt do 25 K (vodorovne)</option>
+                                            <option value="int_hor_over25">Medzi vnút. priestorom s rozdielom teplôt nad 25 K (vodorovne)</option>
+                                        </optgroup>
+                                        <optgroup label="Stropy s tepelným tokom zdola nahor">
+                                            <option value="int_up_10">Medzi vnút. priestorom s rozdielom teplôt do 10 K (zdola nahor)</option>
+                                            <option value="int_up_15">Medzi vnút. priestorom s rozdielom teplôt do 15 K (zdola nahor)</option>
+                                            <option value="int_up_20">Medzi vnút. priestorom s rozdielom teplôt do 20 K (zdola nahor)</option>
+                                            <option value="int_up_25">Medzi vnút. priestorom s rozdielom teplôt do 25 K (zdola nahor)</option>
+                                            <option value="int_up_over25">Medzi vnút. priestorom s rozdielom teplôt nad 25 K (zdola nahor)</option>
+                                        </optgroup>
+                                        <optgroup label="Stropy s tepelným tokom zhora nadol">
+                                            <option value="int_down_10">Medzi vnút. priestorom s rozdielom teplôt do 10 K (zhora nadol)</option>
+                                            <option value="int_down_15">Medzi vnút. priestorom s rozdielom teplôt do 15 K (zhora nadol)</option>
+                                            <option value="int_down_20">Medzi vnút. priestorom s rozdielom teplôt do 20 K (zhora nadol)</option>
+                                            <option value="int_down_25">Medzi vnút. priestorom s rozdielom teplôt do 25 K (zhora nadol)</option>
+                                            <option value="int_down_over25">Medzi vnút. priestorom s rozdielom teplôt nad 25 K (zhora nadol)</option>
+                                        </optgroup>
+                                        <optgroup label="Podlahy a steny pri zemine">
+                                            <option value="earth_wall_05">Stena k zemine pri hĺbke do 0,5 m</option>
+                                            <option value="earth_wall_20">Stena k zemine pri hĺbke nad 0,5 m do 2,0 m</option>
+                                            <option value="earth_wall_over20">Stena k zemine pri hĺbke nad 2,0 m</option>
+                                            <option value="earth_floor_edge">Podlaha na teréne (úroveň do 0,5 m, vzdialenosť do 2,0 m od steny)</option>
+                                            <option value="earth_floor_other">Podlaha na teréne (ostatné prípady)</option>
+                                        </optgroup>
+                                        <optgroup label="Výplne otvorov">
+                                            <option value="window">Okno vo vonkajšej stene / strešné okno</option>
+                                            <option value="door">Vonkajšie dvere / dvere do zádveria</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch1-hf">Smer toku</label>
+                                    <select id="ch1-hf">
+                                        <option value="horizontal" selected>Vodorovný (Rsi=0.13)</option>
+                                        <option value="upward">Nahor (Rsi=0.10)</option>
+                                        <option value="downward">Nadol (Rsi=0.17)</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch1-level">Úroveň požiadavky STN</label>
+                                    <select id="ch1-level">
+                                        <option value="u_max">Maximálna (u_max)</option>
+                                        <option value="u_n">Normalizovaná (u_n)</option>
+                                        <option value="u_r1" selected>Odporúčaná (u_r1)</option>
+                                        <option value="u_r2">Cieľová (u_r2)</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch1-area">Celková plocha A [m²]</label>
+                                    <input type="number" id="ch1-area" value="100" step="0.1">
+                                </div>
+                            </div>
+                            <!-- Skryté pole na držanie U pre Elaborát -->
+                            <input type="hidden" id="ch1-u" value="0.22"> 
+
+                            <button type="button" id="ch1-btn-calc-u" class="btn-primary" style="margin-top:1rem;" onclick="calculateU()">Vypočítať a posúdiť U</button>
+                        </div>
+                    </div>
+                    <div id="ch1-u-result" class="result-card hidden"></div>
+
+                    <!-- 2. Detailed Assessment (Elaborát) -->
+                    <div class="card">
+                        <h2>2. Detailné posúdenie konštrukcie (Elaborát)</h2>
+                        <p class="card-desc">Posúdenie povrchovej teploty, rizika plesní a kondenzácie podľa STN 73
+                            0540-2</p>
+
+                        <div class="form-section">
+                            <h3>Okrajové podmienky</h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="det-ti">Teplota interiér θi [°C]</label>
+                                    <input type="number" id="det-ti" value="20" step="0.1">
+                                </div>
+                                <div class="field">
+                                    <label for="det-phi-i">Vlhkosť interiér φi [%]</label>
+                                    <input type="number" id="det-phi-i" value="50" step="1">
+                                </div>
+                                <div class="field">
+                                    <label for="det-te">Teplota exteriér θe [°C]</label>
+                                    <input type="number" id="det-te" value="-11" step="0.1">
+                                </div>
+                                <div class="field">
+                                    <label for="det-phi-e">Vlhkosť exteriér φe [%]</label>
+                                    <input type="number" id="det-phi-e" value="83" step="1">
+                                </div>
+                                <div class="field">
+                                    <label for="det-rsi">Odpor Rsi [m²·K/W]</label>
+                                    <input type="number" id="det-rsi" value="0.13" step="0.01">
+                                </div>
+                                <div class="field">
+                                    <label for="det-rse">Odpor Rse [m²·K/W]</label>
+                                    <input type="number" id="det-rse" value="0.04" step="0.01">
+                                </div>
+                                <div class="field">
+                                    <label for="det-safety">Bezpečnostná prirážka Δθsi [K]</label>
+                                    <input type="number" id="det-safety" value="1.0" step="0.1">
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
+                                <button id="ch1-btn-elaborat" class="btn-primary" onclick="assessDetailed()">
+                                    Generovať podrobný protokol (Elaborát)
+                                </button>
+                                <button id="ch1-btn-download-elaborat" class="btn-secondary" onclick="window.downloadElaborat()">
+                                    📥 Stiahnuť Elaborát ako PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ch1-detailed-result" class="result-card hidden"></div>
+
+                    <!-- Koniec krok 1 -->
+
+                            <div class="form-section" style="margin-top:2rem; padding-top:2rem; text-align:right;">
+                                <button id="btn-next-to-ch2" class="btn-primary btn-large"
+                                    onclick="switchTab('ch2', document.querySelectorAll('.step-btn')[1])">
+                                    Pokračovať na Krok 2: Potreba tepla ➔
+                                </button>
+                            </div>
+                        </div><!-- /Hlavný stĺpec -->
+
+                        <!-- Vedľajší pripnutý stĺpec pre uložené konštrukcie -->
+                        <div class="ch1-side-col" style="flex: 0 0 380px; position: sticky; top: 1.5rem;">
+                            <!-- Uložené konštrukcie -->
+                            <div class="card" id="ch1-saved-card" style="display:none; margin:0; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-top: 4px solid var(--accent);">
+                                <h2 style="font-size: 1.1rem; color: var(--accent);">💾 Zoznam konštrukcií</h2>
+                                <p class="card-desc" style="margin-bottom: 1rem; line-height:1.4;">Tieto konštrukcie budú automaticky dostupné v <a href="#" onclick="switchTab('ch2', document.querySelectorAll('.step-btn')[1]); return false;" style="color:var(--accent);">Kroku 2 (Potreba tepla)</a>.</p>
+                                
+                                <div class="table-responsive" style="margin-bottom:0; border:none; overflow:visible;">
+                                    <table class="layers-table" style="font-size:0.8rem; min-width:auto;">
+                                        <thead>
+                                            <tr>
+                                                <th style="padding:0.5rem;">Názov / Typ</th>
+                                                <th width="60" style="padding:0.5rem; text-align:center;">U</th>
+                                                <th width="50" style="padding:0.5rem; text-align:center;">A[m²]</th>
+                                                <th width="30" style="padding:0.5rem;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ch1-saved-tbody">
+                                            <!-- Dynamic rows -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!-- /Vedľajší stĺpec -->
+
+                    </div><!-- /ch1-layout-wrapper -->
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- CHAPTER 2: Heating Demand -->
+                <!-- ============================================================ -->
+                <section id="tab-ch2" class="tab-content">
+                    <div class="card">
+                        <h2>Potreba tepla na vykurovanie — Sezónna metóda</h2>
+                        <p class="card-desc">QH = Qht − ηgn · Qgn — vzorec (2.1) podľa STN EN ISO 52016-1</p>
+
+                        <!-- Building info -->
+                        <div class="form-section">
+                            <h3>🏢 Základné údaje o budove</h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch2-name">Názov budovy / projektu</label>
+                                    <input type="text" id="ch2-name" value="Bytový dom Bratislava P 1.14 BA">
+                                    <span class="tooltip">Identifikačný názov pre protokol o energetickom
+                                        hodnotení.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-ab">Celková podlahová plocha Ab [m²]</label>
+                                    <input type="number" id="ch2-ab" value="4403.4" step="0.1" min="0.1">
+                                    <span class="tooltip">Súčet plôch všetkých vykurovaných podlaží (merané z vnútornej
+                                        strany).
+                                        Používa sa na výpočet mernej potreby tepla QH,nd = QH / Ab.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-vb">Obostavaný objem Vb [m³]</label>
+                                    <input type="number" id="ch2-vb" value="12417.6" step="0.1" min="0.1">
+                                    <span class="tooltip">Celkový objem vykurovanej časti budovy (merané z vonkajších
+                                        rozmerov).
+                                        Vzorec (2.11): Vb = ΣAi × h. Používa sa na výpočet HV.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Climate / City selection -->
+                        <div class="form-section">
+                            <h3>🌡️ Klimatické údaje</h3>
+                            <p class="section-desc">Vyberte mesto zo zoznamu (dáta podľa STN EN ISO 13790/NA) alebo
+                                zadajte
+                                vlastné hodnoty.</p>
+                            <div class="form-grid">
+                                <div class="field field-wide">
+                                    <label for="ch2-city">Mesto / lokalita</label>
+                                    <select id="ch2-city" onchange="onCityChange()">
+                                        <option value="">— Vlastné hodnoty —</option>
+                                    </select>
+                                    <span class="tooltip">Výber mesta automaticky vyplní θe,m, vykurovacie dni a
+                                        nadmorskú
+                                        výšku
+                                        podľa údajov z STN EN ISO 13790/NA, Tab. NA.1.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-tint">Vnútorná výpočtová teplota θint [°C]</label>
+                                    <div class="input-with-custom">
+                                        <select onchange="syncCustomInput(this)" data-target="ch2-tint">
+                                            <option value="20" selected>20 — bytové budovy (štandard)</option>
+                                            <option value="22">22 — nemocnice, škôlky</option>
+                                            <option value="18">18 — administratíva, školy</option>
+                                            <option value="15">15 — športové haly, sklady</option>
+                                            <option value="__custom__">Vlastná hodnota...</option>
+                                        </select>
+                                        <input type="number" id="ch2-tint" value="20" step="0.1"
+                                            class="custom-input hidden">
+                                    </div>
+                                    <span class="tooltip">Návrhová vnútorná teplota podľa STN EN 15251. Bytové budovy:
+                                        20
+                                        °C,
+                                        nemocnice: 22 °C, školy: 18 °C.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-tem">Priemerná vonkajšia teplota θe,m [°C]</label>
+                                    <input type="number" id="ch2-tem" value="3.86" step="0.01">
+                                    <span class="tooltip">Priemerná teplota vonkajšieho vzduchu za vykurovaciu sezónu.
+                                        Pri
+                                        výbere mesta sa vyplní automaticky z tabuľky STN EN ISO 13790/NA.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-theta-des">Vonkajšia návrhová teplota θe,des [°C]</label>
+                                    <input type="number" id="ch2-theta-des" value="-11" step="1">
+                                    <span class="tooltip">Návrhová teplota pre výpočet maximálneho tepelného výkonu
+                                        (podľa
+                                        lokality).
+                                        Bratislava: -11 °C, Poprad: -16 °C.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-days">Počet vykurovacích dní</label>
+                                    <div class="input-with-custom">
+                                        <select onchange="syncCustomInput(this)" data-target="ch2-days">
+                                            <option value="212">212 — oblasť 1 (teplejšia, JZ Slovensko)</option>
+                                            <option value="222">222 — oblasť 2 (stredná)</option>
+                                            <option value="232">232 — oblasť 3 (chladnejšia, Tatry)</option>
+                                            <option value="__custom__">Vlastná hodnota...</option>
+                                        </select>
+                                        <input type="number" id="ch2-days" value="212" step="1" min="1"
+                                            class="custom-input hidden">
+                                    </div>
+                                    <span class="tooltip">Dĺžka vykurovacej sezóny podľa teplotnej oblasti. Oblasť 1:
+                                        212
+                                        dní
+                                        (Bratislava, Nitra), oblasť 2: 222 dní (Košice, B. Bystrica), oblasť 3: 232 dní
+                                        (Poprad).</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Constructions for HT -->
+                        <div class="form-section">
+                            <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+                                <div>
+                                    <h3>🧱 Konštrukcie obálky budovy (pre výpočet HT)</h3>
+                                    <p class="section-desc">Zadajte všetky konštrukcie tvoriace obálku vykurovanej zóny (steny,
+                                        strecha,
+                                        podlaha, okná, dvere).</p>
+                                </div>
+                                <button type="button" class="btn-primary" style="margin-bottom: 0.5rem;" onclick="importFromChapter1()">📥 Importovať uložené z Kroku 1</button>
+                            </div>
+                            <div class="info-box">
+                                <strong>Vzorec (2.3):</strong> HT = Σ(bx · Ui · Ai) + ΔU · ΣAi &nbsp;[W/K]<br>
+                                <strong>bx</strong> — korekčný faktor teploty: 1.0 pre vonkajší vzduch, 0.5 pre nevykur.
+                                priestor, 0.3 pre zeminu (Tab. 2.1)<br>
+                                <strong>U</strong> — súčiniteľ prechodu tepla [W/(m²·K)] — z Tab. 1.4–1.7 alebo
+                                výpočtom<br>
+                                <strong>A</strong> — plocha konštrukcie [m²] — merané z vonkajšej strany
+                            </div>
+
+                            <div class="construction-table">
+                                <div class="ct-header">
+                                    <span class="ct-name">Názov konštrukcie</span>
+                                    <span class="ct-u">U [W/(m²·K)]</span>
+                                    <span class="ct-a">A [m²]</span>
+                                    <span class="ct-bx">bx [-]</span>
+                                    <span class="ct-x"></span>
+                                </div>
+                                <div id="ht-constructions">
+                                    <div class="ct-row">
+                                        <input type="text" value="Obvodová stena" class="ht-name" placeholder="Názov">
+                                        <input type="number" value="0.68" step="0.01" min="0.01" class="ht-u"
+                                            placeholder="U">
+                                        <input type="number" value="2056.6" step="0.1" min="0.1" class="ht-a"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="ht-bx-sel" onchange="syncBxInput(this)">
+                                                <option value="1.0" selected>1.0 — vonk. vzduch</option>
+                                                <option value="0.5">0.5 — nevyk. priestor</option>
+                                                <option value="0.3">0.3 — zemina</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="1.0" step="0.01" min="0" max="1"
+                                                class="ht-bx custom-input hidden">
+                                        </div>
+                                        <button class="btn-icon" onclick="removeHTRow(this)"
+                                            title="Odstrániť konštrukciu">✕</button>
+                                    </div>
+                                    <div class="ct-row">
+                                        <input type="text" value="Plochá strecha" class="ht-name" placeholder="Názov">
+                                        <input type="number" value="0.50" step="0.01" min="0.01" class="ht-u"
+                                            placeholder="U">
+                                        <input type="number" value="366.95" step="0.1" min="0.1" class="ht-a"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="ht-bx-sel" onchange="syncBxInput(this)">
+                                                <option value="1.0" selected>1.0 — vonk. vzduch</option>
+                                                <option value="0.5">0.5 — nevyk. priestor</option>
+                                                <option value="0.3">0.3 — zemina</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="1.0" step="0.01" min="0" max="1"
+                                                class="ht-bx custom-input hidden">
+                                        </div>
+                                        <button class="btn-icon" onclick="removeHTRow(this)"
+                                            title="Odstrániť">✕</button>
+                                    </div>
+                                    <div class="ct-row">
+                                        <input type="text" value="Podlaha nad nevyk. suterénom" class="ht-name"
+                                            placeholder="Názov">
+                                        <input type="number" value="0.56" step="0.01" min="0.01" class="ht-u"
+                                            placeholder="U">
+                                        <input type="number" value="366.95" step="0.1" min="0.1" class="ht-a"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="ht-bx-sel" onchange="syncBxInput(this)">
+                                                <option value="1.0">1.0 — vonk. vzduch</option>
+                                                <option value="0.5" selected>0.5 — nevyk. priestor</option>
+                                                <option value="0.3">0.3 — zemina</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="0.5" step="0.01" min="0" max="1"
+                                                class="ht-bx custom-input hidden">
+                                        </div>
+                                        <button class="btn-icon" onclick="removeHTRow(this)"
+                                            title="Odstrániť">✕</button>
+                                    </div>
+                                    <div class="ct-row">
+                                        <input type="text" value="Pôvodné drevené okná" class="ht-name"
+                                            placeholder="Názov">
+                                        <input type="number" value="2.70" step="0.01" min="0.01" class="ht-u"
+                                            placeholder="U">
+                                        <input type="number" value="300.30" step="0.1" min="0.1" class="ht-a"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="ht-bx-sel" onchange="syncBxInput(this)">
+                                                <option value="1.0" selected>1.0 — vonk. vzduch</option>
+                                                <option value="0.5">0.5 — nevyk. priestor</option>
+                                                <option value="0.3">0.3 — zemina</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="1.0" step="0.01" min="0" max="1"
+                                                class="ht-bx custom-input hidden">
+                                        </div>
+                                        <button class="btn-icon" onclick="removeHTRow(this)"
+                                            title="Odstrániť">✕</button>
+                                    </div>
+                                    <div class="ct-row">
+                                        <input type="text" value="Vymenené plastové okná" class="ht-name"
+                                            placeholder="Názov">
+                                        <input type="number" value="1.30" step="0.01" min="0.01" class="ht-u"
+                                            placeholder="U">
+                                        <input type="number" value="300.30" step="0.1" min="0.1" class="ht-a"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="ht-bx-sel" onchange="syncBxInput(this)">
+                                                <option value="1.0" selected>1.0 — vonk. vzduch</option>
+                                                <option value="0.5">0.5 — nevyk. priestor</option>
+                                                <option value="0.3">0.3 — zemina</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="1.0" step="0.01" min="0" max="1"
+                                                class="ht-bx custom-input hidden">
+                                        </div>
+                                        <button class="btn-icon" onclick="removeHTRow(this)"
+                                            title="Odstrániť">✕</button>
+                                    </div>
+                                    <div class="ct-row">
+                                        <input type="text" value="Oceľové okná schodisko" class="ht-name"
+                                            placeholder="Názov">
+                                        <input type="number" value="5.20" step="0.01" min="0.01" class="ht-u"
+                                            placeholder="U">
+                                        <input type="number" value="253.40" step="0.1" min="0.1" class="ht-a"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="ht-bx-sel" onchange="syncBxInput(this)">
+                                                <option value="1.0" selected>1.0 — vonk. vzduch</option>
+                                                <option value="0.5">0.5 — nevyk. priestor</option>
+                                                <option value="0.3">0.3 — zemina</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="1.0" step="0.01" min="0" max="1"
+                                                class="ht-bx custom-input hidden">
+                                        </div>
+                                        <button class="btn-icon" onclick="removeHTRow(this)"
+                                            title="Odstrániť">✕</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="ch2-btn-add-ht" class="btn-secondary" onclick="addHTRow()">+ Pridať
+                                konštrukciu</button>
+
+                            <div class="form-grid" style="margin-top: 1.25rem;">
+                                <div class="field">
+                                    <label for="ch2-du">Prirážka na tepelné mosty ΔU [W/(m²·K)]</label>
+                                    <div class="input-with-custom">
+                                        <select onchange="syncCustomInput(this)" data-target="ch2-du">
+                                            <option value="0.02">0.02 — spojitá izolácia, nové ETICS (od 2016)</option>
+                                            <option value="0.05">0.05 — spojitá izolácia, po 2002</option>
+                                            <option value="0.10" selected>0.10 — panelové/murované bez obnovy</option>
+                                            <option value="__custom__">Vlastná hodnota...</option>
+                                        </select>
+                                        <input type="number" id="ch2-du" value="0.10" step="0.01" min="0"
+                                            class="custom-input hidden">
+                                    </div>
+                                    <span class="tooltip">Prirážka na vplyv tepelných mostov, závisí od kvality detailov
+                                        zateplenia. Panelové domy bez obnovy: 0.10, po zateplení: 0.05, nové systémy:
+                                        0.02.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ventilation -->
+                        <div class="form-section">
+                            <h3>💨 Vetranie (výpočet HV)</h3>
+                            <p class="section-desc">Tepelná strata vetraním závisí od intenzity výmeny vzduchu a objemu
+                                budovy.
+                            </p>
+                            <div class="info-box">
+                                <strong>Vzorec (2.4):</strong> HV = (V/Vb) · ρa · ca · ninf · Vb / 3600 &nbsp;[W/K]<br>
+                                <strong>ρa · ca</strong> = 1200 J/(m³·K) — konštanta pre vzduch
+                            </div>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch2-vvb">Pomer vnútorného k obostav. objemu V/Vb [-]</label>
+                                    <div class="input-with-custom">
+                                        <select onchange="syncCustomInput(this)" data-target="ch2-vvb">
+                                            <option value="0.75">0.75 — nové RD, veľké miestnosti</option>
+                                            <option value="0.80">0.80 — bežné budovy, admin.</option>
+                                            <option value="0.85" selected>0.85 — panel. / mur. domy (pôvodný stav)
+                                            </option>
+                                            <option value="__custom__">Vlastná hodnota...</option>
+                                        </select>
+                                        <input type="number" id="ch2-vvb" value="0.85" step="0.01" min="0" max="1"
+                                            class="custom-input hidden">
+                                    </div>
+                                    <span class="tooltip">Podiel čistého vnútorného objemu k obostavaného objemu. Závisí
+                                        od
+                                        hrúbok stien a konštrukcií. Pre panelové domy typicky 0.85.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-ninf">Intenzita výmeny vzduchu ninf [1/h]</label>
+                                    <div class="input-with-custom">
+                                        <select onchange="syncCustomInput(this)" data-target="ch2-ninf">
+                                            <option value="0.5">0.50 — tesné okná (minimum podľa vyhl. 364/2012)
+                                            </option>
+                                            <option value="0.6">0.60 — nové plastové okná</option>
+                                            <option value="0.79" selected>0.79 — pôvodné drevené okná (príklad BA)
+                                            </option>
+                                            <option value="1.0">1.00 — staré netesné okná</option>
+                                            <option value="__custom__">Vlastná hodnota...</option>
+                                        </select>
+                                        <input type="number" id="ch2-ninf" value="0.79" step="0.01" min="0.5"
+                                            class="custom-input hidden">
+                                    </div>
+                                    <span class="tooltip">Násobnosť výmeny vzduchu infiltráciou. Minimum 0.5 1/h
+                                        (vyhláška
+                                        364/2012). Závisí od typu a tesnosti okien — vzorec (2.5), Tab. 2.2.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Internal gains -->
+                        <div class="form-section">
+                            <h3>🔥 Vnútorné tepelné zisky</h3>
+                            <p class="section-desc">Tepelné zisky od ľudí, osvetlenia a spotrebičov vo vnútri budovy.
+                            </p>
+                            <div class="info-box">
+                                <strong>Vzorec (2.7):</strong> Qint = n · 0.024 · qi · Ab &nbsp;[kWh/a]<br>
+                                <strong>n</strong> — počet vykurovacích dní, <strong>qi</strong> — merný tepelný výkon
+                                [W/m²],
+                                <strong>Ab</strong> — podlahová plocha
+                            </div>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch2-qi">Merný tepelný výkon vnútor. zdrojov qi [W/m²]</label>
+                                    <div class="input-with-custom">
+                                        <select onchange="syncCustomInput(this)" data-target="ch2-qi">
+                                            <option value="4">4 — Rodinný dom</option>
+                                            <option value="5" selected>5 — Bytový dom</option>
+                                            <option value="6">6 — Administratíva, škola</option>
+                                            <option value="8">8 — Nemocnica</option>
+                                            <option value="10">10 — Reštaurácia, dielňa</option>
+                                            <option value="__custom__">Vlastná hodnota...</option>
+                                        </select>
+                                        <input type="number" id="ch2-qi" value="5" step="0.1" min="0"
+                                            class="custom-input hidden">
+                                    </div>
+                                    <span class="tooltip">Priemerný tepelný tok od vnútorných zdrojov na m² podlahy.
+                                        Hodnoty
+                                        podľa STN EN ISO 13790, príloha G. Bytový dom: 5 W/m², RD: 4 W/m².</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solar gains -->
+                        <div class="form-section">
+                            <h3>☀️ Solárne tepelné zisky</h3>
+                            <p class="section-desc">Tepelné zisky od slnečného žiarenia cez transparentné konštrukcie
+                                (okná).
+                            </p>
+                            <div class="info-box">
+                                <strong>Vzorec (2.8):</strong> Qsol = Σ(Fsh · ggl · Asol,k · Isol,k) &nbsp;[kWh/a]<br>
+                                <strong>ggl</strong> — celková priepustnosť slnečného žiarenia zasklením (Tab.
+                                2.4/2.5)<br>
+                                <strong>Fsh</strong> — tieniaci faktor (okolité budovy, markízy...): 0.3–0.9, typicky
+                                0.5<br>
+                                <strong>Isol</strong> — normalizovaná intenzita slnečného žiarenia podľa orientácie
+                                (Tab.
+                                2.3)
+                            </div>
+
+                            <div class="solar-table">
+                                <div class="st-header">
+                                    <span class="st-orient">Orientácia fasády</span>
+                                    <span class="st-area">Plocha okien [m²]</span>
+                                    <span class="st-ggl">ggl [-]</span>
+                                    <span class="st-fsh">Fsh [-]</span>
+                                    <span class="st-x"></span>
+                                </div>
+                                <div id="solar-rows">
+                                    <div class="solar-row">
+                                        <select class="sol-orient">
+                                            <option value="south" selected>Juh (Isol = 320 kWh/m²)</option>
+                                            <option value="north">Sever (Isol = 100 kWh/m²)</option>
+                                            <option value="east_west">Východ/Západ (Isol = 200 kWh/m²)</option>
+                                            <option value="se_sw">JV / JZ (Isol = 260 kWh/m²)</option>
+                                            <option value="ne_nw">SV / SZ (Isol = 130 kWh/m²)</option>
+                                            <option value="horizontal">Horizontálna (Isol = 340 kWh/m²)</option>
+                                        </select>
+                                        <input type="number" value="248.76" step="0.1" min="0.1" class="sol-area"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="sol-ggl-sel" onchange="syncGglInput(this)">
+                                                <option value="0.62" selected>0.62 — jednoduché zasklenie</option>
+                                                <option value="0.53">0.53 — izolačné dvojsklo</option>
+                                                <option value="0.44">0.44 — trojsklo / low-e</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="0.62" step="0.01" min="0" max="1"
+                                                class="sol-ggl custom-input hidden">
+                                        </div>
+                                        <input type="number" value="0.5" step="0.05" min="0" max="1" class="sol-fsh"
+                                            placeholder="f">
+                                        <button class="btn-icon" onclick="removeSolarRow(this)"
+                                            title="Odstrániť orientáciu">✕</button>
+                                    </div>
+                                    <div class="solar-row">
+                                        <select class="sol-orient">
+                                            <option value="south">Juh (Isol = 320 kWh/m²)</option>
+                                            <option value="north">Sever (Isol = 100 kWh/m²)</option>
+                                            <option value="east_west" selected>Východ/Západ (Isol = 200 kWh/m²)</option>
+                                            <option value="se_sw">JV / JZ (Isol = 260 kWh/m²)</option>
+                                            <option value="ne_nw">SV / SZ (Isol = 130 kWh/m²)</option>
+                                            <option value="horizontal">Horizontálna (Isol = 340 kWh/m²)</option>
+                                        </select>
+                                        <input type="number" value="408.24" step="0.1" min="0.1" class="sol-area"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="sol-ggl-sel" onchange="syncGglInput(this)">
+                                                <option value="0.62" selected>0.62 — jednoduché</option>
+                                                <option value="0.53">0.53 — dvojsklo</option>
+                                                <option value="0.44">0.44 — trojsklo</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="0.62" step="0.01" min="0" max="1"
+                                                class="sol-ggl custom-input hidden">
+                                        </div>
+                                        <input type="number" value="0.5" step="0.05" min="0" max="1" class="sol-fsh"
+                                            placeholder="f">
+                                        <button class="btn-icon" onclick="removeSolarRow(this)"
+                                            title="Odstrániť">✕</button>
+                                    </div>
+                                    <div class="solar-row">
+                                        <select class="sol-orient">
+                                            <option value="south">Juh (Isol = 320 kWh/m²)</option>
+                                            <option value="north" selected>Sever (Isol = 100 kWh/m²)</option>
+                                            <option value="east_west">Východ/Západ (Isol = 200 kWh/m²)</option>
+                                            <option value="se_sw">JV / JZ (Isol = 260 kWh/m²)</option>
+                                            <option value="ne_nw">SV / SZ (Isol = 130 kWh/m²)</option>
+                                            <option value="horizontal">Horizontálna (Isol = 340 kWh/m²)</option>
+                                        </select>
+                                        <input type="number" value="205.56" step="0.1" min="0.1" class="sol-area"
+                                            placeholder="A">
+                                        <div class="input-with-custom compact">
+                                            <select class="sol-ggl-sel" onchange="syncGglInput(this)">
+                                                <option value="0.62" selected>0.62 — jednoduché</option>
+                                                <option value="0.53">0.53 — dvojsklo</option>
+                                                <option value="0.44">0.44 — trojsklo</option>
+                                                <option value="__custom__">Vlastná...</option>
+                                            </select>
+                                            <input type="number" value="0.62" step="0.01" min="0" max="1"
+                                                class="sol-ggl custom-input hidden">
+                                        </div>
+                                        <input type="number" value="0.5" step="0.05" min="0" max="1" class="sol-fsh"
+                                            placeholder="f">
+                                        <button class="btn-icon" onclick="removeSolarRow(this)"
+                                            title="Odstrániť">✕</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="ch2-btn-add-solar" class="btn-secondary" onclick="addSolarRow()">+ Pridať
+                                orientáciu fasády</button>
+                        </div>
+
+                        <!-- Utilization factor -->
+                        <div class="form-section">
+                            <h3>⚙️ Faktor využitia a hodnotenie</h3>
+                            <div class="info-box">
+                                <strong>QH = Qht − ηgn · Qgn</strong> — faktor ηgn vyjadruje, aký podiel tepelných
+                                ziskov sa
+                                skutočne využije na pokrytie strát.<br>
+                                Hodnotenie: porovnanie QH,nd = QH/Ab s normovým limitom podľa tvaru budovy (Tab. 2.7).
+                            </div>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch2-eta">Faktor využitia tepelných ziskov ηgn [-]</label>
+                                    <div class="input-with-custom">
+                                        <select onchange="syncCustomInput(this)" data-target="ch2-eta">
+                                            <option value="0.95" selected>0.95 — bytové domy, bežné budovy</option>
+                                            <option value="0.90">0.90 — ľahké konštrukcie</option>
+                                            <option value="1.0">1.00 — ťažké masívne konštrukcie</option>
+                                            <option value="__custom__">Vlastná hodnota...</option>
+                                        </select>
+                                        <input type="number" id="ch2-eta" value="0.95" step="0.01" min="0" max="1"
+                                            class="custom-input hidden">
+                                    </div>
+                                    <span class="tooltip">Podiel ziskov, ktoré sa využijú na zníženie straty. Závisí od
+                                        tepelnej
+                                        kapacity budovy (Tab. 2.6). Pre byt. domy typicky 0.95.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch2-level">Úroveň hodnotenia QH,nd</label>
+                                    <select id="ch2-level">
+                                        <option value="u_max">Maximálna</option>
+                                        <option value="u_n">Normalizovaná</option>
+                                        <option value="u_r1" selected>Odporúčaná (r1) — od 2016</option>
+                                        <option value="u_r2">Cieľová (r2) — od 2021</option>
+                                    </select>
+                                    <span class="tooltip">Úroveň energetického kritéria podľa Tab. 2.7 STN. Limit sa
+                                        odvodzuje
+                                        od faktora tvaru budovy (ΣA/Vb).</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expert Mode: Constants -->
+                        <div class="expert-fields">
+                            <h3 style="color:var(--accent); font-size:0.9rem; margin-bottom:1rem;">🛠️ Rozšírené
+                                parametre
+                                výpočtu (Kap. 2)</h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="exp-rho-air">Hustota vzduchu ρa [kg/m³]</label>
+                                    <input type="number" id="exp-rho-air" placeholder="1.2" step="0.01">
+                                </div>
+                                <div class="field">
+                                    <label for="exp-c-air">Merná tepelná kapacita ca [J/(kg·K)]</label>
+                                    <input type="number" id="exp-c-air" placeholder="1000" step="10">
+                                </div>
+                                <div class="field">
+                                    <label for="exp-min-air">Min. intenzita vetrania [1/h]</label>
+                                    <input type="number" id="exp-min-air" placeholder="0.5" step="0.1">
+                                </div>
+                                <div class="field">
+                                    <label for="exp-r-se">Odpor prestupu tepla exteriér Rse</label>
+                                    <input type="number" id="exp-r-se" placeholder="0.04" step="0.01">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="ch2-btn-calc" class="btn-primary btn-large" onclick="calculateHeatingDemand()">
+                            ▶ Vypočítať potrebu tepla na vykurovanie
+                        </button>
+                    </div>
+
+                    <div id="ch2-result" class="result-card hidden"></div>
+
+                    <div class="form-section" style="margin-top:2rem; padding-top:2rem; text-align:right;">
+                        <button id="btn-next-to-ch3" class="btn-primary btn-large"
+                            onclick="switchTab('ch3', document.querySelectorAll('.step-btn')[2])">
+                            Pokračovať na Krok 3: Vykurovacia sústava ➔
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- CHAPTER 3: Heating Energy -->
+                <!-- ============================================================ -->
+                <section id="tab-ch3" class="tab-content">
+                    <div class="card">
+                        <h2>Potreba energie na vykurovanie — Technické systémy</h2>
+                        <p class="card-desc">Výpočet účinnosti a strát vykurovacieho systému podľa kategórie budovy a
+                            veku.</p>
+
+                        <!-- General Inputs -->
+                        <div class="form-section">
+                            <h3>📄 Vstupné údaje</h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch3-qh">Potreba tepla QH [kWh/a]</label>
+                                    <input type="number" id="ch3-qh" placeholder="Zadajte alebo vypočítajte v Kap. 2"
+                                        step="1">
+                                    <span class="tooltip">Hodnota potreby tepla z predchádzajúceho kroku.</span>
+                                </div>
+                                <div class="field">
+                                    <label for="ch3-ab">Podlahová plocha Ab [m²]</label>
+                                    <input type="number" id="ch3-ab" placeholder="4403.4" step="0.1">
+                                </div>
+                                <div class="field">
+                                    <label for="ch3-phi-em">Projektovaný výkon ΦH,em,out [kW]</label>
+                                    <input type="number" id="ch3-phi-em" value="228.6" step="0.1">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Settings Toggle -->
+                        <details
+                            style="margin-top: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; background: rgba(30, 41, 59, 0.3);">
+                            <summary style="cursor: pointer; font-weight: 600; color: var(--accent);">⚙️ Rozšírené
+                                nastavenia
+                                (Geometria, Teploty)</summary>
+
+                            <div class="form-section">
+                                <h3>📐 Geometria a Teplotný spád</h3>
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="ch3-theta-s">Teplota prívodu θs,des [°C]</label>
+                                        <input type="number" id="ch3-theta-s" value="90" step="1">
+                                    </div>
+                                    <div class="field">
+                                        <label for="ch3-theta-r">Teplota spiatočky θr,des [°C]</label>
+                                        <input type="number" id="ch3-theta-r" value="70" step="1">
+                                    </div>
+                                </div>
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="ch3-len">Dĺžka budovy L [m]</label>
+                                        <input type="number" id="ch3-len" value="25.03" step="0.01">
+                                        <span class="tooltip">Pre odhad dĺžky rozvodov (Lmax).</span>
+                                    </div>
+                                    <div class="field">
+                                        <label for="ch3-wid">Šírka budovy W [m]</label>
+                                        <input type="number" id="ch3-wid" value="21.23" step="0.01">
+                                    </div>
+                                    <div class="field">
+                                        <label for="ch3-n-lev">Počet podlaží</label>
+                                        <input type="number" id="ch3-n-lev" value="12" step="1">
+                                    </div>
+                                    <div class="field">
+                                        <label for="ch3-h-lev">Konštrukčná výška h [m]</label>
+                                        <input type="number" id="ch3-h-lev" value="2.8" step="0.1">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pump Advanced -->
+                            <div class="form-section">
+                                <h3>💧 Detail Čerpadla</h3>
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="ch3-pump-reg">Regulácia čerpadla</label>
+                                        <select id="ch3-pump-reg">
+                                            <option value="no_regulation">Žiadna regulácia</option>
+                                            <option value="dp_const">Konštantný tlak (Δp-c)</option>
+                                            <option value="dp_variable">Variabilný tlak (Δp-v)</option>
+                                        </select>
+                                    </div>
+                                    <div class="field checkbox-field">
+                                        <label><input type="checkbox" id="ch3-pump-balanced" checked> Čerpadlo
+                                            hydraulicky
+                                            vyvážené</label>
+                                    </div>
+                                    <div class="field checkbox-field">
+                                        <label><input type="checkbox" id="ch3-is-new-bldg"> Nová budova (pre výpočet
+                                            čerpadla)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- Emission -->
+                        <div class="form-section">
+                            <h3>🌡️ Odovzdávanie tepla (Emisia)</h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch3-em-type">Typ vykurovacieho telesa</label>
+                                    <select id="ch3-em-type">
+                                        <option value="radiator" selected>Radiátory (voľné plochy)</option>
+                                        <option value="floor_wet">Podlahové (mokrý systém)</option>
+                                        <option value="floor_dry">Podlahové (suchý systém)</option>
+                                        <option value="wall">Stenové vykurovanie</option>
+                                        <option value="ceiling">Stropné vykurovanie</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch3-reg">Regulácia teploty</label>
+                                    <select id="ch3-reg">
+                                        <option value="p_controller" selected>P-regulátor (Termohlavice 2K)</option>
+                                        <option value="p_controller_old">P-regulátor starý (pred 1988)</option>
+                                        <option value="pi_controller">PI-regulátor</option>
+                                        <option value="pi_optimized">PI-optimalizovaný</option>
+                                        <option value="reference_room">Podľa referenčnej miestnosti (termostat)</option>
+                                        <option value="unregulated">Bez regulácie (centrálna)</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch3-temp-drop">Teplotný spád</label>
+                                    <select id="ch3-temp-drop">
+                                        <option value="60K" selected>90/70 °C (Δθ = 60 K)</option>
+                                        <option value="42.5K">75/65 °C (Δθ = 42.5 K)</option>
+                                        <option value="30K">55/45 °C (Δθ = 30 K)</option>
+                                        <option value="20K">45/35 °C (Δθ = 20 K)</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch3-rad-pos">Poloha radiátora</label>
+                                    <select id="ch3-rad-pos">
+                                        <option value="external_wall_normal" selected>Pri obvodovej stene (bežné)
+                                        </option>
+                                        <option value="external_wall_gf_no_protection">Pred presklením (bez ochrany)
+                                        </option>
+                                        <option value="external_wall_gf_with_protection">Pred presklením (s ochranou)
+                                        </option>
+                                        <option value="internal_wall">Pri vnútornej stene</option>
+                                    </select>
+                                </div>
+                                <div class="field checkbox-field">
+                                    <label><input type="checkbox" id="ch3-n-le-10"> Počet telies v okruhu ≤ 10</label>
+                                    <span class="tooltip">Pre dvojrúrové systémy ovplyvňuje hydraulickú stratu (0.2 vs
+                                        0.3 K).
+                                        Zaškrtnite pre malé okruhy.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Distribution -->
+                        <div class="form-section">
+                            <h3>⛓️ Distribúcia tepla (Rozvody)</h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch3-pipe-sys">Systém rozvodov</label>
+                                    <select id="ch3-pipe-sys">
+                                        <option value="two_pipe" selected>Dvojrúrový</option>
+                                        <option value="one_pipe">Jednorúrový</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch3-balancing">Hydraulické vyregulovanie</label>
+                                    <select id="ch3-balancing">
+                                        <option value="static_with_system" selected>Statické (na stúpačkách)</option>
+                                        <option value="static_per_radiator">Statické (na telesách)</option>
+                                        <option value="dynamic_per_circuit">Dynamické (na okruhu)</option>
+                                        <option value="none">Žiadne</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="construction-table" style="margin-top: 1rem;">
+                                <div class="pt-header">
+                                    <span style="flex:2;">Názov úseku</span>
+                                    <span style="flex:1;">DN [mm]</span>
+                                    <span style="flex:1;">Dĺžka [m]</span>
+                                    <span style="flex:1;">Ψ [W/mK]</span>
+                                    <span style="flex:1;">Teplota okolia [°C]</span>
+                                    <span style="flex:0.5;"></span>
+                                </div>
+                                <div id="pipe-rows">
+                                    <!-- Rows added by JS -->
+                                </div>
+                            </div>
+                            <button id="ch3-btn-add-pipe" class="btn-secondary" onclick="addPipeRow()">+ Pridať úsek
+                                potrubia</button>
+                            <button id="ch3-btn-default-pipes" class="btn-secondary" onclick="addDefaultPipes()">Načítať
+                                predvolené úseky (Worked
+                                Example)</button>
+                        </div>
+
+                        <!-- Generation & Pump -->
+                        <div class="form-section">
+                            <h3>🔥 Zdroj Tepla (Generácia)</h3>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="ch3-fuel">Typ paliva / Zdroja</label>
+                                    <select id="ch3-fuel">
+                                        <option value="heat_exchanger_hw_hw">OST (Výmenníková stanica) - Horúca voda
+                                        </option>
+                                        <option value="natural_gas_old">Plynový kotol - Štandardný (Starý)</option>
+                                        <option value="natural_gas_new">Plynový kotol - Štandardný (Nový)</option>
+                                        <option value="natural_gas_condensing">Plynový kotol - Kondenzačný</option>
+                                        <option value="wood_pellets_new">Kotol na biomasu - Pelety</option>
+                                        <option value="hp_air_water_radiator">Tepelné čerpadlo (Vzduch-Voda) - Radiátory
+                                        </option>
+                                        <option value="hp_ground_water_radiator">Tepelné čerpadlo (Zem-Voda) - Radiátory
+                                        </option>
+                                        <option value="electric">Elektrický kotol</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="ch3-eff-override">Účinnosť zdroja η [%]</label>
+                                    <input type="number" id="ch3-eff-override"
+                                        placeholder="Napr. 90 (ak nezadáte, určí sa tabuľkovo)" step="0.1">
+                                    <span class="tooltip">Zadajte, ak chcete prepísať tabuľkovú účinnosť.</span>
+                                </div>
+                            </div>
+                            <div class="form-grid" style="margin-top: 0.5rem;">
+                                <div class="field checkbox-field">
+                                    <label><input type="checkbox" id="ch3-is-external" checked> Zdroj je mimo
+                                        vykurovanej zóny
+                                        (externá kotolňa/OST)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="ch3-pump-power">Príkon čerpadla [W]</label>
+                            <input type="number" id="ch3-pump-power" placeholder="Nechajte prázdne pre odhad">
+                            <span class="tooltip">Ak nezadáte, vypočíta sa paušálne podľa veku budovy.</span>
+                        </div>
+                        <div class="field">
+                            <label for="ch3-pump-reg">Regulácia čerpadla</label>
+                            <select id="ch3-pump-reg">
+                                <option value="no_regulation">Žiadna regulácia</option>
+                                <option value="dp_const">Konštantný tlak (Δp-c)</option>
+                                <option value="dp_variable">Variabilný tlak (Δp-v)</option>
+                            </select>
+                        </div>
+                        <div class="field checkbox-field">
+                            <label><input type="checkbox" id="ch3-pump-balanced" checked> Čerpadlo hydraulicky
+                                vyvážené</label>
+                        </div>
+                        <div class="field checkbox-field">
+                            <label><input type="checkbox" id="ch3-is-new-bldg"> Nová budova (pre výpočet
+                                čerpadla)</label>
+                        </div>
+                        <div class="field">
+                            <label for="ch3-dhw-rec">Spätne získateľné teplo z TV [kWh]</label>
+                            <input type="number" id="ch3-dhw-rec" value="2077">
+                            <span class="tooltip">Tepelné zisky z rozvodov teplej vody. Tento údaj sa vypočíta v
+                                Kapitole 4
+                                (Príprava teplej vody). Ak nie je k dispozícii, zadajte 0.</span>
+                        </div>
+                    </div>
+
+                    <!-- Expert Mode: Constants -->
+                    <div class="expert-fields">
+                        <h3 style="color:var(--accent); font-size:0.9rem; margin-bottom:1rem;">🛠️ Rozšírené parametre
+                            výpočtu
+                            (Kap.
+                            3)</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="exp-pump-cp">Korekčný činiteľ čerpadla Cp</label>
+                                <input type="number" id="exp-pump-cp" placeholder="4.7" step="0.1">
+                            </div>
+                            <div class="field">
+                                <label for="exp-theta-aut">Prirážka na autonómiu θ_room_aut [K]</label>
+                                <input type="number" id="exp-theta-aut" placeholder="0.0" step="0.1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="ch3-btn-calc" class="btn-primary btn-large" onclick="calculateHeatingEnergy()">
+                        ▶ Vypočítať potrebu energie (QVYK)
+                    </button>
+            </div>
+
+            <div id="ch3-result" class="result-card hidden"></div>
+
+            <div class="form-section" style="margin-top:2rem; padding-top:2rem; text-align:right;">
+                <button id="btn-next-to-ch4" class="btn-primary btn-large"
+                    onclick="switchTab('ch4', document.querySelectorAll('.step-btn')[3])">
+                    Pokračovať na Krok 4: Príprava teplej vody ➔
+                </button>
+            </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CHAPTER 4: Domestic Hot Water (NEW) -->
+            <!-- ============================================================ -->
+            <section id="tab-ch4" class="tab-content">
+                <div class="card">
+                    <h2>Kapitola 4: Teplá Voda (TV)</h2>
+                    <p class="card-desc">Výpočet potreby energie na prípravu teplej vody podľa STN EN 15316-3.</p>
+
+                    <div class="form-section">
+                        <h3>💧 Netto potreba vody</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label>Podlahová plocha Ab [m²]</label>
+                                <input type="number" id="ch4-ab" disabled class="read-only-input"
+                                    placeholder="Načíta sa z Kap. 1">
+                                <span class="tooltip">Celková podlahová plocha budovy.</span>
+                            </div>
+                            <div class="field">
+                                <label>Netto potreba QW [kWh/rok]</label>
+                                <input type="number" id="ch4-qw" disabled class="read-only-input"
+                                    placeholder="Vypočíta sa">
+                                <span class="tooltip">Zjednodušená metóda: 20 * Ab.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>🛠️ Distribúcia (Rozvody TV)</h3>
+                        <p class="section-desc">Zadajte úseky potrubia pre prívod a cirkuláciu.</p>
+
+                        <div class="construction-table" style="margin-top: 1rem;">
+                            <div class="dhw-header">
+                                <span style="flex:2;">Názov úseku</span>
+                                <span style="flex:0.6;">DN [mm]</span>
+                                <span style="flex:0.7;">Dĺžka [m]</span>
+                                <span style="flex:0.7;">Ψ [W/mK]</span>
+                                <span style="flex:0.7;">T. okolia [°C]</span>
+                                <span style="flex:0.7;">T. vody [°C]</span>
+                                <span style="flex:0.5; text-align: center;">Cirk.</span>
+                                <span style="flex:0.5;"></span>
+                            </div>
+                            <div id="dhw-pipe-rows">
+                                <!-- Rows added via JS -->
+                            </div>
+                        </div>
+                        <button id="ch4-btn-add-pipe" class="btn-secondary" onclick="addDHWPipeRow()">+ Pridať
+                            potrubie</button>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>🔄 Cirkulácia & Čerpadlo</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label>Príkon čerpadla [W]</label>
+                                <input type="number" id="ch4-pump-power" value="30">
+                            </div>
+                            <div class="field">
+                                <label>Hodiny prevádzky [h/deň]</label>
+                                <input type="number" id="ch4-pump-hours" value="24">
+                                <span class="tooltip">Zvyčajne 24h pre cirkuláciu.</span>
+                            </div>
+                            <div class="field checkbox-field" style="align-self: end;">
+                                <label><input type="checkbox" id="ch4-has-circ" onchange="toggleDHWCirculation()">
+                                    Existuje
+                                    cirkulácia TV</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>🛢️ Zásobník (Akumulácia)</h3>
+                        <div class="form-grid">
+                            <div class="field checkbox-field">
+                                <label><input type="checkbox" id="ch4-has-storage" checked> Existuje zásobník TV</label>
+                            </div>
+                            <div class="field">
+                                <label>Objem zásobníka [l]</label>
+                                <input type="number" id="ch4-store-vol" value="200">
+                            </div>
+                            <div class="field">
+                                <label>Pohotovostná strata [kWh/24h]</label>
+                                <input type="number" id="ch4-store-loss" value="1.5" step="0.1">
+                                <span class="tooltip">Qst,loss - z energetického štítku alebo tabuľky.</span>
+                            </div>
+                            <div class="field">
+                                <label>Teplota v zásobníku [°C]</label>
+                                <input type="number" id="ch4-store-temp" value="60">
+                            </div>
+                            <div class="field">
+                                <label>Teplota miestnosti [°C]</label>
+                                <input type="number" id="ch4-store-amb" value="20">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>🔥 Zdroj Tepla (Výroba)</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label>Typ paliva / Zdroja</label>
+                                <select id="ch4-fuel">
+                                    <option value="natural_gas_condensing">Plynový kotol - Kondenzačný</option>
+                                    <option value="natural_gas_new">Plynový kotol - Štandardný (Nový)</option>
+                                    <option value="heat_exchanger_hw_hw">OST (Výmenníková stanica)</option>
+                                    <option value="electric">Elektrický ohrev</option>
+                                    <option value="hp_air_water_radiator">Tepelné čerpadlo (Vzduch-Voda)</option>
+                                    <option value="hp_ground_water_radiator">Tepelné čerpadlo (Zem-Voda)</option>
+                                    <option value="wood_pellets_new">Kotol na biomasu (Pelety)</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Účinnosť zdroja / COP</label>
+                                <input type="number" id="ch4-eff-override"
+                                    placeholder="Ponechajte prázdne pre tabuľkovú">
+                                <span class="tooltip">Zadajte ak poznáte presnú účinnosť (%). Pre TČ zadajte COP.</span>
+                            </div>
+                            <div class="field checkbox-field">
+                                <label><input type="checkbox" id="ch4-is-external"> Zdroj mimo budovy (OST)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expert Mode: Constants -->
+                    <div class="expert-fields">
+                        <h3 style="color:var(--accent); font-size:0.9rem; margin-bottom:1rem;">🛠️ Rozšírené parametre
+                            výpočtu
+                            (Kap. 4)</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="exp-dhw-rho">Hustota vody ρW [kg/l]</label>
+                                <input type="number" id="exp-dhw-rho" placeholder="1.0" step="0.01">
+                            </div>
+                            <div class="field">
+                                <label for="exp-dhw-c">Tepelná kapacita vody cW [kJ/(kg·K)]</label>
+                                <input type="number" id="exp-dhw-c" placeholder="4.18" step="0.01">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="ch4-btn-calc" class="btn-primary btn-large" onclick="calculateDHW()">
+                        ▶ Vypočítať Potrebu Energie (QTV)
+                    </button>
+                </div>
+
+                <div id="ch4-result" class="result-card hidden"></div>
+
+                <div class="form-section" style="margin-top:2rem; padding-top:2rem; text-align:right;">
+                    <button id="btn-next-to-ch6" class="btn-primary btn-large"
+                        onclick="switchTab('ch6', document.querySelectorAll('.step-btn')[4])">
+                        Pokračovať na Krok 5: Návrh opatrení ➔
+                    </button>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CHAPTER 6: Renovation Measures -->
+            <!-- ============================================================ -->
+            <section id="tab-ch6" class="tab-content">
+                <div class="card">
+                    <h2>Kapitola 6: Návrh Úsporných Opatrení</h2>
+                    <p class="card-desc">Porovnanie stavu Pred Obnovou a Po Obnove — obálka budovy + vykurovací systém.
+                    </p>
+
+                    <!-- PRED OBNOVOU -->
+                    <div class="form-section">
+                        <h3>🏚️ Aktuálny stav (Pred Obnovou)</h3>
+                        <div id="ch6-before-summary" class="info-box"
+                            style="border-left: 4px solid var(--accent); background: rgba(59, 130, 246, 0.05); padding: 1rem;">
+                            <strong>ℹ️ Postupnosť výpočtu:</strong><br><br>
+                            Tento modul porovnáva Váš aktuálny stav s novým (navrhovaným) stavom. Aby mohol pristúpiť k
+                            porovnaniu, musíte mať v pamäti uložený aktuálny stav budovy.
+                            <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                <li>Vypočítajte <strong>Kapitolu 2</strong> (Potreba tepla na vykurovanie).</li>
+                                <li>Trasa Vás následne presunie k výpočtu <strong>Kapitoly 3</strong> (Potreba energie
+                                    na
+                                    vykurovanie).</li>
+                                <li>Až po dokončení Kap. 3 sa sem vráťte a nasimulujte úsporné opatrenia. Dáta z Kap. 2
+                                    a 3 sa
+                                    sem prenesú <strong>automaticky</strong>.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- ═══ ENVELOPE: Konštrukcie Po Obnove ═══ -->
+                    <div class="form-section">
+                        <h3>🧱 Konštrukcie Po Obnove (Obálka budovy)</h3>
+                        <p class="card-desc">Zadajte nové U-hodnoty pre konštrukcie po zateplení / výmene okien / dverí.
+                            Konštrukcie sa automaticky načítajú z Kap. 2.</p>
+
+                        <div style="margin-bottom: 0.75rem;">
+                            <button id="ch6-btn-load-ch2" class="btn-secondary btn-sm" style="margin-right:0.5rem;"
+                                onclick="loadCh2ConstructionsIntoCh6()">
+                                🔄 Načítať konštrukcie z Kap. 2
+                            </button>
+                            <button id="ch6-btn-preset-etics" class="btn-secondary btn-sm" style="margin-right:0.5rem;"
+                                onclick="applyCh6Preset('etics')">
+                                🧱 ETICS preset
+                            </button>
+                            <button id="ch6-btn-preset-windows" class="btn-secondary btn-sm"
+                                style="margin-right:0.5rem;" onclick="applyCh6Preset('windows')">
+                                🪟 Nové okná preset
+                            </button>
+                            <button id="ch6-btn-preset-full" class="btn-secondary btn-sm"
+                                onclick="applyCh6Preset('full')">
+                                ⭐ Kompletná obnova
+                            </button>
+                        </div>
+
+                        <!-- Construction table: Before vs After -->
+                        <div style="overflow-x: auto;">
+                            <table class="comparison-table" id="ch6-constructions-table" style="min-width: 700px;">
+                                <thead>
+                                    <tr>
+                                        <th>Konštrukcia</th>
+                                        <th>Typ</th>
+                                        <th>Plocha [m²]</th>
+                                        <th>bx [-]</th>
+                                        <th>U pred [W/(m²·K)]</th>
+                                        <th style="background: rgba(34, 197, 94, 0.08);">U po [W/(m²·K)]</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ch6-constr-body">
+                                    <tr>
+                                        <td colspan="6" class="text-muted" style="text-align:center; padding:1rem;">
+                                            Kliknite "Načítať z Kap. 2" alebo pridajte konštrukcie ručne.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <button id="ch6-btn-add-constr" class="btn-secondary btn-sm" style="margin-top: 0.5rem;">
+                            + Pridať konštrukciu
+                        </button>
+
+                        <div class="form-grid" style="margin-top: 1rem;">
+                            <div class="field">
+                                <label>ΔU pred obnovou [W/(m²·K)]</label>
+                                <input type="number" id="ch6-du-before" value="0.10" step="0.01" min="0">
+                            </div>
+                            <div class="field">
+                                <label>ΔU po obnove [W/(m²·K)]</label>
+                                <input type="number" id="ch6-du-after" value="0.05" step="0.01" min="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ═══ SYSTEM MEASURES ═══ -->
+                    <div class="form-section">
+                        <h3>🔧 Systémové Opatrenia (Vykurovanie)</h3>
+
+                        <div class="measures-checklist" id="ch6-measures">
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-hydraulic" checked>
+                                <div>
+                                    <strong>Hydraulické vyregulovanie</strong>
+                                    <span class="tooltip">Zmena prednastavenia termostatických ventilov. Ovplyvňuje
+                                        Δθ_hyd.</span>
+                                </div>
+                            </label>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-valves" checked>
+                                <div>
+                                    <strong>Výmena/kontrola termostatických ventilov</strong>
+                                    <span class="tooltip">P-regulátor — Δθ_ctr klesne z ~2.0 na 0.7 K.</span>
+                                </div>
+                            </label>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-insulation" checked>
+                                <div>
+                                    <strong>Izolácia rozvodných potrubí</strong>
+                                    <span class="tooltip">40mm izolácia, λ=0.036 W/(m·K). Ψ klesne podľa Tab.
+                                        6.2.</span>
+                                </div>
+                            </label>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-temp-grad" checked>
+                                <div>
+                                    <strong>Zníženie teplotného spádu</strong>
+                                    <span class="tooltip">Trojcestný ventil — napr. z 90/70 na 75/65 °C.</span>
+                                </div>
+                            </label>
+
+                            <div class="form-grid" style="margin-left: 2rem; margin-top: 0.5rem;">
+                                <div class="field">
+                                    <label>Nová θ prívod (°C)</label>
+                                    <input type="number" id="ch6-new-ts" value="75" step="1">
+                                </div>
+                                <div class="field">
+                                    <label>Nová θ vrátna (°C)</label>
+                                    <input type="number" id="ch6-new-tr" value="65" step="1">
+                                </div>
+                            </div>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-pump" checked>
+                                <div>
+                                    <strong>Nové čerpadlo s frekvenčným meničom</strong>
+                                    <span class="tooltip">Výmena za účinnejšie čerpadlo s reguláciou.</span>
+                                </div>
+                            </label>
+
+                            <div class="form-grid" style="margin-left: 2rem; margin-top: 0.5rem;">
+                                <div class="field">
+                                    <label>Nový príkon čerpadla P_el (W)</label>
+                                    <input type="number" id="ch6-new-pump-pel" value="179" step="1">
+                                </div>
+                            </div>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-boiler">
+                                <div>
+                                    <strong>Nový zdroj tepla (kotol / TČ)</strong>
+                                    <span class="tooltip">Výmena zdroja tepla za účinnejší.</span>
+                                </div>
+                            </label>
+
+                            <div class="form-grid" style="margin-left: 2rem; margin-top: 0.5rem;">
+                                <div class="field">
+                                    <label>Nový typ</label>
+                                    <select id="ch6-new-fuel">
+                                        <option value="">— ponechať aktuálny —</option>
+                                        <option value="natural_gas_condensing">Kondenzačný plynový kotol</option>
+                                        <option value="heat_pump_air">Tepelné čerpadlo (vzduch-voda)</option>
+                                        <option value="heat_pump_ground">Tepelné čerpadlo (zem-voda)</option>
+                                        <option value="biomass_pellets">Biomasa (pelety)</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>Nová účinnosť [0-1]</label>
+                                    <input type="number" id="ch6-new-eff" value="" step="0.01" placeholder="napr. 0.95">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ═══ SYSTEM MEASURES (DHW) ═══ -->
+                    <div class="form-section">
+                        <h3>💧 Systémové Opatrenia (Teplá Voda)</h3>
+
+                        <div class="measures-checklist" id="ch6-dhw-measures">
+                            <!-- DHW Calculate Checkbox -->
+                            <label class="measure-item"
+                                style="border: 1px solid var(--accent); background: rgba(59, 130, 246, 0.05);">
+                                <input type="checkbox" id="m-dhw-calculate">
+                                <div>
+                                    <strong>Zahrnúť Teplú Vodu do posúdenia obnovy</strong>
+                                    <span class="tooltip">Ak nie je zaškrtnuté, vyhodnotí sa iba úspora na
+                                        vykurovaní.</span>
+                                </div>
+                            </label>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-dhw-insulation">
+                                <div>
+                                    <strong>Izolácia rozvodov teplej vody</strong>
+                                    <span class="tooltip">Zaizolovanie rozvodov a cirkulácie (40mm izolácia, λ=0.036).
+                                        Znižuje
+                                        straty distribúciou.</span>
+                                </div>
+                            </label>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-dhw-water-saving">
+                                <div>
+                                    <strong>Úsporné armatúry (sprchové hlavice, perlátory)</strong>
+                                    <span class="tooltip">Zníženie prietoku a celkovej spotreby vody.</span>
+                                </div>
+                            </label>
+
+                            <div class="form-grid" style="margin-left: 2rem; margin-top: 0.5rem;">
+                                <div class="field">
+                                    <label>Nová merná potreba Q_W,A (kWh/m²·a)</label>
+                                    <input type="number" id="ch6-new-dhw-qwa" placeholder="napr. 14">
+                                    <span class="tooltip">Pôvodne zvyčajne 20 kWh/m2.a. Nechajte prázdne pre automatický
+                                        -30%
+                                        odpočet.</span>
+                                </div>
+                            </div>
+
+                            <label class="measure-item">
+                                <input type="checkbox" id="m-dhw-source">
+                                <div>
+                                    <strong>Nový zdroj pre prípravu Teplej Vody</strong>
+                                    <span class="tooltip">Nariadenie nového tepelného čerpadla alebo kotla výhradne pre
+                                        TV.</span>
+                                </div>
+                            </label>
+
+                            <div class="form-grid" style="margin-left: 2rem; margin-top: 0.5rem;">
+                                <div class="field">
+                                    <label>Nový typ zdroja (TV)</label>
+                                    <select id="ch6-new-dhw-fuel">
+                                        <option value="">— ponechať aktuálny —</option>
+                                        <option value="heat_pump_air">Tepelné čerpadlo (Vzduch-Voda)</option>
+                                        <option value="heat_pump_ground">Tepelné čerpadlo (Zem-Voda)</option>
+                                        <option value="natural_gas_condensing">Kondenzačný plynový kotol</option>
+                                        <option value="biomass_pellets">Kotol na biomasu (Pelety)</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>Nová účinnosť zdroja / COP</label>
+                                    <input type="number" id="ch6-new-dhw-eff" step="0.01" placeholder="napr. 2.8">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="ch6-btn-calc" class="btn-primary btn-large" onclick="calculateRenovation()">
+                        ▶ Porovnať Pred / Po Obnove
+                    </button>
+                </div>
+
+                <div id="ch6-result" class="result-card hidden"></div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CHAPTER 9: Energy Certification (NEW) -->
+            <!-- ============================================================ -->
+            <section id="tab-ch9" class="tab-content">
+                <div class="card">
+                    <h2>Kapitola 9: Energetická Certifikácia</h2>
+                    <p class="card-desc">Výpočet primárnej energie, emisií CO2 a určenie energetickej triedy.</p>
+
+                    <!-- TZB Summary Section -->
+                    <div class="form-section">
+                        <h3>📋 Sumarizácia TZB systémov</h3>
+                        <div id="tzb-summary" class="info-box"
+                            style="border-left: 4px solid var(--accent); background: rgba(59, 130, 246, 0.05); padding: 1rem;">
+                            <strong>ℹ️ Postupnosť výpočtu:</strong><br><br>
+                            Pre vystavenie Energetického Certifikátu systém potrebuje zhromaždiť všetky dáta o Vašej
+                            budove.
+                            <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                                <li>Vypočítajte Spotrebu na Vykurovanie v <strong>Kapitole 3</strong>.</li>
+                                <li>Vypočítajte Spotrebu na Teplú vodu v <strong>Kapitole 4</strong>.</li>
+                                <li>Dáta sa sem automaticky prenesú a odomknú možnosť spustiť Globálny Ukazovateľ.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>🔥 Potreba Energie (Vstupy)</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label>Vykurovanie (QH) [kWh/rok]</label>
+                                <input type="number" id="ch9-qh" placeholder="Načíta sa z Kap. 3">
+                                <span class="tooltip">Automaticky načítané, možnosť manuálnej úpravy.</span>
+                            </div>
+                            <div class="field">
+                                <label>Teplá Voda (QW) [kWh/rok]</label>
+                                <input type="number" id="ch9-qw" placeholder="Načíta sa z Kap. 4">
+                            </div>
+                            <div class="field">
+                                <label>Podlahová plocha (Ab) [m²]</label>
+                                <input type="number" id="ch9-ab" placeholder="Načíta sa z Kap. 1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>⚡ Doplňujúce údaje</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label>Osvetlenie - Dodaná [kWh/rok]</label>
+                                <input type="number" id="ch9-lighting" value="0">
+                                <span class="tooltip">Podľa VstupneUdaje.xlsx (cca 6-15 W/m2).</span>
+                            </div>
+                            <div class="field">
+                                <label>Chladenie - Dodaná energia [kWh/rok]</label>
+                                <input type="number" id="ch9-cooling" value="0">
+                            </div>
+                            <div class="field">
+                                <label>Vetranie - Dodaná energia [kWh/rok]</label>
+                                <input type="number" id="ch9-ventilation" value="0">
+                            </div>
+                            <div class="field">
+                                <label>Fotovoltika - Produkcia [kWh/rok]</label>
+                                <input type="number" id="ch9-pv" value="0">
+                                <span class="tooltip">Energia z FVE odpočítaná z primárnej energie.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>🌍 Faktory primárnej energie a CO2</h3>
+                        <p class="section-desc">Prednastavené hodnoty podľa vyhlášky (editovateľné).</p>
+
+                        <div class="factors-table">
+                            <div class="ft-header">Nosič energie</div>
+                            <div class="ft-header">f_prim</div>
+                            <div class="ft-header">f_CO2</div>
+
+                            <div class="ft-row">
+                                <span>Elektrina</span>
+                                <input type="number" id="f-el-prim" value="2.2" step="0.1">
+                                <input type="number" id="f-el-co2" value="0.167" step="0.001">
+                            </div>
+                            <div class="ft-row">
+                                <span>Zemný plyn</span>
+                                <input type="number" id="f-gas-prim" value="1.1" step="0.1">
+                                <input type="number" id="f-gas-co2" value="0.220" step="0.001">
+                            </div>
+                            <div class="ft-row">
+                                <span>CZT</span>
+                                <input type="number" id="f-czt-prim" value="1.3" step="0.1">
+                                <input type="number" id="f-czt-co2" value="0.300" step="0.001">
+                            </div>
+                            <div class="ft-row">
+                                <span>Biomasa (Pelety/Drevo)</span>
+                                <input type="number" id="f-bio-prim" value="0.2" step="0.1">
+                                <input type="number" id="f-bio-co2" value="0.020" step="0.001">
+                            </div>
+                            <div class="ft-row">
+                                <span>Fotovoltika (Odpočet)</span>
+                                <input type="number" id="f-pv-prim" value="2.2" step="0.1">
+                                <input type="number" id="f-pv-co2" value="0.167" step="0.001" disabled
+                                    title="Použije sa faktor elektriny">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="ch9-btn-calc" class="btn-primary btn-large" onclick="calculateCertificate()">
+                        ▶ Vypočítať Energetický Certifikát
+                    </button>
+                </div>
+
+                <div id="ch9-result" class="result-card hidden"></div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CHAPTER 8: Economics and Return on Investment (NEW) -->
+            <!-- ============================================================ -->
+            <section id="tab-ch8" class="tab-content">
+                <div class="card">
+                    <h2>Kapitola 8: Ekonomické Hodnotenie a Návratnosť</h2>
+                    <p class="card-desc">Výpočet hrubej návratnosti (PB), čistej súčasnej hodnoty (NPV) a Hotovostného
+                        toku
+                        (Cashflow).</p>
+
+                    <div class="form-section">
+                        <h3>💰 Základné investičné parametre</h3>
+                        <div class="info-box"
+                            style="border-left: 4px solid var(--accent); background: rgba(59, 130, 246, 0.05); padding: 1rem; margin-bottom: 1rem;">
+                            <strong>ℹ️ Postupnosť výpočtu:</strong><br><br>
+                            Ekonomické hodnotenie nadväzuje na <strong>Kapitolu 6</strong> (Návrh opatrení). Energiovú
+                            úsporu a
+                            sumárne zhodnotenie si systém automaticky prevezme z výsledkov Kapitoly 6. Zadáte už len
+                            financovanie.
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="field">
+                                <label>Celkové investičné náklady (I) [€]</label>
+                                <input type="number" id="ch8-investment" value="529160" step="1" min="0">
+                            </div>
+                            <div class="field">
+                                <label>Súčasná cena energie (E) [€/kWh]</label>
+                                <input type="number" id="ch8-energy-price" value="0.11" step="0.01" min="0">
+                                <span class="tooltip">Priemerná vážená cena za energie (teplo + elektrina z Kap.
+                                    6).</span>
+                            </div>
+                            <div class="field">
+                                <label>Doba ekonomickej životnosti (n) [roky]</label>
+                                <input type="number" id="ch8-lifetime" value="30" step="1" min="1">
+                                <span class="tooltip">Zvyčajne 30 rokov podľa životnosti zateplenia / stavebných
+                                    konštrukcií.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>📈 Financovanie a Inflácia</h3>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label>Nominálna úroková miera (nr) [%]</label>
+                                <input type="number" id="ch8-interest" value="5.0" step="0.1" min="0">
+                                <span class="tooltip">Banka obvykle ponúka 4.0 - 6.0%. Podpora ŠFRB býva nižšie
+                                    (1-2%).</span>
+                            </div>
+                            <div class="field">
+                                <label>Predpokladaná miera inflácie (b) [%]</label>
+                                <input type="number" id="ch8-inflation" value="2.0" step="0.1" min="0">
+                            </div>
+                            <div class="field">
+                                <label>Podiel cudzieho kapitálu (Úver) [%]</label>
+                                <input type="number" id="ch8-loan-share" value="80" step="1" min="0" max="100">
+                            </div>
+                            <div class="field">
+                                <label>Splatnosť úveru [roky]</label>
+                                <input type="number" id="ch8-loan-duration" value="20" step="1" min="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="ch8-btn-calc" class="btn-primary btn-large" onclick="calculateEconomics()">
+                        ▶ Vypočítať Návratnosť (Cashflow)
+                    </button>
+                </div>
+
+                <div id="ch8-result" class="result-card hidden">
+                    <!-- Results will be injected here via app.js -->
+                </div>
+
+                <div class="form-section" style="margin-top:2rem; padding-top:2rem; text-align:right;">
+                    <button id="btn-next-to-ch9" class="btn-primary btn-large" style="background:#0f172a;"
+                        onclick="switchTab('ch9', document.querySelectorAll('.step-btn')[6])">
+                        Pokračovať na Vystavenie Certifikátu (Záver) ➔
+                    </button>
+                </div>
+            </section>
+
+    </div>
+    </main>
+    </div>
+
+    <footer>
+        <p>Energetický Audit © 2026 — Výpočty podľa STN 73 0540-2/Z1, STN EN ISO 52016-1, STN EN ISO 13790/NA</p>
+    </footer>
+
+</div><!-- /view-audit -->
+
+<!-- Material Picker Side Drawer -->
+<div id="mat-picker-overlay" onclick="closeMaterialPicker()"></div>
+<div id="mat-picker-drawer">
+    <div class="mpd-header">
+        <div>
+            <div class="mpd-title">🧱 Knižnica materálov</div>
+            <div class="mpd-subtitle">Vyberte materál — hodnoty sa vyplnia automaticky</div>
+        </div>
+        <button class="mpd-close" onclick="closeMaterialPicker()">✕</button>
+    </div>
+
+    <!-- Search -->
+    <div class="mpd-search-wrap">
+        <span class="mpd-search-icon">🔍</span>
+        <input type="text" id="mpd-search" placeholder="Hľadať materál..." autocomplete="off" oninput="filterMaterials()">
+    </div>
+
+    <!-- Category tabs -->
+    <div class="mpd-cats" id="mpd-cats"></div>
+
+    <!-- Material grid -->
+    <div class="mpd-grid" id="mpd-grid"></div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="app-toast"></div>
+
+    <script src="materials.js?v=5"></script>
+    <script src="app.js?v=5"></script>
+    <script src="dashboard.js?v=5"></script>
+</body>
+
+</html>
