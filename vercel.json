@@ -1,14 +1,1 @@
-{
-  "builds": [
-    {
-      "src": "backend/app/main.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/backend/app/main.py"
-    }
-  ]
-}
+﻿{"functions": {"api/index.py": {"includeFiles": "backend/**"}}, "rewrites": [{"source": "/api/(.*)", "destination": "/api/index.py"}]}
