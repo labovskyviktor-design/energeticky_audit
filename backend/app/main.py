@@ -38,23 +38,23 @@ app.add_middleware(
 app.include_router(thermal_router)
 app.include_router(energy_router)
 
-# Serve static frontend files
-FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend" / "static"
-
-if FRONTEND_DIR.exists():
-    app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
-
-
-@app.get("/")
-async def serve_frontend():
-    """Serve the frontend SPA."""
-    index = FRONTEND_DIR / "index.html"
-    if index.exists():
-        return FileResponse(str(index))
-    return {"message": "Frontend not found. Use /docs for API documentation."}
-
-
 @app.get("/health")
 async def health_check() -> dict[str, str]:
     """Health check endpoint."""
     return {"status": "ok", "service": "energy-audit-backend"}
+
+
+# Serve static frontend files
+FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend" / "static"
+
+@app.get("/{path:path}")
+async def serve_static_or_index(path: str):
+    file_path = FRONTEND_DIR / path
+    if path != "" and file_path.exists() and file_path.is_file():
+        return FileResponse(file_path)
+    
+    index_path = FRONTEND_DIR / "index.html"
+    if index_path.exists():
+        return FileResponse(index_path)
+        
+    return {"message": "Frontend not found. Use /docs for API documentation."}
