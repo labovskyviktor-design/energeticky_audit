@@ -1,1 +1,11 @@
-{"rewrites": [{"source": "/api/(.*)", "destination": "/api/app/main.py"}]}
+{
+  "builds": [
+    { "src": "backend/app/main.py", "use": "@vercel/python" },
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/backend/app/main.py" },
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "/(.*)", "destination": "/public/$1" }
+  ]
+}
