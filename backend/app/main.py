@@ -43,18 +43,7 @@ async def health_check() -> dict[str, str]:
     """Health check endpoint."""
     return {"status": "ok", "service": "energy-audit-backend"}
 
-
-# Serve static frontend files
-FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "public"
-
-@app.get("/{path:path}")
-async def serve_static_or_index(path: str):
-    file_path = FRONTEND_DIR / path
-    if path != "" and file_path.exists() and file_path.is_file():
-        return FileResponse(file_path)
-    
-    index_path = FRONTEND_DIR / "index.html"
-    if index_path.exists():
-        return FileResponse(index_path)
-        
-    return {"message": "Frontend not found. Use /docs for API documentation."}
+@app.get("/")
+async def root():
+    """Root endpoint — on Vercel, static files from public/ are served automatically."""
+    return {"message": "Energy Audit API is running. Use /docs for documentation."}
