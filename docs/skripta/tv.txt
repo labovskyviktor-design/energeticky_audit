@@ -1,0 +1,317 @@
+
+--- Page 1 ---
+94 
+ 
+7 POTREBA ENERGIE NA PRÍPRAVU TEPLEJ VODY PO OBNOVE 
+ ÚVOD 7.0
+ Opis situácie 7.0.1
+Okrem vykurovacej sústavy si identifikoval(a) potenciál energetických úspor aj v sústave 
+prípravy teplej vody. Najmä izoláciou rozvodných potrubí na nevykurovanom prízemí 
+a v stúpacích šachtách by sa dalo ušetri ť ve ľa energie. Vypo čítaš preto úsporu energie pre toto 
+opatrenie, čím si ukončil(a) energetické výpočty potrebné na stanovenie úspory energie. 
+ Zadanie  7.0.2
+Navrhni vhodné energeticky úsporné opatrenia pre systém prípravy teplej vody. Vypo čítaj 
+potrebu energie na prípravu teplej vody po uskutočnení týchto opatrení. 
+ 
+ ENERGETICKY ÚSPORNÉ OPATRENIA PRE SYSTÉM PRÍPRAVY TV 7.1
+Niektoré úsporné opatrenia v systéme prípravy TV a prislúchajúce ovplyvnené 
+parametre sú v Tab. 7.1. Základným predpokladom úspechu je minimalizácia tepelných strát 
+z rozvodov TV. Vyhláška MDVRR SR č. 364/2012 Z. z. odporú ča distribučnú sústavu novej 
+budovy alebo významne obnovenej budovy navrhnú ť tak, aby výpo čtová teplota teplej vody 
+s možnos ťou termickej dezinfekcie bola 60 °C, výpo čtová teplota teplej vody bez možnosti 
+termickej dezinfekcie bola 70 °C, maximálny rozdiel teploty teplej vody medzi výstupným a 
+vratným otvorom zásobníka bol najviac 5 K, z výtoku od otvorenia teplej vody vytekala do 30 
+sekúnd voda s výpo čtovou teplotou 50 °C, tepelná strata potrubia neprek ročila hodnotu 10 
+W/(m.K).  
+  
+Tabuľka 7.1. Energeticky úsporné opatrenia a ovplyvnené parametre na prípravu TV 
+Opatrenia v systéme prípravy TV Ovplyvnené parametre 
+Úsporné sprchové hlavice Potreba vody 
+Časové ovládanie prevádzky spŕch Potreba vody 
+Termostatický zmiešavač, sprchy Potreba vody 
+Časové riadenie prevádzky cirkulačných čerpadiel TV Distribučný systém 
+Oprava netesností Distribučný systém 
+Tepelná izolácia potrubných rozvodov, armatúr Distribučný systém 
+Termostatické riadenie teploty TV Automatická regulácia teploty 
+Inštalácia tepelného čerpadla Účinnosť zdroja tepla 
+Spätné získavanie tepla z odpadovej vody Účinnosť zdroja tepla 
+Manuál prevádzky a údržby P&Ú* / energetický manažment 
+*) P&Ú znamená prevádzka a údržba. 
+
+--- Page 2 ---
+95 
+ 
+ PRÍKLAD 7.2
+V prípade systému prípravy TV sa uvažuje s tepelným izolovaním rozvodných potrubí. 
+Vzhľadom na to, že cirkula čné čerpadlo sa nachádza mimo objektu a nevplýva na dodan ú 
+energiu, nebudeme sa s ním v tomto príklade zaoberať.  
+ Izolácia rozvodných potrubí sústavy TV 7.2.1
+Pôvodná izolácia rozvodných potrubí TV je na niektorých miestach poškodená, alebo 
+už vôbec neexistuje. Táto izolácia nevyhovuje sú časným požiadavkám na tepelnú ochranu. 
+Preto sa navrhuje vymeni ť pôvodnú izoláciu ležatých rozvodov za novú. Okrem t oho sa 
+odporúča izolovať stúpacie potrubia vedené v šachtách. V praxi môže b yť s ohľadom na stav 
+rozvodov výhodné, resp. nutné spolu so zateplením realizova ť aj výmenu samotných 
+rozvodov tepla.  
+V tomto príklade sa uvažuje s hrúbkou tepelnej izolácie pre ležaté rozvody 30 mm. 
+Stúpacie potrubia v šachtách sú v pôvodnom stave a sú len ve ľmi slabo izolované plstenými 
+pásmi; v príklade sa pre tieto potrubia uvažuje s tepelnou izoláciou hrúbky 20 mm. 
+ Výpočet potreby energie na prípravu teplej vody 7.2.2
+7.2.2.1 Potreba tepla na prípravu TV – zjednodušená metóda 
+Zjednodušenou metódou vypo čítať potrebu tepla na prípravu TV na základe podlahovej 
+plochy pri definovanej teplote TV 60 °C a teplote studenej vody  10 °C takto: 
+ 
+  Q,². ,  20 . 4486,1  89 722 kWh/rok 
+ 
+kde: 
+QW,A   – špecifická potreba tepla na jednotku plochy (kWh/m 2.a). V prípade 
+normalizovaného  
+výpočtu možno použi ť hodnotu pre bytové domy pod ľa vyhlášky MDVRR SR               
+č. 364/2012 Z. z., príloha č. 1, Tab. č. 1. V prípade energetického auditu treba 
+stanoviť potrebu tepla tak, aby sa táto čo najviac približovala realite. V tomto 
+príklade uvažujeme s hodnotou 20 kWh/(m 2.a). 
+A   – rovná sa mernej ploche Ab = 4486,1 m2. 
+ 
+ 
+
+--- Page 3 ---
+96 
+ 
+7.2.2.2 Strata tepelnej energie z distribučného systému teplej vody 
+Celková tepelná strata z distribučného systému TV je: 
+ 
+,Z = £ ,Z," + ,Z,X = 37 754 + 3577 = 41 331 kWh/rok 
+7.2.2.3 Tepelná strata úseku potrubia s cirkuláciou TV  
+Tepelná strata úseku potrubia TV a cirkula čného potrubia sa počíta pre tú časť rozvodu,  
+v ktorej prebieha cirkulácia TV, t. j. od zdroja tepla (resp. v našom prípade od vstupu potrubí 
+do budovy) až po pripájacie potrubia do bytov. Pretože v pripájacích rozvodoch od stúpacích 
+potrubí do bytov TV necirkuluje, tieto sa vo výpo čte neuvažujú. Pri výpo čte tepelnej straty 
+úseku potrubia TV a cirkulačného potrubia sa vychádzalo z nasledujúcich údajov: 
+ 
+• prívodné ležaté aj cirkula čné potrubie TV je z oce ľových závitových pozinkovaných 
+rúr svetlosti DN 40, resp. DN 32. Sú činiteľ tepelnej vodivosti oce ľovej rúry je λ = 50 
+W/(m.K); 
+• ležaté potrubia sú izolované novou tepelnou izoláciou hrúbky 30 mm. Uvažuje sa so 
+súčiniteľom tepelnej vodivosti izolácie λ = 0,036 W/(m.K); 
+• v objekte sú 4 inštala čné šachty, v každej je stúpacie prívodné aj cirkula čné potrubie 
+TV z oce ľových závitových pozinkovaných rúr. Sú činiteľ tepelnej vodivosti oce ľovej 
+rúry je λ = 50 W/(m.K); 
+• stúpacie potrubia sú izolované novou tepelnou izoláciou hrúbky 20 mm. Uvažuje sa so 
+súčiniteľom tepelnej vodivosti izolácie λ = 0,036 W/(m.K). 
+ 
+Na Obr. 7.1  je príklad výpo čtu lineárneho stratového sú činiteľa ležatého prívodného 
+potrubia. Tepelná  strata  distribu čného  systému  sa  vypo čítala  pomocou  programu  na 
+nasledujúcej internetovej stránke: 
+ 
+http://vytapeni.tzb-info.cz/tabulky-a-vypocty/44-tepelna-ztrata-potrubi-s-izolaci-
+kruhovehoprurezu 
+ 
+
+--- Page 4 ---
+97 
+ 
+ 
+Obr. 7.1. Výpočet lineárneho stratového súčiniteľa prívodného potrubia TV na prízemí 
+ 
+Pri výpočte tepelnej straty z rozvodu sa použili tieto vstupn é údaje: 
+ 
+Ui    je lineárny stratový súčiniteľ zodpovedá hodnote Uo na Obr. 7.1 v obdĺžniku.  
+Hodnoty použité vo výpo čte sú v Tab. 7.2; 
+θW,d,i   – stredná teplota teplonosnej látky zodpovedá hodnote tin na  Obr. 7.1. Uvažuje sa  
+s maximálnym rozdielom teploty teplej vody medzi výstupným a vratným otvorom  
+zásobníka najviac 5 K (vyhláška MDVRR SR č. 364/2012 Z. z.), preto sa uvažuje so 
+strednou teplotou vody v rozvodoch θm = 60 °C – 5 °C / 2 = 57,5 °C; 
+θi    – teplota okolitého prostredia zodpovedá hodnote tout na Obr. 7.1. Uvažuje sa 10 °C  
+pre ležaté potrubia na prízemí a 15 °C pre stúpacie potrubia v šachte; 
+L     – d ĺžka ležatých rozvodov na 1. NP a stúpacích rozvodov v šachtách (v budove sú 
+štyri stúpacie potrubia TV s cirkuláciou). Hodnoty použité vo výpo čte sú v Tab. 7.2; 
+
+
+--- Page 5 ---
+98 
+ 
+tW – po čet prevádzkových hodín; počet dní prípravy TV = 365 dní. Počet 
+prevádzkových hodín je 365 . 24 = 8760 hod. 
+ 
+V Tab. 7.2 sú vlastnosti rozvodov TV na nevykurovanom prízemí a v šachtách, na 
+základe ktorých sa vypočítala tepelná strata úseku potrubia s cirkuláciou TV. 
+ 
+Tabuľka 7.2. Vlastnosti rozvodov TV na nevykurovanom prízemí a v šachtách po izolácii 
+DN 
+potrubia 
+(mm) 
+Lineárny 
+stratový 
+súčiniteľ  
+Ψ (W/(m.K)) 
+Dĺžka 
+rozvodu  
+L (m) 
+Teplota okolitého 
+prostredia  
+θi (°C) 
+Identifikácia 
+potrubia Izolácia 
+40 0,259 7 10 prívod 1. NP 30 mm 
+32 0,238 6 10 prívod 1. NP 30 mm 
+25 0,257 56 15 prívod šachta 20 mm 
+20 0,222 76 15 prívod šachta 20 mm 
+20 0,180 13 10 cirkulácia 1. NP 30 mm 
+15 0,193 132 15 cirkulácia šachta 20 mm 
+ 
+Výpočet tepelnej straty distribučným potrubím TV: 
+ 
+,Z"?,A?,1 = £\],^.  !$ − !",^%. _^. &@K,1
+^
+= 0,259 . 7 . 57,5 − 10 + 0,238 . 6 . 57,5 − 10 + 0,257 .56. 57,5 − 15
++ 0,222 . 76. 57,5 − 15 + 0,180.13. 57,5 − 10 + 0,193.132. 57,5
+− 15. 8760 1000⁄ = 37 754 kWh/rok 
+7.2.2.4 Tepelná strata potrubia v dôsledku stagnácie TV 
+Tepelná strata potrubia v dôsledku stagnácie TV sa vypo číta pre pripájacie potrubia od 
+stúpacích potrubí k výtokovým armatúram v bytoch. Pretože tieto potrubia prechádzajú 
+bytmi, uvažuje s teplotou okolitého vzduchu 20 °C. Tepelná strata potrubia v dôsledku 
+stagnácie vody sa pre bytový dom vypočíta takto: 
+ 
+,Z," = 365 3600³ . 2. 5.  !,Z − !1$C%. ¸¹
+= 365 3600³  . 4181 . 0,045 . 57,5 − 20 . 5= 3577 kWh/rok
+ 
+ 
+ 
+
+--- Page 6 ---
+99 
+ 
+kde sa pri výpočte použili tieto vstupné údaje: 
+ 
+cW      je merná tepelná kapacita vody (J/(kg.K)), má hodnotu 4181 J/(kg.K); 
+VW – objem vody v rúrkach (m 3) je vypočítaný z dĺžky a priemeru potrubia, VW = 0,045 m3; 
+θW,d – priemerná teplota vody v potrubí (°C), má hodnotu 57,5 °C; 
+θamb – priemerná teplota okolia (°C), má hodnotu 20 °C; 
+Ntap  – po čet odberov teplej vody, teda ko ľkokrát za de ň TV vychladne. V tomto príklade sa 
+uvažuje 5-krát za de ň. 
+ 
+Objem vody v rúrkach sa vypočítal takto: 
+ 
+Z pôdorysu sa zistila d ĺžka potrubia TV v jednotlivých bytoch na typickom po dlaží od 
+inštala čnej šachty po výtokové armatúry v kuchyni a v kúpe ľni. V tomto prípade sú na podlaží 
+4 byty, celková d ĺžka potrubí na podlaží je 5,3 + 5,4 + 5,3 + 5,4 = 21 ,4 m. Táto d ĺžka sa 
+vynásobila počtom obytných podlaží (12) v bytovom dome. Dimenzia p otrubí v bytoch je DN 
+15, teda VW = (21,4 . 12) . (3,14 . 0,0152 / 4) = 0,045 m3. 
+ 
+Pretože táto tepelná strata prispieva k vykurovaniu bytov, možno časť tejto straty počas 
+vykurovacej sezóny považova ť za spätne získate ľnú tepelnú stratu a odpo čítať ju od potreby 
+energie na vykurovanie vypo čítanej v 6.2.2.6. Spätne získate ľná tepelná strata z distribúcie 
+TV počas vykurovacej sezóny sa vypočíta takto: 
+ 
+,Z," = 212 3600³ . 2 . 5.  !,Z − !1$C%. ¸¹
+= 212 3600³  . 4181 . 0,045 . 57,5 − 20 . 5= 2077 kWh 
+ 
+kde sa pri výpočte použili tieto vstupné údaje: 
+ 
+cW  je tepelná kapacita vody, cW = 4 181 J/(kg.K); 
+VW – objem vody v rúrkach je vypo čítaný z dĺžky a priemeru potrubia, VW = 0,045 m3; 
+θW,d – priemerná teplota vody v potrubí, θW,d = 57,5 °C; 
+θamb – priemerná teplota okolia v bytoch, θamb = 20 °C; 
+Ntap – po čet odberov teplej vody, teda, ko ľkokrát za de ň TV v potrubiach vychladne. 
+V tomto príklade sa uvažuje 5-krát za de ň. 
+
+--- Page 7 ---
+100 
+ 
+7.2.2.5 Tepelná strata cirkulačného okruhu počas obdobia bez cirkulácie 
+Predpokladá sa, že cirkula čné čerpadlo je v prevádzke bez prestávky, v cirkula čnom 
+potrubí preto nedochádza k vychladnutiu vody. Hoci sa dá predpoklada ť vychladnutie TV 
+v cirkulačnom počas technickej prestávky, toto vychladnutie sa vo výpočte zanedbalo. 
+7.2.2.6 Stanovenie vlastnej elektrickej energie cirkulačných čerpadiel 
+V tomto prípade sa cirkula čné čerpadlo systému prípravy TV nachádza v OST mimo 
+bytového domu, s vlastnou elektrickou energiou cirkula čného čerpadla sa preto v tomto 
+príklade neuvažuje. 
+7.2.2.7 Tepelná strata z akumulácie TV 
+Akumulačná nádoba sa nachádza v odovzdávacej stanici tepla m imo budovy. V tomto 
+príklade sa preto s tepelnou stratou z akumulácie neuvažuje.  
+7.2.2.8 Tepelná strata z výroby tepla 
+Zdrojom tepla je v tomto prípade odovzdávacia stanica tepla, ktorá sa nachádza mimo 
+budovy. S tepelnou stratou z výroby tepla sa preto v tomto príklade neuvažuje.  
+V prípade, ak by išlo o výpo čet energetickej hospodárnosti budovy v súlade s vyhláškou 
+MDVRR SR č. 364/2012 Z. z., musí sa ú činnosť pri výrobe tepla zoh ľadniť vo výpo čte 
+dodanej energie (pozri 9.2.2). 
+7.2.2.9 Potreba energie na prípravu TV 
+Potreba energie na prípravu TV: 
+ 
+    ,Z + o,Z,KM$K + ,  = 89 722 + 41 331 = 131 053 kWh/rok 
+ 
+Merná potreba energie na ohrev TV: 
+ 
+,$ =  ,C⁄ = 131 053 4486,1⁄ = 29,2 kWh/m[. rok 
+ 
+Výpočet potreby energie na prípravu TV je zhrnutý v Tab. 7.3. 
+ 
+ 
+ 
+
+--- Page 8 ---
+101 
+ 
+Tabuľka 7.3. Potreba energie na prípravu TV – nový stav 
+Sledovaný údaj Označenie Jednotka Vypočítaná 
+hodnota 
+Potreba tepla na prípravu TV QW kWh/rok 89 722 
+Tepelná strata z distribúcie TV QW,d kWh/rok 41 331 
+Potreba energia na prípravu TV QTV kWh/rok 131 053 
+Podlahová plocha budovy Ab m2 4486,1 
+Merná potreba energie na prípravu TV QTV,m kWh/(m 2.rok) 29,2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 9 ---
+102 
+ 
+8 VÝPOČET NÁVRATNOSTI A ZISKOVOSTI ENERGETICKY 
+ÚSPORNÝCH OPATRENÍ, HOTOVOSTNÝ TOK 
+ ÚVOD 8.0
+ Opis situácie 8.0.1
+Prepracoval(a) si sa k závere čnému kroku svojho posúdenia, ktorým je technicko-
+ekonomické vyhodnotenie navrhovaných úsporných opatrení. Konkrétne treba stanovi ť 
+ziskovosť energeticky úsporných opatrení a hotovostný tok – c ashflow.  
+ Zadanie  8.0.2
+Pre energeticky úsporné opatrenia uvažované v predošlých krokoch vypo čítaj 
+jednoduchú návratnos ť (PB), čistú sú časnú hodnotu (NPV) a koeficient čistej sú časnej 
+hodnoty (NPVQ). Navrhni formu financovania obnovy bytového domu a vypo čítaj 
+hotovostný tok – cashflow. 
+ 
+ TECHNICKO-EKONOMICKÉ VYHODNOTENIE 8.1
+Technicko-ekonomické vyhodnotenie je dôležitou sú časťou projektov obnovy. Cie ľom 
+technicko-ekonomického vyhodnotenia je nájs ť ziskovos ť jednotlivých energeticky 
+úsporných opatrení a zisti ť hotovostný tok pri navrhovanej variante financovani a, resp. 
+porovnať rôzne varianty financovania. 
+ Ekonomické parametre 8.1.1
+Ekonomické parametre, ktoré vstupujú do technicko-ekonomického vyhodnotenia, sú tieto: 
+ 
+• investície  (€), 
+• ročná úspora (€/rok), 
+• technická/ekonomická životnos ť (roky), 
+• nominálna úroková miera  (%), 
+• miera inflácie (%), 
+• reálna úroková miera (%). 

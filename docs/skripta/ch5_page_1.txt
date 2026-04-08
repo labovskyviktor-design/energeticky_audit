@@ -1,0 +1,36 @@
+82 
+ 
+6 
+POTREBA ENERGIE NA VYKUROVANIE PO OBNOVE 
+ ÚVOD 
+6.0
+ Opis situácie 
+6.0.1
+Vykonal(a) si výpočet potreby tepla a zistil(a) si, že existuje významný potenciál 
+energetických úspor zateplením stavebných konštrukcií. No aby bola tvoja práca úplná, treba 
+vyčísliť aj potenciál úspor v systéme vykurovania. Navyše, bez niektorých opatrení v systéme 
+vykurovania, ako sú hydraulické vyregulovanie či centrálna a individuálna regulácia 
+vnútornej teploty, sa ani účinok opatrení na teplovýmennom obale nemôže naplno prejaviť. 
+ Zadanie  
+6.0.2
+Navrhni vhodné energeticky úsporné opatrenia pre systém vykurovania. Vypočítaj 
+potrebu energie na vykurovanie po uskutočnení týchto opatrení. 
+ 
+ ENERGETICKY ÚSPORNÉ OPATRENIA PRE SYSTÉM 
+6.1
+VYKUROVANIA 
+Zvýšenie energetickej hospodárnosti vykurovania závisí vo veľkej miere od úrovne 
+tepelnej ochrany (zateplenie, výmena otvorových výplní). Aby sa efekt zlepšenia tepelnej 
+ochrany mohol v plnej miere prejaviť, je potrebné po obnove stavebných konštrukcií 
+primerane prispôsobiť vykurovaciu sústavu. Dôležitými opatreniami sú najmä centrálna 
+automatická regulácia teploty vykurovacej vody, individuálna regulácia teploty vzduchu 
+v bytoch pomocou vysokoodporových ventilov s termostatickými hlavicami, zabezpečenie 
+merania tepla v jednotlivých bytoch, zvýšenie kvality tepelnej izolácie potrubia v 
+nevykurovaných priestoroch, montáž nových obehových čerpadiel s frekvenčným meničom, 
+zníženie teplotného spádu sústavy, ako aj hydraulické vyregulovanie rozvodov vykurovania. 
+Niektoré úsporné opatrenia vo vykurovacom systéme a prislúchajúce ovplyvnené parametre 
+sú v Tab. 6.1.  
+ 
+ 
+ 
+ 

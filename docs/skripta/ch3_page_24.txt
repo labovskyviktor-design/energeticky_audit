@@ -1,0 +1,61 @@
+Potreba hydraulickej energie sa vypočítala takto: 
+
+o(cid:18),Z"?,(cid:19)YZ(cid:3),1(cid:24) =
+
+~(cid:19)YZ(cid:3),Z#?
+1000
+
+. mZ"?. &@K,1(cid:24). wxy(cid:28). w(cid:18)z. w{,|} =
+
+133
+1000
+
+ . 0,42 . 5088 . 1 . 1 . 1
+
+= 284 kWh/rok
+
+Návrhový hydraulický výkon čerpadla v pracovnom bode Phydr,des sa vypočítal takto: 
+
+~(cid:19)YZ(cid:3),Z#? = 0,2778. Δ‚Z#?. 5Z#? = 0,2778 . 48,6 . 9,85 = 133 kW
+
+Hodnoty ∆pFH a ∆pG sa pri výpočte merného tlakového spádu ∆pdes uvažovali: 
+
+∆pFH  – 25 kPa vrátane uzatváracích armatúr a rozdeľovačov; 
+
+∆pG   – pre zariadenie na výrobu tepla s vodným objemom > 0,3 l/kW má hodnotu 1,0 kPa. 
+
+Maximálnu  dĺžku  vykurovacieho  okruhu  možno  odčítať  na  základe  projektovej 
+
+dokumentácie.  Pre  ilustráciu  sa  v tomto  príklade  maximálna  dĺžka  vykurovacieho  okruhu 
+
+odhadla výpočtom. Pri výpočte Lmax sa uvažovalo s týmito hodnotami: 
+
+LL   – dĺžka je 25,03 m; 
+
+LW   – šírka je 21,23 m; 
+
+Nlev   – 12 vykurovaných podlaží; 
+
+hlev   – konštrukčná výška podlažia je 2,8 m; 
+
+lc  
+
+– dĺžka pripájacích potrubí sa pre dvojrúrové vykurovacie systémy uvažuje 10 m. 
+
+Maximálna dĺžka vykurovacieho okruhu Lmax v objekte: 
+
+_$1+ = 2 . a_] +
+
+_J
+2
+
++ …A#†. ℎA#† + ‡Xi =  2 . a25,03 +
+
+21,23
+2
+
++ 12 . 2,8 + 10i = 158 m
+
+Δ‚Z#? = 0,13 . _$1+ + 2 + Δ‚I(cid:18) + Δ‚{ = 0,13 . 158 + 2 + 25 + 1 = 48,6 kPa
+
+60

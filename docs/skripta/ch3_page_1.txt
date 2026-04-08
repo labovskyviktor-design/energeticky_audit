@@ -1,0 +1,72 @@
+3 
+
+POTREBA ENERGIE NA VYKUROVANIE 
+
+3.0
+
+  ÚVOD 
+
+3.0.1
+
+  Opis situácie 
+
+Výpočet  potreby  tepla  na  vykurovanie  si  už  v minulosti  robil(a),  teraz  ťa  však  čaká 
+
+niečo  nové  –  výpočet  tepelných  strát  vykurovacieho  systému  a potreby  energie  na 
+
+vykurovanie.  Tu  sa  okrem  potreby  tepla  zohľadňujú  aj  tepelné  straty  technických  zariadení 
+
+budovy.  Máš  k dispozícii  dokumentáciu  z obhliadky  a projektovú  dokumentáciu,  pustíš  sa 
+
+teda do výpočtu. 
+
+3.0.2
+
+  Zadanie 
+
+Vypočítaj tepelné straty z podsystémov odovzdávania, rozvodu a výroby tepla a vlastnú 
+
+spotrebu  energie  obehových  čerpadiel.  Vypočítaj  potrebu  energie  na  vykurovanie.  Zohľadni 
+
+pritom  spätne  získateľnú  tepelnú  stratu  zo  systému  prípravy  teplej  vody,  ako  i  spätne 
+
+získateľnú časť vlastnej spotreby energie obehového čerpadla, ak je to vhodné. 
+
+3.1
+
+  VÝPOČET POTREBY ENERGIE NA VYKUROVANIE 
+
+Vykurovací  systém  pozostáva  z podsystémov  výroby  a akumulácie  tepla,  podsystému 
+
+rozvodu  tepla  a  podsystému  odovzdávania  tepla.  Pri  výpočte  potreby  energie,  resp.  dodanej 
+
+energie  sa  však  v súlade  s  STN  EN  15316-1  postupuje  v opačnom  poradí,  teda  od  potreby 
+
+tepla  na  vykurovanie,  smerom  k podsystému  výroby  a akumulácie.  Táto  kapitola  obsahuje 
+
+postup  výpočtu  tepelných  strát  vykurovacieho  systému  a výpočet  potreby  energie  na 
+
+vykurovanie,  ktorá  zohľadňuje  tak  potrebu  tepla  na  vykurovanie,  ako  i tepelné  straty 
+
+vykurovacieho systému. 
+
+3.1.1
+
+  Tepelná strata systému odovzdávania tepla 
+
+Podrobnosti  ohľadne  výpočtu  tepelnej  straty  systému  odovzdávania  tepla  možno  nájsť 
+
+v STN EN 15316-2. Tepelné straty systému odovzdávania tepla sa vypočítajú takto: 
+
+(cid:17)#$,A? (cid:5)  (cid:17)#$,@M(cid:20). N
+
+OP(cid:8)QR,(cid:8)QS 
+P (cid:8)QR,(cid:8)QST P(cid:10),SUV/ 
+
+        (kWh) 
+
+W
+
+(3.1) 
+
+37

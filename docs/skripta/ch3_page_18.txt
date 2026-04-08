@@ -1,0 +1,73 @@
+kde: 
+
+QH 
+
+je potreba tepla na vykurovanie (kWh). Táto sa vypočítala v predošlej kapitole; 
+
+Qem,ls  
+
+  – tepelná strata systému odovzdávania tepla (kWh); 
+
+QH,dis,ls,an  – tepelná strata z rozvodov vykurovacieho systému (kWh); 
+
+WH,dis,aux,an  – vlastná spotreba energie systému rozvodu tepla (kWh); 
+
+Qs,ls 
+
+– tepelná strata z akumulácie tepla (kWh). Pri výpočte sa postupuje rovnako, ako 
+
+v prípade prípravy TV (pozri 4.1.4). 
+
+Qg,ls   
+
+  – tepelná strata z výroby tepla (kWh). 
+
+3.2
+
+  PRÍKLAD 
+
+3.2.1
+
+  Tepelná strata systému odovzdávania tepla 
+
+Tepelné straty systému odovzdávania tepla sa vypočítajú takto: 
+
+(cid:17)#$,A? (cid:5)  (cid:17)(cid:18). N
+
+-!"(cid:24)(cid:20),"(cid:24)X 
+! "(cid:24)(cid:20),"(cid:24)X (cid:21)  !#,X@$C 
+
+W (cid:5) 447 539. a
+
+1,85
+(cid:26)20 (cid:29) 1,85(cid:31) (cid:21)  3,86
+
+i (cid:5) 46 023 kWh
+
+kde: 
+
+QH 
+
+– potreba tepla na vykurovanie, QH = 447 539 kWh; 
+
+∆θint,inc   – zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania (K); 
+
+θe,comb  –  v prípade  vykurovania  je  táto  hodnota  rovná  priemeru  vonkajšej  teploty  vzduchu 
+
+počas uvažovaného obdobia (°C). V prípade normalizovaného hodnotenia sa uvažuje 
+
+s hodnotou θe,comb = 3,86 °C (STN 73 0540-3). V prípade energetického auditu treba 
+
+uvažovať s hodnotou čo najbližšie k realite. 
+
+Zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania: 
+
+!"(cid:24)(cid:20),"(cid:24)X (cid:5) !"(cid:24)(cid:20),"(cid:24)" (cid:29) Δ!"(cid:24)(cid:20),"(cid:24)X (cid:5) 20 (cid:29) 1,85 (cid:5) 21,85 °C
+
+kde:  
+
+θint,ini    – počiatočná teplota vzduchu v priestore, θint,ini = 20 °C; 
+
+∆θint,inc   – zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania (K). 
+
+54

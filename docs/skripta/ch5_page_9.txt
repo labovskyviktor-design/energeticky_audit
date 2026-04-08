@@ -1,0 +1,62 @@
+90 
+ 
+θi 
+– teplota okolitého prostredia zodpovedá hodnote tout na Obr. 6.1. Pre ležaté potrubia na 
+prízemí uvažujeme θi = 10 °C; 
+L  
+– dĺžka rozvodov. Hodnoty použité vo výpočte sú v Tab. 6.2; 
+top,an – počet vykurovacích hodín za rok top,an = 212 . 24 = 5088 hod.  
+ 
+V Tab. 6.2 sú vlastnosti rozvodov vykurovania na nevykurovanom 1. NP po ich 
+zaizolovaní, na základe ktorých sa vypočítala tepelná strata. Tepelná strata z rozvodov 
+prechádzajúcich bytmi prispieva k vykurovaniu obytných priestorov, preto sa s ňou vo 
+výpočte neuvažovalo. 
+ 
+Tabuľka 6.2. Vlastnosti rozvodov vykurovania na nevykurovanom prízemí po ich zaizolovaní 
+DN potrubia 
+(mm) 
+Lineárny stratový súčiniteľ  
+Ψ (W/(m.K)) 
+Dĺžka rozvodu 
+L (m) 
+Teplota okolitého 
+prostredia θi (°C) 
+65 
+0,296 
+14 
+10 
+50 
+0,243 
+20 
+10 
+40 
+0,208 
+88 
+10 
+32 
+0,189 
+54 
+10 
+ 
+Výpočet tepelnej straty z rozvodov vykurovania: 
+ 
+,Z"?,A?,1 = £ \],^.  !$ −!",^%. _^. &@K,1
+^
+= 0,296 . 36,2 −10 . 14 + 0,243 . 36,2 −10. 20
++ 0,208 . 36,2 −10 . 88 + 0,189 . 36,2 −10 . 54 . 5088 1000
+⁄
+= 5001 kWh 
+6.2.2.3 Vlastná spotreba energie systému rozvodu tepla 
+Ročná vlastná spotreba energie obehových čerpadiel pre vodné vykurovacie systémy sa 
+vypočíta podľa zjednodušenej metódy. 
+ 
+Vo výpočte potreby hydraulickej energie sa použili nasledujúce hodnoty: 
+ 
+Phydr,des – vypočítaný návrhový hydraulický výkon čerpadla v pracovnom bode, 117,0 W; 
+βdis     
+– priemerná časť straty na distribúciu sa vypočíta takto: 
+mZ"? = ,Z"?,@M
+¡#$. t@K
+=
+144 529
+100,6 . 5 088 = 0,28 

@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Nitra",
+    "oblast": 1,
+    "altitude": 135,
+    "monthly_temps": {
+      "I": -1.64,
+      "II": 0.62,
+      "III": 5.39,
+      "IV": 10.75,
+      "V": 15.66,
+      "VI": 18.69,
+      "VII": 20.39,
+      "VIII": 19.79,
+      "IX": 15.42,
+      "X": 10.02,
+      "XI": 4.49,
+      "XII": -0.11
+    },
+    "theta_e_m": 4.22,
+    "heating_days": 212
+  },
+  {
+    "name": "Senica",
+    "oblast": 2,
+    "altitude": 195,
+    "monthly_temps": {
+      "I": -2.58,
+      "II": -0.38,
+      "III": 4.13,
+      "IV": 9.73,
+      "V": 14.63,
+      "VI": 17.64,
+      "VII": 19.24,
+      "VIII": 18.64,
+      "IX": 14.43,
+      "X": 9.22,
+      "XI": 3.82,
+      "XII": -0.78
+    },
+    "theta_e_m": 3.31,
+    "heating_days": 222
+  },
+  {
+    "name": "Topolcany",
+    "oblast": 2,
+    "altitude": 192,
+    "monthly_temps": {
+      "I": -2.57,
+      "II": -0.36,
+      "III": 4.15,
+      "IV": 9.76,
+      "V": 14.66,
+      "VI": 17.66,
+      "VII": 19.26,
+      "VIII": 18.66,
+      "IX": 14.45,
+      "X": 9.24,
+      "XI": 3.84,
+      "XII": -0.76
+    },
+    "theta_e_m": 3.33,
+    "heating_days": 222
+  },
+  {
+    "name": "Piestany",
+    "oblast": 1,
+    "altitude": 163,
+    "monthly_temps": {
+      "I": -1.75,
+      "II": 0.48,
+      "III": 5.22,
+      "IV": 10.56,
+      "V": 15.46,
+      "VI": 18.48,
+      "VII": 20.18,
+      "VIII": 19.58,
+      "IX": 15.24,
+      "X": 9.88,
+      "XI": 4.37,
+      "XII": -0.23
+    },
+    "theta_e_m": 4.08,
+    "heating_days": 212
+  },
+  {
+    "name": "Dolny Kubin",
+    "oblast": 2,
+    "altitude": 468,
+    "monthly_temps": {
+      "I": -3.67,
+      "II": -1.74,
+      "III": 2.49,
+      "IV": 7.82,
+      "V": 12.72,
+      "VI": 15.59,
+      "VII": 17.19,
+      "VIII": 16.59,
+      "IX": 12.66,
+      "X": 7.86,
+      "XI": 2.59,
+      "XII": -2.01
+    },
+    "theta_e_m": 4.3,
+    "heating_days": 222
+  },
+  {
+    "name": "Banska Bystrica",
+    "oblast": 2,
+    "altitude": 429,
+    "monthly_temps": {
+      "I": -3.52,
+      "II": -1.54,
+      "III": 2.73,
+      "IV": 8.1,
+      "V": 13.0,
+      "VI": 15.88,
+      "VII": 17.48,
+      "VIII": 16.88,
+      "IX": 12.91,
+      "X": 8.05,
+      "XI": 2.77,
+      "XII": -1.83
+    },
+    "theta_e_m": 3.46,
+    "heating_days": 222
+  },
+  {
+    "name": "Trebisov",
+    "oblast": 2,
+    "altitude": 105,
+    "monthly_temps": {
+      "I": -2.22,
+      "II": 0.07,
+      "III": 4.67,
+      "IV": 10.37,
+      "V": 15.27,
+      "VI": 18.31,
+      "VII": 19.91,
+      "VIII": 19.31,
+      "IX": 15.02,
+      "X": 9.67,
+      "XI": 4.23,
+      "XII": -0.37
+    },
+    "theta_e_m": 3.77,
+    "heating_days": 222
+  },
+  {
+    "name": "Bardejov",
+    "oblast": 2,
+    "altitude": 305,
+    "monthly_temps": {
+      "I": -3.02,
+      "II": -0.93,
+      "III": 3.47,
+      "IV": 8.96,
+      "V": 13.87,
+      "VI": 16.81,
+      "VII": 18.41,
+      "VIII": 17.81,
+      "IX": 13.72,
+      "X": 8.67,
+      "XI": 3.33,
+      "XII": -1.27
+    },
+    "theta_e_m": 2.74,
+    "heating_days": 222
+  },
+  {
+    "name": "Bratislava-letisko",
+    "oblast": 1,
+    "altitude": 133,
+    "monthly_temps": {
+      "I": -1.63,
+      "II": 0.64,
+      "III": 5.4,
+      "IV": 10.77,
+      "V": 15.67,
+      "VI": 18.7,
+      "VII": 20.4,
+      "VIII": 19.8,
+      "IX": 15.44,
+      "X": 10.04,
+      "XI": 4.5,
+      "XII": -0.1
+    },
+    "theta_e_m": 4.23,
+    "heating_days": 212
+  },
+  {
+    "name": "Košice-letisko",
+    "oblast": 2,
+    "altitude": 230,
+    "monthly_temps": {
+      "I": -2.72,
+      "II": -0.55,
+      "III": 3.92,
+      "IV": 9.49,
+      "V": 14.39,
+      "VI": 17.38,
+      "VII": 18.97,
+      "VIII": 18.38,
+      "IX": 14.21,
+      "X": 9.05,
+      "XI": 3.67,
+      "XII": -0.93
+    },
+    "theta_e_m": 3.13,
+    "heating_days": 222
+  },
+  {
+    "name": "Poprad",
+    "oblast": 3,
+    "altitude": 694,
+    "monthly_temps": {
+      "I": -5.28,
+      "II": -3.57,
+      "III": 0.24,
+      "IV": 5.54,
+      "V": 10.54,
+      "VI": 13.29,
+      "VII": 14.79,
+      "VIII": 14.19,
+      "IX": 11.49,
+      "X": 6.13,
+      "XI": 1.08,
+      "XII": -3.62
+    },
+    "theta_e_m": 2.51,
+    "heating_days": 232
+  },
+  {
+    "name": "Liptovský Mikuláš",
+    "oblast": 2,
+    "altitude": 569,
+    "monthly_temps": {
+      "I": -4.08,
+      "II": -2.25,
+      "III": 1.89,
+      "IV": 7.12,
+      "V": 12.02,
+      "VI": 14.83,
+      "VII": 16.43,
+      "VIII": 15.83,
+      "IX": 12.0,
+      "X": 7.35,
+      "XI": 2.14,
+      "XII": -2.46
+    },
+    "theta_e_m": 3.75,
+    "heating_days": 222
+  },
+  {
+    "name": "Rimavská Sobota",
+    "oblast": 2,
+    "altitude": 215,
+    "monthly_temps": {
+      "I": -2.66,
+      "II": -0.47,
+      "III": 4.01,
+      "IV": 9.59,
+      "V": 14.49,
+      "VI": 17.49,
+      "VII": 19.09,
+      "VIII": 18.49,
+      "IX": 14.3,
+      "X": 9.12,
+      "XI": 3.73,
+      "XII": -0.87
+    },
+    "theta_e_m": 3.21,
+    "heating_days": 222
+  },
+  {
+    "name": "Trenč. Biskupice",
+    "oblast": 2,
+    "altitude": 201,
+    "monthly_temps": {
+      "I": -2.6,
+      "II": -0.41,
+      "III": 4.09,
+      "IV": 9.69,
+      "V": 14.59,
+      "VI": 17.59,
+      "VII": 19.19,
+      "VIII": 18.59,
+      "IX": 14.39,
+      "X": 9.19,
+      "XI": 3.8,
+      "XII": -0.8
+    },
+    "theta_e_m": 3.28,
+    "heating_days": 222
+  }
+]

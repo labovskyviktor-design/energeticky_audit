@@ -1,0 +1,35 @@
+20 
+ Zasklenie schodiskového a vý ťahového priestoru tvorí oce ľová konštrukcia s copilitovým 
+zasklením, priebežne pozd ĺž celej výšky objektu. Tepelno-technické vlastnosti otvorových 
+konštrukcií sú uvedené v Tab. 1.7. Pod ľa STN 73 0540-2/Z1 majú nové okná a dvere v 
+obvodovej stene sp ĺňať hodnotu súčiniteľa prechodu tepla UW,r1 = 1,0 W/(m2.K). Pre budovy, 
+na ktorých sa čiastočné stavebné úpravy vykonali v minulosti, platí maxim álna hodnota 
+UW,max  = 1,7 W/(m2.K). 
+ 
+Tabuľka 1.7. Tepelno-technické posúdenie otvorových výpln í 
+Otvorová konštrukcia Súčiniteľ prechodu tepla 
+UW (W/(m2.K)) 
+Pôvodné drevené zdvojené okná 2,7 
+Pôvodné drevené zdvojené okná a dvere – lodžia 2,7 
+Oceľové okná v schodiskovej a vý ťahovej časti 5,2 
+Oceľová vstupná zasklená stena 5,2 
+Vymenené plastové okná 1,3 
+Vymenené plastové okná a dvere – lodžia 1,3 
+ 
+Posúdenie: Pôvodné zdvojené okná a lodžiové dvere s dreveným profilom, ako i vymenené 
+plastové okná a lodžiové dvere možno posudzova ť podľa maximálnej hodnoty sú činiteľa 
+prechodu tepla UW,max . Požiadavka na sú činiteľ prechodu tepla pre tieto otvorové konštrukcie 
+sa splní vtedy, ak bude plati ť vzťah UW < UW,max . Podľa Tab. 1.3 pre okná, dvere, zasklené 
+steny v obvodovej stene a strešné okná UW,max  = 1,7 W/(m2.K).  
+Na základe porovnania sú činiteľa prechodu tepla pôvodných otvorových konštrukcií 
+s dreveným profilom UW s maximálnou hodnotou UW,max  možno konštatova ť, že pôvodné 
+otvorové konštrukcie s dreveným profilom NEVYHOVUJÚ . 
+Na základe porovnania sú činiteľa prechodu tepla vymenených otvorových konštrukcií 
+s plastovým profilom UW s maximálnou hodnotou UW,max  možno konštatova ť, že vymenené 
+otvorové konštrukcie s plastovým profilom VYHOVUJÚ . 
+ Záver tepelno-technického posúdenia stavebných konštrukcií 1.2.4
+V Tab. 1.8 je sumár sú činiteľov prechodu tepla posudzovaných nepriesvitných 
+konštrukcií a porovnanie s požadovanými hodnotami, platnými od roku 2016, pod ľa STN 73 
+0540-2/Z1.  
+ 
+ 

@@ -1,0 +1,142 @@
+Tabuľka 3.2. Zmena teploty pre komponenty s integrovanou vykurovacou plochou v K; výška 
+miestnosti £
+
+ 4 m (STN EN 15316-2) 
+
+Regulácia 
+teploty 
+miestnosti 
+
+Parametre vplyvu 
+
+Neregulovaná, s centrálnou 
+reguláciou teploty 
+Riadenie podľa referenčnej miestnosti 
+Riadenie na úrovni miestnosti  
+(napr. 2-stupňový regulátor) 
+P-regulátor (pred 1988) 
+P-regulátor / 2-stupňový regulátor 
+(hysteréza ≤ ±0,5 K) 
+PI-regulátor 
+PI-regulátor (s funkciou 
+optimalizácie, napríklad prítomnosť 
+riadenia, adaptívny regulátor) 
+Podlahové vykurovanie 
+
+- mokrý systém 
+
+- suchý systém 
+
+Systém 
+
+- suchý systém s malým prekrytím 
+
+Stenové vykurovanie 
+
+Stropné vykurovanie 
+Vykurovacie systémy kombinované s 
+núteným vetranímc 
+Plošné vykurovanie bez minimálnej 
+izolácie podľa STN EN 1264  
+
+Plošné vykurovanie s minimálnou 
+izoláciou podľa STN EN 1264 
+
+Plošné vykurovanie so o 100 % 
+lepšou izoláciou ako sa požaduje 
+podľa STN EN 1264 
+
+Špecifické 
+tepelné straty 
+cez 
+vykurovacie 
+plochy 
+(pozri Tab. 
+3.3) 
+
+Zmena teploty 
+
+a 
+∆θstr  ∆θctr,1
+
+∆θctr,2
+
+b 
+
+∆θemb 
+
+2,5 
+
+2 
+
+1,8 
+
+1,4 
+
+1,2 
+
+1,2 
+
+0,9 
+
+2,5 
+
+1,8 
+
+1,6 
+
+1,4 
+
+0,7 
+
+0,7 
+
+0,5 
+
+0 
+
+0 
+
+0 
+
+0,4 
+
+0,7 
+
+0 
+
+∆θemb,1 
+
+∆θemb,2 
+
+0,7 
+
+0,4 
+
+0,2 
+
+0,7 
+
+0,7 
+
+1,4 
+
+0,5 
+
+0,1 
+
+a Použije sa ∆θctr,1 pre výrobky bez certifikátu. 
+b Použije sa ∆θctr,2 pre výrobky s certifikátom. 
+c Inštalácia vykurovacieho systému v miestnostiach s núteným vetraním ovplyvní teplotnú stratifikáciu. 
+
+Tepelný  odpor  Rl
+
+,ins  izolačnej  vrstvy  systému  vykurovania/chladenia  podľa  STN  EN 
+
+1264-4  je  špecifikovaný  v Tab.  3.3.  Tieto  požiadavky  sú  platné  pre  kombinovaný  systém 
+
+vykurovania a chladenia, ale pre systémy výlučne len na chladenie sa tieto požiadavky takisto 
+
+odporúčajú. 
+
+41

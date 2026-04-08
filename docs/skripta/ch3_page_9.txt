@@ -1,0 +1,117 @@
+Tabuľka 3.6. Minimálna hrúbka tepelnej izolácie rozvodov tepla a teplej vody v budovách, λ 
+
+= 0,035 W/(m.K), teplota vzduchu 0 °C (vyhláška MH SR č. 14/2016 Z. z.) 
+
+P. č.  Vnútorný priemer potrubia alebo armatúry 
+
+Minimálna hrúbka izolácie 
+
+1 
+2 
+3 
+4 
+
+do 22 mm 
+od 23 mm do 35 mm 
+od 35 mm do 100 mm 
+nad 100 mm 
+
+20 mm 
+30 mm 
+rovnaká ako vnútorný priemer potrubia 
+100 mm 
+
+Pre  rozdeľovače  a  zberače  tepla,  v  miestach  križovania  potrubí,  v  miestach  spájania 
+
+potrubí a pre potrubia a armatúry inštalované v prestupoch stien a stropov sa môže minimálna 
+
+hrúbka izolácie znížiť o 50 % hodnoty hrúbky izolácie uvedenej v príslušnom riadku tabuľky. 
+
+Uvedené  hodnoty  sú  navrhnuté  pre  rozvody  tepla  a  teplej  vody  s  oceľovými  rúrkami.  V 
+
+prípade použitia iných materiálov rozvodov tepla a teplej vody sa minimálna hrúbka izolácie 
+
+vypočíta podľa prílohy č. 2 k vyhláške MH SR č. 14/2016 Z. z. 
+
+3.1.2.2  Výpočet lineárneho súčiniteľa prechodu tepla 
+
+Podrobnosti  o výpočte  lineárneho  súčiniteľa  prechodu  tepla  sú  v STN  EN  ISO  12241. 
+
+Lineárny  súčiniteľ  prechodu  tepla  izolovaných  potrubí  zavesených  vo  vzduchu  s celkovým 
+
+súčiniteľom prestupu tepla, ktorý zahŕňa prúdenie a sálanie na vonkajšom povrchu, sa určí: 
+
+\ (cid:5)
+
+`
+fg
+f(cid:8)
+
+b
+a
+c.de
+
+.A(cid:24)
+
+(cid:9)
+
+b
+hg.fg
+
+i
+
+ (W/(m.K))  
+
+(3.9) 
+
+kde: 
+
+di, da  
+
+sú  vnútorný  priemer  (bez  tepelnej  izolácie)  a vonkajší  priemer  potrubia  (s  tepelnou 
+
+izoláciou) (m); 
+
+ha   
+
+  – celkový súčiniteľ prestupu tepla na vonkajšom povrchu (prúdením a sálaním) 
+
+(W/(m2.K));  preddefinované  hodnoty  súčiniteľa  sú  ha  =  8  W/(m2.K)  pre  izolované 
+potrubia a ha = 14 W/(m2.K) pre neizolované potrubia; 
+
+l D  
+
+  – tepelná vodivosť tepelnej izolácie (W/(m.K)). 
+
+Pre potrubia zapustené do podkladu sa lineárny súčiniteľ prechodu tepla určí takto: 
+
+\ =
+
+`
+
+(W/(m.K))   
+
+b
+ca
+
+b
+de
+
+.A(cid:24)
+
+fg
+f(cid:8)
+
+(cid:9)
+
+b
+dj..A(cid:24)
+
+k.l
+fg
+
+i
+
+(3.10)  
+
+45

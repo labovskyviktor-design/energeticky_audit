@@ -1,0 +1,72 @@
+Zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania zohľadňuje 
+
+vplyv  hydraulického  vyregulovania,  typ  a vyhotovenie  odovzdávacieho  systému  a spôsob 
+
+regulácie: 
+
+Δ!"(cid:24)(cid:20),"(cid:24)X = Δ!(cid:19)YZ + Δ!#$(cid:20),?Y? + Δ!X(cid:20)(cid:3),?Y? = 0,2 + 0,45 + 1,2 = 1,85 K
+
+kde: 
+
+∆θhyd   –  zmena  teploty  v závislosti  od  hydraulického  vyregulovania,  ∆θhyd  =  0,2  K (Tab. 
+
+3.1); 
+
+∆θemt,sys  – zmena teploty v závislosti od odovzdávacieho systému (K); 
+
+∆θctr,sys   – zmena teploty v závislosti od spôsobu regulácie (K). 
+
+Δ!#$(cid:20),?Y? = Δ!?(cid:20)(cid:3) + Δ!#$C + Δ!(cid:3)1Z + Δ!"$,#$(cid:20) = 0,75 − 0,3 = 0,45 K
+
+kde: 
+
+∆θstr    – nerovnomernosť rozloženia teploty v priestore v dôsledku stratifikácie (K), 
+
+Δ!?(cid:20)(cid:3) =
+
+OP(cid:7)Ru,b(cid:9)OP(cid:7)Ru,c
+
+[
+
+=  
+
+(cid:4),[(cid:9)v,ˆ
+
+[ = 0,75 K
+
+ podľa Tab. 3.4; 
+
+∆θstr,1   –  zmena  teploty  vplyvom  nerovnomernosti  rozloženia  teploty  pre  teplotný  spád 
+
+90/70 a dvojrúrkový vykurovací systém, θstr,1 = 1,2; 
+
+∆θstr,2   –  zmena  teploty  vplyvom  špecifických  tepelných  strát  cez  externé  komponenty, 
+
+radiátor umiestnený na normálnej vonkajšej stene, θstr,2 = 0,3; 
+
+∆θemb   –  zmena 
+
+teploty  v dôsledku 
+
+tepelných  strát  komponentov  s integrovanou 
+
+vykurovacou plochou do vonkajšieho prostredia alebo do nevykurovaného priestoru, 
+
+∆θemb = 0 K; 
+
+∆θrad  
+
+– zmena teploty v dôsledku účinku sálania v závislosti od odovzdávacieho systému, 
+∆θrad = 0 K pre voľné vykurovacie plochy v miestnosti s výškou £
+
+ 4 m; 
+
+∆θim,emt   – zmena teploty v dôsledku prerušovanej prevádzky vykurovacieho systému, ∆θim,emt 
+
+= -0,3 K. 
+
+Zmena teploty v závislosti od spôsobu regulácie: 
+
+Δ!X(cid:20)(cid:3),?Y? = Δ!X(cid:20)(cid:3) + Δ!"$,X(cid:20)(cid:3) + Δ!(cid:3)@@$1M(cid:20) = 1,2 + 0 + 0 = 1,2 K
+
+55

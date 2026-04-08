@@ -1,0 +1,53 @@
+83 
+ 
+Tabuľka 6.1. Energeticky úsporné opatrenia a ovplyvnené parametre pre vykurovanie 
+Opatrenia na vykurovacom systéme 
+Ovplyvnené parametre 
+Hydraulické vyregulovanie vykurovacieho systému 
+Vnútorná teplota 
+Inštalácia termostatických ventilov 
+Vnútorná teplota 
+Výmena nefunkčných termostatických ventilov 
+Vnútorná teplota 
+Odstránenie netesností  
+Distribučný systém 
+Tepelná izolácia potrubných rozvodov, armatúr 
+Distribučný systém 
+Oprava a nastavenie automatického regulačného systému 
+Automatická regulácia – kontrola teploty
+Nový automatický regulačný systém  
+Automatická regulácia – kontrola teploty
+Nočný teplotný útlm 
+Nočný teplotný útlm 
+Nastavenia horáka /kotla 
+Účinnosť zdroja tepla 
+Vyčistenie kotla  
+Účinnosť zdroja tepla 
+Nový horák / kotol  
+Účinnosť zdroja tepla 
+Sekvenčné zariadenie horáka  
+Účinnosť zdroja tepla 
+Manuál prevádzky a údržby 
+P&Ú* / energetický manažment 
+*) P&Ú znamená prevádzka a údržba. 
+ Hydraulické vyregulovanie 
+6.1.1
+Hydraulické vyregulovanie predstavuje dôležité opatrenie pre efektívne fungovanie 
+vykurovacej sústavy. Podľa zákona č. 555/2005 Z. z. je vlastník existujúcej budovy povinný 
+zabezpečiť po významnej obnove budovy reguláciu zásobovania teplom a zabezpečiť aj 
+hydraulické vyváženie vykurovacej sústavy budovy po každom zásahu do tepelnej ochrany 
+alebo do energetického vybavenia. Takisto podľa zákona č. 476/2008 Z. z. je vlastník veľkej 
+budovy s ústredným teplovodným vykurovaním povinný zabezpečiť a udržiavať hydraulicky 
+vyregulovanú vykurovaciu sústavu v budove.  
+V tom najpriaznivejšom prípade ide o zmenu prednastavenia všetkých existujúcich 
+termostatických ventilov na vykurovacích telesách v zmysle projektu preregulovania 
+vykurovacej sústavy a zmenu nastavenia armatúr na vstupe rozvodov tepla do budovy. 
+V mnohých prípadoch, zvlášť v tých, kde bolo hydraulické vyregulovanie realizované 
+dávnejšie a ide o technicky zložitejšie riešenie, treba okrem prestavenia hydraulického odporu 
+termostatických ventilov, realizovať aj iné práce. Prevažne ide o dodatočnú montáž 
+regulátorov diferenčného tlaku, zmenu nastavenia stúpačkových vyvažovacích armatúr 
+a realizáciu vhodného systému na diagnostiku prípadných porúch vykurovacej sústavy. 
+ Zdroj tepla 
+6.1.2
+Dôležitým predpokladom na dosiahnutie vysokej úrovne energetickej hospodárnosti je 
+využitie obnoviteľných zdrojov energie, resp. systémov výroby tepla s vysokou účinnosťou, 

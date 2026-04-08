@@ -1,0 +1,49 @@
+88 
+ 
+Vo výpočte βdis sa uvažovalo s týmito hodnotami: 
+ 
+QH,dis,out  – tepelný výstup zo systému distribúcie, má hodnotu 135 860 + 8 669 = 144 529 
+kWh; 
+Φem        – projektovaný tepelný príkon pre budovu vo fáze navrhovania, má hodnotu 100,6 
+kW; 
+top          – počet vykurovacích hodín, má hodnotu 5088 hod. 
+ 
+Teplota prívodnej vody θs : 
+ 
+!?   !?,Z#? −!"%. mZ"?
+b
+n + !" = 75 −15. 0,28
+b
+b,»» + 15 = 38,1 °C  
+ 
+ 
+ 
+Teplota vratnej vody θr : 
+ 
+!? =  !,Z#? −!"%. mZ"?
+b
+n + !" = 65 −15. 0,28
+b
+b,»» + 15 = 34,3 °C  
+ 
+ 
+V nasledujúcich výpočtoch sa uvažuje s priemernou teplotou vykurovacej vody θm: 
+ 
+!$ = !? + !
+2
+= 38,1 + 34,3
+2
+= 36,2 °C 
+ 
+Pri výpočte tepelnej straty z rozvodu vykurovania sa vychádzalo z nasledujúcich 
+údajov: 
+ 
+• ležaté aj vratné potrubie je z bezšvových oceľových zváraných rúr svetlosti DN 50. 
+Súčiniteľ tepelnej vodivosti oceľovej rúry je λ = 50 W/(m.K). Teplota okolitého 
+vzduchu sa uvažuje 10 °C; 
+• pôvodná tepelná izolácia sa odstránila a ležaté potrubia sa zaizolovali tepelnou izoláciou 
+hrúbky 40 mm so súčiniteľom prechodu tepla λ = 0,036 W/(m.K); 
+• stúpacie prívodné aj vratné potrubie prechádzajú bytmi a prispievajú k vykurovaniu 
+obytných priestorov, preto sa tepelná strata z týchto potrubí považuje za spätne 
+získateľnú tepelnú stratu. Tieto potrubia zostávajú bez tepelnej izolácie. 
+ 

@@ -1,0 +1,71 @@
+Teplota prívodnej vody q s : 
+
+(cid:4)
+¢
+!? (cid:5)  !?,Z#? − !"%. mZ"?
+
++ !" = (cid:26)90 − 20(cid:31). 0,42
+
+(cid:4)
+(cid:4),ˆˆ + 20 = 56,5 °C
+
+Teplota vratnej vody q r : 
+
+(cid:4)
+¢
+!(cid:3) =  !(cid:3),Z#? − !"%. mZ"?
+
++ !" = (cid:26)70 − 20(cid:31). 0,42
+
+(cid:4)
+(cid:4),ˆˆ + 20 = 46,1 °C
+
+V nasledujúcich výpočtoch sa uvažuje s priemernou teplotou vykurovacej vody q m: 
+
+!$ =
+
+!? + !(cid:3)
+2
+
+=
+
+56,5 + 46,1
+2
+
+= 51,3 °C
+
+Pri výpočte tepelnej straty z rozvodu vykurovania sa vychádzalo z týchto údajov: 
+
+• 
+
+• 
+
+ležaté  aj  vratné  potrubie  je  z bezšvových  oceľových  zváraných  rúr  svetlosti  DN  50. 
+
+Súčiniteľ  tepelnej  vodivosti  oceľovej  rúry  je  λ  =  50  W/(m.K).  Teplota  okolitého 
+
+vzduchu sa uvažuje 10 °C; 
+
+ležaté  potrubia  sú  izolované  minerálnou  vlnou  hrúbky  30  mm,  ktorá  je  čiastočne 
+
+poškodená  a  zdegenerovaná.  Uvažuje  sa  preto  so  súčiniteľom  tepelnej  vodivosti 
+
+minerálnej vlny λ = 0,07 W/(m.K). 
+
+•  stúpacie  prívodné  aj  vratné  potrubie  je  z  bezšvových  oceľových  zváraných  rúr;  tieto 
+
+potrubia prechádzajú bytmi a prispievajú k vykurovaniu obytných priestorov, preto sa 
+
+tepelná strata z týchto potrubí považuje za spätne získateľnú tepelnú stratu. 
+
+Na  Obr.  3.1  je  uvedený  príklad  výpočtu  tepelnej  straty  stúpacieho  prívodného  a 
+
+vratného potrubia. Tepelná strata distribučného systému sa vypočítala pomocou programu na 
+
+nasledujúcej internetovej stránke: 
+
+http://vytapeni.tzb-info.cz/tabulky-a-vypocty/44-tepelna-ztrata-potrubi-s-izolaci-kruhoveho-
+
+prurezu 
+
+57

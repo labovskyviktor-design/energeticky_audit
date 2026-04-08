@@ -1,0 +1,87 @@
+kde: 
+
+di, da  
+
+sú  vnútorný  priemer  (bez  tepelnej  izolácie)  a vonkajší  priemer  potrubia  (s  tepelnou 
+
+izoláciou) (m); 
+
+l E   
+l D  
+
+  – tepelná vodivosť okolitého výplňového materiálu (W/(m.K));  
+
+  – tepelná vodivosť tepelnej izolácie (W/(m.K)); 
+
+z 
+
+  – hĺbka potrubia pod povrchom (m). 
+
+3.1.2.3  Výpočet teploty prívodnej a vratnej vody 
+
+V prípade  systémov  odovzdávania 
+
+tepla  do  vnútorného  prostredia  s konštantným 
+
+prietokom a reguláciou teploty prívodnej vody v závislosti od vonkajšej teploty možno teplotu 
+prívodnej vody q s a teplotu vratnej vody q r vypočítať takto: 
+
+b
+n
+!? (cid:5) (cid:26)!?,Z#? (cid:21) !"(cid:31). mZ"?
+
+(cid:29) !"
+
+(°C) 
+
+resp. 
+
+b
+n
+!(cid:3) (cid:5) (cid:26)!(cid:3),Z#? (cid:21) !"(cid:31). mZ"?
+
+(cid:29) !"
+
+(°C) 
+
+   (3.11) 
+
+   (3.12) 
+
+kde: 
+
+βdis 
+
+n 
+
+q s,des 
+q r,des 
+q i 
+
+je priemerné čiastočné zaťaženie rozvodu v zóne; 
+
+–  teplotný  exponent  systému  odovzdávania  tepla  do  vnútorného  prostredia. 
+
+Preddefinované hodnoty exponentu sú n = 1,33 pre vykurovacie telesá a n = 1,1 pre 
+
+podlahové vykurovacie systémy; 
+
+– projektovaná teplota prívodnej vody (°C); 
+
+– projektovaná teplota vratnej vody (°C); 
+
+– teplota okolitého vzduchu (°C). 
+
+3.1.3
+
+  Vlastná spotreba energie systému rozvodu tepla – zjednodušená metóda 
+
+Vlastná spotreba energie zahŕňa najmä elektrickú energiu potrebnú na pohon obehových 
+
+čerpadiel.  Uvádzame  zjednodušenú  výpočtovú  metódu,  pre  ktorú  sa  zadefinovali  niektoré 
+
+predpoklady pre najdôležitejšie prípady. Ročná vlastná spotreba energie obehových čerpadiel 
+
+pre vodné vykurovacie systémy sa vypočíta takto: 
+
+46

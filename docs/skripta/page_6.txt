@@ -1,0 +1,45 @@
+14 
+ Vonkajšie okná a dvere musia ma ť súčiniteľ prechodu tepla UW konštrukcie nižší alebo 
+rovnaký, ako je požiadavka na hodnotu UW,r1  podľa STN 73 0540-2/Z1. 
+ 
+ ≤ ,    (W/(m2.K))                      (1.5) 
+ 
+V prípade budov, na ktorých sa čiastočné stavebné úpravy vykonali v minulosti, sa 
+namiesto odporú čanej hodnoty UW,r1 použije maximálna hodnota UW,max .  
+Požiadavky na hodnoty U  transparentných stavebných konštrukcií sú uvedené  
+v Tab. 1.3. 
+ 
+Tabuľka 1.3. Požiadavky na UW vonkajších otvorových konštrukcií (STN 73 0540-2/Z1) 
+Konštrukcia/ 
+komponent Súčiniteľ prechodu tepla W/(m2.K) 
+Maximálna 
+hodnota1) Normalizovaná 
+hodnota Odporúčaná 
+hodnota Cieľová 
+odporúčaná 
+hodnota 
+UW,max  UW,N UW,r1 UW,r2 
+Okná, dvere, zasklené 
+steny2) v obvodovej 
+stene, strešné okná 1,7 1,44) 1,04) 0,64) 
+Okná v šikmej strešnej 
+konštrukcii 1,7 1,53) 1,43) 1,03) 
+Dvere do ostatných 
+priestorov 
+- bez zádveria 4,3 3,0 2,5 ≤ 2,0 
+- so zádverím 5,5 4,0 3,0 ≤ 2,0 
+1) Platí pre budovy, na ktorých sa čiastočné stavebné úpravy vykonali v minulosti. 
+2) Požiadavky neplatia pre celopresklené obvodové plášte. 
+3) Strešné okno sa nadväzne na STN EN ISO 673 hodnotí s prihliadnutím  na sklon strešného okna pri 
+zabudovaní: 
+- sklon od 20°do ≤ 40°zhoršuje dvojsklo o + 0,4 W(m2.K) a trojsklo o + 0,2 W(m2.K), 
+- sklon od 40°do ≤ 60°zhoršuje dvojsklo o + 0,3 W(m2.K) a trojsklo o + 0,2 W(m2.K), 
+- sklon od 60°do ≤ 70°zhoršuje dvojsklo o + 0,2 W(m2.K) a trojsklo o + 0,1 W(m2.K), 
+- pri sklone nad 70° sa už hodnota zasklenia Ug nezhoršuje. 
+2) Požiadavky  platia pre vonkajšie okná s plochou aspo ň 1,8 m2; okná menšej plochy, ktoré nesp ĺňajú 
+požadované hodnoty, musia by ť zhotovené z rovnakých komponentov ako okná sp ĺňajúce požiadavky.  
+ 
+Rôzne hodnoty sú činiteľa prechodu tepla v Tab. 1.1 a Tab. 1.3, resp. tepeln ého odporu 
+v Tab. 1.2, zoh ľadňujú rôzne úrovne energetickej hospodárnosti. Do 31. decembra 2015 boli 
+platné normalizované hodnoty UN, ktoré predstavujú nízkoenergetickú úrove ň výstavby. Od 
+roku 2016 sú v platnosti odporú čané hodnoty Ur1, ktoré predstavujú ultranízkoenergetickú 

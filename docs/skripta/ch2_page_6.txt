@@ -1,0 +1,28 @@
+27 
+ je výpočtom určená intenzita výmeny vzduchu v budove vyššia ako 0,5 -krát za hodinu, 
+potreba tepla sa ur čí pre túto vypo čítanú hodnotu intenzity výmeny vzduchu. Intenzitu 
+výmeny vzduchu vplyvom infiltrácie vzduchu do budovy cez otvorové konštrukcie možno 
+vypočítať takto: 
+ 
+3"4 25 200∑; <=.>
+./  (1/h)    (2.5)  
+ 
+kde: 
+ilv  je súčiniteľ škárovej prievzdušnosti (m2/(s.Pa0,67)); 
+l  – dĺžka škár otvorových konštrukcií (m). Spôsob ur čenia dĺžky škár je na Obr. 2.3; 
+Vb  – obostavaný objem budovy (m3). 
+ 
+Tento vzťah platí len pre výpo čet intenzity výmeny vzduchu vplyvom  infiltrácie cez  
+škáry budov pre budovy do 25 m. Pre budovy vyššie ako 25 m treba použi ť výpočet 
+priemernej hodnoty výmeny vzduchu v budove pod ľa Prílohy C STN 73 0540-2. 
+ 
+ 
+ 
+ 
+Obr. 2.3. Určenie dĺžky škár otvorových konštrukcií 
+ 
+Hodnoty súčiniteľa škárovej prievzdušnosti otvorových konštrukcií sú uvedené v Tab. 
+2.2. Hodnoty uvedené v tejto tabu ľke možno použi ť v prípadoch, ke ď nie sú známe presnejšie 
+údaje o konkrétnej otvorovej konštrukcii z akreditovaného laboratória alebo od výrobcu. 
+ 
+  okenné škáry  

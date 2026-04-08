@@ -1,0 +1,32 @@
+16 
+ trojcestného zmiešavacieho ventilu, umiestneného na vstupe do objektu. Tento ventil 
+primiešava horúcu vodu z OST do vykurovacej sústavy v bytovom dome tak, aby sa dosiahla 
+požadovaná teplota vykurovacej vody, vypo čítaná na základe ekvitermickej krivky (centrálna 
+regulácia podľa vonkajšej teploty). Obeh vykurovacej vody v dome z abezpečuje obehové 
+čerpadlo, inštalované v roku 2001. Toto čerpadlo je bez možnosti regulácie otá čok, teda 
+pracuje s konštantným výkonom. Rozvody vykurovania sú bezšvové oce ľové zvárané, 
+v technickom podlaží (prízemie) izolované minerálnou vlnou; izolácia je však pôvodná, 
+zdegradovaná a nevyhovuje sú časným požiadavkám na tepelnú ochranu rozvodov. Stúpa cie 
+potrubia prechádzajú priamo cez byty a sú bez tepelnej izolácie. Na meranie odberu tepla pre 
+celý objekt slúži kalorimetrické po čítadlo na päte objektu, náklady sa medzi jednotlivé byty 
+rozpočítavajú pomocou pomerových rozde ľovačov vykurovacích nákladov umiestnených na 
+vykurovacích telesách. 
+1.2.2.2  Príprava teplej vody 
+Teplá voda (TV) sa dodáva z centralizovaného zdroja do OST, odkia ľ sa potom dodáva 
+do bytového domu. Cirkulácia TV sa zabezpe čuje cirkulačným čerpadlom s konštantným 
+výkonom, umiestneným v OST. Pôvodné cirkula čné čerpadlo sa vymenilo za nové v roku 
+2001. Ležaté rozvody TV sú vedené v technickom podlaží (prízemie) na spolo čných závesoch 
+s rozvodmi vykurovania a sú vybavené hlavným domovým uzáverom a objektovým mera čom 
+tepla. Rozvody TV sú oce ľové závitové pozinkované, na prízemí izolované miner álnou vlnou; 
+izolácia je pôvodná, zdegradovaná a nevyhovuje sú časným požiadavkám na tepelnú ochranu 
+rozvodov. Stúpacie potrubia prívodu a cirkulácie TV sú vedené v stúpacích šachtách a sú 
+obalené plstenými pásmi. 
+ Opis a tepelnotechnické posúdenie stavebných konštrukcií 1.2.3
+Stavebné konštrukcie bytového domu sú vä čšinou v pôvodnom stave, okrem strechy, 
+kde sa v roku 2003 spravila nová hydroizolácia. Pri obhliadke budovy sa zistilo, že približne 
+polovica pôvodných okien bola vymenená za nové okná s plastovým profilom.  
+1.2.3.1  Obvodový pláš ť 
+Obvodový pláš ť je predsadený, vrstvený – sendvi čový, s hrúbkou 300 mm. V Tab. 1.4 
+je uvedená skladba a tepelno-technické vlastnosti konštrukcie. Pod ľa STN 73 0540-2/Z1 má 
+vonkajšia stena sp ĺňať hodnotu súčiniteľa prechodu tepla Ur1 = 0,22 W/(m2.K). 
+ 

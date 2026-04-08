@@ -1,0 +1,50 @@
+91 
+ 
+top,an    
+– počet vykurovacích hodín za rok (hod) = 212 . 24 = 5088 hod 
+fNET   
+– korekčný faktor hydraulickej sústavy, pre dvojrúrové vykurovacie systémy má 
+hodnotu 1,0; 
+fHB     – korekčný faktor hydraulického vyregulovania sústavy (-), pre hydraulicky  
+vyregulovaný systém má hodnotu 1,0; 
+fG,PM 
+ – korekčný faktor pre zdroje tepla s integrovanou reguláciou čerpadiel (-), pre zdroj  
+tepla s reguláciou podľa vonkajšej teploty má hodnotu 1,0. Vzhľadom na to, že  
+v budove sa uplatňuje regulácia podľa vonkajšej teploty, uvažujeme fG,PM = 1. 
+ 
+Potreba hydraulickej energie sa vypočítala takto: 
+ 
+o,Z"?,YZ,1 =
+~YZ,Z#?
+1000
+. mZ"?. &@K,1. wxy. wz. w{,|} = 117,0
+1000  . 0,28 . 5088 . 1 . 1 . 1
+= 167 kWh/rok 
+ 
+Návrhový hydraulický výkon čerpadla v pracovnom bode Phydr,des sa vypočítal takto:   
+ 
+~YZ,Z#? = 0,2778. Δ‚Z#?. 5Z#? = 0,2778 . 48,6 . 8,67 = 117,0 kW 
+ 
+Tlakový spád v pracovnom bode Δpdes je rovnaký, ako bol v pôvodnom stave pred 
+obnovou: 
+ 
+Δ‚Z#? = 48,6 kPa  
+ 
+Pri výpočte prietoku sa uvažovalo s týmito hodnotami: 
+ 
+ΦH,em,out 
+je projektovaný tepelný príkon podľa STN EN 12831-1 (kW), má hodnotu 100,6 
+kW; 
+c   
+ 
+ 
+– merná tepelná kapacita vykurovacej látky má hodnotu 4,18 kJ/(kg.K); 
+ρ   
+ 
+ 
+– hustota vykurovacej látky má hodnotu 1000 kg/m3; 
+Δϑdis,des  
+– projektovaný teplotný spád má hodnotu 10 K (75/65 °C). 
+ 
+ 
+ 

@@ -1,0 +1,46 @@
+13 
+ Tabuľka 1.2. Normalizované hodnoty tepelného odporu konštrukcie R (STN 73 0540-2/Z1) 
+Druh stavebnej konštrukcie Tepelný odpor konštrukcie 
+(m2.K)/W 
+Minimálna  
+hodnota Normalizovaná hodnota  Odporúčaná  
+hodnota Cieľová odporúčaná 
+hodnota 
+Rmin RN Rr1 Rr2 
+Vonkajšia stena a šikmá strecha nad obytným 
+priestorom so sklonom > 45° 2,0 3,0 4,4 6,5 
+Plochá a šikmá strecha ≤ 45° 3,2 4,9 6,5 9,9 
+Strop nad vonkajším prostredíma) 3,1 4,8 6,5 9,8 
+Strop pod nevykurovaným priestoromb) 2,7 3,9 4,9 6,5 
+Stena s vodorovným tepelným tokom c)/strop s 
+tepelným tokom zdola nahor b)/strop s 
+tepelným tokom zhora nadol a) medzi 
+vnútornými priestormi s rozdielnou teplotou 
+vnútorného vzduchu v oddelených priestoroch:  Smer tepelného toku 
+Vodo-
+rovne Zdola 
+nahor Zhora 
+nadol Vodo-
+rovne Zdola 
+nahor Zhora 
+nadol Vodo-
+rovne Zdola 
+nahor Zhora 
+nadol Vodo-
+rovne Zdola 
+nahor Zhora 
+nadol 
+- do 10 K 0,1 0,1 0,1 0,4 0,4 0,4 0,6 0,6 0,8 0,7 0,9 1,3 
+- do 15 K 0,3 0,3 0,3 0,7 0,7 0,7 1,1 1,1 1,3 1,2 1,8 2,5 
+- do 20 K 0,5 0,5 0,5 1,0 1,0 1,0 1,4 1,5 1,7 1,6 2,7 3,7 
+- do 25 K 0,7 0,7 0,7 1,3 1,2 1,3 1,6 1,8 2,2 2,0 3,1 4,7 
+- nad 25 K 1,0 1,0 1,0 2,0 1,8 2,2 2,2 2,3 3,0 2,6 3,8 6,3 
+Stena vykurovaného priestoru pri ľahlá k zemine pri h ĺbke zeminy:  
+- do 5 m 1,5 2,0 2,5 2,5 
+- nad 0,5 m do 2,0 m 1,0 1,5 2,0 2,0 
+- nad 2,0 0,7 1,2 1,5 1,5 
+Podlaha vykurovaného priestoru na teréne:  
+- v úrovni do 0,5 m pod vonkajším terénom a 
+do vzdialenosti 2,0 od vnútorného povrchu 
+vonkajšej steny 1,5 2,3 2,5 2,5 
+- ostatné prípady 1,0 1,5 2,0 2,0 

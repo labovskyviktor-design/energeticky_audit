@@ -1,0 +1,19 @@
+23 
+  
+Obr. 2.1. Určenie hraníc vykurovaného priestoru budovy (www.tzb-i nfo.cz) 
+ Sezónna metóda výpo čtu potreby tepla na vykurovanie 2.1.2
+Výpočet potreby tepla sezónnou metódou sa v sú časnosti akceptuje len pre obytné 
+budovy (vyhláška MDVRR SR č. 364/2012 Z. z.). Pri ostatných budovách treba vyko nať 
+výpočet potreby tepla po mesiacoch. Rovnako aj pri použit í postupov pod ľa niektorých 
+technických noriem, ako napríklad STN EN 15316-4-3 pre výpo čet energetických 
+požiadaviek a ú činnosti tepelných solárnych a fotovoltických systémo v, nie je možné použi ť 
+sezónny výpočet. Postup pri výpo čte potreby tepla s časovým krokom jeden mesiac je opísaný 
+v STN EN ISO 52016-1. Pri použití sezónnej metódy sa potreba tepla na vykurovanie 
+vypočíta podľa vzorca: 
+ 
+    .    (kWh)      (2.1) 
+ 
+kde: 
+Qht je celková tepelná strata vo vykurovacom období (kWh); 
+ηgn –  faktor využitia tepelných ziskov (-); 
+Qgn –  celkový tepelný zisk vo vykurovacom období (kWh). 

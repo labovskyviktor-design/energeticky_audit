@@ -1,0 +1,67 @@
+kde: 
+
+∆θctr  
+
+– zmena teploty v závislosti od spôsobu regulácie, ∆θctr  =  1,2  K pre  P-regulátor 
+
+(termostatická hlavica) podľa Tab. 3.4; 
+
+∆θim,ctr   – zmena teploty v dôsledku prerušovanej prevádzky riadiaceho systému,  ∆θim,ctr = 0 
+
+K; 
+
+∆θroomaut – zmena teploty v závislosti od samostatnej prevádzky (stand alone) alebo prevádzky 
+
+v sieti  /  automatizácie  riadenia.  Uvažuje  sa  s  ∆θroomaut  =  0  K,  pretože  v priestore  sa 
+
+neuvažuje  s automatizáciou  prevádzky.  Vplyv  automatickej  regulácie  pomocou           
+
+P-regulátora je započítaný v ∆θctr. 
+
+3.2.2
+
+  Tepelná strata z rozvodov vykurovacieho systému 
+
+Na  úvod  je  potrebné  vypočítať  teplotu  prívodnej  a vratnej  vody.  Pri  výpočte  sa 
+
+uvažovalo s nasledujúcimi hodnotami: 
+
+βdis  – priemerné čiastočné zaťaženie rozvodu v zóne = 0,42; 
+
+n     – teplotný exponent systému odovzdávania tepla do vnútorného prostredia, pre  
+
+vykurovacie telesá je n = 1,33; 
+
+q s,des  – projektovaná teplota prívodnej vody, q s,des = 90 °C; 
+q r,des  – projektovaná teplota vratnej vody, q r,des = 70 °C; 
+q i       – teplota vzduchu v priestore; stúpacie potrubia prechádzajú bytmi, preto prevládajúca  
+
+teplota vzduchu v okolí rozvodov q i = 20 °C. 
+
+Výpočet priemerného čiastočného zaťaženia rozvodu v zóne je takýto: 
+
+mZ"? (cid:5)
+
+(cid:17)(cid:18),Z"?,@M(cid:20)
+¡#$. &@K
+
+(cid:5)
+
+493 562
+228,6 . 5088
+
+(cid:5) 0,42
+
+Vo výpočte βdis sa uvažovalo s týmito hodnotami: 
+
+QH,dis,out  – tepelný výstup zo systému distribúcie = 447 539 + 46 023 = 493 562 kWh; 
+
+Φem 
+
+top   
+
+– projektovaný tepelný príkon vo fáze navrhovania = 228,6 kW; 
+
+  – počet vykurovacích hodín = 5088 hod; 
+
+56

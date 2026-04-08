@@ -1,0 +1,329 @@
+Tabuľka  3.9.  Ukazovatele  energetickej  účinnosti  odovzdávacích  staníc  tepla  podľa  druhu 
+
+teplonosného média (vyhláška ÚRSO č. 59/2008 Z. z.) 
+
+Teplonosné médium 
+
+Para/teplá voda 
+Teplá voda/teplá vody 
+Horúca voda/teplá voda 
+Para/horúca voda 
+
+Ukazovateľ energetickej účinnosti 
+odovzdávacej stanice tepla (-) 
+
+0,97 
+0,99 
+0,985 
+0,96 
+
+Ak  nie  sú  dostupné  bližšie  informácie  o účinnosti  zdroja  tepla,  možno  použiť  na 
+
+výpočet tepelnej energie požadovanej na výrobu tepla hodnoty z Tab. 3.10, zo stĺpca „Faktor 
+
+transformácie  a distribúcie  energie.“  Ďalšie  informácie  o účinnosti  kotlov  v  závislosti  od 
+
+energetického nosiča a od výkonu možno nájsť vo vyhláške ÚRSO č. 59/2008 Z. z.  
+
+Tabuľka 3.10.    Transformačné a prepočítavacie faktory účinnosti výroby a distribúcie tepla, 
+
+emisií  oxidu  uhličitého,  primárnej  energie  a  hodnoty  výhrevnosti  palív  podľa  vyhlášky 
+
+MDVRR SR č. 324/2016 Z. z. 
+
+Energetický nosič 
+
+Spôsob transformácie 
+
+Zemný plyn 
+
+LPG 
+
+Koks čiernouhoľný 
+Čierne uhlie 
+Hnedé uhlie triedené 
+
+Ľahký vykurovací 
+olej 
+
+Drevené peletky 
+
+Drevná štiepka 
+
+Kusové drevo 
+
+Kusové drevo 
+
+Zemný plyn 
+
+Čierne uhlie 
+
+štandardný kotol-starý 
+
+štandardný kotol-nový 
+
+nízkoteplotný kotol 
+
+kondenzačný kotol 
+
+kombinovaná výroba 
+
+štandardný kotol – nový 
+
+nízkoteplotný kotol 
+
+kondenzačný kotol 
+
+kotol na tuhé palivo 
+
+kotol na tuhé palivo 
+
+kotol na tuhé palivo 
+
+štandardný kotol – starý 
+
+štandardný kotol – nový 
+
+nízkoteplotný kotol – starý 
+
+nízkoteplotný kotol – nový 
+
+kotol na biomasu 
+
+kotol na biomasu 
+
+kotol na biomasu 
+kotol na biomasu so 
+splyňovaním 
+diaľkové vykurovanie 
+
+diaľkové vykurovanie 
+
+Merná 
+jednotka 
+(m.j.) 
+
+Výhrevnosť 
+kWh/m.j. 
+
+Faktor 
+
+transformácie 
+a distribúcie 
+energie 
+
+emisie 
+CO2 K 
+kg/kWh 
+
+9,59 
+
+9,59 
+
+9,59 
+
+9,59 
+
+9,59 
+
+12,788 
+
+12,788 
+
+12,788 
+
+7,79 
+
+6,99 
+
+4,31 
+
+11,67 
+
+11,67 
+
+11,67 
+
+11,67 
+
+4,72 
+
+3,19 
+
+3,19 
+
+3,19 
+
+0,83 – 0,89 
+
+0,89 – 0,90 
+
+0,90 – 0,93 
+
+0,97 – 1,05 
+
+0,85 
+
+0,89 – 0,90 
+
+0,90 – 0,93 
+
+0,97 – 1,05 
+
+0,72 – 0,75 
+
+0,69 – 0,78 
+
+0,65 – 0,75 
+
+0,82 
+
+0,85 
+
+0,87 
+
+0,91 
+
+0,86 
+
+0,78 
+
+0,7 
+
+0,83 
+
+0,84 
+
+0,80 
+
+0,220 
+
+0,220 
+
+0,220 
+
+0,220 
+
+0,220 
+
+0,2484 
+
+0,2484 
+
+0,2484 
+
+0,360 
+
+0,360 
+
+0,360 
+
+0,290 
+
+0,290 
+
+0,290 
+
+0,290 
+
+0,020 
+
+0,020 
+
+0,020 
+
+0,020 
+
+0,220 
+
+0,360 
+
+m³ 
+
+m³ 
+
+m³ 
+
+m³ 
+
+m³ 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kg 
+
+kWh 
+
+kWh 
+
+52 
+
+primár-
+nej 
+energie 
+fp 
+1,1 
+
+1,1 
+
+1,1 
+
+1,1 
+
+1,1 
+
+1,35 
+
+1,35 
+
+1,35 
+
+1,1 
+
+1,1 
+
+1,1 
+
+1,1 
+
+1,1 
+
+1,1 
+
+1,1 
+
+0,20 
+
+0,15 
+
+0,10 
+
+0,10 
+
+1,3 
+
+1,3

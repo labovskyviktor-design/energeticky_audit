@@ -1,0 +1,24 @@
+Obr. 3.1. Tepelná strata ležatého prívodného potrubia vykurovania vedeného na prízemí 
+
+Pri výpočte tepelnej straty z rozvodu sa použili tieto vstupné údaje: 
+
+Ψ 
+
+– lineárny stratový súčiniteľ zodpovedá hodnote Uo na Obr. 3.1 v obdĺžniku. Hodnoty 
+
+použité vo výpočte sú v Tab. 3.11; 
+
+q m   – stredná teplota teplonosnej látky zodpovedá hodnote tin na Obr. 3.1. Použila sa  
+
+vypočítaná priemerná hodnota q m = 51,3 °C; 
+
+q i 
+
+– teplota okolitého prostredia zodpovedá hodnote tout na Obr. 3.1. Pre ležaté potrubia na 
+prízemí sa uvažuje q i = 10 °C; 
+
+L    – dĺžka rozvodov. Hodnoty použité vo výpočte sú v Tab. 3.11; 
+
+top,an   – počet vykurovacích hodín za rok top,an = 212 . 24 = 5088 hod; 
+
+58

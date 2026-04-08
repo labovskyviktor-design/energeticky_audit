@@ -1,0 +1,55 @@
+Výpočet podľa STN EN 15316-1,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Vstupné údaje,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16
+,,,,,,,,,,,,,,,,
+Potreba energie na prípravu TV,"Qw,d",,kWh,,,Tepelná strata z distribúcie TV,,,"Qw,d",,kWh,,,,,
+Merná potreba energie na TV,"Qw,d,m",,kWh/m2,,,tepelná strata z úseku distribučného systému,,,"Qw,d,i",9681.543828043918,kWh,Doplnit tabulku pre viac moznosti dlzky a DN,,,,
+,,,,,,tepelná strata z cirkulácie,,,"Qw,d,c",,kWh,,,,,
+Potreba TV/deň,Qpotr,250.0,kWh/deň,,,spätne získateľná strata z distribúcie TV,,,"Qw,d,ii",,kWh,,,,,
+počet osôb,n,5.0,,,,Potreba tepla na prípravu TV,,,Qw,,kWh/a,,,,,
+špecifická potreba vody,q0,50.0,l/os.deň,,,špecifická potreba tepla na jednotku plochy,,,"Qw,A",20.0,kWh/m2.a,Vyhláška 364/2012,,,,
+,,,,,,vlastná spotreba elektrickej energie cirk čerpadiel,,,"Wd,pump",273.75,kWh,,,,,
+Spotreba vody/rok,,,kWh/a,,,tepelná strata z akumulácie TV,,,"Qw,s",3.2,kWh,,,,,
+,,,,,,tepelná strata z výroby TV,,,"Qw,g",,kWh,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,Lineárny stratový súčiniteľ,,,,0.15554180046340077,,,,,,
+,,,,,,vnútorný priemer potrubia,,,"di, da",2.2422360248447206,mm,,,,,
+,,,,,,celkový súčiniteľ prestupu tepla na vonk povrchu,,,ha - izolované,8.0,W/m2.K,,,,,
+,,,,,,,,,ha - neizol,14.0,W/m2.K,,,,,
+,,,,,,Tepelná vodivosť tep izolácie,,,λD,50.0,W/mK,,,,,
+,,,,,,priemer potrubia - vnut,,,da,108.3,mm,,,,,
+,,,,,,priemer potrubia - vonk,,,di,48.3,mm,,,,,
+,,,,,,stredná teplota teplnosnej látky,,,"θw,d,i",57.5,°C,,,,,
+,,,,,,počet prevádzkových hodín,,,tw,8736.0,hodín,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,účinnosť ZT,,,η,0.85,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,čiastočné zaťaženie rozvodu,,,Bdis,,,,,,,
+,,,,,,teplotný exponent systému odovdzávania tepla,,,n-vykurov syst,1.33,,,,,,
+,,,,,,,,,n-podlah syst,1.1,,,,,,
+,,,,,,menovitý výkon inšt vyk telies - obytné budovy,,,"Фem,b",,kW,,,,,
+,,,,,,menovitý výkon inšt vyk telies - iné budovy,,,"Фem,o",,kW,,,,,
+,,,,,,faktor na zákur,obytné budovy,,"frh,b",8.0,h,,,,,
+,,,,,,faktor na zákur,iné budovy,,"frh,o",12.0,h,,,,,
+,,,,,,tepelný príkon na zákur - obytné budovy,,,"Фrh,i,b",,W,,,,,
+,,,,,,tepelný príkon na zákur - iné budovy,,,"Фrh,i,b",,W,,,,,
+,,,,,,počet vyk hodín zóny,,,top,5088.0,h,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,tepelná kapacita vody,,,cw,4181.0,J/kg*K,,,,,
+,,,,,,objem vody v rúrkach  (podľa dĺžky a priemeru potrubia),,,Vw,,m3,,,,,
+,,,,,,priemerná teplota okolia ,,,θamb,22.8,°C,,,,,
+,,,,,,počet odberov TV/deň,,,Ntap,5.0,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,prevádzkový čas čerpadla,,,fpump,5.0,h/deň,,,,,
+,,,,,,príkon čerpadla,,,ppump,150.0,W,,,,,
+,,,,,,,,,,,,,Tomašovič a kol. 2006,,,
+,,,,,,priemerná teplota vody v zásobníku,,,"Qw,s",55.0,°C,,Objem zásobníka,plocha povrchu zásobníka,"denná strata Qz,adm","min hrúbka izolácie di,min"
+,,,,,,teplotný rozdiel medzi teplotou vody v zásobníku a tepl okolia,,,"Qs,s-b",32.2,°C,,,,,
+,,,,,,pohotovostná tepelná strata zásobníka,,,Qs-b,3.2,kWh/deň,,l,m2,kWh/deň,mm
+,,,,,,,,,,,,,250,1.89,3.2,16
+,,,,,,,,,,,,,400,2.74,4.4,17
+,,,,,,Lineárny stratový súčiniteľ,,,Ψ,0.15554180046340077,STN EN ISO 12241,,630,4.25,6,19
+,,,,,,stredná teplota teplonosnej látky,,,θm,0.07777090023170039,°C,,1000,6.13,8,19
+,,,,,,teplota okolitého prostredia,,,θi,10.0,°C,,1600,8.2,11,20
+,,,,,,dlźka potrubia vyk okruhu,,,L,150.0,m,,2500,10.2,15,20
+,,,,,,počet vyk hodín v časovom kroku,,,"top,an",1.33,,,4000,13.63,20,21
+,,,,,,dĺžka potrubia v bytoch ,,,l,20.0,m,,6300,19.03,27,22
+,,,,,,,,,,,,,10000,27.3,36,23

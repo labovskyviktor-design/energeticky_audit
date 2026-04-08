@@ -1,0 +1,86 @@
+Pri výpočte prietoku sa uvažovalo s týmito hodnotami: 
+
+H,em,out 
+
+Φ
+c    
+r     
+
+– projektovaný tepelný príkon podľa STN EN 12831-1 má hodnotu 228,6 kW; 
+
+  – merná tepelná kapacita vykurovacej látky má hodnotu 4,18 kJ/(kg.K); 
+  – hustota vykurovacej látky má hodnotu 1000 kg/m3; 
+
+dis,des    – projektovaný teplotný spád má hodnotu 20 K (90/70 °C). 
+
+Δϑ
+
+Prietok sa vypočítal takto: 
+
+5Z#? =
+
+3600. ¡(cid:18),#$,@M(cid:20)
+2. 0. Δ®Z"?,Z#?
+
+=
+
+3600 . 228,6
+4,18 . 1000 . 20
+
+= 9,85 m³/h
+
+Pri výpočte systémového výkonového faktora sa uvažovalo s týmito hodnotami: 
+
+CP1  
+
+CP2  
+
+βdis  
+
+fe   
+
+  – pre čerpadlo bez regulácie má hodnotu 0,25; 
+
+  – pre čerpadlo bez regulácie má hodnotu 0,75; 
+
+  – priemerné čiastočné zaťaženie rozvodu je 0,42; 
+  – faktor účinnosti, pričom 
+
+w# = (cid:26)1,25 + (cid:26)
+Pel,pmp   – hodnota menovitého príkonu čerpadla, uvažujeme Pel,pmp = 200 W; 
+
+(cid:31).1,5. * = (cid:26)1,25 + °
+
+v,–
+
+; 
+(cid:31) . 1,5 . 2 = 7,43
+
+[vv
+(cid:4)ˆˆ±
+
+q(cid:10)<,”V”
+qrstu,t(cid:10)(cid:7)(cid:31)
+
+v,–
+
+b    
+
+  – pre existujúce budovy má hodnotu 2. 
+
+Systémový výkonový faktor sa potom vypočíta takto: 
+
+T(cid:4)
+pZ"? = w#. (cid:26)•|(cid:4) + •|[. mZ"?
+
+(cid:31) = 7,43 . (cid:26)0,25 + 0,75 . 0,42
+
+T(cid:4)
+
+(cid:31) = 15,1
+
+Vlastná spotreba energie sa napokon vypočíta: 
+
+o(cid:18),Z"?,1M+,1(cid:24) = o(cid:18),Z"?,(cid:19)YZ(cid:3),1(cid:24) . pZ"? = 284 . 15,1 = 4 288 kWh
+
+61

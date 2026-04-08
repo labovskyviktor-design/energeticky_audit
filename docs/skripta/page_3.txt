@@ -1,0 +1,43 @@
+11 
+  Tepelnotechnické vlastnosti stavebných konštrukcií 1.1.2
+S ohľadom na splnenie podmienok tepelnej pohody v miestno sti v zimnom období 
+a splnenie energetických požiadaviek musia ma ť steny, strechy, stropy a podlahy 
+vykurovaných alebo klimatizovaných priestorov s relatívnou vlhkos ťou φi ≤ 80 % súčiniteľ 
+prechodu tepla konštrukcie U nižší alebo rovnaký, ako je požiadavka na hodnotu Ur1 podľa  
+STN 73 0540-2/Z1: 
+ 
+ ≤    (W/(m2.K))                         (1.1) 
+ 
+Požiadavky na hodnoty U nepriesvitných stavebných konštrukcií sú uvedené v Tab. 1.1, 
+pričom hodnota U stavebnej konštrukcie sa vypo číta takto: 
+ 
+ 
+	 	  
+   (W/(m2.K))                   (1.2) 
+kde:   
+U je súčiniteľ prechodu tepla konštrukciou (W/(m2K));                                
+Rsi  – tepelný odpor na vnútornom povrchu stavebnej konštrukcie ((m2K)/W);                                                          
+R  – súčet tepelných odporov jednotlivých vrstiev konštrukci e  ((m2K)/W); 
+Rse  – tepelný odpor na vonkajšom povrchu stavebnej konštrukcie ((m2K)/W). 
+ 
+Súčiniteľ prechodu tepla otvorových konštrukcií, okien a dver í sa určí podľa STN EN 
+ISO 10077-1. Sú činiteľ prechodu tepla konštrukcií, ktoré sú v kontakte so zeminou, sa ur čí 
+podľa STN EN ISO 13370. 
+Vyjadrené pomocou tepelného odporu: tepelný odpor stavebnej konštrukcie R musí byť 
+vyšší alebo rovnaký, ako je požiadavka na hodnotu Rr1, podľa STN 73 0540-2/Z1: 
+ 
+ ≥    ((m2.K) /W)                             (1.3)  
+ 
+Požiadavky na hodnoty R nepriesvitných stavebných konštrukcií sú uvedené v  Tab. 1.2. 
+Postup určenia tepelného odporu stavebnej konštrukcie R a súčiniteľa prechodu tepla 
+stavebnej konštrukcie U sa uvádza v STN EN ISO 6946. Tepelný odpor danej konštrukcie sa 
+počíta podľa vzťahu: 
+ 
+∑  ∑
+   ((m2.K) /W)                          (1.4) 
+ 
+kde:     
+di  je hrúbka jednotlivých vrstiev konštrukcie (m); 
+λi   – súčiniteľ tepelnej vodivosti jednotlivých vrstiev konštrukcie  (W/(m.K)). Hodnoty λi 
+pre jednotlivé materiály, sú uvedené v STN 73 0540-3. 
+ 

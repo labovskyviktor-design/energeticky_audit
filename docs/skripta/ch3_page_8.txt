@@ -1,0 +1,71 @@
+v technických normách. Tepelné straty pre všetky potrubia j v časovom kroku možno stanoviť 
+
+takto: 
+
+(cid:17)(cid:18),Z"?,A?,1(cid:24) = ∑\],^. (cid:26)!$ − !",^(cid:31). _^. &@K,1(cid:24)
+
+(kWh)   
+
+(3.8) 
+
+kde: 
+
+Ψ 
+q m 
+q i 
+
+L 
+
+ je lineárny stratový súčiniteľ (W/(m.K)); 
+
+ – stredná teplota teplonosnej látky (°C); 
+
+ – teplota okolitého prostredia (°C); 
+
+–  dĺžka  potrubia  vykurovacieho  okruhu,  vrátane  ekvivalentnej  dĺžky  pre  zohľadnenie 
+
+armatúr podľa Tab. 3.5 (m); 
+
+j 
+
+ – index pre potrubia s rovnakými okrajovými podmienkami; 
+
+top,an  – počet vykurovacích hodín v časovom kroku (h). 
+
+Tepelnú  stratu  z armatúr  na  vykurovacom  potrubí  možno  vo  výpočte  zohľadniť 
+
+pomocou ekvivalentnej  dĺžky. To znamená, že za každú armatúru sa k dĺžke vykurovacieho 
+
+potrubia  pripočíta  ekvivalentná  dĺžka,  ktorou  sa  zohľadní  tepelná  strata  cez  armatúru. 
+
+Ekvivalentné dĺžky pre armatúry sú v Tab. 3.5. 
+
+Tabuľka 3.5. Ekvivalentné dĺžky pre armatúry 
+
+Armatúry vrátane 
+prírub 
+
+Ekvivalentná dĺžka (m)  
+(priemer d ≤ 100 mm) 
+
+Ekvivalentná dĺžka (m)  
+(priemer > 100 mm) 
+
+Bez tepelnej izolácie 
+S tepelnou izoláciou 
+
+4 
+1,5 
+
+6 
+2,5 
+
+3.1.2.1  Minimálna hrúbka tepelnej izolácie rozvodov tepla a teplej vody 
+
+Minimálna  hrúbka  tepelnej  izolácie  rozvodov  tepla  a teplej  vody  v  budovách  pre 
+
+izolačný materiál s tepelnou vodivosťou 0,035 W/(m.K) pri teplote 0 °C podľa vyhlášky MH 
+
+SR č. 14/2016 Z. z. je uvedená v Tab. 3.6. 
+
+44

@@ -1,0 +1,49 @@
+32 
+ ktoré nespĺňajú prvú požiadavku na kWh/(m2.a). Faktor tvaru budovy je podielom sú čtu plôch 
+konštrukcií teplovýmenného obalu a obostavaného priestoru. Hodnoty QH,nd pre medziľahlé 
+hodnoty faktora tvaru sa ur čia lineárnou interpoláciou tabu ľkových hodnôt a vypo čítané 
+hodnoty sa zaokrúhlia na desatiny. 
+ 
+Tabuľka 2.7. Hodnoty mernej potreby tepla na vykurovanie na hodnotenie energetického 
+kritéria podľa STN 73 0540-2/Z1 
+Faktor 
+tvaru 
+budovy  
+1/m Potreba tepla na vykurovanie 
+Maximálna 
+hodnota Normalizovaná 
+hodnota Odporúčaná 
+hodnota Cieľová odporúčaná 
+hodnota 
+QH,nd,max  QH,nd,N  QH,nd,r1  QH,nd,r2  QH,nd,max1  
+kWh/(m2.a) 
+QH,nd,max2 
+kWh/(m3.a) 
+QH,nd,N1 
+kWh/(m2.a) 
+QH,nd,N2 
+kWh/(m3.a) 
+QH,nd,r1,1 
+kWh/(m2.a) 
+QH,nd,r1,2 
+kWh/(m3.a) 
+QH,nd,r2,1 
+kWh/(m2.a) 
+QH,nd,r2,2 
+kWh/(m3.a) 
+≤ 0,3 70,00 25,00 50,00 17,90 25,00 8,93 12,50 4,47 
+0,4 78,60 28,10 57,10 20,40 28,55 10,20 14,28 5,10 
+0,5 87,10 31,10 64,30 23,00 32,15 11,49 16,08 5,75 
+0,6 95,70 34,20 71,40 25,50 35,70 12,75 17,85 6,38 
+0,7 104,30 37,50 78,60 28,10 39,30 14,04 19,65 7,02 
+0,8 112,90 40,30 85,70 30,60 42,85 15,31 21,43 7,66 
+0,9 121,40 43,40 92,90 33,20 46,45 16,60 23,23 8,30 
+1,0 130,00 46,50 100,00 35,70 50,00 17,86 25,00 8,93 
+ 
+ PRÍKLAD 2.2
+ Určenie hranice vykurovaného priestoru 2.2.1
+Určenie hranice vykurovaného priestoru pre bytový dom j e zobrazené na Obr. 2.4 a 2.5. 
+Hranica je vymedzená po stranách vonkajšou hranou muriva, hore vrchnou hranou tepelnej 
+izolácie strešnej konštrukcie a dole spodnou (vonkajšou) hranou stropu nad nevykurovaným 
+podlažím. 
+ 

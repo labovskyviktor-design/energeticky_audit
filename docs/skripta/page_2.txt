@@ -1,0 +1,30 @@
+10 
+ 1 OPIS SKUTKOVÉHO STAVU BUDOVY A POSÚDENIE 
+TEPELNO-TECHNICKÝCH VLASTNOSTÍ STAVEBNÝCH 
+KONŠTRUKCIÍ 
+ ÚVOD 1.0
+ Opis situácie  1.0.1
+Pracuješ pre firmu, ktorá sa zaoberá projek čnou a poradenskou činnosťou v oblasti 
+energetickej efektívnosti budov. Spolo čenstvo vlastníkov bytov rozmýš ľa nad komplexnou 
+obnovou jedného z bytových domov. Tvojou úlohou bude vypracova ť kvalifikovaný odhad, 
+koľko energie možno ušetri ť realizáciou energeticky úsporných opatrení, aká je ich 
+návratnosť a ziskovosť a aký vplyv by mali tieto opatrenia na energetickú hospodárnosť 
+budovy. Začneš opisom objektu a výpo čtom tepelnotechnických vlastností stavebných 
+konštrukcií. 
+ Zadanie  1.0.2
+Opíš skutkový stav riešeného objektu. Zameraj sa pritom na stavebné konštrukcie, 
+vykurovací systém a systém prípravy teplej vody. Definuj konštrukcie tvoriace teplovýmenný 
+obal budovy a opíš skladby týchto konštrukcií. Vypo čítaj tepelnotechnické parametre 
+stavebných konštrukcií a porovnaj s požiadavkami uvedenými v STN 73 0540-2/Z1. 
+ 
+ POŽIADAVKY NA TEPELNOTECHNICKÉ VLASTNOSTI 1.1
+STAVEBNÝCH KONŠTRUKCIÍ 
+ Opis skutkového stavu 1.1.1
+Opis skutkového stavu budovy predstavuje charakteristiku riešeného objektu. Je vhodné 
+k opisu pripoji ť fotodokumentáciu objektu, prípadne pôdorysy a rezy.  Opis má zahŕňať: 
+• lokalizáciu budovy (mesto, ulica, súpisné číslo, parcela), 
+• situáciu s orientáciou na svetové strany, 
+• typ budovy (rodinný dom, bytový dom, administratívna budova a pod.), 
+• stručný opis konštruk čného systému (pri bytových domoch),  
+• skladby konštrukcií tvoriacich teplovýmenný obal budovy, 
+• popis technických zariadení budovy (vykurovanie, príprava teplej vody). 

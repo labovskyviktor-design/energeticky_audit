@@ -1,0 +1,8 @@
+Výpočet podľa STN EN 15316-1,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Vstupné údaje,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11
+,,,,,,,,,,,
+Potreba energie na vykurovanie,Qvyk,,kWh,,,potreba hydraulickej energie,,,"WH,dis,aux,an",,kWh
+Merná potreba energie na VYK,"Qvyk,m",,kWh/m2,,,Potreba tepla na vykurovanie,,,QH,,kWh
+,,,,,,Straty z odovzdávania tepla,,,"Qem,ls",,kWh
+Účinnosť ZT,%,,,,,Straty z rozvodu tepla,,,"QH,dis,ls,an",,kWh
+,,,,,,Tepelná strata z akumulácie tepla,,,"Qs,ls",,kWh
+,,,,,,Tepelná strata z výroby tepla,,,"QH,g",,kWh

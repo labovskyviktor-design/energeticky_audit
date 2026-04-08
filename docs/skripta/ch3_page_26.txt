@@ -1,0 +1,62 @@
+3.2.4
+
+  Spätne získateľná časť vlastnej spotreby energie 
+
+Vzhľadom  na  to,  že  obehové  čerpadlo  sa  nachádza  v nevykurovanej  časti  budovy, 
+
+spätne  získateľná  časť  vlastnej  spotreby  energie  sa  v tomto  prípade  do  energetickej  bilancie 
+
+nezapočíta.  
+
+3.2.5
+
+  Tepelná strata z výroby tepla 
+
+Zdrojom tepla je v tomto prípade odovzdávacia stanica tepla, ktorá sa nachádza mimo 
+
+budovy. S tepelnou stratou z výroby tepla sa preto v tomto príklade neuvažuje.  
+
+V prípade, ak by išlo o výpočet energetickej hospodárnosti budovy v súlade s vyhláškou 
+
+MDVRR  SR  č.  364/2012  Z.  z.,  musí  sa  účinnosť  pri  výrobe  tepla  zohľadniť  vo  výpočte 
+
+dodanej energie (pozri 9.2.2). 
+
+3.2.6
+
+  Potreba energie na vykurovanie 
+
+Potreba  energie  na  vykurovanie  bez  zohľadnenia  spätne  získateľnej  tepelnej  straty  sa 
+
+vypočíta takto: 
+
+(cid:17)(cid:30)˜™ (cid:5) (cid:17)(cid:18) (cid:29) (cid:17)#$,A? (cid:29) (cid:17)(cid:18),Z"?,A?,1(cid:24) (cid:29) o(cid:18),Z"?,1M+,1(cid:24) (cid:5) 447 539 (cid:29) 46 023 (cid:29) 16 893 (cid:29) 4 288
+
+(cid:5) 514 743 kWh
+
+Merná  potreba  energie  na  vykurovanie  bez  zohľadnenia  spätne  získateľnej  tepelnej 
+
+straty: 
+
+(cid:17)(cid:30)˜™,$ (cid:5) (cid:17)(cid:30)˜™ ,C⁄ (cid:5) 514 743  4403,4
+
+⁄
+
+[
+  (cid:5) 116,9 kWh/(cid:26)m
+
+. rok(cid:31)
+
+Pri výpočte potreby energie na vykurovanie treba ešte zohľadniť spätne získateľnú časť 
+
+tepelnej  straty  zo  systému  prípravy  TV.  Uvažuje  sa  s tým,  že  spätne  sa  využije  len  tepelná 
+
+strata  z rozvodov  TV,  ktoré  sa  nachádzajú  v bytoch  (pripájacie  potrubia  z cirkulačného 
+
+okruhu  k odbernému  miestu).  Tepelnú  stratu  z rozvodov  v stúpacích  šachtách  v tomto 
+
+príklade  nepovažujeme  za  spätne  získateľnú  napriek  tomu,  že  stúpacie  šachty  sú  súčasťou 
+
+vykurovanej  zóny.  Výpočet  spätne  získateľnej  tepelnej  straty  zo  systému  prípravy  TV  sa 
+
+62

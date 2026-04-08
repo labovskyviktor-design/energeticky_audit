@@ -1,0 +1,740 @@
+
+--- Page 1 ---
+102 
+ 
+8 VÝPOČET NÁVRATNOSTI A ZISKOVOSTI ENERGETICKY 
+ÚSPORNÝCH OPATRENÍ, HOTOVOSTNÝ TOK 
+ ÚVOD 8.0
+ Opis situácie 8.0.1
+Prepracoval(a) si sa k závere čnému kroku svojho posúdenia, ktorým je technicko-
+ekonomické vyhodnotenie navrhovaných úsporných opatrení. Konkrétne treba stanovi ť 
+ziskovosť energeticky úsporných opatrení a hotovostný tok – c ashflow.  
+ Zadanie  8.0.2
+Pre energeticky úsporné opatrenia uvažované v predošlých krokoch vypo čítaj 
+jednoduchú návratnos ť (PB), čistú sú časnú hodnotu (NPV) a koeficient čistej sú časnej 
+hodnoty (NPVQ). Navrhni formu financovania obnovy bytového domu a vypo čítaj 
+hotovostný tok – cashflow. 
+ 
+ TECHNICKO-EKONOMICKÉ VYHODNOTENIE 8.1
+Technicko-ekonomické vyhodnotenie je dôležitou sú časťou projektov obnovy. Cie ľom 
+technicko-ekonomického vyhodnotenia je nájs ť ziskovos ť jednotlivých energeticky 
+úsporných opatrení a zisti ť hotovostný tok pri navrhovanej variante financovani a, resp. 
+porovnať rôzne varianty financovania. 
+ Ekonomické parametre 8.1.1
+Ekonomické parametre, ktoré vstupujú do technicko-ekonomického vyhodnotenia, sú tieto: 
+ 
+• investície  (€), 
+• ročná úspora (€/rok), 
+• technická/ekonomická životnos ť (roky), 
+• nominálna úroková miera  (%), 
+• miera inflácie (%), 
+• reálna úroková miera (%). 
+
+--- Page 2 ---
+103 
+ 
+8.1.1.1 Investície 
+Investičné náklady zah ŕňajú všetky výdavky spojené s celkovou investíciou do  
+navrhnutých energeticky úsporných opatrení. Tieto investície pozostávajú z nákladov na 
+materiál, na projektovú dokumentáciu, montážne práce, dopravu, prenájom lešenia, daní 
+a pod. 
+8.1.1.2 Ročná úspora    
+Ročná úspora energie v kWh/rok predstavuje rozdiel v po trebe energie pred 
+aplikovaním energeticky úsporných opatrení a po ich realizácii. K ľúčové je pritom správne 
+prerozdeliť usporenú energiu medzi jednotlivé úsporné opatrenia. 
+Ročná ekonomická úspora ( B) je čistá ro čná úspora pe ňazí (€/rok), ktorá vyplýva zo 
+zodpovedajúcej investície. Zjednodušený výpo čet ro čnej úspory z investície do energeticky 
+úsporných opatrení predstavuje: 
+ 
+¾  ¿ .  À   (€/rok)                  (8.1)
+  
+kde:
+ S je úspora energie za rok (kWh/rok); 
+E – cena energie (€/kWh). 
+8.1.1.3 Technická a ekonomická životnos ť 
+Technická životnos ť je fyzická životnos ť investície/zariadenia, t. j. čas, počas ktorého 
+dokáže by ť zariadenie v činnosti/prevádzke (z technického hľadiska). 
+Ekonomická životnos ť ( n)  je praktická životnos ť investície/zariadenia, t. j. čas, po 
+ktorého uplynutí je ziskovejšie vymeni ť existujúce zariadenie za nové.  
+Vzhľadom na to, že prvky/zariadenia sa často vymie ňajú skôr, ako sú neschopné 
+prevádzky, v dôsledku rýchleho vývoja novších a efektívnejších zariadení je ich ekonomická 
+životnos ť zvyčajne kratšia, ako technická životnos ť týchto zariadení. Technická a ekonomická 
+ž ivotnosť jednotlivých zariadení pod ľa Dahlsveena a kol. (2008) sú v Tab. 8.1. Alternatív ne 
+možno použi ť údaje o životnosti produktov pod ľa Tab. 8.2, kde sú uvedené niektoré údaje 
+o strednej d ĺžke životnosti a ro čných nákladoch na údržbu vybraných komponentov 
+a produktov podľa prílohy A STN EN 15459. 
+ 
+ 
+
+--- Page 3 ---
+104 
+ 
+Tabuľka 8.1.  Technické a ekonomické životnosti zariadení  (Dahlsveen a kol., 2008) 
+Zariadenia Technická životnos ť Ekonomická životnos ť 
+Stavebné konštrukcie 60 30 
+Izolácie 40 30 
+Okná 30 30 
+Vykurovací systém 25 15 
+Potrubné rozvody 30 15 
+Zásobníkový ohrievač TV 15 15 
+Elektrické vykurovanie 30 15 
+Termostatické hlavice a ventily 15 10 
+Tepelné čerpadlá 15 15 
+Expanzný systém 20 15 
+Výmenník tepla 15 15 
+Rozvody VZT 30 15 
+Automatická regulácia 15 10 
+Osvetlenie 20 15 
+Zariadenia na úsporu vody (úsporné 
+výtokové armatúry...) 10 – 15 5 – 10 
+ 
+Tabuľka 8.2. Údaje o strednej d ĺžke životnosti a nákladoch na údržbu vybraných 
+komponentov a produktov podľa STN EN 15459 
+Komponent Stredná dĺžka životnosti 
+min – max (roky) 
+Ročná preventívna údržba 
+zahŕňajúca prevádzkové 
+náklady, náklady na opravu a 
+služby v  % po čiatočných 
+investícií 
+Klimatizačné jednotky 15 4 
+Kotol – kondenza čný  20 1 – 2 
+Riadiaci systém – centrálny 15 – 25 4 
+Regulačný ventil, automatický 15 6 
+Regulačný ventil, manuálny 30 4 
+Chladiace panely a stropy 30 2 
+Elektrické ohrievače – tepelný 
+zásobníkový ohrievač  20 – 25 1 
+Podlahové vykurovanie – voda  50 2 
+Tepelné čerpadlá  15 – 20 2 – 4 
+Rúry, medené 30 1 
+Rúry, kompozitné alebo (pozri 
+podlahové vykurovanie, voda) 50 1 
+Rúry, nerezové 30 1 
+Rúry, oceľ v zatvorenom systéme 30 1 
+Čerpadlá – cirkula čné 10 – 20 2 
+Čerpadlá  – regula čné 10 – 15 1,5 – 2 
+Vykurovacie telesá, voda 30 – 40   1 – 2 
+Zásobníková nádrž pre teplú vodu  20 1 
+Ventil – termostatický  20 1,5 
+
+--- Page 4 ---
+105 
+ 
+8.1.1.4 Nominálna úroková miera 
+Nominálnu úrokovú mieru ( nr) možno uvažova ť rovnakú, ako je úroková miera úveru 
+z banky, resp. zo stavebnej sporite ľne. Nominálna úroková miera je takmer vždy vyššia ak o 
+inflácia, s výnimkou úrokovej miery zo Štátneho fondu rozvoja bývania, kedy úroková miera 
+môže by ť nižšia ako inflácia. 
+8.1.1.5 Miera inflácie 
+Inflácia (b) je definovaná ako priemerný vzostup cien všetkých tovarov za rok. Miera 
+inflácie sa dá len ťažko predpoveda ť, okrem iného aj preto, že sa môže líši ť v závislosti od 
+rozličných typov tovarov a služieb. 
+8.1.1.6 Reálna úroková miera 
+Reálna úroková miera ( r) je nominálna úroková miera upravená tak, aby zoh ľadňovala 
+infláciu, relatívny vzostup cien energie a iných možných relatívnych cenových vzostupov. Je 
+to dôležitý parameter, pretože čím je ekonomická životnos ť ur čitej investície dlhšia, tým 
+podstatnejšiu úlohu bude ma ť reálna úroková miera. Reálna úroková miera sa so zohľadnením 
+inflácie  vypočíta podľa vzťahu: 
+ 
+Á 
+¢ÂT6
+	6       (%)                (8.2)   
+ 
+kde:  
+r je reálna úroková miera (%); 
+nr – nominálna úroková miera (%); 
+b – inflácia (%). 
+ Ukazovatele ziskovosti opatrení 8.1.2
+Existuje viacero ukazovate ľov ziskovosti energeticky úsporných opatrení. Medzi 
+najčastejšie používané ukazovatele patria hrubá návratno sť, čistá súčasná hodnota a koeficient 
+čistej súčasnej hodnoty. 
+8.1.2.1 Hrubá návratnosť  
+Hrubá návratnosť – PayBack (PB) predstavuje po čet rokov, za ktoré sa vrátia vložené 
+investície prostredníctvom úspor na energiách. Hrubá návratnosť sa vypočíta takto: 
+ 
+
+--- Page 5 ---
+106 
+ 
+PB F ¾³     ( rok )                                                          (8.3) 
+ 
+kde: 
+I  sú investície (€);    
+B je ro čná úspora (€/rok). Táto úspora ( B) sa pre zjednodušenie vo výpo čtoch hrubej 
+návratnosti uvažuje každý rok rovnaká ( B1 = B2 = ... Bn ). 
+ 
+Metóda hrubej návratnosti môže by ť vhodným nástrojom na rýchle výpočty návratnosti, 
+má však nieko ľko obmedzení: 
+ 
+• môže sa používa ť iba vtedy, keď je nízka reálna úroková miera; 
+• môže sa používa ť iba v prípade, keď je hrubá návratnosť nižšia ako 4 až 5 rokov; 
+• pri metóde sa neberie do úvahy hodnota ročných úspor po čase hrubej návratnosti.  
+8.1.2.2 Metóda čistej súčasnej hodnoty – Net Present Value (NPV) 
+NPV je ukazovate ľ, ktorý vyjadruje dnešnú hodnotu pe ňažných tokov v budúcnosti. 
+V dôsledku inflácie totiž ceny relatívne rastú, 1000 € v roku 2016 nemusí ma ť rovnakú 
+hodnotu ako 1000 € v roku 2017. V praxi to znamená, že v roku 2016 nemôžeme za 1000 € 
+kúpiť rovnaké množstvo tovarov a služieb, ako v roku 2017 . Navyše, ak by sme dali 1000 € 
+dnes do banky, aj ke ď len na nízky úrok, o nieko ľko rokov by sme mali k dispozícii viac ako 
+1000 €. Preto sa pri metóde NPV pe ňažné toky diskontujú, pri čom diskont predstavuje akúsi 
+potenciálnu ušlú príležitos ť. Keby sme napríklad boli dali peniaze namiesto zate plenia do 
+banky na úročený účet, zarobili by sme po nejakej dobe určité množstvo pe ňazí.  
+Pri výpo čtoch ziskovosti energeticky úsporných opatrení možno  ako diskont použi ť 
+nominálnu úrokovú mieru, ktorá sa rovná úrokovej sadzbe pri pôži čke z finan čnej inštitúcie. 
+Táto úroková sadzba v sebe skrýva úrokovú sadzbu, za ktorú finan čná inštitúcia štandardne 
+zhodnocuje svoje peniaze a k nej je pripo čítaná prémia za riziko, ktoré finan čná inštitúcia 
+podstupuje, keď nám peniaze poži čiava. 
+Čistá sú časná hodnota – Net Present Value  (NPV) opatrenia na  úsporu energie je 
+súčasná hodnota všetkých budúcich ro čných úspor po čas ekonomickej životnosti zariadenia 
+(od 1. roku do roku n), mínus začiatočná investícia. Čistá súčasná hodnota sa vypočíta takto: 
+ 
+NPV  °
+Æb
+	Çb 
+Æc
+	Çc  ⋯ 
+Æn
+	Çn±  F  (€)              (8.4)                                        
+
+--- Page 6 ---
+107 
+ 
+kde:  
+r je reálna úroková miera (%); 
+n – ekonomická životnos ť (rok); 
+B – finan čné úspory (€/rok);      
+I – investície (€). 
+ 
+Ak je hodnota NPV kladná, znamená to, že investícia je zisková.  
+ 
+Pre zjednodušenie sa v projektoch úspory často predpokladajú v rovnakej výške pre 
+každý rok ( B1 = B2 = ... = Bn); potom sa rovnica na výpo čet čistej sú časnej hodnoty môže 
+matematicky zjednoduši ť: 
+ 
+NPV  ¾.
+T	Ç¶n
+Ç  F      (€)                 (8.5)                                        
+ 
+kde: 
+r je reálna úroková miera (%); 
+n – ekonomická životnos ť (rok); 
+B sú finančné úspory (€/rok);      
+I – investície (€). 
+ 
+Rozpočítanie úspor v rovnakej výške pre každý rok je ilust rované na Obr. 8.1. 
+ 
+ 
+Obr. 8.1. Rozpočítanie úspor v rovnakej výške pre každý rok pri výpo čte NPV 
+
+
+--- Page 7 ---
+108 
+ 
+8.1.2.3 Koeficient čistej súčasnej hodnoty – NPVQ  
+Koeficient čistej sú časnej hodnoty NPVQ je vyjadrený ako pomer čistej sú časnej 
+hodnoty a hodnoty celkových investícií.   
+ 
+NPVQ  NPV F³      (-)                                                                                                                    
+(8.6) 
+ 
+kde: 
+NPV je čistá súčasná hodnota; 
+I  sú investície (€). 
+ 
+Kladný NPVQ indikuje ziskové opatrenie (projekt), zatia ľ čo záporný NPVQ indikuje 
+neziskové opatrenie (projekt). Najvyšší NPVQ indikuje najziskovejšie opatrenie (projekt). 
+Metóda NPVQ je vhodná na zoradenie energeticky úsporných opatrení z hľadiska ziskovosti.  
+ Hotovostný tok – CASHFLOW 8.1.3
+8.1.3.1 Princíp hotovostného toku 
+Pre investora projektu je dôležitým ukazovate ľom hotovostný tok, tzv. cashflow, ktorý 
+závisí od spôsobu financovania projektu. Nosite ľ projektu bude investova ť čiastočne vlastné 
+prostriedky (kapitál), zároveň splácať úver a má mať zabezpečené znížené náklady na energie 
+(úspory). Výpočtom cashflow zistí, kedy začne byť projekt ziskový.  
+Princíp hotovostného toku je vyjadrený na Obr. 8.2. Na y-ovej osi dole sú po čiatočné 
+investície, ktoré môžu pochádza ť z vlastných prostriedkov, z úveru, z grantu a pod. Na y-ovej 
+osi hore sú úspory pre jednotlivé roky. Zatia ľ čo nosite ľ projektu musí pravidelne spláca ť 
+úver, čím o peniaze prichádza, v ďaka energeticky úsporným opatreniam zaznamenáva zisk  
+(úspory), z ktorých tieto splátky financuje. V ideálnom prípade nosite ľ projektu každoro čne 
+vyprodukuje prebytok, teda zarobí viac, ako musí splati ť. Bilancia výdavkov a príjmov pre 
+všetky roky projektu je hotovostný tok – cashflow. 
+ 
+
+--- Page 8 ---
+109 
+ 
+ 
+Obr. 8.2. Princíp hotovostného toku – cashflow 
+8.1.3.2 Faktor anuity 
+Vezmime si nasledujúci príklad: Investície do energeticky úsporných opatrení 
+(zateplenie, výmena transparentných konštrukcií, rekonštrukcia odovzdávacieho systému...) 
+sú finan čne náro čné, preto si investor musel ve ľkú časť finan čných prostriedkov poži čať. 
+Predpokladajme, že prostriedky sú zabezpe čené z 80 % úverom z finan čnej inštitúcie 
+s úrokom 5,65 % a zvyšných 20 % sú vlastné prostriedky. Splatnos ť úveru je 10 rokov. 
+Potrebujeme zisti ť, ko ľko treba mesa čne splati ť za úver finan čnej inštitúcii. To zistíme 
+pomocou faktora anuity; príklad faktora anuity pre rôzne kombinácie úrokovej sadzby 
+a splatnosti úveru je v Tab. 8.3. Napríklad, pre úver s úrokom 5,65 % má pri splatnosti 12 
+rokov faktor anuity určený z Tab. 8.3 hodnotu 0,1170 (hodnota sa získala in terpoláciou medzi 
+5 % a 6 %, pozri hodnoty v rámiku). Ro čnú splátku získame, ke ď prenásobíme celkovú 
+hodnotu úveru faktorom anuity určeným z tabuľky. Túto tabuľku možno použi ť pre komerčný 
+úver z finančnej inštitúcie, nie však pre úver zo Štátneho fondu rozvoja bývania (ŠFRB). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- Page 9 ---
+110 
+ 
+Tabuľka 8.3. Faktor anuity pre rôzne kombinácie splatnost i úveru a úrokovej sadzby 
+(Dahlsveen a kol., 2008)                                                                         
+Úroková miera nr (%) 
+(Roky) 1 2 3 4 5 6 7 8 9 10 
+1 1,01 1,02 1,03 1,04 1,05 1,06 1,07 1,08 1,09 1,1 
+2 0,5075 0,515 0,5226 0,5302 0,5378 0,5454 0,5531 0,5608 0,5685 0,5762 
+3 0,34 0,3468 0,3535 0,3603 0,3672 0,3741 0,3811 0,388 0,3951 0,4021 
+4 0,2563 0,2626 0,269 0,2755 0,282 0,2886 0,2952 0,3019 0,3087 0,3155 
+5 0,206 0,2122 0,2184 0,2246 0,231 0,2374 0,2439 0,2505 0,2571 0,2638 
+6 0,1725 0,1785 0,1846 0,1908 0,197 0,2034 0,2098 0,2163 0,2229 0,2296 
+7 0,1486 0,1545 0,1605 0,1666 0,1728 0,1791 0,1856 0,1921 0,1987 0,2054 
+8 0,1307 0,1365 0,1425 0,1485 0,1547 0,161 0,1675 0,174 0,1807 0,1874 
+9 0,1167 0,1225 0,1284 0,1345 0,1407 0,147 0,1535 0,1601 0,1668 0,1736 
+10 0,1056 0,1113 0,1172 0,1233 0,1295 0,1359 0,1424 0,149 0,1558 0,1627 
+11 0,0965 0,1022 0,1081 0,1141 0,1204 0,1268 0,1334 0,1401 0,1469 0,154 
+12 0,0888 0,0946 0,1005 0,1066 0,1128 0,1193 0,1259 0,1327 0,1397 0,1468 
+15 0,0721 0,0778 0,0838 0,0899 0,0963 0,103 0,1098 0,1168 0,1241 0,1315 
+20 0,0554 0,0612 0,0672 0,0736 0,0802 0,0872 0,0944 0,1019 0,1095 0,1175 
+25 0,0454 0,0512 0,0574 0,064 0,071 0,0782 0,0858 0,0937 0,1018 0,1102 
+30 0,0387 0,0446 0,051 0,0578 0,0651 0,0726 0,0806 0,0888 0,0973 0,1061 
+ 
+ PRÍKLAD 8.2
+ Ekonomické parametre 8.2.1
+8.2.1.1 Investície  
+Celkové investície do energeticky úsporných opatrení zah ŕňajú všetky náklady spojené 
+s týmito opatreniami, teda najmä náklady na materiál a náklady na montáž, ale i projekciu, 
+prenájom lešenia a pod. Na ur čenie investičných nákladov sa vypracovali položkové rozpo čty 
+pre jednotlivé opatrenia: realizácia zatep ľovacieho systému obvodového pláš ťa, strechy, 
+výmena okien, zateplenia rozvodov vykurovacej sústavy a sústavy prípravy teplej vody, at ď. 
+Zhrnutie investičných nákladov pre všetky úsporné opatrenia je v Tab.  8.5. 
+8.2.1.2 Ročná úspora energie 
+Pri výpo čte energetickej úspory je dôležité si uvedomi ť, ktoré parametre budú vo 
+výpočte energetickej bilancie jednotlivými opatreniami ov plyvnené, aby sa mohla úspora 
+správne medzi tieto opatrenia rozpo čítať. Výpo čet úspory energie treba vykona ť pre celý 
+súbor opatrení. Až ke ď sa vypo číta úspora energie vplyvom celého súboru opatrení, m ožno 
+
+--- Page 10 ---
+111 
+ 
+túto úsporu rozpočítať medzi jednotlivé opatrenia. Príklad rozpo čítania úspory energie medzi 
+jednotlivé opatrenia je v Tab. 8.4. 
+ 
+Tabuľka 8.4. Rozpočítanie úspory energie medzi jednotlivé opatrenia 
+Energetický úsporné 
+opatrenie 
+Úspora energie v kWh/rok 
+Potreba 
+tepla 
+Odovz-
+dávanie Distribúcia Čerpadlá Celk. 
+úspora 
+tepla 
+Celk. 
+úspora 
+elektriny 
+Úspora 
+spolu Qh Q em,ls Q dis,ls W dis 
+St. konštrukcie  
+Zateplenie pláš ťa  
+(aj copilitovej steny) 142786 14684 2125  159594  159594 
+Zateplenie strechy 10060 1035 150  11245  11245 
+Výmena okien  
+(bez copilitovej steny) 158833 16334 2364  177531  177531 
+VYK 
+zateplenie rozvodov     5715   5715   5715 
+hydr. pregulovanie, aut. 
+regulácia, tepl. spád   5302 1538   6840   6840 
+výmena čerpadla       2722   2722 2722 
+TV 
+zateplenie rozvodov     45467   45467   45467 
+SUMA 311679 37354 57359 2722 406392 2722 409114 
+ 
+Stavebné konštrukcie : v dôsledku zateplenia sa znížila potreba tepla. Celková úspora 
+tepla sa rozdelila pomerne medzi zateplenie pláš ťa, zateplenie strechy a výmenu okien.  
+V dôsledku zníženia potreby tepla sa znížili aj tepelné straty z odovzdávania (rovnica 
+3.1 – s klesajúcou potrebou tepla klesá aj tepelná energia potrebná na krytie straty 
+z odovzdávania). Okrem toho, zateplenie viedlo k zníženiu priemernej teploty vykurovacej 
+vody (rovnice 3.11 a 3.12), a tým aj k zníženiu tepelných strát pri rozvode tepla (rovnica 3.8). 
+Zníženie tepelných strát z odovzdávania a z rozvodu tepla sa rozdelilo medzi zateplenie 
+pláš ťa, zateplenie strechy a výmenu okien v rovnakom pomere, ako úspora potreby tepla. 
+Zateplenie stavebných konštrukcií a výmena okien vedie aj k ur čitej úspore elektrickej 
+energie pre obehové čerpadlo. Úspora elektrickej energie vplyvom zateplenia a výmeny okien 
+bola pomerne nízka. Preto sa pre zjednodušenie prisúdila celá úspora elektrickej energie pre 
+obehové čerpadlo len výmene obehového čerpadla za nové. 
+Vykurovanie: zateplenie rozvodov vykurovania v nevykurovanej časti viedlo 
+k zníženiu lineárneho sú činiteľa prechodu tepla, a tým k zníženiu tepelných strát p rechodom 
+cez steny vykurovacích potrubí (rovnica 3.8). 
+Hydraulické preregulovanie, automatická regulácia a zníženie teplotného spádu sú 
+opatrenia, ktorých realizácia je nevyhnutná na to, aby sa v plnej miere prejavil ú činok 
+zateplenia a aby sa zlepšila efektívnos ť prevádzky vykurovacieho systému. Celkovú úsporu 
+energie týmito opatreniami môže by ť zložité vy čísliť. Napríklad, sústava bola hydraulicky 
+
+--- Page 11 ---
+112 
+ 
+vyregulovaná pred zateplením, no po zateplení ju treba preregulova ť. Aká bude úspora 
+v dôsledku tohto opatrenia? Zníženie tepelných strát z odovzdávacieho systému, vy číslené pre 
+tieto opatrenia v Tab. 8.4, je dôsledkom vyladenia, prípadnej opravy regula čných ventilov 
+a automatickej regulácie (toto sa zoh ľadnilo v rovnici 3.5, parametrom ∆θctr). Zníženie 
+tepelnej straty z distribúcie tepla je dôsledkom zníženia teplotného spádu z 90/70 °C na 75/65 
+°C, a tým aj priemernej teploty vykurovacej vody (rovnice 3.11 a 3.12). 
+Výmena obehového čerpadla za nové, efektívnejšie, vedie k zníženiu pot reby 
+elektrickej energie pre obehové čerpadlo v dôsledku jeho účinnejšej prevádzky (rovnica 3.20). 
+Príprava teplej vody : Zateplením rozvodov TV sa vzh ľadom na nevyhovujúci stav 
+tepelnej izolácie rozvodov pred opatreniami ušetrilo ve ľké množstvo energie. Táto úspora je 
+dôsledkom radikálneho zníženia tepelných strát prechodom tepla cez steny rozvodov TV, 
+vrátane cirkulácie TV. 
+Potenciál ročnej úspory energie vplyvom jednotlivých úsporných op atrení je vyjadrený 
+graficky na Obr. 8.3 v kWh/rok. 
+ 
+ 
+Obr. 8.3.  Potenciál ročnej úspory energie pre jednotlivé úsporné opatrenia 
+8.2.1.3 Ekonomická životnos ť 
+Vo výpo čtoch sme uvažovali s ekonomickou životnos ťou zariadení a systémov pod ľa 
+Tab. 8.1, resp. Tab. 8.2. Konkrétne hodnoty ekonomickej životnosti pre navrhované úsporné 
+opatrenia sú uvedené v Tab. 8.6. 
+0
+30000
+60000
+90000
+120000
+150000
+180000
+Úspora energie (kWh/rok)
+Energeticky úsporné opatrenie
+
+--- Page 12 ---
+113 
+ 
+8.2.1.4 Nominálna úroková miera 
+Pri výpo čte NPV môžeme vychádza ť z úrokovej miery, ktorá zodpovedá úrokovej 
+miere poskytovanej komer čnými inštitúciami pri obnove bytového fondu. V našom  prípade 
+budeme počítať s nominálnou úrokovou mierou nr .100 = 5 %. 
+Okrem komerčnej pôži čky existujú na Slovensku i nástroje štátnej podpory,  napríklad 
+pôži čka zo Štátneho fondu rozvoja bývania (ŠFRB). V prípa de pôži čky zo ŠFRB je úrok 
+obvykle nižší, ako je to v prípade komer čných inštitúcií. 
+8.2.1.5 Miera inflácie 
+Miera inflácie cien energie použitá vo výpo čtoch je odhadnutá na 2 %. Na 
+zjednodušenie sa uvažovalo s konštantnou mierou inflácie po čas celého výpočtového obdobia 
+a použila sa rovnaká miera inflácie pre cenu tepla aj pre cenu elektrickej energie. 
+8.2.1.6 Reálna úroková miera 
+Reálna úroková miera so zohľadnením inflácie sa vypočíta takto: 
+ 
+Á  3Ç  *
+1  * 0,05  0,02
+1  0,02  0,029 
+kde: 
+nr  je nominálna úroková miera = 5 %, teda 0,05; 
+b  – miera inflácie = 2,0 %, teda 0,02. 
+ Ukazovatele ziskovosti 8.2.2
+Nasleduje príklad výpo čtu niektorých ukazovate ľov ziskovosti, konkrétne hrubej 
+návratnosti, čistej súčasnej hodnoty (NPV) a koeficientu čistej súčasnej hodnoty (NPVQ). 
+8.2.2.1 Hrubá návratnosť 
+Ročná úspora energie a financií je uvedená v Tab. 8.5, spolu s hrubou návratnos ťou. 
+Ceny tepla a elektriny sa určili na základe nasledovných predpokladov: 
+ 
+• Súčasná cena tepla 0,11 €/kWh. Táto cena zodpovedá vari abilnej zložke ceny tepla v 
+€/kWh. 
+• Súčasná cena elektriny 0,15 €/kWh. Táto cena zodpovedá variabilnej zložke ceny 
+elektrickej energie v €/kWh. 
+
+--- Page 13 ---
+114 
+ 
+• cena tepla aj elektriny je po čas celej doby návratnosti konštantná. Výpo čet hrubej 
+návratnosti teda nezohľadňuje infláciu cien energie. 
+ 
+Tabuľka 8.5. Ročná úspora a hrubá návratnosť navrhnutých opatrení 
+Energeticky úsporné opatrenie 
+Invest. 
+náklady 
+Úspora  
+energie 
+Súčasná 
+cena energie 
+Finančná 
+úspora 
+Hrubá 
+návratnosť 
+I (€) S (kWh/rok) (€/kWh) B (€/rok) PB (rok) 
+STAVEBNÉ KONŠTRUKCIE           
+Zateplenie obvodového pláš ťa a 
+schodiskovej steny 407 208 159 594 0,11 17 555 23 
+Zateplenie strechy 27 452 11 245 0,11 1237 22 
+Výmena pôvodných otvorových 
+konštrukcií 72 895 177 531 0,11 19 528 4 
+VYKUROVANIE           
+Izolácia rozvodných potrubí 
+vykurovacej sústavy 7963 5715 0,11 629 13 
+Hydraulické preregulovanie, 
+automatická regulácia, zníženie 
+teplotného spádu 
+4243 6840 0,11 752 6 
+Výmena pôvodného čerpadla za 
+nové čerpadlo s frekvenčným 
+meničom 
+1126 2722 0,15 408 3 
+PRÍPRAVA TV           
+Izolácia rozvodných potrubí 
+sústavy TV 8272 45 467 0,11 5001 2 
+529 160 409 114 45 111 
+8.2.2.2 Čistá súčasná hodnota – Net Present Value (NPV) 
+Reálna úroková miera 2,9 % sa vypočítala z nominálnej úrokovej miery 5,0 % a inflácie 
+2,0 %. Ekonomická životnos ť sa určila podľa Tab. 8.1 a Tab. 8.2. Ak sa na výpočet ziskovosti 
+(NPV, NPVQ) použije reálna úroková miera, potom by ďalšie úspory mali vychádza ť zo 
+súčasných cien energie a nemali by sa navyšova ť o infláciu. Ak sa na za čiatku použije 
+nominálna úroková miera, potom by sa ďalšie úspory mali navýši ť o infláciu. Pretože sa na 
+výpočet NPV a NPVQ použila reálna úroková miera, uvažoval o sa so sú časnou cenou 
+energie. Uvažovala sa sú časná cena tepla 0,11 €/kWh a sú časná cena elektrickej energie 0,15 
+€ /kWh. 
+Ekonomické parametre, čistá sú časná hodnota (NPV) a koeficient čistej sú časnej 
+hodnoty (NPVQ) pre navrhované úsporné opatrenia sú zhrnuté v Tab. 8.6.  
+ 
+ 
+ 
+ 
+
+--- Page 14 ---
+115 
+ 
+Tabuľka 8.6. NPV a NPVQ navrhovaných energeticky úsporných opatrení 
+Energeticky úsporné opatrenie 
+Investičné 
+náklady 
+Finančná 
+úspora 
+Ekonomická 
+životnos ť NPV NPVQ 
+I (€) B (€/rok) n (rok) (€) (-) 
+STAVEBNÉ KONŠTRUKCIE           
+Zateplenie obvodového pláš ťa  
+a schodiskovej steny 407 208 17 555 30 -60 484 -0,15 
+Zateplenie strechy 27 452 1237 30 -3 023 -0,11 
+Výmena pôvodných otvorových 
+konštrukcií 72 895 19 528 30 312 797 4,29 
+VYKUROVANIE           
+Izolácia rozvodných potrubí vykurovacej 
+sústavy 7963 629 30 4454 0,56 
+Hydraulické preregulovanie, automatická 
+regulácia, zníženie teplotného spádu 4243 752 10 2194 0,52 
+Výmena pôvodného čerpadla za nové 1126 408 10 2367 2,10 
+PRÍPRAVA TV           
+Izolácia rozvodných potrubí sústavy TV 8272 5001 30 90 506 10,94 
+529 160 45 111 
+8.2.2.3 Koeficient čistej súčasnej hodnoty (NPVQ) 
+Koeficient čistej súčasnej hodnoty pre jednotlivé opatrenia je uvedený v Tab. 8.6. 
+ Hotovostný tok – CASHFLOW 8.2.3
+Pretože investi čné náklady na obnovu bytového domu sú vysoké a inves tor nie je 
+schopný obnovu financova ť len z vlastných prostriedkov, je pre neho k ľúčové získa ť 
+chýbajúce financie z iného zdroja. Pri plánovaní zdrojov na obnovu je potrebné vypracova ť 
+hotovostný tok (cashflow), predstavujúci finan čnú analýzu pre investora aj pre potenciálneho 
+veriteľa, ktorá jasne určuje čas, za ktorý je investícia splatená a kedy začína byť výnosná. 
+S oh ľadom na plánovanie financií treba zdôrazni ť, že komplexná obnova bytového 
+domu nespo číva len v zateplení, ale aj v odstránení statických nedostatkov, systémových 
+porúch, výmene rozvodov a pod. S týmito opatreniami treba v rozpo čte takisto po čítať. 
+Nasledujúci výpo čet preto predstavuje zjednodušený príklad, zameraný len na vybrané 
+energeticky úsporné opatrenia.  
+8.2.3.1 Zdroje financovania obnovy bytového domu 
+Hoci investor projektu, v tomto prípade vlastníci bytového domu (fyzické osoby 
+zastúpené správcom, spolo čenstvo vlastníkov bytov, bytové družstvo…), bude inv estovať 
+sčasti vlastný kapitál, vzh ľadom na investi čné náklady často nie je možné obnovu v plnej 
+
+--- Page 15 ---
+116 
+ 
+miere financova ť z vlastných zdrojov. Investor si preto musí časť finan čných prostriedkov 
+poži čať. 
+Najpriaznivejšou z možností je vzia ť si pôži čku zo Štátneho fondu rozvoja bývania 
+(ŠFRB). Pôži čky od ŠFRB predstavujú prostriedok, ktorým štát podp oruje obnovu bytového 
+fondu tak, že na obnovu domu poskytuje úvery s nízkou úrokovou sadzbou, ktorej výška sa 
+nemení po čas celej doby splatnosti úveru. Poskytovanie podpory  z prostriedkov ŠFRB sa 
+riadi zákonom č. 150/2013 Z. z. a vyhláškou MDVRR SR č. 284/2013 Z. z. Navyše možno od 
+Ministerstva dopravy, výstavby a regionálneho rozvoja SR získa ť nenávratný príspevok na 
+odstránenie systémovej poruchy bytového domu podľa zákona č. 443/2010 Z. z.  
+Okrem podpory zo ŠFRB možno využi ť aj pôži čku od komer čnej inštitúcie. V tomto 
+príklade uvažujeme s pôži čkou z komer čnej inštitúcie vo výške 80 % z celkových nákladov. 
+Zvyšných 20 % nákladov pokryje investor z vlastných zdrojov. Uvažuje sa s úrokovou 
+sadzbou vo výške 5,0 % a s d ĺžkou splácania 20 rokov. Rozdelenie finan čných zdrojov 
+a podmienky financovania sú uvedené v Tab. 8.7. 
+ 
+Tabuľka 8.7. Rozdelenie finančných zdrojov a podmienky financovania 
+Finančné zdroje Podiel  
+z nákladov (%) 
+Investície   
+(€) 
+Úroková miera  
+(%) 
+Splatnosť  
+(roky) 
+Komerčný úver  80 423 328 5,0 20 
+Vlastné zdroje 20 105 832 -- -- 
+Celkom 100 529 160   
+ 
+8.2.3.2 Náklady na úsporné opatrenia 
+Vo finan čnom toku sa uvažuje s uplynutím času ekonomickej životnosti obehového 
+čerpadla po 10 rokoch, a teda s jeho výmenou v 11. ro ku. Okrem toho sa predpokladá, že po 
+10 rokoch od obnovy (v 11. roku) bude potrebná výmena regula čných armatúr v bytoch a na 
+pätách stúpacích potrubí, resp. na päte objektu a ich hydraulické vyregulovanie. 
+Počas životného cyklu budovy je potrebné vynaklada ť prostriedky na prevádzku 
+a údržbu a na opravy rôznych porúch, aby sa neznižovala energetická efektívnos ť, či aby sa 
+neznížila životnos ť stavby. Vzh ľadom nato, že náklady na opravy a údržbu by sa musel i 
+vynakladať aj v prípade neobnovenej budovy, nie sú tieto nákla dy pri výpo čte hotovostného 
+toku zohľadnené ako výdavok súvisiaci so zateplením. 
+Počas obdobia 20 rokov bude treba spláca ť úver z komer čnej inštitúcie. Tento dlh sa 
+vyčísli pomocou faktora anuity, ktorý sa od číta z Tab. 8.3. Pre splatnos ť 20 rokov 
+
+--- Page 16 ---
+117 
+ 
+a nominálnu úrokovú mieru 5,0 % sa faktor anuity rovná 0,0802. Ro čná dlhová služba sa 
+vypočíta prenásobením faktora anuity a celkovej sumy pôži čky: 
+ 
+ročná dlhová služba = 423 131 . 0,0802 = 33 935,13 € 
+8.2.3.3 Výpočet kumulovaného cashflow 
+Výpočet kumulovaného cashflow je v Tab. 8.8 pre prvých 15  rokov od po čiatočnej 
+investície. Jednotlivé stĺpce možno interpretova ť takto: 
+ 
+• Stĺpec 1: po čiatočná investícia – sú čet investi čných nákladov na všetky úsporné 
+opatrenia z Tab. 8.5, resp. Tab. 8.6; 
+• Stĺpec 2: komerčný úver – výška komer čného úveru z finančnej inštitúcie z Tab. 8.7; 
+• Stĺpec 3: vlastný kapitál – objem vlastných zdrojov z T ab. 8.7; 
+• Stĺpec 4: dodatočná investícia – v 11. roku po investícii sa po číta s výmenou obehového 
+čerpadla. Okrem toho sa predpokladá, že uplynie doba životnosti regula čných armatúr, 
+uvažuje sa preto s výmenou regula čných armatúr na päte rozvodov a v bytoch, spolu 
+s hydraulickým vyregulovaním. Pri výpo čte dodatočnej investície sa zobrala do úvahy 
+dnešná cena investície, navýšená o infláciu; 
+• Stĺpec 5: dlhová služba – ro čná splátka úveru, vypočítaná v 8.2.3.2; 
+• Stĺpec 6: čisté úspory – finan čná úspora. V roku 1 sa finan čná úspora vypo čítala 
+prenásobením úspory energie v roku 1 a ceny energie v roku 1. V ostatných rokoch sa 
+finančná úspora z 1. roku navyšuje o infláciu, teda v našo m prípade rok 1 = 45182; rok 
+2 = rok 1 x (1 + 0,02); rok 3 = rok 2 x (1 + 0,02), atď.; 
+• Stĺpec 7: čistý cashflow – sú čet dodatočnej investície, dlhovej služby a čistých úspor, 
+teda stĺpec 4 + stĺpec 5 + stĺpec 6; 
+• Stĺpec 8: kumulovaný cashflow – na za čiatku sa rovná vlastnému kapitálu. Potom sa 
+každý rok pripo čítava ku kumulovanému cashflow v predošlom roku hodn ota čistého 
+cashflow v súčasnom roku, teda v našom prípade po čiatočný stav (rok 0) =  
+-105 832; rok 1 = -105 832 + 11 232 = -94 600; rok 2 = -94 600 + 12 135 = -82 465 atď. 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 17 ---
+118 
+ 
+Tabuľka 8.8. Výpočet kumulovaného cashflow 
+Stĺpec 1 2 3 4 5 6 7 8 
+Rok 
+Počiatočná 
+investícia 
+(€) 
+Komerčný 
+úver  
+(€) 
+Vlastný 
+kapitál 
+(€) 
+Dodatočná 
+investícia 
+(€) 
+Dlhová 
+služba 
+(€/rok) 
+Čisté 
+úspory 
+(€) 
+Čistý 
+cashflow 
+(€/rok) 
+Kumulovaný 
+cashflow 
+(€/rok) 
+0 529 160 423 328 105 832         -105 832 
+1         -33 951 45 182 11 232 -94 600 
+2         -33 951 46 086 12 135 -82 465 
+3         -33 951 47 008 13 057 -69 408 
+4         -33 951 47 948 13 997 -55 411 
+5         -33 951 48 907 14 956 -40 455 
+6         -33 951 49 885 15 934 -24 521 
+7         -33 951 50 883 16 932 -7 589 
+8         -33 951 51 900 17 950 10 360 
+9         -33 951 52 938 18 988 29 348 
+10         -33 951 53 997 20 046 49 394 
+11       -20972 -33 951 55 077 155 49 549 
+12         -33 951 56 179 22 228 71 777 
+13         -33 951 57 302 23 351 95 128 
+14         -33 951 58 448 24 497 119 625 
+15         -33 951 59 617 25 666 145 292 
+ 
+Graficky je hotovostný tok znázornený na Obr. 8.4, kde na y-ovej osi je kumulovaný 
+cashflow z Tab. 8.8 a na x-ovej osi sú roky trvania projektu. Z obrázku je vidie ť, že 
+kumulovaný cashflow sa stane kladným v ôsmom roku, teda zisk vplyvom realizácie 
+úsporných opatrení prevýši vloženú investíciu ôsmy rok po realizácii. 
+ 
+ 
+Obr. 8.4. Kumulovaný cashflow – 80 % komer čný úver, 20 % vlastné zdroje 
+-120 000
+-90 000
+-60 000
+-30 000
+0
+30 000
+60 000
+90 000
+120 000
+150 000
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+Kumulovaný cashflow (€)
+Roky
+
+
+--- Page 18 ---
+119 
+ 
+ Záver technicko-ekonomického vyhodnotenia 8.2.4
+Na základe ekonomických výpočtov možno konštatova ť toto: 
+ 
+• Hrubá návratnos ť (PB), ktorá predstavuje najjednoduchší z uvedených ekonomických 
+ukazovateľov, nazna čuje návratnos ť v rámci ekonomickej životnosti pre všetky 
+navrhované úsporné opatrenia. Hodnoty hrubej návratnosti majú vysokú výpovednú 
+hodnotu v prípadoch, ke ď sú nízke. V našom prípade teda možno považova ť za 
+dôveryhodné najmä hodnoty hrubej návratnosti pre výmenu otvorových konštrukcií, 
+výmenu čerpadla a tepelné izolovanie potrubí TV. Vysoká zisk ovosť výmeny 
+otvorových konštrukcií sa dosiahla v ďaka radikálnej zmene sú činiteľa prechodu tepla 
+vymenených otvorových konštrukcií z 2,7 W/(m 2.K) na 1,0 W/(m2.K). 
+• Čistá súčasná hodnota (NPV) a koeficient čistej súčasnej hodnoty (NPVQ), ktoré berú 
+do úvahy aj infláciu, úrokovú mieru a ekonomickú životnos ť, nazna čujú, že najmä 
+zateplenie obvodového pláš ť a zateplenie strechy sú na hranici ziskovosti. Pri zateplení 
+stavebných konštrukcií však treba vzia ť do úvahy aj faktory ako potreba obnovy 
+bytového fondu, potreba sanácie konštrukcií (teda fasáda i strecha by sa museli po 
+určitom čase aj tak rekonštruova ť), a to, že zateplením sa bude šetri ť energia aj po 
+uplynutí ekonomickej životnosti. V prípade izolácie rozvodov vykurovania je dôvodom 
+nízkeho NPVQ veľká hrúbka tepelnej izolácie a v dôsledku toho vysoká cena izolácie. 
+• Z finančného toku – cashflow, kde sa zoh ľadňuje aj spôsob financovania, vyplýva, že 
+kumulované príjmy prevýšia kumulované výdavky v ôsmom roku po obnove. Do 
+cashflow sa pritom v našom príklade zahrnuli len výdavky priamo súvisiace 
+s energeticky úspornými opatreniami. Celkovo cashflow nazna čuje solídny finan čný 
+prínos vplyvom realizácie úsporných opatrení. Ešte výraznejší nárast kumulovaného 
+cashflow možno o čakávať po splatení úveru. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

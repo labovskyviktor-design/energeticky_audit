@@ -1,0 +1,96 @@
+V Tab.  3.11  sú  vlastnosti  rozvodov  vykurovania  na  nevykurovanom  1.NP,  na  základe 
+
+ktorých  sa  vypočítala  tepelná  strata.  Tepelná  strata  z rozvodov  prechádzajúcich  bytmi 
+
+prispieva k vykurovaniu obytných priestorov, preto sa s ňou vo výpočte neuvažovalo. 
+
+Tabuľka 3.11. Vlastnosti rozvodov vykurovania na nevykurovanom prízemí 
+
+DN potrubia 
+(mm) 
+
+Lineárny stratový súčiniteľ  
+Ψ (W/(m.K)) 
+
+Dĺžka rozvodu  
+L (m) 
+
+Teplota okolitého 
+prostredia θi (°C) 
+
+65 
+50 
+40 
+32 
+
+0,642 
+0,524 
+0,445 
+0,403 
+
+14 
+20 
+88 
+54 
+
+10 
+10 
+10 
+10 
+
+Výpočet tepelnej straty z rozvodov vykurovania: 
+
+(cid:17)(cid:18),Z"?,A?,1(cid:24) (cid:5) £ \],^.  !$ (cid:21) !",^%. _^. &@K,1(cid:24)
+
+^
+
+(cid:5) (cid:26)0,642 . (cid:26)51,3 (cid:21) 10(cid:31). 14 (cid:29) 0,524. (cid:26)51,3 (cid:21) 10(cid:31). 20
+
+(cid:29) 0,445. (cid:26)51,3 (cid:21) 10(cid:31). 88 (cid:29) 0.403. (cid:26)51,3 (cid:21) 10(cid:31). 54(cid:31). 5088 1000
+
+⁄
+
+(cid:5) 16 893 kWh
+
+3.2.3
+
+  Vlastná spotreba energie systému rozvodu tepla 
+
+Ročná  vlastná  spotreba  energie  obehových  čerpadiel  pre  vykurovací  systém  sa 
+
+vypočítala podľa zjednodušenej metódy. Vo výpočte potreby hydraulickej energie sa použili 
+
+tieto hodnoty: 
+
+Phydr,des  – vypočítaný návrhový hydraulický výkon čerpadla v pracovnom bode je 133 W; 
+
+βdis      – priemerná časť straty na distribúciu  sa vypočíta takto: 
+
+¥¦ˆ –‰[
+[[§,‰.– v§§ (cid:5) 0,42
+top,an     – počet vykurovacích hodín za rok (hod) = 212 . 24 = 5088 hod 
+
+’‹,t(cid:8)(cid:7),UŒR
+Š(cid:10)V.“U” (cid:5)
+
+mZ"? (cid:5)
+
+fNET 
+
+–  korekčný  faktor  hydraulickej  sústavy,  pre  dvojrúrové  vykurovacie  systémy  má 
+
+hodnotu 1,0; 
+
+fHB       – korekčný faktor hydraulického vyregulovania sústavy (-), pre hydraulicky  
+
+vyregulovaný systém má hodnotu 1,0; 
+
+fG,PM   
+
+– korekčný faktor pre zdroje tepla s integrovanou reguláciou čerpadiel (-), pre  
+
+zdroj tepla s reguláciou podľa vonkajšej teploty má hodnotu 1,0. Vzhľadom na to, že  
+
+v budove sa uplatňuje regulácia podľa vonkajšej teploty, uvažujeme fG,PM = 1. 
+
+59

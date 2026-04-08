@@ -1,0 +1,90 @@
+Tabuľka 3.1 (pokračovanie) 
+
+Dynamické vyváženie pre každý 
+okruh (napr. automatickými 
+obmedzovačmi prietoku) a 
+dynamická regulácia v závislosti od 
+tepelného príkonu (regulácia na 
+základe rozdielu teploty prívodnej a 
+vratnej vody) 
+*n – počet odovzdávacích prvkov (napr. počet vykurovacích telies…) 
+
+Dynamické vyváženie pre každé 
+vykurovacie teleso alebo 
+komponent s integrovanou 
+vykurovacou plochou (napr. 
+automatickými obmedzovačmi 
+prietoku / regulátormi tlakovej 
+diferencie) 
+
+0,1 
+
+0 
+
+3.1.1.1  Zmena  teploty  pre  komponenty  s integrovanou  vykurovacou  plochou,  výška 
+
+miestnosti £
+
+ 4 m 
+
+Nerovnomernosť  rozloženia  teploty  v priestore  v dôsledku  stratifikácie,  ∆θstr,  ako 
+
+i zmena teploty v dôsledku tepelných strát komponentov s integrovanou vykurovacou plochou 
+
+do  vonkajšieho  prostredia  alebo  do  nevykurovaného  priestoru,  ∆θemb,  sa  stanoví  na  základe        
+
+Tab. 3.2 pre komponenty s integrovanou vykurovacou plochou, pričom ∆θemb sa vypočíta ako 
+
+priemer z hodnôt ∆θemb,1 a ∆θemb,2: 
+
+Δ
+
+!#$C (cid:5) (cid:26)
+
+Δ
+
+!#$C,(cid:4) +
+
+Δ
+
+       (K)                            
+
+!#$C,[(cid:31)
+
+(3.6) 
+
+kde: 
+
+∆θemb,1  je zmena teploty v závislosti od vyhotovenia systému (K), Tab. 3.2; 
+
+∆θemb,2  – zmena teploty v dôsledku tepelných strát cez vykurovacie plochy (K), Tab. 3.2; 
+
+Zmena teploty v dôsledku prerušovanej prevádzky má tieto hodnoty: 
+
+riadenie   
+
+• 
+•  vykurovací systém 
+
+  ∆θim,ctr = 0,0 K 
+
+  ∆θim,emt = - 0,2 K 
+
+Zmena  teploty  v dôsledku  účinku  sálania  v  závislosti  od  odovzdávacieho  systému, 
+
+∆θrad,  je  pre  komponenty  s integrovanou  vykurovacou  plochou  v miestnosti  s výškou  £
+
+  4  m 
+
+rovná 0 K. 
+
+Zmena teploty v závislosti od automatizácie riadenia má tieto hodnoty: 
+
+•  samostatná prevádzka   
+  ∆θroomaut = - 0,5 K 
+•  samostatná prevádzka s adaptívnym zapínaním a vypínaním   ∆θroomaut = - 1,0 K 
+•  systém s adaptívnym zapínaním a vypínaním, riadiace prvky pre daný priestor sú 
+
+zapojené v sieti a v interakcii s ostatnými riadiacimi prvkami  ∆θroomaut = - 1,2 K 
+
+40

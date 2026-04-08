@@ -1,0 +1,37 @@
+19 
+  
+ 
+ 
+                                         
+ 
+ 
+Odpor pri prestupe tepla na vnútornom povrchu Rsi = 0,17 m2.K/W. 
+Odpor pri prestupe tepla na vnútornom povrchu Rsi = 0,17 m2.K/W. 
+ 
+Tabuľka 1.6. Výpočet tepelného odporu podlahy nad nevykurovaným podlaž ím 
+Číslo  
+vrstvy Názov materiálu Hrúbka Sú činiteľ tepelnej vodivosti Tepelný odpor 
+Symbol d λ R 
+Jednotka m W/(m.K) m2.K/W 
+1 PVC podlahovina 0,005 0,160 0,031 
+2 Cementový poter 0,020 1,020 0,020 
+3 ŽB stropný panel 0,150 1,340 0,112 
+4    Dosky z čadičovej plsti   0,060 0,048 1,250 
+5 Lignátové dosky 0,006 0,220 0,027 
+6 Omietka vnútorná 0,010 0,700 0,014 
+ 
+Výsledný tepelný odpor stropu R = 1,45 m2.K/W. 
+Súčiniteľ prechodu tepla stropu U = 0,56 W/(m2.K). 
+ 
+Posúdenie: Požiadavka na sú činiteľ prechodu tepla pre strop medzi vnútornými priestorm i 
+s rozdielnou teplotou do 10 K a s tepelným tokom zhora nadol sa splní vtedy, ak bude plati ť 
+vzťah 1.1, teda U < Ur1. Platí U = 0,56 W/(m2.K) < Ur1 = 0,85 W/(m2.K). Na základe 
+porovnania súčiniteľa prechodu tepla stropu medzi vnútornými priestormi U s požadovanou 
+hodnotou Ur1 možno konštatova ť, že strop V YHOVUJE . 
+1.2.3.4  Otvorové konštrukcie 
+Pôvodné okná a balkónové dvere sú drevené zdvojené, zasklené jednoduchým 
+zasklením. Vstupné steny na 1. NP sú s oce ľovým rámom s jednoduchým zasklením. 
+interiér 
+θint =  20 °C                                 
+interiér 
+θint =  10 °C                                 

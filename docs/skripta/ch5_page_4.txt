@@ -1,0 +1,42 @@
+85 
+ 
+Automatická regulácia sa v objekte uplatňovala už pred zateplením. Táto regulácia sa 
+prejavovala nastavovaním teploty vykurovacej vody podľa ekvitermickej krivky (regulácia 
+teploty vykurovacej vody v závislosti od vonkajšej teploty). Systém automatickej regulácie 
+však treba pri obnove prenastaviť, aby správne fungoval aj po zateplení. 
+Zníženie teplotného spádu vykurovacej sústavy možno vykonať pomocou trojcestného 
+zmiešavacieho ventilu na päte vykurovacieho systému. V tomto príklade sa uvažuje 
+s teplotným spádom po obnove 75/65 °C. Toto opatrenie priamo ovplyvní tepelnú stratu z 
+odovzdávania tepla, pretože sa zníži teplotný gradient vzduchu v miestnostiach, čím sa zvýši 
+účinnosť odovzdávania tepla do priestoru. Zároveň sa v dôsledku nižšej teploty vykurovacej 
+vody zníži tepelná strata z rozvodov. Toto opatrenie nepriamo ovplyvní aj tepelnú stratu z 
+výroby tepla, pretože táto závisí od tepelnej straty z odovzdávania a tepelnej straty z rozvodu 
+tepla (tepelná strata z výroby tepla v tomto príklade do výpočtu nevstupuje). 
+6.2.1.3 Výmena pôvodného čerpadla za čerpadlo s frekvenčným meničom 
+Navrhuje sa vymeniť pôvodné obehové čerpadlo za nové, účinnejšie, s integrovaným 
+frekvenčným meničom, ktorý umožní plynulú reguláciu otáčok čerpadla. Týmto sa ušetrí 
+elektrická energia na pohon obehového čerpadla. 
+ Výpočet potreby energie na vykurovanie 
+6.2.2
+6.2.2.1 Tepelná strata systému odovzdávania tepla 
+Tepelné straty systému odovzdávania tepla sa vypočítajú takto: 
+ 
+#$,A?   . N
+Δ!","X 
+! ","X   !#,X@$C 
+W  135 860. a
+1,1
+20  1,1   3,86i  8 669 kWh 
+ 
+kde: 
+QH 
+ 
+– potreba tepla na vykurovanie, QH = 135 860 kWh; 
+∆θint,inc  – zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania (K); 
+θe,comb 
+– v prípade vykurovania je táto hodnota rovná priemeru vonkajšej teploty vzduchu 
+počas uvažovaného obdobia (°C). V prípade normalizovaného hodnotenia sa uvažuje 
+s hodnotou θe,comb = 3,86 °C (STN 73 0540-3). V prípade energetického auditu treba 
+uvažovať s hodnotou čo najbližšie k realite. 
+ 
+!","X  !",""  -!","X   20  1,1   21,1 °C  

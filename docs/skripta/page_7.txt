@@ -1,0 +1,41 @@
+15 
+ úroveň výstavby až do 31. decembra 2018, resp. 2020. Napok on, od začiatku roka 2019 pre 
+nové budovy vo vlastníctve orgánov verejnej správy, resp. od roka 2021 aj pre všetky ostatné 
+nové budovy, majú stavebné konštrukcie sp ĺňať cieľové odporúčané hodnoty Ur2, ktoré 
+charakterizujú budovy s takmer nulovou spotrebou energie.  
+ PRÍKLAD 1.2
+ Opis skutkového stavu budovy 1.2.1
+Posudzovaný panelový bytový dom sa nachádza v Bratislave a je postavený v stavebnej 
+sústave P 1.14 BA. Bytový dom má bodový charakter, 13 podlaží a nie je podpivni čený. 1. 
+NP tvorí technické podlažie, ostatné podlažia (2. NP - 13. NP) sú obytné, s konštruk čnou 
+výškou  2,8 m. V dome je 48 bytových jednotiek. Poh ľad na bytový dom a pôdorys typického 
+podlažia sú na Obr. 1.1.  
+ 
+    3000 7630 14400
+25030
+3460 7630 10200
+212903460 7630 1020021290OBÝVACIA IZBA
+IZBAIZBA
+CHODBAKUCHYÒA
+KÚPE¼ ÒA WC
+PREDSIEÒLODŽIALODŽIA
+PREDSIEÒKUCHYÒA
+KÚPE¼ ÒAWC
+CHODBA IZBA
+OBÝVACIA IZBA IZBALODŽIAKUCHYÒAKÚPE¼ ÒA WCPREDSIEÒ
+CHODBA
+IZBAOBÝVACIA IZBAIZBAPREDSIEÒKÚPE¼ ÒA
+WCKUCHYÒACHODBAIZBA
+IZBAOBÝVACIA IZBA
+CHODBA VÝ AHY CHODBA
+LODŽIA2. - 13. NP
+ 
+Obr. 1.1.  Pohľad na bytový dom a pôdorys typického podlažia. Foto: Ing. Hana Bukovianska  
+ Opis technických zariadení budovy 1.2.2
+1.2.2.1  Vykurovanie 
+Zdrojom tepla pre bytový dom je odovzdávacia stanica tepla (OST), ktorá je 
+v pôvodnom stave. OST sa nachádza mimo budovy a slúži na zásobovanie teplom pre viacero 
+objektov. Vykurovací systém objektu je teplovodný, dvojrúrkový, s teplotným spádom 90/70 
+°C. Systém je hydraulicky vyregulovaný od roku 2001. V rámci vyregulovania sa pred 
+vykurovacie telesá inštalovali termostatické ventily s termostatickými hlavicami na reguláciu 
+vnútornej teploty. Teplota vykurovacej vody sa v budove centrálne reguluje pomocou 

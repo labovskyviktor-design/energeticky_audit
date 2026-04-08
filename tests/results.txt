@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.4.2, pluggy-1.6.0 -- C:\Users\42191\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\42191\.gemini\antigravity\scratch\energy-audit
+collecting ... collected 15 items
+
+..\tests\unit\test_thermal_assessment.py::TestRFromLayers::test_wall_r PASSED [  6%]
+..\tests\unit\test_thermal_assessment.py::TestRFromLayers::test_roof_r PASSED [ 13%]
+..\tests\unit\test_thermal_assessment.py::TestRFromLayers::test_floor_r PASSED [ 20%]
+..\tests\unit\test_thermal_assessment.py::TestRFromLayers::test_empty_layers_raises PASSED [ 26%]
+..\tests\unit\test_thermal_assessment.py::TestUFromR::test_wall_u PASSED [ 33%]
+..\tests\unit\test_thermal_assessment.py::TestUFromR::test_roof_u PASSED [ 40%]
+..\tests\unit\test_thermal_assessment.py::TestUFromR::test_floor_u PASSED [ 46%]
+..\tests\unit\test_thermal_assessment.py::TestCalculateUFromLayers::test_wall_full PASSED [ 53%]
+..\tests\unit\test_thermal_assessment.py::TestCalculateUFromLayers::test_roof_full PASSED [ 60%]
+..\tests\unit\test_thermal_assessment.py::TestAssessConstruction::test_wall_fails_r1 PASSED [ 66%]
+..\tests\unit\test_thermal_assessment.py::TestAssessConstruction::test_roof_fails_r1 PASSED [ 73%]
+..\tests\unit\test_thermal_assessment.py::TestAssessConstruction::test_floor_passes_r1 PASSED [ 80%]
+..\tests\unit\test_thermal_assessment.py::TestAssessConstruction::test_old_window_fails_max PASSED [ 86%]
+..\tests\unit\test_thermal_assessment.py::TestAssessConstruction::test_new_window_passes_max PASSED [ 93%]
+..\tests\unit\test_thermal_assessment.py::TestAssessBuilding::test_bratislava_panel_block PASSED [100%]
+
+============================= 15 passed in 0.17s ==============================

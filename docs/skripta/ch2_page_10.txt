@@ -1,0 +1,35 @@
+31 
+ Upozornenie: treba rozlišova ť medzi celkovou priepustnos ťou slnečného žiarenia 
+a priepustnosťou slnečného žiarenia pri dopade kolmo na zasklenie. Pretože  celková 
+priepustnosť slnečnej energie je o nie čo nižšia než priepustnos ť slnečnej energie pri žiarení 
+kolmo na zasklenie, použije sa na prepo čet korekčný faktor: 
+ 
+GA E J. GA,        (-)   (2.10) 
+ 
+ 
+kde: 
+Fw je korekčný faktor zasklenia (-). Ak sa neudáva inak, hodnota  faktora Fw = 0,9; 
+ggl,n – priepustnosť slnečného žiarenia pri dopade kolmo na zasklenie (-). 
+ Faktor využitia tepelných ziskov 2.1.5
+Podľa STN 73 0540-2 sa pre bytové budovy s neprerušovaný m vykurovaním výpo čtom 
+sezónnou metódou na zoh ľadnenie dynamického správania budovy môže použi ť bezrozmerný 
+faktor využitia tepelných ziskov ηH,gn. Faktor využitia tepelných ziskov pre bytové budovy 
+hodnotené sezónnou metódou pri uvažovaní vplyvu rôznych úrovní výstavby sa uvádza v 
+Tab. 2.6. 
+ 
+Tabuľka 2.6. Návrh faktorov využitia tepelných ziskov (ST N 73 0540-2) 
+Úroveň tepelnotechnických vlastností budovy Faktor využitia tepelných ziskov 
+Rodinné domy Bytové domy 
+Energeticky úsporné budovy 0,95 0,95 
+Nízkoenergetické budovy 0,95 0,95 
+Ultranízkoenergetické budovy 0,95 0,84 
+Budovy s takmer nulovou spotrebou energie 0,95 0,84 
+ 
+Pri prerušovanom vykurovaní môže by ť vhodnejšie použi ť mesačnú metódu, pri ktorej 
+je potrebný výpo čet faktora využitia tepelných ziskov pre každý mesia c roka podľa STN EN 
+ISO 52016-1. 
+ Energetické kritérium 2.1.6
+Budovy spĺňajú energetické kritérium, ak majú v závislosti od f aktora tvaru budovy 
+mernú potrebu tepla QH,nd nižšiu, ako je požiadavka na mernú potrebu tepla pod ľa Tab. 2.7. 
+Požiadavka na mernú potrebu tepla je stanovená v kWh/(m2.a) pre bytové a nebytové budovy 
+a je stanovená v kWh/(m3.a) pre nebytové budovy s konštruk čnou výškou viac ako 2,8 m, 

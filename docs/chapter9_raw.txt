@@ -1,0 +1,323 @@
+
+--- Page 1 ---
+74 
+ 
+Merná potreba energie na prípravu TV: 
+ 
+,$ =  ,C⁄ = 174 866 4403,4⁄ =  39,7 kWh/m[. rok 
+ 
+Výpočet potreby energie na prípravu TV je zhrnutý v Tab. 4.3. 
+ 
+Tabuľka 4.3. Výpočet mernej potreby energie na prípravu TV – skutkový stav 
+Sledovaný údaj Označenie Jednotka Vypo čítaná hodnota 
+Potreba tepla na prípravu TV QW kWh/rok 88 068 
+Tepelná strata z distribúcie TV QW,d kWh/rok 86 798 
+Potreba energie na prípravu TV QTV kWh/rok 174 866 
+Podlahová plocha budovy Ab m2 4403,4 
+Merná potreba energie na  
+prípravu TV QTV,m kWh/(m 2.rok) 39,7 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 2 ---
+75 
+ 
+5 POTREBA TEPLA NA VYKUROVANIE PO OBNOVE 
+ ÚVOD 5.0
+ Opis situácie 5.0.1
+Výpočet potreby energie pre súčasný stav máš už hotový a postupne si sa prepracoval (a) 
+k očakávanému výstupu tvojej práce – návrhu a posúdeniu vplyvu energeticky úsporných 
+opatrení. 
+ Zadanie 5.0.2
+Navrhni energeticky úsporné opatrenia pre teplovýmenný obal budovy. Vypo čítaj 
+potrebu tepla na vykurovanie pre navrhovaný stav.  
+ 
+ ENERGETICKY ÚSPORNÉ OPATRENIA NA TEPLOVÝMENNOM 5.1
+OBALE 
+Zateplenie budovy je proces energetickej sanácie budovy a rentabilný spôsob zvýšenia 
+tepelného odporu teplovýmenného obalu. Len zateplením teplovýmenného obalu možno 
+zníži ť potrebu energie na vykurovanie asi o 30 %, za predp okladu, že sa zárove ň vykonajú aj 
+potrebné opatrenia vo vykurovacom systéme. Naj častejšie energeticky úsporné opatrenia 
+v tepelnej ochrane budov sú na Obr. 5.1. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Obr. 5.1. Najčastejšie energeticky úsporné opatrenia v oblasti tep elnej ochrany 
+ 
+Energeticky úsporné opatrenia realizované na stavebných konštrukciách majú prevažne 
+za úlohu zvýši ť tepelný odpor konštrukcií a zníži ť množstvo infiltrovaného vzduchu cez 
+netesnosti. Niektoré úsporné opatrenia pritom môžu ovplyvni ť aj viacero parametrov, 
+izolácia obvodových stien  
+a utesnenie stykov na fasáde 
+izolácia strechy 
+izolácia podlahy 
+nové otvorové 
+konštrukcie  
+
+--- Page 3 ---
+76 
+ 
+napríklad výmenou otvorových konštrukcií sa nielen zníži tepelná strata prechodom tepla 
+vplyvom lepšieho tepelného odporu, ale aj tepelná strata vetraním vplyvom vyššej tesnosti; na 
+druhej strane sa môže zníži ť slnečný tepelný zisk, pre nižšiu priepustnos ť slnečného žiarenia 
+zasklením. Niektoré opatrenia a prislúchajúce ovplyvnené parametre sú v Tab. 5.1. 
+ 
+Tabuľka 5.1. Energeticky úsporné opatrenia a ovplyvnené parametre 
+Opatrenie pre stavebné konštrukcie Ovplyvnené parametre 
+Dodatočná tepelná izolácia fasády U-steny (infiltrácia - pri netesnostiach vo fasáde) 
+Dodatočná tepelná izolácia strechy U-strecha 
+Dodatočná tepelná izolácia podlahy U-podlaha 
+Nové okná U-okná, infiltrácia, slnečné zisky 
+Utesnenie stykov na fasáde Infiltrácia 
+Oprava konštrukcií dverí Infiltrácia 
+Utesnenie okien, dverí Infiltrácia 
+Oprava okien Infiltrácia 
+ Obvodový pláš ť 5.1.1
+Zlepšenie tepelnotechnických vlastností možno vykona ť zhotovením ETICS (vonkajší 
+kontaktný tepelnoizola čný systém), s tepelnou izoláciou z dosiek na báze EP S, resp. dosiek 
+alebo lamiel na báze minerálnej vlny, v súlade s požiadavkami na protipožiarnu bezpe čnosť. 
+Celoplošným zateplením sa okrem iného odstránia tepelné mosty, odstráni sa prípadné 
+zatekanie zrážkovej vody a pred ĺži sa životnos ť stavebných konštrukcií a budovy. Hrúbka 
+zateplenia sa stanoví podrobným výpočtom v projektovej dokumentácii. 
+ Strecha 5.1.2
+Tepelnotechnické vlastnosti strešnej konštrukcie možno zlepši ť dodatočným zateplením 
+s použitím tepelnej izolácie na báze EPS alebo na báze minerálnej vlny s hrúbkou stanovenou 
+podrobným výpočtom v projektovej dokumentácii. 
+ Strop nad suterénom a podlaha na teréne 5.1.3
+Upravenie tepelnotechnických vlastností možno zabezpe čiť dodato čným zateplením 
+stropnej dosky zospodu nalepením tepelnoizola čných dosiek hrúbky stanovenej podrobným 
+výpočtom v projektovej dokumentácii. Okrem lepenia sa tep elnoizolačné dosky kotvia 
+tanierovými rozperkami. 
+
+--- Page 4 ---
+77 
+ 
+  Otvorové konštrukcie 5.1.4
+Výmenou pôvodných otvorových konštrukcií za nové s trojsklom a kvalitným 
+plastovým rámom možno dosiahnu ť požadované parametre pre otvorové konštrukcie. Ako 
+zasklenie možno použi ť izolačné trojsklo plnené inertným plynom, najčastejšie argónom. Ako 
+alternatívu k plastovým rámom možno použi ť drevené, resp., ak sa vyžaduje zvýšená 
+odolnosť, hliníkové rámy.  
+ 
+ PRÍKLAD 5.2
+ Návrh energeticky úsporných opatrení 5.2.1
+Najväčší potenciál úspor energie predstavujú zateplenie ob vodového pláš ťa a strešnej 
+konštrukcie a výmena okien. Zateplenie podlahy sa v tomto príklade neriešilo, pretože tá 
+vyhovuje tepelnotechnickým požiadavkám. 
+5.2.1.1 Zateplenie obvodového pláš ťa 
+Zateplenie obvodového pláš ťa sa bude realizova ť kontaktným zatep ľovacím systémom 
+z dvoch rôznych zatep ľovacích materiálov. Do požiarnej výšky 22,4 m (8. NP ) sa realizuje 
+zateplenie fasádnou doskou z expandovaného polystyrénu hrúbky 140 mm, s protipožiarnymi 
+pásmi z minerálnej vlny. Nad úrov ňou požiarnej výšky 22,4 m (9. – 13. NP) sa navrhuje 
+zateplenie fasádnou doskou z minerálnej vlny hrúbky 140 mm. 
+5.2.1.2 Zateplenie strešnej konštrukcie 
+Zateplenie strešnej konštrukcie sa bude realizova ť tepelnou izoláciou z expandovaného 
+polystyrénu hrúbky 300 mm. 
+5.2.1.3 Výmena otvorových konštrukcií 
+Pôvodné drevené zdvojené okná, lodžiové dvere, vstupné dvere, zasklenie 
+schodiskového a vý ťahového priestoru a okná spolo čných priestorov na 1.NP s oce ľovým 
+rámom nevyhovujú sú časným tepelnotechnickým požiadavkám na otvorové konš trukcie. Z 
+celého bytového domu je približne polovica pôvodných okien vymenených užívate ľmi za 
+nové plastové okná, ktoré už tepelnotechnickým požiadavkám vyhovujú. Navrhuje sa 
+vymeniť pôvodné otvorové konštrukcie za nové s izola čným trojsklom so 7-komorovým 
+plastovým profilom a UW = 1,0 W/(m2.K). 
+
+--- Page 5 ---
+78 
+ 
+5.2.1.4 Otvorové konštrukcie v priestore schodiska a vý ťahu 
+V priestore vý ťahu sa navrhuje nahradi ť pôvodné okná s oce ľovým rámom murivom 
+rozmerov 150 x 249 x 599 do výšky 0,9 m od úrovne podlahy a oknami s plastovým profilom 
+s izolačným dvojsklom, trojdielnymi. V priestore schodiska s a navrhuje nahradi ť pôvodné 
+okná s oce ľovým rámom murivom rozmerov 150 x 249 x 599 do výšky 0,9 m od úrovne 
+podlahy a oknami s plastovým profilom dvojdielnymi, otváravými, výklopnými s izola čným 
+trojsklom. 
+ Tepelnotechnické posúdenie stavebných konštrukcií po zateplení 5.2.2
+Pri tepelnotechnickom posúdení sa použila rovnaká metodika, ako v kapitole 1. V Tab. 
+5.2 je zhrnutie tepelnotechnických parametrov obnovovaných konštrukcií a posúdenie pod ľa 
+STN 73 0540-2/Z1. Po aplikácii navrhnutých opatrení všetky posudzované konštrukcie 
+spĺňajú požiadavku na sú činiteľ prechodu tepla. 
+ 
+Tabuľka 5.2. Z hrnutie tepelno-technických parametrov a posúdenie stavebných konštrukcií 
+Stavebná konštrukcia 
+Súčiniteľ 
+prechodu tepla 
+U (W/(m2.K)) 
+Odporúčaná 
+hodnota Ur1  
+(W/(m2.K)) 
+Posúdenie 
+konštrukcie 
+Obvodový plášť 0,19 0,22 VYHOVUJE 
+Strešná konštrukcia 0,10 0,15 VYHOVUJE 
+Podlahová konštrukcia 0,56 0,85 VYHOVUJE 
+Okná s izolačným dvojsklom, plastový profil 1,00 1,00 VYHOVUJE 
+Okná a dvere s izolačným trojsklom – lodžia 1,00 1,00 VYHOVUJE 
+Okná s izolačným trojsklom na 1. NP  
+v schodiskovej a výťahovej časti 1,00 1,00 VYHOVUJE 
+Vstupná zasklená stena, izolačné trojsklo 1,00 1,00 VYHOVUJE 
+Predtým vymenené okná, plastový profil1) 1,30 1,70 VYHOVUJE 
+Predtým vymenené okná a dvere – lodžia, plastový 
+profil1) 1,30 1,70 VYHOVUJE 
+1) Otvorové konštrukcie, ktoré boli vymenené už pred rekonštrukciou, sa posudzujú na maximálnu hodnotu 
+súčiniteľa prechodu tepla UW,max. 
+ Určenie hranice vykurovaného priestoru 5.2.3
+Princíp určenia hranice vykurovaného priestoru pre bytový dom j e na Obr. 2.4 a Obr. 
+2.5 v 2.2.1. Hranica je vymedzená po stranách vonkajšou hranou navrhnutej tepelnej izolácie, 
+hore vrchnou hranou tepelnej izolácie strešnej konštrukcie a dole spodnou (vonkajšou) hranou 
+podlahy nad nevykurovaným podlažím. Po zateplení bytového domu navrhovanými hrúbkami 
+
+--- Page 6 ---
+79 
+ 
+tepelnej izolácie sa celkový vykurovaný priestor zvä čší. Obostavaný objem po zateplení sa 
+vypočíta podľa vzťahu 2.11. 
+ Výpočet potreby tepla na vykurovanie 5.2.4
+Výpočet potreby tepla na vykurovanie, spolu so vstupnými údajmi o budove, je zhrnutý 
+v Tab. 5.3. 
+ 
+Tabuľka 5.3. Výpočet potreby tepla na vykurovanie bytového domu 
+Vstupné údaje 
+Kategória budovy: Bytový dom 
+Typ, konštruk čný systém, stavebná sústava P 1.14 BA  
+Šírka budovy 25,31 m 
+Dĺžka budovy 21,57 m 
+Výška budovy 37,3 m 
+Počet podlaží 13 
+Obostavaný objem Vb 12 830,2 m 3 
+Celková podlahová plocha Ab 4486,1 m2 
+Celková teplovýmenná plocha Ai 3660,5 m2 
+Priemerná konštruk čná výška hk,pr 2,86 m 
+Faktor tvaru ∑Ai/Vb 0,29 l/m 
+Výpočtová metóda sezónna 
+Počet dennostupňov 3422 K.de ň 
+Výpočet potreby tepla na vykurovanie 
+Konštrukcia 
+Ui Ai Ui . Ai Faktor bx bx . Ui . Ai 
+(W/m2K) (m 2) (W/K) (-) (W/K) 
+Obvodový pláš ť:           
+1. Obvodová stena 0,19 2234,3 424,52 1,00 424,52 
+2.             
+Strecha:           
+1. Plochá strecha 0,10 373,84 37,38 1,00 37,38 
+2.             
+Podlaha:           
+1. Podlaha nad nevykurovaným 
+suterénom 0,56 373,84 209,35 0,50 104,68 
+2.             
+Otvorové konštrukcie:           
+1. Nové plastové okná a dvere (byty) 1,00 300,30 300,30 1,00 300,30 
+2. Vymenené plastové okná a dvere (byty) 1,30 300,30 390,39 1,00 390,39 
+3. Nové plastové okná v schodiskovej 
+časti 1,00 77,90 77,90 1,00 77,90 
+Súčty ∑Ai = 3660,5 ∑bx . Ui . Ai = 1335,2 
+Priemerný súčiniteľ prechodu tepla: Um = HT/∑Ai = 0,41 W/m2K 
+Započítanie vplyvu tepelných mostov1):   exaktne   paušálne 
+Paušálne: ∆U = 0,05  Zatepľované konštrukcie 
+∆U = 0,10 Jednovrstvové murované konštrukcie 
+Zvýšenie tepelnej straty vplyvom tepelných mostov: ∆HTM = ∆U . ∑Ai = 183,02 W/K 
+ 
+ 
+
+--- Page 7 ---
+80 
+ 
+Pokračovanie Tabuľky 5.3. 
+Intenzita výmeny vzduchu 
+Opis otvorovej konštrukcie Celková dĺžka 
+otvorových škár l (m) 
+Súčin. prievzdušnosti otvor. 
+výplní i.104 (m2/(s.Pa0,67)) 
+1. Nové plastové okná a dvere (byty) 946,0 1,00 
+2. Nové plastové okná v schodiskovej a vý ťahovej časti 450,4 1,00 
+3. Vymenené plastové okná a dvere (byty) 946,0 1,00 
+Priemerná intenzita výmeny vzduchu vypočítaná: ninf = 0,47 l/h, použitá intenzita výmeny vzduchu: ninf = 0,50 l/h 
+Vnútorné tepelné zisky 
+Vnútorné tepelné zisky: Qi = 5 . qi . Ab = 112 152,5 kWh/a 
+qi = 4.00 W/m2   5.00 W/m2 6.00 W/m2   
+    Rodinný dom   Bytový dom Verejná budova   
+Solárne tepelné zisky 
+Orientácia Intenzita slnečného 
+žiarenia lsj (kWh/m2) 
+Priepustnosť slnečného 
+žiarenia ggl (-)1) 
+Tieniaci 
+faktor (-)2) Plocha A (m2) 
+JUH 320,00 0,60 0,5 160,92 
+VÝCHOD/ZÁPAD 200,00 0,60 0,5 408,24 
+SEVER 100,00 0,60 0,5 117,72 
+JV/JZ  260,00   
+SV/SZ 130,00   
+HORIZONTÁLNA 340,00 
+Solárne tepelné zisky: Qs = 43 474,3 kWh/a 
+Merná tepelná strata 
+Merná tepelná strata prechodom: HT = ∑bx . Ui . Ai + ∆U . ∑Ai = 1518,2 W/K 
+Merná tepelná strata vetraním3): Hv = ρa . ca . ninf . V / 3600 = 1727,8 W/K 
+Merná tepelná strata: H = HV + HT = 3246,0 W/K 
+Potreba tepla na vykurovanie 
+Celkové vnútorné zisky: Qgn = Qs + Qi = 155 626,8 kWh/a 
+Faktor využitia tepelných ziskov: ηgn = 0,84 
+Potreba tepla na vykurovanie: QH = (HT + HV) . (θint - θe,m) . t . 0,024 - 0,84 . (Qi + Qs) = 135 860,2 kWh/a 
+Merná potreba tepla na vykurovanie: QH,nd = QH /Ab = 30,28 kWh/m2 
+Vyhodnotenie 
+Odporúčaná hodnota QH,nd,r1,1:4)   
+QH,nd,r1,1 = 25 kWh/(m2.a) QH,nd > QH,nd,r1,1 Nevyhovuje 
+1) Pod ľa STN 73 0540-2/Z1 možno za predpokladu spojitej tepelnoizola čnej vrstvy na vonkajšom povrchu 
+konštrukcie a použitia nových systémov murovaných konštrukcií sp ĺňajúcich aspo ň požiadavky normalizované 
+od 1.1.2016 uvažova ť s hodnotou ∆U = 0,02. 
+2)Hodnota priepustnosti slne čného žiarenia 0,60 sa získala z priemeru hodnôt uvažovaných pre jednotlivé 
+otvorové konštrukcie takto: 
+- nové plastové okná (aj lodžia): ggl = 0,60; 
+- nové plastové okná v schodiskovej a výťahovej časti: ggl = 0,60; 
+- vymenené plastové okná a dvere  (aj lodžia): ggl = 0,60. 
+3)Tieniaci faktor sa ur čil ako sú čin faktorov opísaných v 2.1.4.2, ke ď hodnota každého z faktorov sa 
+zjednodušene uvažovala 0,8, teda Fsh,ob,k . Fsh,gl . (1 - FF) = 0,8 . 0,8 . 0,8 = 0,5. Takéto zjednodušenie je prípustné 
+pre obytné budovy. 
+
+--- Page 8 ---
+81 
+ 
+4)Použila sa hodnota V / Vb = 0,80, používaná pre všetky budovy okrem nových rodinných domov 
+a obnovovaných budov v pôvodnom stave. 
+5)Odporúčaná hodnota QH,nd,r1,1 sa určila z Tab. 2.7 na základe faktora tvaru budovy. 
+ Čiastkový záver 5.2.5
+V rámci energetickej bilancie obnoveného bytového domu sa vypo čítala merná potreba 
+tepla na vykurovanie. Na základe porovnania sú činiteľa prechodu tepla stavebných 
+konštrukcií s odporú čanými hodnotami sme dospeli k záveru, že konštrukcie  sp ĺňajú 
+požiadavku na tepelnú ochranu, avšak budova nesp ĺňa energetické kritérium pod ľa STN 73 
+0540-2/Z1. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

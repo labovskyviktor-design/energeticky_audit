@@ -1,0 +1,30 @@
+22 
+ 2 POTREBA TEPLA NA VYKUROVANIE 
+ ÚVOD 2.0
+ Opis situácie  2.0.1
+Po diskusii so správcom bytového domu, ktorý tu býva už od za čiatku, a od ktorého si 
+sa dozvedel(a) ve ľa užitočných informácií, sa ti podarilo dosta ť k projektovej dokumentácii 
+a dohodnúť si obhliadku stavby. Na základe projektovej dokumen tácie a obhliadky sa ti 
+podarilo zistiť skladby a vypo čítať tepelnotechnické vlastnosti stavebných konštrukcií.  
+Pokračuješ výpočtom potreby tepla na vykurovanie. 
+ Zadanie  2.0.2
+Urči hranicu vykurovaného priestoru. Vypo čítaj potrebu tepla na vykurovanie pre 
+normalizované podmienky v súlade s STN EN ISO 52016-1, STN EN ISO 13789 a STN 73 
+0540. Porovnaj vypo čítanú mernú potrebu tepla na vykurovanie s požiadavk ou na mernú 
+potrebu tepla na vykurovanie uvedenou v STN 73 0540-2/Z1. 
+ 
+ ZÁSADY VÝPO ČTU POTREBY TEPLA NA VYKUROVANIE 2.1
+Zásady výpočtu potreby tepla na vykurovanie vychádzajú z STN EN ISO 52016-1. Na 
+výpočet tepelnej straty budovy po čas vykurovacieho obdobia je potrebné stanovi ť merný 
+tepelný tok prechodom tepla a vetraním cez teplovýmennú obalovú konštrukciu pod ľa STN 
+EN ISO 13789.  
+ Určenie hranice vykurovaného priestoru 2.1.1
+Hranicu vykurovaného priestoru pre výpo čet potreby tepla na vykurovanie tvoria všetky 
+stavebné konštrukcie, ktoré odde ľujú vykurovaný priestor od vonkajšieho prostredia (v zduch, 
+pôda alebo voda), od nevykurovaných priestorov v tejto budove alebo od pri ľahlej budovy. V 
+opodstatnených prípadoch možno do hranice vykurovaného zahrnú ť aj malé nevykurované 
+priestory, v takom prípade však treba aj tieto priestory považova ť za vykurované. Celková 
+podlahová plocha podlaží s upravovaným vnútorným prostredím miestností sa ur čí 
+z vonkajších rozmerov budovy bez zoh ľadnenia miestnych vystupujúcich konštrukcií ako sú 
+rímsy, plochy balkónov, lodžií a terás a pod. (vyhláška MDVRR SR č. 364/2012 Z. z.). 
+ 

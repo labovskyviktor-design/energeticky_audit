@@ -1,0 +1,79 @@
+uvádza v 4.2.2.2. Výpočet potreby energie na vykurovanie so zohľadnením spätne získateľnej 
+
+tepelnej straty je v Tab. 3.12. 
+
+Tabuľka 3.12. Výpočet mernej potreby energie na vykurovanie – skutkový stav 
+
+Sledovaný údaj 
+
+Označenie 
+
+Jednotka 
+
+Vypočítaná hodnota 
+
+Potreba tepla na vykurovanie 
+
+Tepelná strata systému odovzdávania 
+
+Tepelná strata z rozvodov 
+
+Vlastná spotreba energie – čerpadlo 
+Potreba energie na vykurovanie bez 
+zohľadnenia spätne získateľnej tepelnej straty 
+Spätne získateľná tepelná strata zo systému 
+prípravy TV 
+Potreba energie na vykurovanie po zohľadnení 
+spätne získateľnej tepelnej straty 
+Podlahová plocha budovy 
+Merná potreba energie na vykurovanie 
+
+QH 
+Qem,ls 
+QH,dis,ls,an 
+WH,dis,aux,an 
+
+QVYK 
+
+QW,d,i 
+
+QVYK 
+
+kWh/rok 
+
+kWh/rok 
+
+kWh/rok 
+
+kWh/rok 
+
+kWh/rok 
+
+kWh/rok 
+
+kWh/rok 
+
+Ab 
+QVYK,m 
+
+m2 
+kWh/(m2.rok) 
+
+447 539 
+
+46 023 
+
+16 893 
+
+4 288 
+
+514 743 
+
+2077 
+
+512 666 
+
+4403,4 
+116,4 
+
+63

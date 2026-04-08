@@ -1,0 +1,109 @@
+kde: 
+
+ΦH,em,out,max  
+
+je maximálny tepelný výkon (kW); 
+
+Vdes 
+
+  – objemový prietok (m3/h). 
+
+Prietok  sa  vypočíta  z tepelného  príkonu  zóny  ΦH,em,out  (projektovaný  tepelný  príkon 
+
+podľa  STN  EN  12831-1)  a z projektovaného  teplotného  spádu  ∆ϑdis,des  vykurovacieho 
+
+systému: 
+
+5Z#? (cid:5)
+
+ˆ‰vv.Š‹,(cid:10)V,UŒR
+
+(cid:141).Ž.(cid:143)(cid:144)t(cid:8)(cid:7),t(cid:10)(cid:7)
+
+(m3/h) 
+
+kde: 
+
+H,em,out 
+
+Φ
+c   
+
+je projektovaný tepelný príkon podľa STN EN 12831-1 (kW); 
+
+  – merná tepelná kapacita vykurovacej látky (kJ/(kg.K)); 
+  – hustota vykurovacej látky (kg/m3); 
+
+∆ϑdis,des    – projektovaný teplotný spád (K). 
+
+Priemerné čiastočné zaťaženie rozvodu sa určí podľa rovnice: 
+
+mZ"? =
+
+’‹,t(cid:8)(cid:7),UŒR
+
+Š(cid:10)V.“U”
+
+(-)  
+
+kde: 
+
+         (3.18) 
+
+   (3.19) 
+
+QH,dis,out  je tepelný výstup zo systému distribúcie (kWh); 
+
+Φem  –  menovitý  výkon 
+
+inštalovaných  vykurovacích 
+
+telies  v príslušnej  zóne  alebo 
+
+projektovaný tepelný príkon vo fáze navrhovania (kW); 
+
+top 
+
+– počet vykurovacích hodín zóny pre príslušnú zónu pre výpočtový interval. 
+
+Korekčný faktor pre hydraulické siete fNET 
+
+fNET = 1  pre dvojrúrové vykurovacie systémy; 
+
+fNET = 8,6 . kby + 0,7 pre jednorúrové vykurovacie systémy, kde kby je pomer medzi prietokom 
+
+cez vykurovacie teleso a prietokom cez okruh (pomer zatekania) (-). 
+
+Korekčný faktor pre hydraulické vyváženie fHB 
+
+fHB = 1 pre hydraulicky vyvážené vykurovacie systémy; 
+
+fHB = 1,15 pre hydraulicky nevyvážené vykurovacie systémy. 
+
+49 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+r

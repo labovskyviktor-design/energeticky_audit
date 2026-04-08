@@ -1,0 +1,588 @@
+
+--- Page 1 ---
+120 
+ 
+9 ENERGETICKÝ CERTIFIKÁT BUDOVY 
+ ÚVOD 9.0
+ Opis situácie 9.0.1
+Po významnej obnove treba budovu skolaudova ť. Ku kolauda čnému konaniu treba 
+zabezpečiť energetický certifikát. Na vysvetlenie princípu vyp racovania energetického 
+certifikátu predpokladajme, že pri obnove bytového domu sa zrealizovali rovnaké energeticky 
+úsporné opatrenia, s ktorými sa uvažovalo v predošlých častiach. Výpo čty potreby tepla na 
+vykurovanie, potreby energie na vykurovanie a potreby energie na prípravu teplej vody 
+popísané v predošlých častiach sa vykonali pre normalizované podmienky a v súlade 
+s predpismi na výpo čet energetickej hospodárnosti budov. Preto možno tie to výpočty využi ť 
+pri vypracovaní energetického certifikátu. 
+ Zadanie 9.0.2
+Vypracuj energetický certifikát. Použi pritom výsledky výpo čtov potreby tepla 
+a potreby energie z predchádzajúcich častí. 
+ 
+ ENERGETICKÁ CERTIFIKÁCIA BUDOV 9.1
+Energetický certifikát je dokument obsahujúci hodnotenie energetickej hospodárnosti 
+budovy. Tento dokument je výstupom z procesu energetickej certifikácie a je podpísaný 
+fyzickými osobami s odbornou spôsobilos ťou, ktoré ho spracovali. Energetická hospodárnos ť 
+budovy sa vyjadruje zatriedením budovy do energetickej triedy od A až po G, kde trieda 
+„A“  predstavuje najúspornejší typ objektu. Energetická certifikácia je povinná pre 
+novostavby, pri významnej obnove budov, a taktiež pri predaji a prenájme. Povinnos ť 
+energetickej certifikácie sa vzťahuje na tieto typy budov: 
+ 
+• rodinné domy; 
+• bytové domy; 
+• administratívne budovy; 
+• budovy škôl a školských zariadení; 
+• budovy nemocníc; 
+• budovy hotelov a reštaurácií; 
+
+--- Page 2 ---
+121 
+ 
+• športové haly a iné budovy na šport; 
+• budovy na veľkoobchodné a maloobchodné služby; 
+• ostatné nevýrobné budovy spotrebúvajúce energiu. 
+ Národný plán zameraný na zvyšovanie po čtu budov s takmer nulovou potrebou 9.1.1
+energie 
+Vychádzajúc z európskej smernice 2010/31/EU a zo zákona č. 300/2012 Z. z., ur čuje 
+vykonávacia vyhláška MDVRR SR č. 364/2012 Z. z., že do roku 2016 minimálne požiadav ky 
+určené ako horná hranica energetickej triedy B pre glob álny ukazovate ľ musia dosiahnu ť 
+nové budovy a významne obnovené budovy. Ak to nie je pri významne obnovovanej budove 
+technicky, funkčne a ekonomicky uskuto čniteľné, stavebné konštrukcie a prvky tvoriace ich 
+časť, ktoré vytvárajú obalovú konštrukciu budovy, musia spĺňať aspo ň požiadavky ur čené 
+podľa STN 73 0540-2/Z1 pre jednotlivé energetické úrovne výstavby.  
+Minimálnou požiadavkou na energetickú hospodárnos ť nových budov postavených po        
+31. decembri 2015 je horná hranica energetickej triedy A1 pre globálny ukazovate ľ, ktorá 
+charakterizuje ultranízkoenergetickú úroveň výstavby.  
+Pre nové budovy vo vlastníctve orgánov verejnej správy postavené po 31. decembri 
+2018 a pre všetky ostatné nové budovy postavené po 31. decembri 2020 je minimálnou 
+požiadavkou pre globálny ukazovate ľ horná hranica energetickej triedy A0, ktorá 
+charakterizuje úroveň výstavby s takmer nulovou spotrebou energie. 
+Na splnenie vyššie uvedeného cie ľa sa vypracoval národný plán na dosiahnutie 
+energetickej úrovne budov s takmer nulovou spotrebou energie. Tento národný plán okrem 
+iného určuje, že normalizované požiadavky na tepelnotechnické  vlastnosti a potrebu tepla na 
+vykurovanie pod ľa STN zodpovedajú splneniu minimálnej požiadavky na energetickú 
+hospodárnosť budov, ktorou bola do roku 2016 horná hranica energ etickej triedy B pre 
+potrebu energie na vykurovanie. Ďalšia energetická úrove ň výstavby predstavuje vždy 
+polovičnú hodnotu predchádzajúcej energetickej triedy. Poži adavky na potrebu tepla na 
+vykurovanie pre jednotlivé energetické úrovne výstavby pod ľa STN 73 054-2/Z1 sú pre 
+stavebné konštrukcie nových budov vyjadrené v Tab. 9.1. 
+ 
+ 
+ 
+ 
+ 
+
+--- Page 3 ---
+122 
+ 
+Tabuľka 9.1. Energetické kritérium pre jednotlivé úrovne výstavby pod ľa Národného plánu 
+SR a STN 73 0540-2/Z1 
+Druh výstavby 
+Potreba tepla na vykurovanie 
+v závislosti na faktore tvaru 
+budovy 
+kWh/(m2 rok) 
+Súčiniteľ prechodu tepla vo W/(m2.K) 
+Obvodový 
+pláš ť 
+Strešný 
+pláš ť 
+Otvorové 
+konštrukcie  
+Minimálne požiadavky pred 
+rokom 2013 ≤ 100 0,46 0,3 1,7 
+Nízkoenergetické budovy 
+normalizované požiadavky od 
+1. 1. 2013 
+≤ 100 0,32 0,22 1,4 
+Ultranízkoenergetické budovy 
+odporúčané požiadavky po 31. 
+12. 2016 
+≤ 50 0,22 0,15 1,0 
+Budovy s takmer nulovou 
+spotrebou energie odporúčané 
+požiadavky po  
+31. 12. 2018/2020 
+≤ 25 0,15 0,1 0,6 
+ Obsah energetického certifikátu (EC) 9.1.2
+Energetický certifikát obsahuje číselné ukazovatele, ktoré vyjadrujú minimálne 
+požiadavky na energetickú hospodárnos ť budov, ur čené pre jednotlivé miesta spotreby, 
+spôsoby spotreby energie v budove, opis technických a energetických charakteristík budovy, 
+technického a technologického zariadenia, výsledky výpo čtu energetickej hospodárnosti, 
+zatriedenie budovy do energetickej triedy (triedy A – G) vrátane grafického vyjadrenia a 
+platnosti certifikátu.  
+Pre obytné budovy sa hodnotí potreba tepla na vykurovanie, potreba energie na 
+vykurovanie, potreba energie na prípravu TV; pre nebytové budov sa hodnotí aj osvetlenie. 
+Potreba energie na nútené vetranie a chladenie sa hodnotí pre nebytové budovy okrem 
+prípadov, ke ď sú v budove chladené alebo nútene vetrané iba niekt oré miestnosti, ktorých 
+celková podlahová plocha je menej ako 80 % celkovej podlahovej plochy budovy. Globálnym 
+(hlavným) ukazovateľom energetickej hospodárnosti je primárna energia. 
+Platnosť energetického certifikátu je najviac 10 rokov, plat nosť sa však môže skráti ť, a 
+to napríklad vykonaním stavebných úprav, ktoré majú vplyv na energetickú hospodárnos ť 
+budovy. 
+Obsah energetického certifikátu je graficky znázornený na Obr. 9.1 a Obr. 9.2. Úvodná 
+strana okrem iného obsahuje eviden čné číslo EC, názov a identifika čné údaje o budove, ú čel 
+spracovania EC, obrázok budovy, ozna čenie energetickej triedy A – G (pre rodinné a bytové  
+domy len vykurovanie a TV, pre nebytové budovy všetky miesta spotreby, pre nebytové 
+budovy bez chladenia a vetrania sa toto miesto spotreby nevyzna čí), kategóriu budovy, 
+
+--- Page 4 ---
+123 
+ 
+celkovú potrebu energie, globálny ukazovate ľ – primárnu energiu, obnovite ľné zdroje 
+energie, opis najdôležitejších opatrení na zlepšenie energetickej hospodárnosti, dátum 
+vyhotovenia, platnosť, identifikačné údaje oprávnenej osoby atď. 
+Druhá strana obsahuje najmä výsledky energetického hodnotenia potreby energie v 
+budove pre jednotlivé miesta spotreby energie, minimálnu požiadavku pre jednotlivé miesta 
+spotreby, posúdenie (áno – nie), celkovú potrebu energie, ktorá je sú čtom potreby energie 
+podľa jednotlivých miest spotreby energie v budove. Vpravo dole sa uvedie výsledok 
+hodnotenia primárnej energie pre globálny ukazovateľ.  
+ 
+   
+Obr. 9.1. Prvé strany energetického certifikátu. Vľavo: titulná strana. Vpravo: miesta spotreby 
+ 
+Tretia až siedma strana EC obsahujú najmä opis aktuálneho stavu a opis navrhovaných 
+úprav na zlepšenie energetickej hospodárnosti. Tretia strana sa týka stavebných konštrukcií, 
+štvrtá vykurovania, piata prípravy TV, šiesta osvetlenia a siedma strana sa týka núteného 
+vetrania a chladenia. 
+
+
+--- Page 5 ---
+124 
+ 
+Na poslednej, ôsmej strane EC, sa uvádzajú výsledky súvisiace s navrhovanými 
+opatreniami pre jednotlivé miesta spotreby, konkrétne výsledok výpo čtu potreby tepla a 
+energie pre aktuálny stav budovy pod ľa príslušných miest spotreby energie; celková dodaná  
+energia, primárna energia a emisie CO 2, výsledok výpo čtu potreby tepla a energie po 
+predpokladanom uplatnení opatrení, predpokladaná úspora vplyvom uplatnenia opatrení 
+v kWh/(m2.a). Ďalej sa uvádza graf uvádzajúci úspory energie, preh ľad navrhovaných 
+opatrení a vyzna čuje sa výsledok energetického hodnotenia vplyvom pre dpokladaného 
+uplatnenia opatrení obdĺžnikom s vyzna čenou energetickou triedou. 
+Podrobnosti energetickej certifikácie a energetického certifikátu sú uvedené vo vyhláške 
+MDVRR SR č. 364/2012 Z. z. a vo vyhláške MDVRR SR č. 324/2016 Z. z. 
+ 
+ 
+Obr. 9.2. Vľavo: Tretia až siedma strana EC – opis aktuálneho st avu a návrh úprav na 
+zlepšenie energetickej hospodárnosti. Vpravo: posledná, ôsma strana EC – možná úspora 
+energie po vykonaní navrhovaných úprav, zatriedenie po realizácii navrhovaných opatrení 
+
+
+--- Page 6 ---
+125 
+ 
+ Odporúčaný postup výpočtu 9.1.3
+Pri zhotovení energetického certifikátu sa odporú ča dodrža ť postup výpo čtu uvedený 
+v prílohe č. 4 k vyhláške MDVRR SR č. 364/2012 Z. z. Odporúčaný postup výpočtu: 
+1. Výpo čet potreby tepla na vykurovanie, chladenie, prípravu  teplej vody s ur čením 
+potreby tepla pre jednotlivé systémy budovy. 
+2. Výpo čet potreby energie pre každé miesto spotreby energie  (na vykurovanie, 
+chladenie, vetranie, prípravu teplej vody, osvetlenie), ktorá sa zárove ň ur čí pre každý 
+energetický nosič. Do úvahy sa berú všetky straty z distribúcie, odov zdávania a regulácie, ako 
+aj vlastná spotreba energie (napr. pre čerpadlá) v budove. 
+3. Vypo čítané hodnoty potreby energie pre jednotlivé miesta spotreby energie sa 
+porovnajú so škálou v prílohe č. 3 na zatriedenie do energetickej triedy. 
+4. Celková potreba energie budovy ako sú čet potrieb energie pre jednotlivé miesta 
+spotreby energie sa porovnajú so škálou v prílohe č. 3 a budova sa zatriedi do energetickej 
+triedy. 
+5. Odpo číta sa tepelná energia z obnovite ľných zdrojov energie v budove alebo v jej 
+blízkosti od potreby tepla na vykurovanie (chladenie) a prípravu teplej vody v budove. 
+6. Stanoví sa dodaná energia berúc do úvahy ú činnosti výroby tepla a všetky straty 
+distribúcie, akumulácie, odovzdávania a regulácie mimo hranice budovy. 
+7. Vypočíta sa dodaná energia pre každý energetický nosi č ako súčet potreby energie. 
+8. Od potreby elektrickej energie sa od číta elektrická energia z obnovite ľných zdrojov 
+energie v budove alebo v jej blízkosti. 
+9. Určí sa podiel energie z obnoviteľných zdrojov. 
+10. Vypo číta sa dodaná energia pod ľa energetických nosi čov bez energie 
+z obnoviteľných zdrojov v budove alebo v jej blízkosti vyjadruj úca súčet potrebnej energie 
+dodanej cez systémovú hranicu budovy. 
+11. Vypočíta sa primárna energia s uplatnením faktorov primárnej energie. 
+12. Výsledok výpočtu sa porovná so škálou uvedenou v prílohe č. 3 a budova sa zatriedi 
+do energetickej triedy podľa globálneho ukazovateľa. 
+13. Z dodanej energie s uplatnením faktora emisií CO 2 sa vypo čítajú emisie oxidu 
+uhličitého. 
+
+--- Page 7 ---
+126 
+ 
+ Škály energetických tried pre jednotlivé kategórie budov 9.1.4
+Budova sa zatriedi do triedy energetickej hospodárnosti pod ľa potreby energie na 
+vykurovanie na základe Tab. 9.2. 
+ 
+Tabuľka 9.2. Škála energetických tried potreby energie na  vykurovanie (vyhl. MDVRR SR       
+č. 364/2012 Z. z.) Vykurovanie 
+Kategórie budov 
+Triedy energetickej hospodárnosti budovy 
+A B C D E F G 
+rodinné domy  ≤ 42 43 – 86 87 – 129  130 – 172 173 – 215 216 – 258 > 258 
+bytové domy  ≤ 27 28 – 53 54 – 80 81 – 106 107 – 133 134 – 159 > 159 
+administratívne budovy  ≤ 28 29 – 56 57 – 84 85 – 112 113 – 140 141 – 168 > 168 
+budovy škôl a školských zariadení  ≤ 28 29 – 56 57 – 84 85 – 112 113 – 140 141 – 168 > 168 
+budovy nemocníc  ≤ 35 36 – 70 71 – 105  106 – 140 141 – 175 176 – 210 > 210 
+budovy hotelov a reštaurácií  ≤ 36 37 – 71 72 – 107  108 – 142 143 – 178 179 – 213 > 213 
+športové haly a iné budovy určené na šport  ≤ 33 34 – 66 67 – 99 100 – 132 133 – 165 166 – 198 > 198 
+budovy pre veľkoobchodné a maloobchodné služby  ≤ 33 34 – 65 66 – 98 99 – 130 131 – 163 164 – 195 > 195 
+ 
+Budova sa zatriedi do triedy energetickej hospodárnosti pod ľa potreby energie na 
+prípravu TV na základe Tab. 9.3. 
+ 
+Tabuľka 9.3. Škála energetických tried potreby energie na  prípravu TV (vyhl. MDVRR SR       
+č. 364/2012 Z. z.) Príprava teplej vody 
+Kategórie budov 
+Triedy energetickej hospodárnosti budovy 
+A B C D E F G 
+rodinné domy  ≤ 12 13 – 24 25 – 36 37 – 48 49 – 60 61 – 72 > 72 
+bytové domy  ≤ 13 14 – 26 27 – 39 40 – 52 53 – 65 66 – 78 > 78 
+administratívne budovy  ≤ 4 5 – 8 9 – 12 13 – 16 17 – 20 21 – 24 > 24 
+budovy škôl a školských zariadení  ≤ 6 7 – 12 13 – 18 19 – 24 25 – 30 31 – 36 > 36 
+budovy nemocníc  ≤ 26 27 – 52 53 – 78 79 – 104 105 – 130 131 – 156 > 156 
+budovy hotelov a reštaurácií  ≤ 32 33 – 64 65 – 96 97 – 128 129 – 160 161 – 192 > 192 
+športové haly a iné budovy určené na šport  ≤ 6 7 – 12 13 – 18 19 – 24 25 – 30 31 – 36 > 36 
+budovy pre veľkoobchodné a maloobchodné služby  ≤ 5 6 – 9 10 – 14 15 – 18 19 – 23 24 – 27 > 27 
+ 
+Celková potreba energie budovy je sú čtom potrieb energie pre jednotlivé miesta 
+spotreby.  Budova sa zatriedi do triedy energetickej hospodárnosti pod ľa celkovej potreby 
+energie budovy na základe Tab. 9.4. 
+
+--- Page 8 ---
+127 
+ 
+Tabuľka 9.4. Škála energetických tried celkovej potreby e nergie budovy (vyhl. MDVRR SR    
+č. 324/2016 Z. z.) Celková potreba energie v budove 
+Kategórie budov 
+Triedy energetickej hospodárnosti budovy 
+A B C D E F G 
+rodinné domy  ≤ 54 55 – 110 111 – 165 166 – 220 221 – 275 276 – 330 > 330 
+bytové domy  ≤ 40 41 – 79 80 – 119 120 – 158 159 – 198 199 – 237 > 237 
+administratívne budovy  ≤ 63 64 – 125 126 – 179 180 – 232 233 – 291 292 – 350 > 350 
+budovy škôl a školských zariadení  ≤ 43 44 – 86 87 – 125 126 – 163 164 – 204 205 – 245 > 245 
+budovy nemocníc  ≤ 104 105 – 207 208 – 300 301 – 393 394 – 491 492 – 590 > 590 
+budovy hotelov a reštaurácií  ≤ 94 95 – 187 188 – 275 276 – 363 364 – 454 455 – 545 > 545 
+športové haly a iné budovy určené na šport  ≤ 60 61 – 120 121 – 170 171 – 219 220 – 274 275 – 329 > 329 
+budovy pre veľkoobchodné a maloobchodné 
+služby  ≤ 107 108 – 214 215 – 303 304 – 391 392 – 489 490 – 586 > 586 
+ 
+Globálnym (hlavným) ukazovate ľom energetickej hospodárnosti budovy je primárna 
+energia, ktorá sa ur čí úpravou (prenásobením) potreby energie rozdelenej podľa jednotlivých 
+energetických nosičov (zemný plyn, elektrická energia, čierne uhlie...) konverzným faktorom 
+primárnej energie pod ľa Tab. 3.10. Budova sa zatriedi do triedy energetick ej hospodárnosti 
+podľa globálneho ukazovateľa – primárnej energie budovy na základe Tab. 9.5. 
+ 
+Tabuľka 9.5. Škála energetických tried globálneho ukazova teľa – primárnej energie              
+(vyhl. MDVRR SR č. 324/2016 Z. z.) 
+Globálny ukazovateľ - primárna energia 
+Kategórie budov 
+Triedy energetickej hospodárnosti budovy 
+A0 A1 B C D E F G 
+rodinné domy  ≤ 54 55 – 108 109 – 216 217 – 324 325 – 432 433 – 540 541 – 648 > 648 
+bytové domy  ≤ 32 33 – 63 64 – 126 127 – 189 190 – 252 253 – 315 316 – 378 > 378 
+administratívne budovy  ≤ 61 62 – 122 123 – 255 256 – 383 384 – 511 512 – 639 640 – 766 > 766 
+budovy škôl a školských 
+zariadení  ≤ 34 35 – 68 69 – 136 137 – 204 205 – 272 273 – 340 341 – 408 > 408 
+budovy nemocníc  ≤ 98 99 – 197 198 – 393 394 – 590 591 – 786 787 – 982 983 – 1179 > 1179 
+budovy hotelov a reštaurácií  ≤ 82 83 – 164 165 – 328 329 – 492 493 – 656 657 – 820 821 – 984 > 984 
+športové haly a iné budovy 
+určené na šport  ≤ 46 47 – 92 93 – 181 182 – 272 273 – 362 363 – 453 454 – 543 > 543 
+budovy pre veľkoobchodné  
+a maloobchodné služby  ≤ 107 108 – 213 214 – 425 426 – 638 639 – 850 851 – 1062 1063 – 1275 > 1275 
+ 
+Budovu so zmiešaným ú čelom užívania treba zatriedi ť do energetickej triedy pod ľa 
+š kály hodnotenia, ktorá sa ur čí váženým priemerom z hodnôt pre jednotlivé kategóri e budov 
+podľa celkovej podlahovej plochy častí budovy a ú čelov ich užívania Ak celková podlahová 
+plocha časti budovy užívanej na iný ú čel nepresahuje 10 % celkovej podlahovej plochy celej  
+budovy, zatriedi sa budova do kategórie budovy podľa prevládajúceho účelu užívania. 
+
+--- Page 9 ---
+128 
+ 
+ PRÍKLAD 9.2
+Predchádzajúce výpo čty možno využi ť na zhotovenie energetického certifikátu 
+vzhľadom na to, že všetky výpo čty v predošlých príkladoch sa vykonali pre normalizo vané 
+klimatické podmienky. Zárove ň sa použili také výpo čtové postupy a vstupné údaje, ktoré sú 
+v zhode s vyhláškou MDVRR SR č. 364/2012 Z. z. a vyhláškou MDVRR SR  
+č. 324/2016 Z. z. 
+ Výpočet potreby energie 9.2.1
+Podľa odporúčaného postupu vo vyhláške MDVRR SR č. 364/2012 Z. z. sa do potreby 
+energie na vykurovanie zapo čítava potreba tepla na vykurovanie, tepelné straty z o systému 
+odovzdávania tepla a systému rozvodu tepla, ako aj vlastná spotreba energie (napr. pre 
+čerpadlá) v budove: 
+ 
+    #$,A?  ,Z"?,A?,1  o,Z"?,1M+,1  (kWh)              (9.1) 
+ 
+kde: 
+QH   je potreba tepla na vykurovanie (kWh); 
+Qem,ls   – tepelná strata systému odovzdávania tepla (kWh); 
+QH,dis,ls,an – tepelná strata z rozvodov vykurovacieho systému (kWh); 
+WH,dis,aux,an – vlastná spotreba energie systému rozvodu tepla (kWh). 
+ Výpočet dodanej energie 9.2.2
+Aby bolo možné vypo čítať primárnu energiu a emisie CO 2, je treba vypo čítať dodanú 
+energiu pre systémy vykurovania a prípravy teplej vody. Dodaná energia sa stanoví berúc do 
+úvahy ú činnosti výroby tepla a všetky straty distribúcie, ak umulácie, odovzdávania a 
+regulácie mimo hranice budovy. 
+9.2.2.1 Dodaná energia na vykurovanie 
+Vo výpočte dodanej energie na vykurovanie treba zoh ľadniť účinnosť výroby tepla. Na 
+výpočet tepelnej straty z výroby tepla sa použije vz ťah 3.22: 
+ 
+ , 
+T
+    #$,A?  ,Z"?,A?,1  ,Z,"% 
+Tv,§¥
+v,§¥  135 860  8669  5001  2077% 
+28 164 kWh/rok   
+         
+
+--- Page 10 ---
+129 
+ 
+kde: 
+η   je ú činnosť zdroja tepla pod ľa Tab. 3.10, st ĺpec „Faktor transformácie 
+a distribúcie  
+energie“ (-). Pre dia ľkové vykurovanie zemným plynom možno použi ť hodnotu 
+0,84; 
+QH   – potreba tepla na vykurovanie vypo čítaná v 5 (kWh); 
+Qem,ls   sú straty z odovzdávania tepla vypo čítané v 6 (kWh); 
+QH,dis,ls,an – straty z rozvodu tepla vypo čítané v 6 (kWh); 
+QW,d,i   – spätne získate ľná tepelná strata zo systému prípravy TV vypočítaná v 7 (kWh). 
+ 
+Od potreby tepla a tepelných strát sa ešte odpo číta spätne získate ľná strata z rozvodu 
+teplej vody. Výpočet dodanej energie na účel energetickej certifikácie budov je v Tab. 9.6 
+ 
+Tabuľka 9.6. Výpočet dodanej energie na vykurovanie – nový stav 
+Sledovaný údaj Označenie Jednotka Vypo čítaná hodnota 
+Potreba tepla na vykurovanie QH kWh/rok 135 860 
+Tepelná strata systému odovzdávania Qem,ls kWh/rok 8669 
+Tepelná strata z rozvodov QH,dis,ls,an kWh/rok 5001 
+Tepelná strata z výroby QH,g kWh/rok 28 164 
+Spätne získateľná tepelná strata zo systému 
+prípravy TV QW,d,i kWh/rok 2077 
+Dodané teplo  kWh/rok 175 617 
+Vlastná spotreba energie WH,dis,aux,an kWh/rok 1566 
+Dodaná elektrická energia  kWh/rok 1566 
+9.2.2.2 Dodaná energia na prípravu teplej vody 
+Vo výpočte dodanej energie na prípravu TV sa zoh ľadnia aj vlastná spotreba energie 
+cirkulačného čerpadla a ú činnosť výroby TV. S akumuláciou TV sa v tomto príklade 
+neuvažuje. Vlastná spotreba energie cirkula čného čerpadla sa vypočíta podľa vzťahu 4.6: 
+ 
+oZ,KM$K = 365 1000³ . wKM$K. ~KM$K = 365 1000³ . 24.70 = 613 kWh
+  
+kde:  
+fpump je prevádzkový čas čerpadla, uvažuje sa 24 h/de ň; 
+Ppump je príkon čerpadla, uvažuje sa 70 W. 
+ 
+
+--- Page 11 ---
+130 
+ 
+Výpočet tepelnej straty z výroby TV sa vykoná obdobne, ako tomu bolo pri vykurovaní: 
+ 
+ , 
+T
+    ,Z% 
+Tv,§¥
+v,§¥ 89 722  41 331  24 962 kWh/rok 
+ 
+Tabuľka 9.7. Výpočet dodanej energie na prípravu TV – nový stav 
+Sledovaný údaj Označenie Jednotka Vypočítaná 
+hodnota 
+Potreba tepla na ohrev TV QW kWh/rok 89 722 
+Tepelná strata z distribúcie TV QW,d kWh/rok 41 331 
+Tepelná strata z výroby TV QW,g kWh/rok 24 962 
+Dodané teplo  kWh/rok 156 015 
+Vlastná spotreba energie Wd,pump kWh/rok 613 
+Dodaná elektrická energia  kWh/rok 613 
+ Výpočet primárnej energie a emisií oxidu uhličitého (CO2) 9.2.3
+Na výpočet primárnej energie a emisií CO2 sa odporúča použi ť tabuľku podľa vyhlášky 
+MDVRR SR č. 364/2012 Z. z. (Tab. 9.8). 
+ 
+Tabuľka 9.8.  Výpočet primárnej energie a emisií CO2 
+Č.r. Energetický nosič / miesto 
+spotreby 
+Potreba energie 
+Vykurovací olej 
+Zemný plyn 
+Uhlie 
+Zemný plyn – dia ľkové vykurovanie 
+Diaľkové chladenie 
+Drevo 
+Tepelná energia z elektriny vyrobenej 
+v budove 
+Elektrická energia 
+Solárna tepelná energia 
+Elektrická energia – tepelné čerpadlo 
+Elektrická energia z kogenerácie 
+Teplo z kogenerácie 
+Vážená energia a CO 2 
+1 
+Potreba energie v budove 
+Vykurovanie 33,2    32,8    0,4     
+2 Príprava teplej vody 29,2    29,2          
+3 Chladenie a vetranie               
+4 Osvetlenie              
+5 Celková potreba 
+energie v budove 62,4    62,0    0,4      
+6 
+OZE 
+V budove 
+a v blízkosti               
+7 Mimo pozemku 
+užívaného s budovou               
+
+--- Page 12 ---
+131 
+ 
+Pokračovanie Tabuľky 9.8. 
+Č.r. Energetický nosič / miesto 
+spotreby 
+Potreba energie 
+Vykurovací olej 
+Zemný plyn 
+Uhlie 
+Zemný plyn – dia ľkové 
+ vykurovanie 
+Diaľkové chladenie 
+Drevo 
+Tepelná energia z elektriny  
+vyrobenej v budove 
+Elektrická energia 
+Solárna tepelná energia 
+Elektrická energia –  
+tepelné čerpadlo 
+Elektrická energia  
+z kogenerácie 
+Teplo z kogenerácie 
+Vážená energia a CO 2 
+8 
+Mimo budovy 
+Straty pri výrobe 11,8    11,8         
+9 Straty pri distribúcii 
+mimo budovy 0,1        0,1      
+10 
+Straty pri 
+odovzdávaní mimo 
+budovy 
+              
+11 Dodaná energia   
+kWh/(m2.a) 74,3    73,8    0,5      
+12 
+Primárna energia, CO2 
+Typ energetického 
+nosiča               
+13 Váhové faktory pre 
+primárnu energiu     1,3    2,2      
+14 Primárna energia  
+kWh/(m2.a)     95,9    1,1     97,0 
+15 Váhové faktory pre 
+emisie CO2     0,22    0,167      
+16 Emisie CO2 v 
+kg/(m2.a)     16,2    0,1     16,3 
+ 
+ Energetický certifikát budovy po významnej obnove 9.2.4
+Predpokladajme, že pre bytový dom sa realizovali energeticky úsporné opatrenia 
+opísané v 5, 6 a 7. Vzh ľadom na to, že budova prešla významnou obnovou, je p otrebné ju 
+skolaudovať. Jeden z dokumentov potrebných na to, aby mohlo pre behnúť kolauda čné 
+konanie, je energetický certifikát vypracovaný v súlade s normalizovaným hodnotením. 
+Výpočty pre normalizované podmienky uvedené v 5, 6 a 7 ná m teraz poslúžia ako podklad na 
+vypracovanie energetického certifikátu. 
+V realite sa informácie zadávajú do informačného systému INFOREG (www.inforeg.sk), 
+kde sa vyplnia všetky potrebné údaje o budove a o jednotlivých miestach spotreby a po 
+potvrdení sa automaticky pridelí evidenčné číslo a vygeneruje sa certifikát. Okrem toho sa po 
+prihlásení do INOREG-u automaticky vyplnia identifikačné údaje oprávnenej osoby a pridelí sa 
+evidenčné číslo. Pretože v našom prípade sa ide o príklad, zost ali identifika čné údaje 
+oprávnenej osoby a evidenčné číslo v energetickom certifikáte na Obr. 9.3 nevyplnené. 
+K energetickému certifikátu treba vypracova ť aj správu, ktorá obsahuje formuláre 
+uvedené vo vyhláške MDVRR SR č. 364/2012 Z. z. Správa k energetickému certifikátu nie je 
+súčasťou tejto kapitoly.  
+
+--- Page 13 ---
+132 
+ 
+ 
+Obr. 9.3. Úvodná strana energetického certifikátu – celkové hodnotenie 
+
+
+--- Page 14 ---
+133 
+ 
+ 
+Obr. 9.4. Druhá strana energetického certifikátu – výsledky energetického hodnotenia 
+
+
+--- Page 15 ---
+134 
+ 
+ 
+Obr. 9.5. Tretia strana energetického certifikátu – tepelná ochrana budov 
+
+
+--- Page 16 ---
+135 
+ 
+ 
+Obr. 9.6. Štvrtá strana energetického certifikátu – vykurovanie 
+
+
+--- Page 17 ---
+136 
+ 
+ 
+Obr. 9.7. Piata strana energetického certifikátu – príprava teplej vody 
+
+
+--- Page 18 ---
+137 
+ 
+ 
+Obr. 9.8. Šiesta strana energetického certifikátu – chladenie a vetranie (pre budovy na bývanie 
+sa nehodnotí) 
+ 
+ 
+ 
+
+
+--- Page 19 ---
+138 
+ 
+ 
+Obr. 9.9. Siedma strana energetického certifikátu – osvetlenie (pre budovy na bývanie sa 
+nehodnotí) 
+ 
+ 
+
+
+--- Page 20 ---
+139 
+ 
+ 
+Obr. 9.10. Posledná strana energetického certifikátu – možná úspora energie 
+
+
+--- Page 21 ---
+140 
+ 
+ Záver k energetickému hodnoteniu 9.2.5
+Na základe energetického hodnotenia možno budovu po obnove zatriedi ť do 
+energetickej triedy „B“ z h ľadiska vykurovania, do energetickej triedy „C“ z h ľadiska 
+prípravy TV, do energetickej triedy „B“ z h ľadiska celkovej dodanej energie a do energetickej 
+triedy „B“ z h ľadiska globálneho ukazovate ľa – primárnej energie. Možno konštatova ť, že 
+budova nespĺňa požiadavky na ultranízkoenergetickú úrove ň výstavby platné po 31. decembri 
+2016. V prípade tepelnej ochrany budov a vykurovania sú v súlade s vyhláškou MDVRR SR 
+č. 364/2012 Z. z. splnené aspo ň požiadavky na stavebné konštrukcie a prvky tvoriace  ich 
+časť, ktoré vytvárajú obalovú konštrukciu budovy, pod ľa STN 73 0540-2/Z1. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

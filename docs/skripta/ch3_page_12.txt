@@ -1,0 +1,84 @@
+-‚Z#? (cid:5) 0,13. _$1+ + 2 + Δ‚I(cid:18) + Δ‚{
+
+(kPa)  
+
+      (3.16) 
+
+kde: 
+
+Lmax   
+
+je maximálna dĺžka potrubia vykurovacieho okruhu (m); 
+
+∆pFH    – prídavný tlakový spád podlahových vykurovacích systémov (kPa); 
+
+∆pG 
+
+– tlakový spád zariadenia na výrobu tepla (kPa). 
+
+Ak  nie  je  maximálna  dĺžka  vykurovacieho  okruhu  v zóne  známa  z projektovej 
+
+dokumentácie, možno ju približne vypočítať z vonkajších rozmerov zóny: 
+
+_$1+ = 2. (cid:26)_] +
+
+ƒ„
+[ + …A#†. ℎA#† + ‡X(cid:31)
+
+(m) 
+
+(3.17) 
+
+kde: 
+
+LL  
+
+je dĺžka zóny (m); 
+
+LW  – šírka zóny (m); 
+
+Nlev  – počet vykurovaných podlaží v zóne (-); 
+
+hlev  – konštrukčná výška podlažia v zóne (m); 
+
+lc 
+
+–  dĺžka  pripájacích  potrubí  od  stúpacích  potrubí  k vykurovacím  telesám,  10  m  pre 
+
+dvojrúrové vykurovacie systémy, alebo LL + LW pre jednorúrové vykurovacie systémy. 
+
+Ak nie sú k dispozícii údaje o hodnotách ∆pFH  a  ∆pG,  použijú 
+
+sa  preddefinované 
+
+hodnoty: 
+
+∆pFH   
+
+je 25 kPa vrátane uzatváracích armatúr a rozdeľovačov; 
+
+∆pG 
+
+je uvedený v Tab. 3.7. 
+
+Tabuľka 3.7. Tlakové straty zariadení na výrobu tepla (STN EN 15361-3) 
+
+Typ zariadenia na výrobu tepla 
+
+Zariadenie na výrobu tepla s vodným objemom > 0,15 l/kW 
+
+Zariadenie na výrobu tepla s vodným 
+objemom £
+
+ 0,15 l/kW 
+
+ΦH,em,out,max < 35 kW 
+ΦH,em,out,max ‡
+ 35 kW 
+
+∆pG (kPa) 
+1 
+20.(Vdes)2 
+80 
+
+48

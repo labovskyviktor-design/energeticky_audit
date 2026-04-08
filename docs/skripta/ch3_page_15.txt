@@ -1,0 +1,71 @@
+3.1.4
+
+  Spätne získateľná časť vlastnej spotreby energie 
+
+Čerpadlá,  ktoré  sú  v prevádzke  sústav  vykurovania,  premieňajú  časť  vlastnej  potreby 
+
+energie na tepelnú energiu. Jej jedna časť sa v podsystéme rozvodu tepla spätne získava ako 
+
+teplo, ktoré sa dodáva do teplonosnej látky. Ďalšia časť tepelnej energie je spätne získateľná 
+
+pre  vykurovanie,  pretože  toto  teplo  ohrieva  okolitý  vzduch.  Spätne  získateľná  časť  vlastnej 
+
+spotreby energie sa vypočíta takto: 
+
+(cid:17)(cid:18),Z"?,1M+,(cid:3)†Z (cid:5) w1M+,(cid:3)CA. o(cid:18),Z"?,1M+,1(cid:24)
+
+(kWh) 
+
+     (3.21) 
+
+kde: 
+
+faux,rbl  
+
+je faktor spätne získateľnej časti vlastnej spotreby energie. Môže mať hodnoty 0,75 
+
+pre čerpadlo bez tepelnej izolácie, alebo 0,90 pre čerpadlo s tepelnou izoláciou; 
+
+WH,dis,aux,an  – ročná vlastná spotreba energie obehových čerpadiel (kWh). 
+
+3.1.5
+
+  Tepelná strata z výroby tepla 
+
+V prípade, ak je zdrojom tepla kotol, možno tepelnú stratu z výroby tepla vyjadriť takto: 
+
+(cid:17)(cid:18),(cid:23) (cid:5)
+
+(cid:26)(cid:4)T—(cid:31)
+
+—
+
+(cid:26)(cid:17)(cid:18) (cid:29) (cid:17)#$,A? (cid:29) (cid:17)(cid:18),Z"?,A?,1(cid:24)(cid:31)
+
+(kWh/rok)   
+
+(3.22) 
+
+kde: 
+
+η 
+
+QH 
+
+je účinnosť zdroja tepla (-); 
+
+  – potreba tepla na vykurovanie (kWh); 
+
+Qem,ls  
+
+  – straty z odovzdávania tepla (kWh); 
+
+QH,dis,ls,an  – straty z rozvodu tepla (kWh). 
+
+V prípade, ak sa teplo odovzdáva z centrálneho zdroja cez odovzdávaciu stanicu tepla, 
+
+možno vypočítať tepelnú energiu požadovanú na výrobu tepla s použitím účinnosti v Tab. 3.9, 
+
+uvedenej ako „Ukazovateľ energetickej účinnosti odovzdávacej stanice tepla“.   
+
+51

@@ -1,0 +1,35 @@
+18 
+  
+ 
+ 
+ 
+Odpor pri prestupe tepla na vonkajšom povrchu Rse = 0,04 (m2.K)/W. 
+Odpor pri prestupe tepla na vnútornom povrchu Rsi = 0,10 (m2.K)/W. 
+ 
+Tabuľka 1.5. Výpočet tepelného odporu strechy 
+Číslo  
+vrstvy Názov materiálu Hrúbka Sú činiteľ tepelnej vodivosti Tepelný odpor 
+Symbol d λ R 
+Jednotka m W/(m.K) m2.K/W 
+1 Omietka vnútorná 0,010 0,880 0,011 
+2 ŽB stropný panel 0,150 1,580 0,095 
+3 Penový polystyrén 0,050 0,044 1,136 
+4 Pórobetónový panel 0,100 0,190 0,526 
+5 Hydroizolácia 0,015 0,210 0,071 
+ 
+Výsledný tepelný odpor strechy R = 1,84 (m2.K)/W. 
+Súčiniteľ prechodu tepla strechy U = 0,50 W/(m2.K). 
+ 
+Posúdenie: Požiadavka na sú činiteľ prechodu tepla pre obvodovú stenu sa splní vtedy, a k 
+bude platiť vzťah 1.1, teda U < Ur1. Platí U = 0,50 W/(m2.K) > Ur1 = 0,15 W/(m2.K). Na 
+základe porovnania sú činiteľa prechodu tepla strechy U s odporúčanou hodnotou Ur1 možno 
+konštatovať, že strecha NEVYHOVUJE . 
+1.2.3.3  Strop nad nevykurovaným podlažím 
+Skladba a tepelno-technické vlastnosti podlahy nad nevykurovaným podlažím sú 
+uvedené v Tab. 1.6. Pod ľa STN 73 0540-2/Z1 má strop medzi vnútornými priesto rmi s 
+rozdielnou teplotou do 10 K a s tepelným tokom zhora nadol sp ĺňať hodnotu súčiniteľa 
+prechodu tepla Ur1 = 0,85 W/(m2.K). 
+exteriér 
+θext =  -11 °C                                 
+interiér 
+θint =  20  °C                 

@@ -1,0 +1,24 @@
+LEGENDA:,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12
+,doplniť hodnotu,,,,,,,,,,,
+,finálny výsledok,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+Umiestnenie,Typ,Príkon svietidla,Počet kusov,Celkový príkon,Prevádzková doba,Celková spotreba elektriny,,Miestnosti,Prevádzkové hodiny,,Typ,Príkon osvetlovacieho telesa [W]
+,,W,ks,kW,hod.rok-1,MWh.rok-1,,Izby,1200,,žiarivky,18
+Chodby,žiarovky,,,0,1000,0,,Učebne,1000,,,24
+,,,,0,,,,"Toalety, sprchy",500,,,30
+,,,,0,,,,Kancelárie,1000,,,36
+,,,,0,,,,Pedagogické kabinety,850,,,58
+,,,,0,,,,Chodby,500,,žiarovky,25
+,,,,0,,,,Vrátnice,600,,,40
+,,,,0,,,,Technické miestnosti,250,,,60
+,,,0,0,,,,Upratovačka,250,,,75
+,,,,,,,,Telocvične,850,,,100
+,,,,,,,,Kuchyňa,1400,,,200
+,,,,,,,,Sklady,250,,výbojky,70
+,,,,,,,,Jedáleň,1500,,,100
+,,,,,,,,Knižnica,1000,,,150
+,,,,,,,,Garáže,250,,,250
+,,,,,,,,Zasadacia miestnosť,1000,,,400
+,,,,,,,,Terapeutické miestnosti,1000,,,
+,,,,,,,,Prednáškové sály,1200,,,

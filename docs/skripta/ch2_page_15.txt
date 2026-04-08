@@ -1,0 +1,34 @@
+36 
+ Tabuľka 2.8. (Pokračovanie) – Výpo čet potreby tepla na vykurovanie bytového domu 
+Merná tepelná strata  
+Merná tepelná strata prechodom: HT = ∑bx . Ui . Ai + ∆U . ∑Ai = 4568,0 
+Merná tepelná strata vetraním3): Hv = ( V / Vb) . ρa . ca . ninf . Vb / 3600 = 2807,3 W/K 
+Merná tepelná strata: H = HV + HT = 7375,3 W/K 
+Potreba tepla na vykurovanie 
+Celkové vnútorné zisky: Qgn = Qs + Qi = 166 445,2 kWh/a  
+Faktor využitia tepelných ziskov: ηgn = 0,95 
+Potreba tepla na vykurovanie: QH = (HT + HV) . (θint - θe,m) . t . 0,024 - 0,95 . ( Qi + Qs) = 447 539,1 kWh/a 
+Merná potreba tepla na vykurovanie: QH,nd = QH / Ab = 101,63 kWh/(m2.a) 
+Vyhodnotenie 
+Odporúčaná hodnota QH,nd,r1,14):   
+QH,nd,r1,1  = 25 kWh/(m2.a) QH,nd > QH,nd,r1,1  Nevyhovuje 
+1) Hodnota priepustnosti slne čného žiarenia 0,62 sa získala z priemeru hodnôt uvažovaných pre jednotlivé 
+otvorové konštrukcie takto: 
+- pôvodné drevené okná (aj lodžia): ggl = 0,76; 
+-  oceľové okná s copilitovým zasklením v schodiskovej časti: ggl = 0,5; 
+-  vymenené plastové okná a dvere (aj lodžia): ggl = 0,6. 
+Pre detailnejší výpo čet by sa mohli spravi ť priemery hodnôt priepustnosti slne čného žiarenia zvláš ť pre každú 
+orientáciu. 
+2) Tieniaci faktor sa ur čil ako súčin faktorov opísaných v 2.1.4.2, ke ď hodnota každého z faktorov sa 
+zjednodušene uvažovala 0,8, teda Fsh,ob,k  . Fsh,gl . (1 - FF) = 0,8 . 0,8 . 0,8 = 0,5. Takéto zjednodušenie je prípustné 
+pre obytné budovy. 
+3) Použila sa hodnota V / Vb = 0,85, používaná pre posudzovanie obnovovaných budov v pôvodnom stave.  
+4) Odporúčaná hodnota QH,nd,r1,1  sa určila z Tab. 2.7 na základe faktora tvaru budovy. 
+ Čiastkový záver 2.2.3
+Na základe porovnania vypo čítanej mernej potreby tepla QH,nd s požadovanou hodnotou 
+QH,nd,r1,1  možno konštatova ť, že objekt nesp ĺňa energetické kritérium pod ľa STN 73 0540-
+2/Z1. 
+ 
+ 
+ 
+ 

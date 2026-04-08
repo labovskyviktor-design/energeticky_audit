@@ -1,0 +1,131 @@
+∆θemb 
+
+–  zmena 
+
+teploty  v dôsledku 
+
+tepelných  strát  komponentov  s integrovanou 
+
+vykurovacou plochou do vonkajšieho prostredia alebo do nevykurovaného priestoru 
+
+(K), Tab. 3.2 a 3.4; 
+
+∆θrad 
+
+– zmena teploty v dôsledku účinku sálania v závislosti od odovzdávacieho systému 
+
+(K). 
+
+∆θim,emt  – zmena teploty v dôsledku prerušovanej prevádzky vykurovacieho systému (K). 
+
+Zmena teploty v závislosti od riadiaceho systému sa stanoví takto: 
+
+Δ
+
+!X(cid:20)(cid:3),?Y? =
+
+Δ
+
+!X(cid:20)(cid:3) +
+
+Δ
+
+!"$,X(cid:20)(cid:3) +
+
+Δ
+
+       (-)                                   
+
+!(cid:3)@@$1M(cid:20) 
+
+(3.5) 
+
+kde: 
+
+∆θctr 
+
+  je zmena teploty v závislosti od spôsobu regulácie (K), Tab. 3.2 a 3.4; 
+
+∆θim,ctr 
+
+  – zmena teploty v dôsledku prerušovanej prevádzky riadiaceho systému (K); 
+
+∆θroomaut 
+
+ –  zmena  teploty  v závislosti  od  samostatnej  prevádzky  (stand  alone)  alebo 
+
+prevádzky v sieti / automatizácie riadenia (K). 
+
+Tabuľka 3.1. Zmena teploty v závislosti od hydraulického vyregulovania (STN EN 15316-2) 
+
+Jednorúrkový systém 
+
+∆θhydr 
+
+Dvojrúrkový systém 
+
+Bez hydraulického vyregulovania 
+
+0,7 
+
+Statické vyváženie pre každý okruh 
+
+0,4 
+
+Dynamické vyváženie pre každý 
+okruh (napr. automatickými 
+obmedzovačmi prietoku) 
+
+Dynamické vyváženie pre každý 
+okruh (napr. automatickými 
+obmedzovačmi prietoku) a 
+dynamická regulácia v závislosti od 
+tepelného príkonu (napr. regulácia na 
+základe teploty vratnej vody) 
+
+0,3 
+
+0,2 
+
+Bez hydraulického vyregulovania 
+Statické vyváženie pre každé 
+vykurovacie teleso alebo 
+komponent s integrovanou 
+vykurovacou plochou, bez 
+vyváženia sústavy ako celku 
+Statické vyváženie pre každé 
+vykurovacie teleso alebo prvok 
+plošného vykurovania, 
+s vyvážením sústavy ako celku 
+(napr. vyvažovacím ventilom) 
+Statické vyváženie pre každé 
+vykurovacie teleso alebo 
+komponent s integrovanou 
+vykurovacou plochou a zároveň 
+dynamické vyváženie sústavy ako 
+celku (napr. regulátormi tlakovej 
+diferencie) 
+
+*n ≤ 10 
+
+*n > 10 
+
+∆θhydr 
+
+∆θhydr 
+
+0,6 
+
+0,3 
+
+0,4 
+
+0,2 
+
+0,3 
+
+0,1 
+
+0,2 
+
+39

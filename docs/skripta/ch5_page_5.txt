@@ -1,0 +1,50 @@
+86 
+ 
+kde:  
+θint,ini  
+– počiatočná teplota vzduchu v priestore, θint,ini = 20 °C; 
+∆θint,inc  – zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania. 
+ 
+Δ!","X = Δ!YZ + Δ!#$,?Y? + Δ!X,?Y? = 0,2 + 0,2 + 0,7 = 1,1  K 
+ 
+kde: 
+∆θhyd  
+– zmena teploty v závislosti od hydraulického vyregulovania, ∆θhyd = 0,2; 
+∆θemt,sys  – zmena teploty v závislosti od odovzdávacieho systému (K); 
+∆θctr,sys  – zmena teploty v závislosti od spôsobu regulácie (K). 
+ 
+Zmena teploty v závislosti od odovzdávacieho systému: 
+ 
+Δ!#$,?Y? = Δ!? + Δ!#$C + Δ!1Z + Δ!"$,#$ = 0,5 −0,3 = 0,2 K 
+ 
+kde: 
+∆θstr   
+– nerovnomernosť rozloženia teploty v priestore v dôsledku stratifikácie (K), 
+ 
+ 
+ 
+Δ!? =
+•PRu,b	•PRu,c
+[
+= 
+v,º	v,ˆ
+[
+= 0,5 K podľa Tab. 3.4; 
+∆θstr,1  
+– zmena teploty vplyvom nerovnomernosti rozloženia teploty pre teplotný spád 
+70/55 (najbližšie k nášmu prípadu 75/65) a dvojrúrkový vykurovací systém, θstr,1 = 
+0,7; 
+∆θstr,2  
+– zmena teploty vplyvom špecifických tepelných strát cez externé komponenty, 
+radiátor umiestnený na normálnej vonkajšej stene, θstr,2 = 0,3; 
+∆θemb  – zmena teploty v dôsledku tepelných strát komponentov s integrovanou 
+vykurovacou plochou do vonkajšieho prostredia alebo do nevykurovaného priestoru, 
+∆θemb = 0 K podľa Tab. 3.4.; 
+∆θrad  
+– zmena teploty v dôsledku účinku sálania v závislosti od odovzdávacieho systému, 
+∆θrad = 0 K pre voľné vykurovacie plochy; 
+∆θim,emt  – zmena teploty v dôsledku prerušovanej prevádzky vykurovacieho systému, ∆θim,emt 
+= -0,3 K. 
+ 
+ 
+ 

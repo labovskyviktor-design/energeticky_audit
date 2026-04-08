@@ -1,0 +1,18 @@
+89 
+ 
+Na Obr. 6.1 je uvedený príklad výpočtu tepelnej straty stúpacieho prívodného a 
+vratného potrubia. Tepelná strata distribučného systému sa vypočítala pomocou programu na 
+nasledujúcej internetovej stránke:  
+ 
+http://vytapeni.tzb-info.cz/tabulky-a-vypocty/44-tepelna-ztrata-potrubi-s-izolaci-kruhoveho-
+prurezu 
+ 
+ 
+Obr. 6.1. Tepelná strata ležatého prívodného potrubia vykurovania vedeného na prízemí 
+ 
+Pri výpočte tepelnej straty z rozvodu sa použili tieto vstupné údaje:  
+ 
+Ψ   je lineárny stratový súčiniteľ zodpovedá hodnote Uo na Obr. 6.1 v obdĺžniku.  
+Hodnoty použité vo výpočte sú v Tab. 6.2; 
+θm   – stredná teplota teplonosnej látky zodpovedá hodnote tin na Obr. 6.1. Použila sa  
+vypočítaná priemerná hodnota θm = 36,2 °C; 

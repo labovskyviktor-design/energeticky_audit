@@ -1,0 +1,45 @@
+87 
+ 
+Zmena teploty v závislosti od spôsobu regulácie: 
+ 
+Δ!X,?Y? = Δ!X + Δ!"$,X + Δ!@@$1M = 0,7 + 0 + 0 = 0,7 K 
+ 
+kde: 
+∆θctr  
+– zmena teploty v závislosti od spôsobu regulácie. Po preregulovaní, kontrole 
+regulačných ventilov s termostatickými hlavicami a prípadnej výmene nefunkčných  
+komponentov sa počíta so zmenou teploty ∆θctr 
+ = 
+0,7 
+K pre 
+P-regulátor  
+(termostatická hlavica) podľa Tab. 3.4 (po obnove sa uvažuje s ∆θctr,2 namiesto 
+∆θctr,1). 
+∆θim,ctr  – zmena teploty v dôsledku prerušovanej prevádzky riadiaceho systému, ∆θim,ctr = 0 
+K; 
+∆θroomaut – zmena teploty v závislosti od samostatnej prevádzky (stand alone) alebo prevádzky 
+v sieti/automatizácie riadenia. Uvažuje sa s ∆θroomaut = 0 K, pretože v priestore sa 
+neuvažuje s automatizáciou prevádzky. Vplyv automatickej regulácie pomocou           
+P-regulátora je započítaný v ∆θctr. 
+6.2.2.2 Tepelná strata z rozvodov vykurovacieho systému 
+Na úvod je potrebné vypočítať teplotu prívodnej a vratnej vody. Pri výpočte sa 
+uvažovalo s nasledujúcimi hodnotami: 
+ 
+βdis 
+– priemerné čiastočné zaťaženie rozvodu v zóne, má hodnotu 0,28; 
+n    
+– teplotný exponent systému odovzdávania tepla do vnútorného prostredia, pre  
+vykurovacie telesá n = 1,33; 
+θs,des   – projektovaná teplota prívodnej vody, má hodnotu 75 °C; 
+θr,des   – projektovaná teplota vratnej vody, má hodnotu 65 °C; 
+θi      – teplota vzduchu v priestore, má hodnotu 10 °C. 
+ 
+Výpočet priemerného čiastočného zaťaženia rozvodu v zóne  je takýto: 
+ 
+mZ"? = ,Z"?,@M
+¡#$. &@K
+=
+144 529
+100,6 . 5088 = 0,28 
+ 
+ 

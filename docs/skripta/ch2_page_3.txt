@@ -1,0 +1,33 @@
+24 
+  Celková tepelná strata 2.1.3
+Celková tepelná strata zóny, resp. budovy je sú čtom tepelnej straty prechodom tepla 
+a tepelnej straty vetraním: 
+ 
+  .  ! " ! #,$%. & .0,024        (kWh)   (2.2) 
+ 
+kde: 
+HT  je merná tepelná strata prechodom tepla (W/K); 
+HV – merná tepelná strata vetraním (W/K); 
+θint – požadovaná vnútorná teplota (°C); 
+θe,m – priemerná vonkajšia teplota po čas vykurovacieho obdobia (°C); 
+t  – dĺžka trvania vykurovacej sezóny (dni). 
+ 
+V prípade, ak výpo čet neslúži na normalizované hodnotenie, ale chceme s a priblížiť 
+skutočnej spotrebe tepla pre konkrétnu budovu v ur čitej lokalite, vo výpo čte sa použijú údaje 
+o dĺžke vykurovacej sezóny, vonkajšej teplote, vnútornej  teplote a pod. pre túto konkrétnu 
+budovu, resp. lokalitu. Ak potreba tepla na vykurovanie slúži na normalizované energetické 
+hodnotenie, výpo čet sa vykoná pre normalizovaný po čet dennostupňov 3422 K.deň, t. j. pre 
+teplotu vnútorného vzduchu θint = 20 °C, priemernú teplotu vonkajšieho vzduchu θe,m = 3,86 
+°C a 212 vykurovacích dní pre budovy s neprerušovaným vykurovaním.  
+2.1.3.1  Merná tepelná strata prechodom tepla 
+Ak sa uvažuje s paušálnou metódou výpo čtu tepelných mostov, možno mernú tepelnú 
+stratu prechodom tepla vyjadri ť takto: 
+ 
+∑*+,". ". ," -. ∑,"  (W/K)       (2.3) 
+ 
+kde: 
+bx,i je bezrozmerný reduk čný faktor elementu i obalovej konštrukcie budovy (-). Používa sa, 
+ak teplota na druhej strane elementu obalovej konštrukcie sa nerovná teplote 
+vonkajšieho prostredia, napríklad v prípade tepelnej straty do nevykurovaného 
+priestoru, tepelnej straty cez dilatáciu a pod. (Obr. 2.2., Tab. 2.1); 
+Ui  – súčiniteľ prechodu tepla elementu i obalovej konštrukcie (W/(m2K); 

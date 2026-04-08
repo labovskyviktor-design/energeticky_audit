@@ -1,0 +1,32 @@
+28 
+ Tabuľka 2.2. Súčiniteľ škárovej prievzdušnosti otvorových konštrukcií ilv (STN 73 0540-3) 
+Druh otvorovej konštrukcie Súčiniteľ škárovej prievzdušnosti 
+ilv . 104 (m2/(s . Pa0.67)) 
+Kovové okná, škáry medzi rámom a krídlami netesnené ≥ 1,8 
+Drevené okná, škáry medzi rámom a krídlami netesnené ≥ 1,4 
+Drevené, plastové a kovové okná s tesniacim profilom ≤ 1,0 
+ Tepelné zisky 2.1.4
+Celkové tepelné zisky zóny, resp. budovy sú sú čtom vnútorných tepelných ziskov 
+a solárnych tepelných ziskov: 
+ 
+  "  ?@A   (kWh)     (2.6)  
+ 
+kde: 
+Qint je suma vnútorných tepelných ziskov po čas vykurovacieho obdobia (kWh); 
+Qsol – suma solárnych tepelných ziskov po čas vykurovacieho obdobia (kWh). 
+2.1.4.1  Vnútorné tepelné zisky 
+Podľa STN 73 0540-2 sa vnútorné zdroje tepla charakteriz ujú priemernými tepelnými 
+výkonmi vnútorných zdrojov tepla qi vo W/m2, pre: 
+• rodinný dom qi ≤ 4; 
+• bytový dom qi ≤ 5; 
+• nebytové budovy (napr. administratívne budovy, školy) qi ≤ 6. 
+ 
+Celkový vnútorný tepelný zisk možno vypo čítať takto: 
+ 
+" 3. 0,024. B ". ,C        (kWh)    (2.7) 
+ 
+kde: 
+n  je počet dní vykurovacej sezóny. Na energetické hodnotenie  sa uvažuje 212 dní; 
+qi  – priemerný tepelný výkon vnútorných zdrojov tepla (W/m2); 
+Ab  – merná plocha (m2). 
+ 

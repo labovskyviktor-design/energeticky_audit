@@ -1,0 +1,277 @@
+Pokračovanie Tabuľky 3.10. 
+
+Energetický nosič 
+
+Spôsob transformácie 
+
+Merná 
+jednotka 
+(m.j.) 
+
+Výhrevnosť 
+kWh/m.j. 
+
+Hnedé uhlie 
+
+Drevná štiepka 
+Ťažký 
+vykurovací olej 
+
+Zemný plyn 
+
+Hnedé uhlie 
+
+Čierne uhlie 
+
+Jadrová energia 
+
+Zemný plyn 
+
+Elektrina 
+
+diaľkové vykurovanie 
+
+diaľkové vykurovanie 
+
+diaľkové vykurovanie 
+
+diaľkové vykurovanie – 
+kombinovaná výroba elektriny a 
+tepla 
+diaľkové vykurovanie – 
+kombinovaná výroba elektriny a 
+tepla 
+diaľkové vykurovanie – 
+kombinovaná výroba elektriny a 
+tepla 
+diaľkové vykurovanie – 
+kombinovaná výroba elektriny a 
+tepla 
+plynové tep. čerpadlo vzduch-
+voda, nízkoteplotné vykurovanie 
+plynové tep. čerpadlo vzduch-
+voda, radiátorové vykurovanie 
+elektrické vykurovanie, 
+chladenie 
+elektrický ohrev pitnej vody 
+tep. čerpadlo vzduch-voda, 
+radiátorové vykurovanie 
+tep. čerpadlo vzduch-voda, 
+nízkoteplotné vykurovanie 
+tep. čerpadlo vzduch-vzduch 
+(vzduch sa ohrieva do 35 °C) 
+tep. čerpadlo zem-voda, 
+radiátorové vykurovanie 
+tep. čerpadlo zem-voda, 
+nízkoteplotné vykurovanie 
+tep. čerpadlo voda-voda, 
+radiátorové vykurovanie 
+tep. čerpadlo voda-voda, 
+nízkoteplotné vykurovanie 
+tep. čerpadlo voda od 18 °C-
+voda, radiátorové vykurovanie 
+tep. čerpadlo voda od 18 °C-
+voda, nízkoteplotné vykurovanie 
+fotovoltika 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+m³ 
+
+m³ 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+kWh 
+
+9,59 
+
+9,59 
+
+Faktor 
+
+transformácie 
+a distribúcie 
+energie 
+
+emisie 
+CO2 K 
+kg/kWh 
+
+0,65 – 0,70 
+
+0,72 – 0,80 
+
+0,80 
+
+0,360 
+
+0,020 
+
+0,330 
+
+primár-
+nej 
+energie 
+fp 
+1,3 
+
+1,3 
+
+1,3 
+
+0,80 – 0,84 
+
+0,220 
+
+0,7 
+
+0,60 – 0,70 
+
+0,360 
+
+0,7 
+
+0,65 – 0,75 
+
+0,360 
+
+0,7 
+
+0,88 
+
+0,016 
+
+0,7 
+
+1,5 
+
+1,4 
+
+0,99 
+
+0,99 
+
+2,6 
+
+2,9 
+
+2,9 
+
+2,9 
+
+3,4 
+
+3,4 
+
+3,9 
+
+4,0 
+
+4,4 
+
+1,00 
+
+0,220 
+
+0,220 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,167 
+
+0,00 
+
+1,1 
+
+1,1 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+2,2 
+
+0,0 
+
+3.1.6
+
+  Potreba energie na vykurovanie 
+
+Potreba  energie  na  vykurovanie  sa  určí  výpočtom  potreby  tepla  na  vykurovanie 
+
+a pripočítaním strát z podsystémov vykurovacieho systému: 
+
+(cid:17)(cid:30)˜™ (cid:5) (cid:17)(cid:18) (cid:29) (cid:17)#$,A? (cid:29) (cid:17)(cid:18),Z"?,A?,1(cid:24) (cid:29) o(cid:18),Z"?,1M+,1(cid:24) (cid:29) (cid:17)?,A? (cid:29) (cid:17)(cid:23),A?
+
+(kWh)    
+
+    (3.23) 
+
+53

@@ -1,0 +1,35 @@
+84 
+ 
+čím sa docieli zníženie potreby primárnej energie a emisií CO2. Počíta sa pritom najmä 
+s týmto technológiami: 
+ 
+• vysokoúčinné kondenzačné plynové kotly; 
+• využitie energie prostredia pomocou tepelných čerpadiel; 
+• využitie slnečnej energie na ohrev TV, vykurovanie a výrobu elektriny; 
+• centralizovaná výroba tepla s využitím kogenerácie. 
+ 
+ PRÍKLAD 
+6.2
+ Návrh energeticky úsporných opatrení 
+6.2.1
+Opatrenia na zlepšenie energetickej efektívnosti vykurovacieho systému v bytovom 
+dome súvisia najmä so zaizolovaním rozvodných potrubí, hydraulickým preregulovaním 
+vykurovacej sústavy, znížením teplotného spádu a výmenou pôvodného čerpadla za nové. 
+6.2.1.1 Izolácia rozvodných potrubí vykurovacej sústavy 
+Pôvodná izolácia rozvodných potrubí vykurovacej sústavy je na niektorých miestach 
+poškodená a nevyhovuje požiadavkám na tepelnú ochranu rozvodov, odporúča sa preto 
+vymeniť túto izoláciu za novú. V praxi môže byť s ohľadom na stav rozvodov výhodné, resp. 
+nutné spolu so zateplením realizovať aj výmenu samotných rozvodov tepla.  
+Odporúčané hrúbky tepelnej izolácie sa určia podľa vyhlášky MH SR č. 14/2016 Z. z., 
+ktorá predpisuje pre potrubia s vnútorným priemerom od 36 mm do 100 mm hrúbku izolácie 
+rovnakú, ako je vnútorný priemer potrubia, pri súčinteli tepelnej vodivosti λ = 0,035 W/(m.K) 
+a okolitej teplote 0 °C. V tomto príklade sa uvažuje s hrúbkou tepelnej izolácie 40 mm. Toto 
+opatrenie priamo ovplyvní tepelnú stratu z rozvodov tepla. Zároveň toto opatrenie nepriamo 
+ovplyvní aj tepelnú stratu z výroby tepla, pretože tá závisí od tepelnej straty z rozvodu tepla 
+(tepelná strata z výroby tepla v tomto príklade do výpočtu nevstupuje). 
+6.2.1.2 Hydraulické preregulovanie, automatická regulácia, zníženie teplotného spádu 
+Vykurovacia sústava bola pred zateplením vyregulovaná, vzhľadom na zmenu tepelnej 
+bilancie po zateplení je však potrebné sústavu preregulovať. Uvažuje sa s pôvodnými 
+termostatickými ventilmi, osadenými pri predošlom vyregulovaní, pričom sa pri 
+hydraulickom vyregulovaní zmení prednastavenie ventilov a overí sa funkčnosť ventilov 
+s termostatickými hlavicami. 

@@ -1,0 +1,39 @@
+34 
+  Výpočet potreby tepla na vykurovanie 2.2.2
+Výpočet potreby tepla na vykurovanie pre bytový dom sa vy konal sezónnou metódou. 
+Na úvod je potrebné ur čiť mernú plochu objektu (sú čet podlahových plôch všetkých 
+vykurovaných podlaží), priemernú konštruk čnú výšku a obostavaný objem vykurovaného 
+priestoru. Pritom musí plati ť rovnica: 
+ 
+5C , C. LD,K   (m3)                      (2.11) 
+ 
+kde: 
+Vb  je obostavaný objem vykurovaného priestoru (m3); 
+Ab  – merná plocha (m2); 
+hk,pr – priemerná konštruk čná výška vykurovaných podlaží (m). 
+ 
+Výpočet potreby tepla na vykurovanie je spolu s údajmi o budove zhrnutý v Tab. 2.8. 
+Pre jednoduchos ť sa v tomto prípade použili normalizované klimatické  podmienky, teda po čet 
+dennostupňov 3422 K.de ň, vnútorná teplota θint = 20 °C, priemerná teplota vonkajšieho 
+vzduchu θe,m = 3,86 °C a 212 vykurovacích dní. V praxi treba na výpo čet úspory energie 
+a ziskovosti úsporných opatrení použi ť hodnoty pre konkrétnu budovu a pre konkrétnu 
+lokalitu. 
+ 
+Tabuľka 2.8. Výpočet potreby tepla na vykurovanie bytového domu 
+Vstupné údaje 
+Kategória budovy: Bytový dom 
+Typ, konštrukčný systém, stavebná sústava P 1.14 BA  
+Šírka budovy 25,03 m 
+Dĺžka budovy 21,29 m 
+Výška budovy 37,0 m 
+Počet podlaží 13 
+Obostavaný objem Vb 12 417,6 m3 
+Celková podlahová plocha Ab 4403,4 m2 
+Celková teplovýmenná plocha Ai 3644,5 m2 
+Priemerná konštruk čná výška hk,pr 2,82 m 
+Faktor tvaru ∑Ai/Vb 0,30 l/m 
+Výpočtová metóda Sezónna 
+Počet dennostupňov 3422 K.de ň 
+ 
+ 
+ 

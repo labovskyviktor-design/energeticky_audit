@@ -1,0 +1,32 @@
+17 
+  
+Odpor pri prestupe tepla na vonkajšom povrchu Rse = 0,04 (m2.K)/W. 
+Odpor pri prestupe tepla na vnútornom povrchu Rsi = 0,13 (m2.K)/W. 
+ 
+Tabuľka 1.4. Výpočet tepelného odporu obvodovej steny 
+Číslo  
+vrstvy Názov materiálu Hrúbka Sú činiteľ tepelnej vodivosti Tepelný odpor 
+Symbol d λ R 
+Jednotka m W/(m.K) m2.K/W 
+1 Omietka vnútorná 0,010 0,880 0,011 
+2 Železobetón 0,150 1,580 0,095 
+3 Penový polystyrén 0,080 0,070 1,143 
+4 Železobetón 0,070 1,580 0,044 
+5 Omietka vonkajšia 0,020 1,160 0,017 
+ 
+Výsledný tepelný odpor obvodovej steny R = 1,31 (m2.K)/W. 
+Súčiniteľ prechodu tepla obvodovej steny U = 0,68 W/(m2.K). 
+ 
+Posúdenie: Požiadavka na sú činiteľ prechodu tepla pre obvodovú stenu sa splní vtedy, a k 
+bude platiť vzťah 1.1, teda U < Ur1. Platí U = 0,68 W/(m2.K) > Ur1 = 0,22 W/(m2.K). Na 
+základe porovnania sú činiteľa prechodu tepla obvodovej steny U s požadovanou hodnotou Ur1 
+možno konštatova ť, že obvodová stena NEVYHOVUJE . 
+1.2.3.2  Strešný plášť 
+Stropy sú zo železobetónových dielcov s hrúbkou 150 mm. Strešná konštrukcia je 
+jednoplášťová, plochá. Strecha je v pôvodnom stave, okrem nove j hydroizolácie z asfaltových 
+pásov z roku 2003. V Tab. 1.5 je uvedená skladba a tepelno-technické vlastnosti konštrukcie. 
+Podľa STN 73 0540-2/Z1 má plochá strecha sp ĺňať hodnotu súčiniteľa prechodu tepla               
+Ur1 = 0,15 W/(m2.K). 
+exteriér 
+θext =  -11 °C                                     interiér 
+θint =  20 °C                 

@@ -1,0 +1,105 @@
+kde: 
+
+Qem,out 
+
+je potreba tepla na vykurovanie, QH, vypočítaná podľa 52016-1 (kWh); 
+
+∆θint,inc  – zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania (K); 
+
+θint,inc   – ekvivalentná vnútorná teplota (°C); 
+
+θe,comb  –  v prípade  vykurovania  sa  táto  hodnota  rovná  priemeru  vonkajšej  teploty  vzduchu 
+
+počas uvažovaného obdobia (°C). 
+
+Ekvivalentná vnútorná teplota sa vypočíta takto: 
+
+!"(cid:24)(cid:20),"(cid:24)X = !"(cid:24)(cid:20),"(cid:24)" +
+
+Δ
+
+!"(cid:24)(cid:20),"(cid:24)X
+
+(kWh) 
+
+(3.2) 
+
+kde: 
+
+θint,ini   
+
+je počiatočná teplota vzduchu v priestore (°C); 
+
+∆θint,inc  – zvýšenie vnútornej teploty v dôsledku tepelnej straty systému odovzdávania (K). 
+
+Zvýšenie  vnútornej  teploty  v dôsledku  tepelnej  straty  systému  odovzdávania  tepla  sa 
+
+vypočíta takto: 
+
+Δ
+
+!"(cid:24)(cid:20),"(cid:24)X =
+
+Δ
+
+!(cid:19)YZ +
+
+Δ
+
+!#$(cid:20),?Y? +
+
+Δ
+
+!X(cid:20)(cid:3),?Y?
+
+        (-)                                        
+
+(3.3) 
+
+kde: 
+
+∆θhyd  
+
+je zmena teploty v závislosti od hydraulického vyregulovania (K), Tab. 3.1; 
+
+∆θemt,sys  – zmena teploty v závislosti od odovzdávacieho systému (K); 
+
+∆θctr,sys  – zmena teploty v závislosti od riadiaceho systému (K). 
+
+Zmena teploty v závislosti od hydraulického vyregulovania, ∆θhyd, sa stanoví na základe 
+
+Tab. 3.1. Zmena teploty v závislosti od odovzdávacieho systému sa vypočíta takto: 
+
+Δ
+
+!#$(cid:20),?Y? =
+
+Δ
+
+!?(cid:20)(cid:3) +
+
+Δ
+
+!#$C +
+
+Δ
+
+!(cid:3)1Z +
+
+Δ
+
+!"$,#$(cid:20)
+
+        (-)                            
+
+(3.4) 
+
+kde: 
+
+∆θstr 
+
+je  nerovnomernosť  rozloženia  teploty  v priestore  v dôsledku  stratifikácie  (K),  Tab. 
+
+3.2 a 3.4; 
+
+38

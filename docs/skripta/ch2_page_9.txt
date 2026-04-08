@@ -1,0 +1,43 @@
+30 
+ ggl – celková priepustnos ť slnečnej energie transparentných častí elementu (-). Príklady 
+hodnôt celkovej priepustnosti slne čnej energie zasklením sú v Tab. 2.4 a Tab. 2.5. 
+Ďalšie hodnoty možno nájs ť v STN 73 0540-3. 
+FF – podiel plochy rámov, pomer plochy rámov k celkovej ploche zaskleného elementu 
+(-). Ak nie sú k dispozícii presné údaje, možno v typických prípadoch  uvažova ť 
+s hodnotou (1 - FF) = 0,8; 
+Aw,p – celková plocha zaskleného elementu (napr. plocha okna) (m2). 
+ 
+Tabuľka 2.4. Informatívne hodnoty sú činiteľa prechodu tepla a celkovej priepustnosti 
+slnečnej energie strešných okien (STN 73 0540-3) 
+Charakteristika zasklenia  
+strešných okien  Súčiniteľ prechodu tepla  Celková 
+priepustnosť 
+slnečnej energie 
+zasklenia W/(m2K) 
+Ug1) Uw1) ggl 
+Nepriehľadné izolačné dvojsklo 1,1 1,4 0,54 
+Štandardné izola čné dvojsklo 1,1 1,4 0,60 
+Bezpečnostné energeticky úsporné dvojsklo 1,1 1,4 0,56 
+Dvojsklo proti hluku a prehrievaniu 1,0 1,3 0,29 
+Špeciálne protihlukové zasklenie 0,9 1,0 0,50 
+Trojsklo 0,5 1,0 0,46 
+Špeciálne tepelnoizola čné zasklenie 0,5 0,77 0,42 
+1) Hodnoty platia pre okná vo vertikálnej polohe.  
+ 
+Tabuľka 2.5. Informatívne hodnoty celkovej priepustnosti slnečnej energie (STN 73 0540-3) 
+Druh zasklenia Celková 
+priepustnosť 
+slnečnej energie 
+zasklenia 
+ggl 
+Jednoduché zasklenie: 
+Plavené sklo s hrúbkou 4 mm 0,86 
+Plavené sklo s hrúbkou 6 mm 0,83 – 0,84 
+Plavené sklo s hrúbkou 8 mm 0,80 – 0,82 
+Dvojité a viacnásobné zasklenie: 
+Dvojsklo zo skiel float (4 mm + 12 mm vzduch + 4 mm) 0,76 
+Dvojsklo zo skiel float  
+(6 mm + 12 mm vzduch + 6 mm) 0,72 
+Dvojsklo zo skiel float + reflexné sklo (4 mm + 12 mm vzduchu + 4 mm) 0,47 
+Trojité zasklenie oby čajnými sklami 3 mm 0,66 
+ 

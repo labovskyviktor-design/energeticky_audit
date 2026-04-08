@@ -1,0 +1,44 @@
+92 
+ 
+Prietok sa vypočítal takto: 
+ 
+5Z#?  3600. ¡,#$,@M
+2. 0. Δ®Z"?,Z#?
+=
+3600 . 100,6
+4,18 . 1000 . 10 = 8,67 m³/h 
+ 
+Pri výpočte systémového výkonového faktora sa uvažovalo s týmito hodnotami: 
+ 
+CP1  – pre čerpadlo s reguláciou má hodnotu 0,90; 
+CP2  – pre čerpadlo s reguláciou má hodnotu 0,10; 
+βdis  – priemerné čiastočné zaťaženie rozvodu je 0,28; 
+fe   – faktor účinnosti. Na základe výpočtu sa navrhlo čerpadlo s menovitým príkonom  
+Pel,pmp = 179 W. Faktor účinnosti sa potom vypočíta takto:  
+w# = 1,25 + 
+q
+<,”V”
+qrstu,t
+v,–.1,5. * = 1,25 + °
+º¦
+º±
+v,–
+ . 1,5 . 2 = 7,46 
+b   
+– pre existujúce budovy má hodnotu 2. 
+ 
+Systémový výkonový faktor sa potom vypočíta takto: 
+ 
+pZ"? = w#.  •| + •|[. mZ"?
+T% = 7,46 . 0,90 + 0,10 . 0,28T = 9,38 
+ 
+Vlastná spotreba energie sa napokon vypočíta: 
+ 
+o,Z"?,1M+,1 = o,Z"?,YZ,1 . pZ"? = 167 . 9,38 = 1566 kWh 
+6.2.2.4 Spätne získateľná časť vlastnej spotreby energie 
+Vzhľadom na to, že obehové čerpadlo sa nachádza v nevykurovanej časti budovy, 
+spätne získateľná časť vlastnej spotreby energie sa v tomto prípade do energetickej bilancie 
+nezapočíta.  
+6.2.2.5 Tepelná strata z výroby tepla  
+Zdrojom tepla je v tomto prípade odovzdávacia stanica tepla, ktorá sa nachádza mimo 
+budovy. S tepelnou stratou z výroby tepla sa preto v tomto príklade neuvažuje.  

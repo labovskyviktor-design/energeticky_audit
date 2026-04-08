@@ -1,0 +1,36 @@
+29 
+ 2.1.4.2  Solárne tepelné zisky 
+Tepelný tok vplyvom slne čného žiarenia elementom k sa vypočíta takto: 
+ 
+?@A,D= E ?,@C,D . ,?@A,D. F?@A,D    (kWh)    (2.8)  
+ 
+kde: 
+Fsh,ob,k je tieniaci reduk čný faktor pre vonkajšie prekážky (-). V typických pr ípadoch možno 
+uvažovať s hodnotou Fsh,ob,k  = 0,8; 
+Asol,k  – účinná kolekčná plocha povrchu k s danou orientáciou a sklonom (m2); 
+Isol,k – priemerná energia slne čného žiarenia po čas výpočtového kroku, na meter 
+štvorcový kolek čnej plochy povrchu k, s danou orientáciou a sklonom (kWh/m2). 
+ 
+Štatistické hodnoty intenzity slne čného žiarenia pre konkrétnu lokalitu možno zisti ť 
+z STN EN ISO 13790/NA. Normalizované hodnoty intenzity slne čného žiarenia pod ľa STN 
+73 0540-3 pre zimné mesiace štandardného vykurovacieho obdobia v kWh/m2 sú v Tab. 2.3.  
+ 
+Tabuľka 2.3. Normalizované hodnoty intenzity slne čného žiarenia (STN 73 0540-3) 
+Orientácia Mesiace Spolu 
+I II III IV X XI XII X-IV 
+Juh 30,2 43,6 61,2 66,3 57,2 33,1 28,4 320 
+Sever 9,1 13,8 20,1 27,2 14,5 8,4 6,8 100 
+Východ, západ 14,9 24,5 42 59,1 32,2 15,4 11,8 200 
+Juhovýchod, juhozápad 22,7 33,8 50,9 62 44,8 24,9 20,8 260 
+Severovýchod, severozápad  10,2 16,1 26,8 41,6 18,3 9,6 7,4 130 
+Horizontálna rovina 22,2 38,6 71,4 108,2 55 26,2 18,4 340 
+ 
+Účinná slnečná kolekčná plocha zasklených prvkov skleného obalu (napr. ok ien) sa 
+vyjadrí takto: 
+ 
+,?@A= E ?,A. GA.1 − E I. ,J,K  (m2)     (2.9) 
+ 
+kde: 
+Fsh,gl je tieniaci reduk čný faktor pre pohyblivé tieniace zariadenia (-). V t ypických 
+prípadoch počítať s hodnotou tieniaceho reduk čného faktora pre pohyblivé tieniace 
+zariadenia Fsh,gl = 0,8; 

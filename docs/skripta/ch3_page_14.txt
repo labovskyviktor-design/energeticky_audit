@@ -1,0 +1,91 @@
+Korekčný  faktor  pre  zariadenia  na  výrobu  tepla  s integrovanou  reguláciou  čerpadiel 
+
+fG,PM 
+
+fG,PM  =  1  pre  štandardné  zariadenie  na  výrobu  tepla  regulované  podľa  vonkajšej  teploty 
+
+(OTC); 
+
+fG,PM = 0,75 pre zariadenia na výrobu tepla inštalované na stene regulované podľa vonkajšej 
+
+teploty (OTC); 
+
+fG,PM = 0,45 pre zariadenia. na výrobu tepla inštalované na stene regulované podľa teploty 
+
+v priestore. 
+
+3.1.3.2  Systémový výkonový faktor 
+
+Pre  zjednodušenú  metódu  sa  hodnota  systémového  výkonového  faktora  vypočíta 
+
+nasledovne: 
+
+T(cid:4)
+pZ"? (cid:5) w#. (cid:26)•|(cid:4) + •|[. mZ"?
+
+(cid:31)
+
+(-)  
+
+     (3.20) 
+
+kde: 
+
+CP1, CP2 sú konštanty podľa Tab. 3.8; 
+
+βdis 
+
+ je priemerné čiastočné zaťaženie rozvodu (-); 
+
+fe 
+
+–  faktor  účinnosti  podľa  rovníc 
+
+q(cid:10)<,”V”
+
+,  kde  Phydr,des  sa  uvedie  vo  W.  Pre 
+
+qrstu,t(cid:10)(cid:7)
+existujúce  inštalácie  možno  použiť  hodnotu  menovitého  príkonu  čerpadla,  ktorá  sa 
+
+w# =
+
+uvádza na štítku ako Pel,pmp. Pri čerpadlách bez regulácie s viacerými stupňami otáčok 
+
+sa Pel,pmp má určiť podľa stupňa otáčok, na ktorom je čerpadlo v prevádzke. Ak hodnota 
+
+Pel,pmp  nie  je  dostupná,  potom 
+
+w# = (cid:26)1,25 + (cid:26)
+
+[vv
+qrstu,t(cid:10)(cid:7)(cid:31)
+
+v,–
+
+(cid:31).1,5. *
+
+,  kde  b  =  1  pre  nové 
+
+budovy a b = 2 pre existujúce budovy.  
+
+Tabuľka  3.8.  Hodnoty  konštánt  CP1,  CP2  na  výpočet  systémového  výkonového  faktora  pre 
+
+prevádzku obehového čerpadla (zjednodušená výpočtová metóda) (STN EN 15316-3) 
+
+Regulácia čerpadla 
+Čerpadlo bez regulácie 
+∆pconst 
+∆pvari 
+
+CP1 
+0,25 
+0,75 
+0,90 
+
+CP2 
+0,75 
+0,25 
+0,10 
+
+50

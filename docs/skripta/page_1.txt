@@ -1,0 +1,33 @@
+9 
+ 0 ÚVOD 
+Reedícia skrípt Energetické hodnotenie budov nadväzuje na prvé vydanie, ako i na 
+publikáciu Energetický audit a certifikácia budov autorského kolektívu DAHLSVEEN, T. – 
+PETRÁŠ, D. a kol. (2008). Skriptá sa zaoberajú problematikou energetického auditu, ako 
+i energetickej certifikácie budov, konkrétne pre oblas ť tepelnej ochrany a systémov 
+vykurovania a prípravy teplej vody. Skriptá sú u čebný text pre cvi čenia z predmetu 
+Energetický audit budov v študijných programoch Technické zariadenia budov, Technika 
+prostredia budov, Pozemné stavby a architektúra a Architektonické konštrukcie 
+a projektovanie na Stavebnej fakulte STU v Bratislave. Sú časne sú vhodný materiál aj na 
+školenia súvisiace s autorizáciou na odborne spôsobilé osoby pre energetickú hospodárnos ť 
+budov. 
+Skriptá opisujú teoretický postup výpo čtu energetickej bilancie budov v súlade 
+s právnymi dokumentmi a technickými normami, ktorý je doplnený o praktické príklady 
+výpočtu a súčasne aj tabuľkami a grafmi potrebnými pre zadávanie hodnôt jednot livých 
+výpočtových parametrov. Princípy uvedené v teoretickej časti možno používa ť univerzálne, 
+teda dajú sa aplikova ť na rôzne procesy súvisiace s energetickou bilanciou  budov, ako sú 
+energetický audit, normalizované hodnotenie energetickej hospodárnosti, či projektové 
+hodnotenie energetickej hospodárnosti, pri čom treba pri každom z týchto procesov vo výpo čte 
+zohľadniť jeho osobitosti, vyplývajúce z rôzneho ú čelu výpočtu. 
+ 
+Autori, 2018 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,40 @@
+25 
+ Ai  – plocha elementu i obalovej konštrukcie budovy (m2); 
+∆U – zvýšenie sú činiteľa prechodu tepla vplyvom tepelných mostov (W/(m2K)). Podľa     
+STN 73 0540-2 sa hodnota ∆U vo W/(m2.K) môže približne ur čiť nasledovne: 
+• ∆U = 0,02 za predpokladu spojitej tepelnoizola čnej vrstvy na vonkajšom povrchu 
+konštrukcie a použitia nových systémov murovaných konštrukcií sp ĺňajúcich 
+aspoň požiadavky normalizované od 1.1.2016; 
+• ∆U = 0,05 za predpokladu spojitej tepelnoizola čnej vrstvy na vonkajšom povrchu 
+konštrukcie a použitia nových systémov murovaných konštrukcií najmä po roku 
+2002; 
+• ∆U = 0,1 pri murovaných, panelových vrstvených betónových a keramických, 
+ľahkých drevených roštových konštrukciách, kovoplasti ckých obvodových 
+plášťoch (pred ich obnovou); 
+• ak je známa hodnota ∆U pre konštruk čný systém, môže sa použi ť za predpokladu, 
+že sa určila podľa STN EN ISO 13789; 
+• v ostatných prípadoch sa vplyv tepelných mostov ur čí podľa STN EN ISO 13789, 
+lineárne stratové sú činitele a bodové stratové sú činitele sa vypo čítajú podľa         
+STN EN ISO 10211. 
+ 
+Obr. 2.2 ukazuje teplotný reduk čný faktor bx pre rôzne prípady stavebných konštrukcií 
+oddeľujúcich vnútorné prostredie a prostredie na druhej s trane stavebnej konštrukcie (exteriér, 
+temperované, nevykurované a podstrešné priestory). Reduk čné faktory bx v závislosti od 
+deliacej konštrukcie sú zhrnuté v Tab. 2.1. 
+ 
+Tabuľka 2.1. Redukčný faktor bx v závislosti od deliacej konštrukcie (STN EN 73 0540-2) 
+Tepelná strata cez konštrukciu bx 
+Cez vonkajšiu stenu, okno, vonkajšie dvere 1,00 
+Cez strechu (plochú, šikmú) na teplovýmennom obale budovy 1,00 
+Cez podlahu na teréne 1,00 
+Cez podlahu podstrešného priestoru (povaly) 0,80 
+Cez stenu medzi vykurovaným a nevykurovaným priestorom a podstrešným priestorom 0,80 
+Cez stenu alebo strop nevykurovaného priestoru (suterénu) 0,50 
+Cez stenu alebo strop temperovaného priestoru (garáž, susedná budova) 0,35 
+Cez otvorenú dilatáciu 0,35 
+Cez uzavretú zaizolovanú dilatáciu so šírkou do 0,05 m 0,10 
+Cez stenu a otvorenú konštrukciu do nevykurovaného priestoru, ktorý má zasklenie   
+     - jednoduché 0,70 
+     - dvojité 0,60 
+     - s tepelnoizola čným dvojsklom Ug ≤ 2,0 W/(m2.K) 0,50 
+Cez strop nad otvoreným prejazdom 1,00 

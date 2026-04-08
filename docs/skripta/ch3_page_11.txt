@@ -1,0 +1,83 @@
+o(cid:18),Z"?,1M+,1(cid:24) = o(cid:18),Z"?,(cid:19)YZ(cid:3),1(cid:24). pZ"?
+
+(kWh) 
+
+  (3.13) 
+
+kde: 
+
+WH,dis,hydr,an je potreba hydraulickej energie (kWh); 
+
+edis 
+
+  – systémový výkonový faktor (-). 
+
+3.1.3.1  Potreba hydraulickej energie 
+
+ V zjednodušenej  výpočtovej  metóde  možno  potrebu  hydraulickej  energie  vyjadriť 
+
+takto: 
+
+o(cid:18),Z"?,(cid:19)YZ(cid:3),1(cid:24) =
+
+qrstu,t(cid:10)(cid:7)
+
+(cid:4)vvv
+
+. mZ"?. &@K,1(cid:24). wxy(cid:28). w(cid:18)z. w{,|}
+
+(kWh) 
+
+     (3.14) 
+
+kde: 
+
+Phydr,des  je výkon čerpadla v pracovnom bode (W); 
+
+βdis 
+
+  – priemerné čiastočné zaťaženie rozvodu (-); 
+
+top,an    – počet vykurovacích hodín za rok (h/rok); 
+
+fNET 
+
+fHB 
+
+fG,PM 
+
+  – korekčný faktor pre hydraulické siete (-); 
+
+  – korekčný faktor pre hydraulické vyváženie (-); 
+
+–  korekčný  faktor  pre  zariadenia  na  výrobu  tepla  s integrovanou  reguláciou 
+
+čerpadiel, (-). 
+
+Na  výpočet  potreby  hydraulickej  energie  je  najskôr  potrebné  určiť  výkon  čerpadla 
+
+v pracovnom bode. Výkon čerpadla sa určí takto: 
+
+~(cid:19)YZ(cid:3),Z#? = 0,2778. Δ‚Z#?. 5Z#?
+
+(W) 
+
+          (3.15) 
+
+kde:  
+
+Vdes 
+
+∆pdes   
+
+je prietok v pracovnom bode (m3/h); 
+
+– tlakový spád (dispozičný tlak čerpadla) v pracovnom bode (kPa). 
+
+Tlakový  spád  v pracovnom  bode  sa  zjednodušene  vypočíta  so  zohľadnením  určeného 
+
+merného  tlakového  spádu  vykurovacieho  okruhu  (100  Pa/m)  a so  zohľadnením  prídavného 
+
+tlakového spádu na vradené odpory 30 Pa/m takto: 
+
+47

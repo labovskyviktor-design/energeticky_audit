@@ -1,0 +1,51 @@
+35 
+ Tabuľka 2.8. (Pokračovanie) – Výpo čet potreby tepla na vykurovanie bytového domu 
+Výpočet potreby tepla na vykurovanie 
+Konštrukcia Ui Ai Ui . Ai Faktor bx bx . Ui . Ai 
+(W/m2K) (m2) (W/K) (-) (W/K) 
+Obvodový pláš ť:           
+1. Obvodová stena 0,68 2056,6 1398,49 1,00 1398,49 
+2.             
+Strecha:           
+1. Plochá strecha 0,50 366,95 183,48 1,00 183,48 
+2.             
+Podlaha:           
+1. Podlaha nad nevykurovaným suterénom 0,56 366,95 205,49 0,50 102,75 
+2.             
+Otvorové konštrukcie:           
+1. Pôvodné drevené okná a dvere (byty) 2,70 300,30 810,81 1,00 810,81 
+2. Vymenené plastové okná a dvere (byty) 1,30 300,30 390,39 1,00 390,39 
+3. Oceľové okná v schodiskovej časti 5,20 253,40 1317,68 1,00 1317,68 
+Súčty ∑Ai = 3644,5 ∑bx . Ui . Ai = 4203,6  
+Priemerný súčiniteľ prechodu tepla: Um = HT/∑Ai = 1,25 W/(m2K) 
+Započítanie vplyvu tepelných mostov:   exaktne   Paušálne 
+Paušálne: ∆U = 0,05  Zatep ľované konštrukcie 
+∆U = 0,10 Jednovrstvové murované konštrukcie 
+Zvýšenie tepelnej straty vplyvom tepelných mostov: ∆HTM = ∆U . ∑Ai = 364,5 W/K 
+Intenzita výmeny vzduchu  
+Opis otvorovej konštrukcie Celková dĺžka 
+otvorových škár l (m) Súčin. prievzdušnosti otvor. 
+výplní i.104 (m2/(s.Pa0,67)) 
+1. Pôvodné drevené okná a dvere (byty) 946,00 1,40 
+2. Oceľové okná v schodiskovej a vý ťahovej časti 450,40 1,80 
+3. Vymenené plastové okná a dvere (byty) 946,00 1,00 
+Priemerná intenzita výmeny vzduchu vypo čítaná: ninf = 0,79 l/h 
+ 
+ 
+ 
+Vnútorné tepelné zisky  
+Vnútorné tepelné zisky: Qi = 5 . qi . Ab = 110 085,0 kWh/a 
+qi = 4,00 W/m2   5,00 W/m2 6,00 W/m2   
+    Rodinný dom   Bytový dom Verejná budova   
+Solárne tepelné zisky 
+Orientácia Intenzita slnečného 
+žiarenia lsol (kWh/m2) Priepustnosť slnečného 
+žiarenia ggl (-)1) Tieniaci 
+faktor (-)2) Plocha A (m2) 
+JUH 320,00 0,62 0,5 248,76 
+VÝCHOD/ZÁPAD 200,00 0,62 0,5 408,24 
+SEVER 100,00 0,62 0,5 205,56 
+JV/JZ  260,00   
+SV/SZ 130,00   
+HORIZONTÁLNA 340,00 
+Solárne tepelné zisky: Qs = Fsh,ob,k . Asol,k . Isol,k = 56360,2 kWh/a  

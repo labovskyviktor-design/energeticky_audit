@@ -1,0 +1,110 @@
+Tabuľka  3.3.  Minimálny  tepelný  odpor  tepelnoizolačnej  vrstvy  pod  systémom  vykurovania, 
+resp. chladenia v (m2.K)/W (STN EN 1264-3) 
+
+Susedná 
+alebo spodná 
+vykurovaná 
+miestnosť 
+
+Nevykurovaná 
+alebo prerušene 
+vykurovaná 
+spodná, vedľajšia 
+miestnosť alebo 
+miestnosť ležiaca 
+priamo na teréne* 
+
+Teplota vonkajšieho vzduchu pod podlahou alebo 
+vedľa 
+
+Vonkajšia 
+výpočtová 
+teplota  
+qd ‡ 0 (cid:176) C 
+
+Vonkajšia 
+výpočtová 
+teplota  
+0 °C > qd -5 °C 
+
+Vonkajšia 
+výpočtová teplota  
+
+-5 °C > qd -15 °C 
+
+Tepelný odpor 
+tepelnej 
+izolácie Rl,ins 
+*) Ak je hladina spodnej vody £
+
+0,75 
+
+1,25 
+
+1,25 
+
+1,50 
+
+2,00 
+
+ 5 m pod vrstvou podkladového betónu, hodnoty sa zvýšia. 
+
+3.1.1.2  Zmena teploty pre voľné vykurovacie plochy, výška miestnosti £
+
+ 4 m 
+
+Nerovnomernosť  rozloženia  teploty  v priestore  v dôsledku  stratifikácie,  ∆θstr,  ako 
+
+i zmena 
+
+teploty  v dôsledku 
+
+tepelných  strát  do  vonkajšieho  prostredia  alebo  do 
+
+nevykurovaného  priestoru,  ∆θemb,  sa  stanoví  na  základe  Tab.  3.4  pre  voľné  vykurovacie 
+
+plochy, pričom ∆θstr sa vypočíta ako priemer z hodnôt ∆θstr,1 a ∆θstr,2: 
+
+Δ
+
+!?(cid:20)(cid:3) (cid:5) (cid:26)
+
+Δ
+
+!?(cid:20)(cid:3),(cid:4) +
+
+Δ
+
+       (K)                                  
+
+!?(cid:20)(cid:3),[(cid:31)
+
+(3.7) 
+
+Zmena teploty v dôsledku prerušovanej prevádzky má tieto hodnoty: 
+
+riadenie   
+
+• 
+•  vykurovací systém 
+
+  ∆θim,ctr = 0,0 K 
+
+  ∆θim,emt = - 0,3 K 
+
+Zmena  teploty  v dôsledku  účinku  sálania  v  závislosti  od  odovzdávacieho  systému, 
+
+∆θrad, sa pre voľné vykurovacie plochy v miestnosti s výškou £
+
+ 4 m rovná 0 K. 
+
+Zmena teploty v závislosti od automatizácie riadenia má tieto hodnoty: 
+
+•  samostatná prevádzka   
+  ∆θroomaut = - 0,5 K 
+•  samostatná prevádzka s adaptívnym zapínaním a vypínaním   ∆θroomaut = - 1,0 K 
+•  systém s adaptívnym zapínaním a vypínaním, riadiace prvky pre daný priestor sú 
+
+zapojené v sieti a v interakcii s ostatnými riadiacimi prvkami  ∆θroomaut = - 1,2 K 
+
+42
