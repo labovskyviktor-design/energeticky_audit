@@ -796,34 +796,98 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-/* Responsive */
+/* Responsive - Breakpoints pre tablety a mobily */
+@media (max-width: 1024px) {
+    .app-layout, .header-inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .app-layout {
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+    .header-inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Zmeníme vertikálny sidebar na horizontálny pre tablety/mobily */
+    .sidebar {
+        flex: none;
+        width: 100%;
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .wizard-steps {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .main-content {
+        width: 100%;
+    }
+    
+    .sidebar-footer {
+        margin-top: 1rem;
+    }
+    
+    .expert-fields {
+        border-radius: var(--radius-sm);
+        border-left: 3px solid var(--accent);
+    }
+}
+
 @media (max-width: 640px) {
+    .wizard-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+
     .form-grid {
         grid-template-columns: 1fr;
     }
 
     .tabs {
         flex-direction: column;
+        overflow-x: auto;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .ct-header,
-    .ct-row {
-        grid-template-columns: 1fr;
-    }
-
+    .ct-row,
     .st-header,
-    .solar-row {
-        grid-template-columns: 1fr;
-    }
-
+    .solar-row,
     .layer-row,
-    .layers-header {
-        grid-template-columns: 1fr;
-    }
-
+    .layers-header,
     .pt-header,
     .pt-row {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--border);
+    }
+    
+    /* Zabezpečenie resizovania inputov v tabuľkách pre mobily */
+    .ct-row > *,
+    .solar-row > *,
+    .layer-row > * {
+        width: 100%;
     }
 }
 
