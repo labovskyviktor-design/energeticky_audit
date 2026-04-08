@@ -45,7 +45,7 @@ async def health_check() -> dict[str, str]:
 
 
 # Serve static frontend files
-FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "public"
+FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend" / "static"
 
 @app.get("/{path:path}")
 async def serve_static_or_index(path: str):

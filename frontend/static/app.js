@@ -2,7 +2,8 @@
 // Energetický Audit — Frontend Application
 // ════════════════════════════════════════════════════════════════
 console.log('🚀 app.js loading...');
-const API = window.location.protocol === 'file:' ? 'http://127.0.0.1:8000' : '';
+// -- GLOBAL API URL --
+const API = window.location.hostname.includes('vercel.app') ? '/_/backend' : (window.location.protocol === 'file:' ? 'http://127.0.0.1:8000' : '');
 
 // Global app state
 window.appData = window.appData || {};
