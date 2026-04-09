@@ -61,7 +61,7 @@ class HeatFlowDirection(str, Enum):
 
 class AssessmentLevel(str, Enum):
     """
-    Level of thermal-technical requirement (STN 73 0540-2/Z1).
+    Level of thermal-technical requirement (STN 73 0540-2/Z1+Z2).
 
     - U_MAX: Maximálna hodnota (for buildings with past partial renovations)
     - U_N: Normalizovaná hodnota (low-energy, valid until 2015)

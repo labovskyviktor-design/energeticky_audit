@@ -568,7 +568,7 @@ window.calculateU = async function () {
 
         box.innerHTML += `
             <div style="margin-top: 1.5rem; border-top: 1px dashed var(--border); padding-top: 1rem;">
-                <h4 style="margin-bottom: 0.5rem">Normové posúdenie (STN 73 0540-2)</h4>
+                <h4 style="margin-bottom: 0.5rem">Normové posúdenie (STN 73 0540-2+Z1+Z2)</h4>
                 <table class="result-table">
                     <tr><td>Názov / Typ</td><td class="val"><strong>${name}</strong></td></tr>
                     <tr><td>Požadovaná U (${level})</td><td class="val">${data.u_required} W/(m²·K)</td></tr>

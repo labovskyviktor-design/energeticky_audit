@@ -3,7 +3,7 @@ Thermal assessment API endpoints.
 
 Provides REST API for:
 - Calculating U-values from material layers
-- Assessing constructions against STN 73 0540-2/Z1
+- Assessing constructions against STN 73 0540-2/Z1+Z2
 - Full building assessment
 """
 
@@ -74,7 +74,7 @@ async def calculate_u_endpoint(request: CalculateURequest) -> LayerCalculationRe
 @router.post("/assess", response_model=AssessmentResult)
 async def assess_construction_endpoint(request: AssessConstructionRequest) -> AssessmentResult:
     """
-    Assess a single construction against STN 73 0540-2/Z1.
+    Assess a single construction against STN 73 0540-2/Z1+Z2.
 
     Compares U-value with the required value for the given level.
     """

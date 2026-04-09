@@ -1,5 +1,5 @@
 """
-STN 73 0540-2/Z1 — Thermal-technical requirement tables and constants.
+STN 73 0540-2/Z1+Z2 — Thermal-technical requirement tables and constants.
 
 Source of truth: Krajčík, M. a kol. — Energetické hodnotenie budov, Tab 1.1, 1.2, 1.3.
 """
@@ -12,7 +12,7 @@ from app.core.models.building import (
 
 # ---------------------------------------------------------------------------
 # Surface heat transfer resistances  [(m²·K)/W]
-# (STN 73 0540-2/Z1, Tab 1.1 footnotes)
+# (STN 73 0540-2/Z1+Z2, Tab 1.1 footnotes)
 # ---------------------------------------------------------------------------
 RSE: float = 0.04  # Vonkajší povrch
 

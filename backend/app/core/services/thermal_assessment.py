@@ -2,7 +2,7 @@
 Thermal Assessment Service — Core calculation engine for Chapter 1.
 
 Implements thermal-technical assessment of building constructions
-according to STN 73 0540-2/Z1.
+according to STN 73 0540-2/Z1+Z2.
 
 Formulas:
     (1.2) U = 1 / (Rsi + ΣR + Rse)
@@ -228,7 +228,7 @@ def assess_construction(
     level: AssessmentLevel = AssessmentLevel.U_R1,
 ) -> AssessmentResult:
     """
-    Assess a single construction against STN 73 0540-2/Z1 requirements.
+    Assess a single construction against STN 73 0540-2/Z1+Z2 requirements.
 
     For opaque constructions: Formula (1.1) U ≤ U_r1
     For transparent constructions: Formula (1.5) UW ≤ UW,r1 (or UW,max)

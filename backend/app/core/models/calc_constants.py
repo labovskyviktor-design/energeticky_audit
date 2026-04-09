@@ -12,7 +12,7 @@ Usage pattern:
     4. Include ``ResolvedConstants`` and ``list[CalcStep]`` in every result model.
 
 Source of truth for defaults:
-    - STN 73 0540-2/Z1 (Kap. 1)
+    - STN 73 0540-2/Z1+Z2 (Kap. 1)
     - STN EN ISO 52016-1, Krajčík et al. (Kap. 2)
     - STN EN 15316-1/2/3 (Kap. 3)
     - Vyhláška MDVRR SR č. 364/2012 (Kap. 9)
@@ -62,7 +62,7 @@ class CalcConstantsOverride(BaseModel):
         default=None,
         description=(
             "Vonkajší povrchový tepelný odpor Rse [(m²·K)/W]. "
-            "Normová hodnota: 0.04 (STN 73 0540-2/Z1, Tab. 1.1 pozn.)"
+            "Normová hodnota: 0.04 (STN 73 0540-2/Z1+Z2, Tab. 1.1 pozn.)"
         ),
     )
     rsi_horizontal: float | None = Field(
@@ -235,22 +235,22 @@ _STN_DEFAULTS: dict[str, tuple[float, str, str]] = {
     # key: (value, norm_ref, description_sk)
     "rse": (
         0.04,
-        "STN 73 0540-2/Z1, Tab. 1.1 poznámka",
+        "STN 73 0540-2/Z1+Z2, Tab. 1.1 poznámka",
         "Vonkajší povrchový tepelný odpor Rse",
     ),
     "rsi_horizontal": (
         0.13,
-        "STN 73 0540-2/Z1, Tab. 1.1",
+        "STN 73 0540-2/Z1+Z2, Tab. 1.1",
         "Rsi — vodorovný tepelný tok (steny)",
     ),
     "rsi_upward": (
         0.10,
-        "STN 73 0540-2/Z1, Tab. 1.1",
+        "STN 73 0540-2/Z1+Z2, Tab. 1.1",
         "Rsi — tok zdola nahor (strechy)",
     ),
     "rsi_downward": (
         0.17,
-        "STN 73 0540-2/Z1, Tab. 1.1",
+        "STN 73 0540-2/Z1+Z2, Tab. 1.1",
         "Rsi — tok zhora nadol (podlahy)",
     ),
     "rho_air": (
