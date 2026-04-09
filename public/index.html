@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
     <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -41,38 +41,15 @@
     </div>
 
     <!-- Hero Section -->
-    <div class="dash-hero">
+    <div class="dash-hero" style="padding-bottom: 0;">
         <div class="dash-hero-content">
             <h1>Vitajte v Energetickom Audite</h1>
             <p>Profesionálny nástroj pre výpočty energetickej hospodárnosti budov</p>
-            
-            <div class="dash-hero-banner">
-                <img src="hero_banner.png" alt="Energy Audit Banner">
-            </div>
-            
-            <!-- Quick Features Grid -->
-            <div class="feature-grid">
-                <div class="feature-card" onclick="switchTab('ch1', document.querySelectorAll('.step-btn')[0])">
-                    <div class="feature-icon">🏠</div>
-                    <h3>Posúdenie obálky</h3>
-                    <p>Kontrola U-hodnôt konštrukcií a hygiena podľa STN 73 0540-2.</p>
-                </div>
-                <div class="feature-card" onclick="switchTab('ch2', document.querySelectorAll('.step-btn')[1])">
-                    <div class="feature-icon">🌡️</div>
-                    <h3>Potreba tepla</h3>
-                    <p>Sezónny výpočet potreby energie na vykurovanie podľa STN EN ISO 13790.</p>
-                </div>
-                <div class="feature-card" onclick="switchTab('ch6', document.querySelectorAll('.step-btn')[4])">
-                    <div class="feature-icon">💡</div>
-                    <h3>Návrh opatrení</h3>
-                    <p>Optimalizácia úspor a návratnosť investície do obnovy budovy.</p>
-                </div>
-            </div>
         </div>
     </div>
 
     <!-- Section Divider -->
-    <div class="dash-section-header">
+    <div class="dash-section-header" style="margin-top: 1.5rem;">
         <h2>Moje Projekty</h2>
         <div class="dash-search-wrap">
             <span class="search-icon">🔍</span>
@@ -83,6 +60,32 @@
     <!-- Projects grid -->
     <div class="dash-content">
         <div class="projects-grid" id="projects-grid"></div>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="dash-section-header" style="margin-top: 3rem;">
+        <h2>Rýchly prístup k modulom</h2>
+    </div>
+
+    <div class="dash-content">
+        <!-- Quick Features Grid -->
+        <div class="feature-grid">
+            <div class="feature-card" onclick="switchTab('ch1', document.querySelectorAll('.step-btn')[0])">
+                <div class="feature-icon">🏠</div>
+                <h3>Posúdenie obálky</h3>
+                <p>Kontrola U-hodnôt konštrukcií a hygiena podľa STN 73 0540-2.</p>
+            </div>
+            <div class="feature-card" onclick="switchTab('ch2', document.querySelectorAll('.step-btn')[1])">
+                <div class="feature-icon">🌡️</div>
+                <h3>Potreba tepla</h3>
+                <p>Sezónny výpočet potreby energie na vykurovanie podľa STN EN ISO 13790.</p>
+            </div>
+            <div class="feature-card" onclick="switchTab('ch6', document.querySelectorAll('.step-btn')[4])">
+                <div class="feature-icon">💡</div>
+                <h3>Návrh opatrení</h3>
+                <p>Optimalizácia úspor a návratnosť investície do obnovy budovy.</p>
+            </div>
+        </div>
     </div>
 
 </div><!-- /view-dashboard -->
@@ -2006,7 +2009,7 @@
 <div class="toast" id="app-toast"></div>
 
     <script src="materials.js?v=6"></script>
-    <script src="app.js?v=6"></script>
+    <script src="app.js?v=7"></script>
     <script src="dashboard.js?v=6"></script>
 </body>
 
