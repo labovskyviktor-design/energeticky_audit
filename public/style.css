@@ -202,6 +202,58 @@ header {
     color: #fff;
 }
 
+.step-btn.step-dev {
+    opacity: 0.55;
+    filter: grayscale(1);
+}
+
+.step-btn.step-dev:hover {
+    opacity: 0.85;
+    filter: grayscale(0.2);
+}
+
+.step-btn.step-dev .step-title::after {
+    content: " (v príprave)";
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Banner pre sekcie vo vývoji */
+.dev-banner {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(217, 119, 6, 0.05),
+        rgba(217, 119, 6, 0.05) 10px,
+        rgba(217, 119, 6, 0.1) 10px,
+        rgba(217, 119, 6, 0.1) 20px
+    );
+    border: 2px dashed var(--warning);
+    color: var(--warning);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.dev-banner-icon {
+    font-size: 2.5rem;
+}
+
+.dev-banner-text h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.dev-banner-text p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
 .sidebar-footer {
     display: flex;
     align-items: center;

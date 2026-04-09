@@ -187,23 +187,23 @@
                     <span class="step-num">2</span>
                     <span class="step-title">Potreba tepla</span>
                 </button>
-                <button class="step-btn" onclick="switchTab('ch3', this)">
+                <button class="step-btn step-dev" onclick="switchTab('ch3', this)">
                     <span class="step-num">3</span>
                     <span class="step-title">Vykurovacia sústava</span>
                 </button>
-                <button class="step-btn" onclick="switchTab('ch4', this)">
+                <button class="step-btn step-dev" onclick="switchTab('ch4', this)">
                     <span class="step-num">4</span>
                     <span class="step-title">Príprava teplej vody</span>
                 </button>
-                <button class="step-btn" onclick="switchTab('ch6', this)">
+                <button class="step-btn step-dev" onclick="switchTab('ch6', this)">
                     <span class="step-num">5</span>
                     <span class="step-title">Návrh opatrení</span>
                 </button>
-                <button class="step-btn" onclick="switchTab('ch8', this)">
+                <button class="step-btn step-dev" onclick="switchTab('ch8', this)">
                     <span class="step-num">6</span>
                     <span class="step-title">Ekonomika a Návratnosť</span>
                 </button>
-                <button class="step-btn" onclick="switchTab('ch9', this)">
+                <button class="step-btn step-dev" onclick="switchTab('ch9', this)">
                     <span class="step-num">7</span>
                     <span class="step-title">Energetický certifikát</span>
                 </button>
@@ -1010,6 +1010,13 @@
                 <!-- CHAPTER 3: Heating Energy -->
                 <!-- ============================================================ -->
                 <section id="tab-ch3" class="tab-content">
+                    <div class="dev-banner">
+                        <div class="dev-banner-icon">🚧</div>
+                        <div class="dev-banner-text">
+                            <h4>Časť pod vývojom</h4>
+                            <p>Modul pre výpočet vykurovacej sústavy sa momentálne pripravuje. Výpočty zatiaľ nemusia byť presné.</p>
+                        </div>
+                    </div>
                     <div class="card">
                         <h2>Potreba energie na vykurovanie — Technické systémy</h2>
                         <p class="card-desc">Výpočet účinnosti a strát vykurovacieho systému podľa kategórie budovy a
@@ -1300,6 +1307,13 @@
             <!-- CHAPTER 4: Domestic Hot Water (NEW) -->
             <!-- ============================================================ -->
             <section id="tab-ch4" class="tab-content">
+                <div class="dev-banner">
+                    <div class="dev-banner-icon">🚧</div>
+                    <div class="dev-banner-text">
+                        <h4>Časť pod vývojom</h4>
+                        <p>Príprava teplej vody (TV) je v testovacej fáze. Niektoré komponenty nie sú prepojené s backendom.</p>
+                    </div>
+                </div>
                 <div class="card">
                     <h2>Kapitola 4: Teplá Voda (TV)</h2>
                     <p class="card-desc">Výpočet potreby energie na prípravu teplej vody podľa STN EN 15316-3.</p>
@@ -1454,6 +1468,13 @@
             <!-- CHAPTER 6: Renovation Measures -->
             <!-- ============================================================ -->
             <section id="tab-ch6" class="tab-content">
+                <div class="dev-banner">
+                    <div class="dev-banner-icon">🚧</div>
+                    <div class="dev-banner-text">
+                        <h4>Časť pod vývojom</h4>
+                        <p>Návrh opatrení a porovnanie pred/po obnove sú momentálne v stavebnom procese.</p>
+                    </div>
+                </div>
                 <div class="card">
                     <h2>Kapitola 6: Návrh Úsporných Opatrení</h2>
                     <p class="card-desc">Porovnanie stavu Pred Obnovou a Po Obnove — obálka budovy + vykurovací systém.
@@ -1719,6 +1740,13 @@
             <!-- CHAPTER 9: Energy Certification (NEW) -->
             <!-- ============================================================ -->
             <section id="tab-ch9" class="tab-content">
+                <div class="dev-banner">
+                    <div class="dev-banner-icon">🚧</div>
+                    <div class="dev-banner-text">
+                        <h4>Časť pod vývojom</h4>
+                        <p>Energetický certifikát a finálne štítky sú predmetom finalizácie STN metodiky.</p>
+                    </div>
+                </div>
                 <div class="card">
                     <h2>Kapitola 9: Energetická Certifikácia</h2>
                     <p class="card-desc">Výpočet primárnej energie, emisií CO2 a určenie energetickej triedy.</p>
@@ -1832,6 +1860,13 @@
             <!-- CHAPTER 8: Economics and Return on Investment (NEW) -->
             <!-- ============================================================ -->
             <section id="tab-ch8" class="tab-content">
+                <div class="dev-banner">
+                    <div class="dev-banner-icon">🚧</div>
+                    <div class="dev-banner-text">
+                        <h4>Časť pod vývojom</h4>
+                        <p>Ekonomické vyhodnotenie a návratnosť investície sú vo fáze prototypu.</p>
+                    </div>
+                </div>
                 <div class="card">
                     <h2>Kapitola 8: Ekonomické Hodnotenie a Návratnosť</h2>
                     <p class="card-desc">Výpočet hrubej návratnosti (PB), čistej súčasnej hodnoty (NPV) a Hotovostného
