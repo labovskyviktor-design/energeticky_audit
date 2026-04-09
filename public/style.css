@@ -1857,10 +1857,12 @@ body.dash-dark-mode {
 
 .dash-hero-banner {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 4.5 / 1;
+    min-height: 160px;
+    max-height: 260px;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     border: 1px solid var(--border);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -1869,6 +1871,7 @@ body.dash-dark-mode {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.8s ease;
 }
 
