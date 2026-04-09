@@ -4,57 +4,41 @@
 
 :root {
     --bg: #f8fafc;
-    /* Slate 50 */
     --bg-card: #ffffff;
-    /* White */
     --bg-card-hover: #f1f5f9;
-    /* Slate 100 */
     --bg-input: #f8fafc;
-    /* Slate 50 */
     --border: #e2e8f0;
-    /* Slate 200 */
-    --border-focus: #2563eb;
-    /* Blue 600 */
+    --border-focus: #10b981; /* Emerald 500 */
     --text: #0f172a;
-    /* Slate 900 */
     --text-muted: #475569;
-    /* Slate 600 */
     --text-dim: #64748b;
-    /* Slate 500 */
-    --accent: #2563eb;
-    /* Blue 600 */
-    --accent-glow: rgba(37, 99, 235, 0.15);
+    --accent: #059669;       /* Emerald 600 */
+    --accent-glow: rgba(5, 150, 105, 0.15);
     --success: #059669;
-    /* Emerald 600 */
     --success-bg: rgba(5, 150, 105, 0.1);
     --danger: #dc2626;
-    /* Red 600 */
     --danger-bg: rgba(220, 38, 38, 0.1);
     --warning: #d97706;
-    /* Amber 600 */
     --info: #0ea5e9;
-    /* Sky 500 */
     --info-bg: rgba(14, 165, 233, 0.08);
-    --radius: 8px;
-    /* Slightly sharper, professional */
-    --radius-sm: 6px;
-    --shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-    /* Very subtle shadow */
+    --radius: 12px;          /* Softer corners like AquaCalc */
+    --radius-sm: 8px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     --font: 'Inter', -apple-system, sans-serif;
 }
 
 [data-theme="dark"] {
-    --bg: #0f172a;        /* slate 900 */
-    --bg-card: #1e293b;   /* slate 800 */
-    --bg-card-hover: #334155;
-    --bg-input: #0f172a;
-    --border: #334155;
-    --border-focus: #3b82f6;
+    --bg: #020617;           /* Deeper dark */
+    --bg-card: #0f172a;      /* Slate 900 */
+    --bg-card-hover: #1e293b;
+    --bg-input: #020617;
+    --border: #1e293b;
+    --border-focus: #10b981;
     --text: #f8fafc;
-    --text-muted: #cbd5e1;
-    --text-dim: #94a3b8;
-    --accent: #3b82f6;
-    --accent-glow: rgba(59, 130, 246, 0.25);
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --accent: #10b981;       /* Brighter emerald on dark */
+    --accent-glow: rgba(16, 185, 129, 0.25);
     --success: #34d399;   
     --success-bg: rgba(5, 150, 105, 0.22);
     --danger: #f87171;    
@@ -62,7 +46,7 @@
     --warning: #fbbf24;   
     --info: #38bdf8;      
     --info-bg: rgba(14, 165, 233, 0.2);
-    --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     --glass-bg: rgba(15, 23, 42, 0.7);
     --glass-border: rgba(255, 255, 255, 0.08);
 }
@@ -187,15 +171,28 @@ header {
 }
 
 .step-btn.active {
-    background: var(--bg-card);
-    border-color: var(--accent);
+    background: rgba(16, 185, 129, 0.1);
+    border-color: transparent;
     color: var(--accent);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+    position: relative;
+}
+
+.step-btn.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background: var(--accent);
+    border-radius: 0 4px 4px 0;
 }
 
 .step-btn.active .step-num {
     background: var(--accent);
     color: #fff;
+    box-shadow: 0 0 15px var(--accent-glow);
 }
 
 .step-btn.completed .step-num {
@@ -1808,7 +1805,7 @@ body.dash-dark-mode {
 
 .dash-logo-sub {
     font-size: 0.7rem;
-    color: rgba(148, 163, 184, 0.7);
+    color: var(--text-dim);
     font-weight: 400;
     display: block;
     margin-top: 2px;
@@ -1817,79 +1814,147 @@ body.dash-dark-mode {
 
 /* â”€â”€â”€ New project button (topbar) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .dash-topbar .btn-primary {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    border: 1px solid rgba(139, 92, 246, 0.4);
-    box-shadow:
-        0 0 20px rgba(99, 102, 241, 0.35),
-        0 4px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    box-shadow: 
+        0 4px 15px rgba(5, 150, 105, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.1);
     color: #fff;
     font-weight: 700;
-    padding: 0.55rem 1.4rem;
-    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    border-radius: 10px;
     transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.dash-topbar .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.35);
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+}
+
+/* â”€â”€â”€ Hero section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Dashboard Enhancements ── */
+.dash-hero {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 1rem;
+}
+
+.dash-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.dash-hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.dash-hero-banner {
+    width: 100%;
+    height: 380px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.dash-hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.dash-hero-banner:hover img {
+    transform: scale(1.02);
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
 }
 
-.dash-topbar .btn-primary::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
-    border-radius: inherit;
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px var(--accent-glow);
 }
 
-.dash-topbar .btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow:
-        0 0 32px rgba(139, 92, 246, 0.55),
-        0 8px 24px rgba(0, 0, 0, 0.35);
-    background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-}
-
-/* â”€â”€â”€ Hero section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-.dash-hero {
-    position: relative;
-    z-index: 1;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 4rem 2.5rem 2rem;
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-glow);
+    color: var(--accent);
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Section Divider */
+.dash-section-header {
+    max-width: 1280px;
+    margin: 4rem auto 1.5rem;
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
-.dash-hero h1 {
-    font-size: 2.6rem;
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.025em;
-    background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 60%, #94a3b8 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.dash-section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
 }
 
-.dash-hero p {
-    color: rgba(148, 163, 184, 0.8);
-    font-size: 0.95rem;
-    margin-top: 0.4rem;
-    font-weight: 400;
+.dash-section-header .dash-search-wrap {
+    min-width: 320px;
 }
+
+/* End of Dashboard Enhancements */
 
 /* â”€â”€â”€ Search bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-.dash-search-bar {
-    position: relative;
-    z-index: 1;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2.5rem 2rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
+/* Old search bar removed */
 
 .dash-search-wrap {
     position: relative;

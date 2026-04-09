@@ -28,7 +28,7 @@
     <div class="dash-topbar">
         <div class="dash-topbar-inner">
             <div class="dash-logo">
-                <span class="dash-logo-icon">⚡</span>
+                <span class="dash-logo-icon">🏢</span>
                 <div>
                     <div class="dash-logo-text">Energetický Audit</div>
                     <div class="dash-logo-sub">Výpočtový nástroj — STN 73 0540-2/Z1+Z2</div>
@@ -40,21 +40,44 @@
         </div>
     </div>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <div class="dash-hero">
-        <div>
-            <h1>Moje projekty</h1>
-            <p>Vyberte existujúci projekt alebo vytvorte nový energetický audit.</p>
+        <div class="dash-hero-content">
+            <h1>Vitajte v Energetickom Audite</h1>
+            <p>Profesionálny nástroj pre výpočty energetickej hospodárnosti budov</p>
+            
+            <div class="dash-hero-banner">
+                <img src="energy_audit_hero_green_1775730401997.png" alt="Energy Audit Banner">
+            </div>
+            
+            <!-- Quick Features Grid -->
+            <div class="feature-grid">
+                <div class="feature-card" onclick="switchTab('ch1', document.querySelectorAll('.step-btn')[0])">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Posúdenie obálky</h3>
+                    <p>Kontrola U-hodnôt konštrukcií a hygiena podľa STN 73 0540-2.</p>
+                </div>
+                <div class="feature-card" onclick="switchTab('ch2', document.querySelectorAll('.step-btn')[1])">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Potreba tepla</h3>
+                    <p>Mesačný výpočet potreby energie na vykurovanie (ISO 52016-1).</p>
+                </div>
+                <div class="feature-card" onclick="switchTab('ch6', document.querySelectorAll('.step-btn')[4])">
+                    <div class="feature-icon">💡</div>
+                    <h3>Návrh opatrení</h3>
+                    <p>Optimalizácia úspor a návratnosť investície do obnovy budovy.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Search bar -->
-    <div class="dash-search-bar">
+    <!-- Section Divider -->
+    <div class="dash-section-header">
+        <h2>Moje Projekty</h2>
         <div class="dash-search-wrap">
             <span class="search-icon">🔍</span>
             <input type="text" id="dash-search" placeholder="Hľadať projekt..." autocomplete="off">
         </div>
-        <span class="dash-count" id="dash-projects-count"></span>
     </div>
 
     <!-- Projects grid -->
