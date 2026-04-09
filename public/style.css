@@ -55,14 +55,16 @@
     --text-dim: #94a3b8;
     --accent: #3b82f6;
     --accent-glow: rgba(59, 130, 246, 0.25);
-    /* Colors slightly brightened for contrast on dark bg */
     --success: #34d399;   
-    --success-bg: rgba(5, 150, 105, 0.2);
+    --success-bg: rgba(5, 150, 105, 0.22);
     --danger: #f87171;    
-    --danger-bg: rgba(220, 38, 38, 0.2);
+    --danger-bg: rgba(220, 38, 38, 0.25);
     --warning: #fbbf24;   
     --info: #38bdf8;      
-    --info-bg: rgba(14, 165, 233, 0.15);
+    --info-bg: rgba(14, 165, 233, 0.2);
+    --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -1005,21 +1007,26 @@ footer {
     }
 }
 
-/* ElaborĂˇt (Report) styling */
+/* Elaborát (Report) styling */
 .elaborat {
-    background: #fff;
-    color: #334155;
+    background: var(--bg-card);
+    color: var(--text);
     padding: 3rem;
     border-radius: var(--radius);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     font-family: 'Inter', serif;
     max-width: 900px;
     margin: 0 auto;
 }
 
+[data-theme="dark"] .elaborat {
+    background: #1e293b;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
 .elaborat h2,
 .elaborat h3 {
-    color: #1e293b;
+    color: var(--text);
     margin-bottom: 0.5rem;
     font-weight: 800;
 }
@@ -1043,37 +1050,36 @@ footer {
 }
 
 .elaborat-table th {
-    background: #f1f5f9;
-    color: #475569;
+    background: var(--bg-card-hover);
+    color: var(--text-muted);
     text-align: left;
     padding: 0.75rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border);
     font-weight: 700;
 }
 
 .elaborat-table td {
     padding: 0.75rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border);
 }
 
 .elaborat-table tr:nth-child(even) {
-    background: #f8fafc;
+    background: var(--bg-input);
 }
 
 .elaborat-table td.pass {
-    color: #059669;
+    color: var(--success);
     font-weight: 700;
     text-transform: uppercase;
-    background: #f0fdf4;
+    background: var(--success-bg);
 }
 
 .elaborat-table td.fail {
-    color: #dc2626;
+    color: var(--danger);
     font-weight: 700;
     text-transform: uppercase;
-    background: #fef2f2;
+    background: var(--danger-bg);
 }
-
 .report-section ul {
     list-style: none;
     margin-bottom: 1rem;
@@ -1084,7 +1090,7 @@ footer {
 }
 
 .calc-step strong {
-    color: #e2e8f0;
+    color: var(--text);
     display: block;
     margin-bottom: 0.25rem;
     font-size: 0.9rem;
@@ -1906,11 +1912,8 @@ body.dash-dark-mode {
     padding: 0.7rem 1rem 0.7rem 2.5rem;
     font-family: var(--font);
     font-size: 0.88rem;
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    color: #f1f5f9;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 10px;
     outline: none;
     transition: all 0.2s ease;
@@ -1948,10 +1951,8 @@ body.dash-dark-mode {
 
 /* â”€â”€â”€ Project card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .project-card {
-    background: rgba(255, 255, 255, 0.055);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 14px;
     padding: 1.5rem;
     cursor: pointer;
@@ -2036,7 +2037,7 @@ body.dash-dark-mode {
 .project-card-name {
     font-size: 1rem;
     font-weight: 700;
-    color: #f1f5f9;
+    color: var(--text);
     line-height: 1.3;
     flex: 1;
     min-width: 0;
@@ -2108,7 +2109,7 @@ body.dash-dark-mode {
 .dash-empty h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #f1f5f9;
+    color: var(--text);
     margin-bottom: 0.6rem;
 }
 
@@ -2180,28 +2181,26 @@ body.dash-dark-mode {
 }
 
 .new-project-card {
-    background: rgba(255, 255, 255, 0.055);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 2rem;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow);
 }
 
-/* Override input styles inside new-project-card for dark theme */
+/* Override input styles inside new-project-card for theme sync */
 .new-project-card input[type="text"],
 .new-project-card input[type="number"],
 .new-project-card select {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #f1f5f9;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    color: var(--text);
     border-radius: 8px;
 }
 
 .new-project-card input[type="text"]::placeholder,
 .new-project-card input[type="number"]::placeholder {
-    color: rgba(148, 163, 184, 0.35);
+    color: var(--text-dim);
 }
 
 .new-project-card input:focus,
@@ -2402,7 +2401,7 @@ body.dash-dark-mode {
     font-size: 0.85rem;
     border-radius: var(--radius-sm);
     color: var(--text);
-    background: #fff;
+    background: var(--bg-card);
     border: 1px solid var(--border);
     cursor: pointer;
     transition: all 0.2s;
@@ -2419,10 +2418,10 @@ body.dash-dark-mode {
     right: 0;
     top: calc(100% + 0.5rem);
     width: 280px;
-    background: #fff;
+    background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
