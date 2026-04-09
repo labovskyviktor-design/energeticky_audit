@@ -200,20 +200,20 @@ window.syncGglInput = function (sel) {
 
 // ── City Data (STN EN ISO 13790/NA) ──────────────────────────
 const CITIES = [
-    { name: "Bratislava", theta_e_m: 3.86, days: 212 },
-    { name: "Trnava", theta_e_m: 3.6, days: 212 },
-    { name: "Nitra", theta_e_m: 3.8, days: 212 },
-    { name: "Trenčín", theta_e_m: 3.1, days: 222 },
-    { name: "Žilina", theta_e_m: 2.0, days: 222 },
-    { name: "Banská Bystrica", theta_e_m: 2.4, days: 222 },
-    { name: "Košice", theta_e_m: 2.6, days: 222 },
-    { name: "Prešov", theta_e_m: 2.2, days: 222 },
-    { name: "Poprad", theta_e_m: 0.0, days: 232 },
-    { name: "Martin", theta_e_m: 1.8, days: 222 },
-    { name: "Zvolen", theta_e_m: 2.5, days: 222 },
-    { name: "Lučenec", theta_e_m: 3.0, days: 222 },
-    { name: "Piešťany", theta_e_m: 3.5, days: 212 },
-    { name: "Komárno", theta_e_m: 4.5, days: 212 },
+    { name: "Bratislava", theta_e_m: 3.86, days: 212, theta_e_des: -11 },
+    { name: "Trnava", theta_e_m: 3.6, days: 212, theta_e_des: -11 },
+    { name: "Nitra", theta_e_m: 3.8, days: 212, theta_e_des: -11 },
+    { name: "Trenčín", theta_e_m: 3.1, days: 222, theta_e_des: -11 },
+    { name: "Žilina", theta_e_m: 2.0, days: 222, theta_e_des: -15 },
+    { name: "Banská Bystrica", theta_e_m: 2.4, days: 222, theta_e_des: -13 },
+    { name: "Košice", theta_e_m: 2.6, days: 222, theta_e_des: -11 },
+    { name: "Prešov", theta_e_m: 2.2, days: 222, theta_e_des: -13 },
+    { name: "Poprad", theta_e_m: 0.0, days: 232, theta_e_des: -16 },
+    { name: "Martin", theta_e_m: 1.8, days: 222, theta_e_des: -15 },
+    { name: "Zvolen", theta_e_m: 2.5, days: 222, theta_e_des: -13 },
+    { name: "Lučenec", theta_e_m: 3.0, days: 222, theta_e_des: -11 },
+    { name: "Piešťany", theta_e_m: 3.5, days: 212, theta_e_des: -11 },
+    { name: "Komárno", theta_e_m: 4.5, days: 212, theta_e_des: -11 },
 ];
 
 
@@ -222,8 +222,28 @@ window.onCityChange = function () {
     const sel = document.getElementById('ch2-city');
     const city = CITIES.find(c => c.name === sel.value);
     if (city) {
+        // 1. Priemerná teplota
         document.getElementById('ch2-tem').value = city.theta_e_m;
-        document.getElementById('ch2-days').value = city.days;
+        
+        // 2. Návrhová teplota
+        document.getElementById('ch2-theta-des').value = city.theta_e_des;
+        
+        // 3. Počet dní (skrytý input aj dropdown)
+        const daysInp = document.getElementById('ch2-days');
+        daysInp.value = city.days;
+        
+        // Synchronizácia selectu pre dni (ak existuje zhoda s predvolenými oblasťami)
+        const daysSel = document.querySelector('select[data-target="ch2-days"]');
+        if (daysSel) {
+            const hasOption = Array.from(daysSel.options).some(opt => opt.value == city.days);
+            if (hasOption) {
+                daysSel.value = city.days;
+                daysInp.classList.add('hidden');
+            } else {
+                daysSel.value = '__custom__';
+                daysInp.classList.remove('hidden');
+            }
+        }
     }
 }
 
