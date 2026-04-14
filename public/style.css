@@ -1702,10 +1702,7 @@ footer {
    BODY DARK MODE — for dashboard / new-project views
    ============================================================ */
 
-body.dash-dark-mode {
-    background: #0a0b14;
-    transition: background 0.3s ease;
-}
+
 
 /* ============================================================
    DASHBOARD & PROJECT MANAGEMENT — Glassmorphism Premium Design
@@ -1715,11 +1712,6 @@ body.dash-dark-mode {
 #view-dashboard,
 #view-new-project {
     min-height: 100vh;
-    background:
-        radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.18) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 55%),
-        radial-gradient(ellipse at 60% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-        linear-gradient(135deg, #0a0b14 0%, #0f1225 30%, #131530 60%, #0e1020 100%);
     animation: fadeIn 0.4s ease;
 }
 
@@ -1739,10 +1731,10 @@ body.dash-dark-mode {
 
 /* â”€â”€â”€ Glass utility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .glass {
-    background: rgba(255, 255, 255, 0.055);
+    background: var(--glass-bg, rgba(255, 255, 255, 0.7));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
 }
 
 /* â”€â”€â”€ Dashboard topbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -1751,11 +1743,11 @@ body.dash-dark-mode {
     top: 0;
     z-index: 100;
     padding: 0;
-    background: rgba(10, 11, 20, 0.75);
+    background: var(--bg-card);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    box-shadow: 0 1px 32px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 32px rgba(0, 0, 0, 0.05);
 }
 
 .dash-topbar-inner {
@@ -1797,7 +1789,7 @@ body.dash-dark-mode {
 .dash-logo-text {
     font-size: 1.25rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #a78bfa, #818cf8, #60a5fa);
+    background: linear-gradient(135deg, var(--accent), var(--success));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

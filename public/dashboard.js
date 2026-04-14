@@ -71,8 +71,7 @@ function showView(viewId) {
         const el = document.getElementById(id);
         if (el) el.style.display = (id === viewId) ? '' : 'none';
     });
-    // Toggle dark mode on body for dashboard screens
-    document.body.classList.toggle('dash-dark-mode', viewId !== 'view-audit');
+    // Dark mode is handled by the global data-theme toggle
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
