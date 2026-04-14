@@ -410,6 +410,7 @@ window.openMaterialPicker = function(rowEl) {
     pickerTargetRow = rowEl;
     document.getElementById('mat-picker-overlay').classList.add('open');
     document.getElementById('mat-picker-drawer').classList.add('open');
+    document.body.style.overflow = 'hidden'; // Lock scroll
     document.getElementById('mpd-search').focus();
     renderMaterialCats();
     renderMaterialGrid();
@@ -418,6 +419,7 @@ window.openMaterialPicker = function(rowEl) {
 window.closeMaterialPicker = function() {
     document.getElementById('mat-picker-overlay').classList.remove('open');
     document.getElementById('mat-picker-drawer').classList.remove('open');
+    document.body.style.overflow = ''; // Unlock scroll
     pickerTargetRow = null;
 }
 
